@@ -1,9 +1,258 @@
 [gd_scene format=3 uid="uid://qepwjdkkhymc"]
 
-[node name="Control" type="Control" unique_id=784347003]
-layout_mode = 3
+[node name="Control" type="TabContainer" unique_id=926314309]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+current_tab = 0
+
+[node name="Rolls" type="ScrollContainer" parent="." unique_id=17168571]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Attributes" type="FoldableContainer" parent="Rolls" unique_id=122389512]
+layout_mode = 2
+size_flags_horizontal = 3
+title = "Attributes"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Rolls/Attributes" unique_id=1930868276]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="GridContainer" type="GridContainer" parent="Rolls/Attributes/VBoxContainer" unique_id=870549800]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/h_separation = 16
+columns = 6
+
+[node name="AttributeNameColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1778208914]
+layout_mode = 2
+text = "Attribute"
+horizontal_alignment = 1
+
+[node name="RollColumLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1801277632]
+layout_mode = 2
+text = "Roll"
+horizontal_alignment = 1
+
+[node name="PrimeModColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1548350954]
+layout_mode = 2
+text = "Prime Mod"
+horizontal_alignment = 1
+
+[node name="SkillBaseColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1065372630]
+layout_mode = 2
+text = "Skill Base"
+horizontal_alignment = 1
+
+[node name="SkillGainColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=133417846]
+layout_mode = 2
+text = "Skill Gain"
+horizontal_alignment = 1
+
+[node name="GOOPBonusColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1933796931]
+layout_mode = 2
+text = "GOO-P Bonus"
+horizontal_alignment = 1
+
+[node name="CognitionLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1192430446]
+layout_mode = 2
+text = "Cognition"
+horizontal_alignment = 1
+
+[node name="CognitionRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=709201583]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=882564800]
+layout_mode = 2
+
+[node name="COGLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer" unique_id=1165101600]
+layout_mode = 2
+text = "+COG"
+
+[node name="COGValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer" unique_id=689920450]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CognitionSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1997728692]
+layout_mode = 2
+
+[node name="CognitionSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=2119608177]
+layout_mode = 2
+
+[node name="CognitionGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=19027145]
+layout_mode = 2
+
+[node name="DeterminationLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1329612662]
+layout_mode = 2
+text = "Determination"
+horizontal_alignment = 1
+
+[node name="DeterminationRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1741384530]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1914474006]
+layout_mode = 2
+
+[node name="DETLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer2" unique_id=931478381]
+layout_mode = 2
+text = "+DET"
+
+[node name="DETValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer2" unique_id=1452707730]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeterminationSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=484053143]
+layout_mode = 2
+
+[node name="DeterminationSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=669991198]
+layout_mode = 2
+
+[node name="DeterminationGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1281397492]
+layout_mode = 2
+
+[node name="AffinityLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=113594110]
+layout_mode = 2
+text = "Affinity"
+horizontal_alignment = 1
+
+[node name="AffinityRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1513318018]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=749829657]
+layout_mode = 2
+
+[node name="AFFLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer3" unique_id=1283844304]
+layout_mode = 2
+text = "+AFF"
+
+[node name="AFFValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer3" unique_id=440095996]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AffinitySkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=42321379]
+layout_mode = 2
+
+[node name="AffinitySkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=975763067]
+layout_mode = 2
+
+[node name="AffinityGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1793103824]
+layout_mode = 2
+
+[node name="PerceptionLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1699889711]
+layout_mode = 2
+text = "Perception"
+horizontal_alignment = 1
+
+[node name="PerceptionRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1319212271]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1274165609]
+layout_mode = 2
+
+[node name="PERLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer4" unique_id=2072115835]
+layout_mode = 2
+text = "+PER"
+
+[node name="PERValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer4" unique_id=1023191026]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PerceptionSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=689628677]
+layout_mode = 2
+
+[node name="PerceptionSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1853521642]
+layout_mode = 2
+
+[node name="PerceptionGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1878050564]
+layout_mode = 2
+
+[node name="StrengthLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=338298415]
+layout_mode = 2
+text = "Strength"
+horizontal_alignment = 1
+
+[node name="StrengthRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=990691042]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=212774891]
+layout_mode = 2
+
+[node name="STRLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer5" unique_id=2024218147]
+layout_mode = 2
+text = "+STR"
+
+[node name="STRValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer5" unique_id=732704608]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StrengthSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=88179535]
+layout_mode = 2
+
+[node name="StrengthSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=14240575]
+layout_mode = 2
+
+[node name="StrengthGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1546365906]
+layout_mode = 2
+
+[node name="ProwessLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1911409774]
+layout_mode = 2
+text = "Prowess"
+horizontal_alignment = 1
+
+[node name="ProwessRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=947053165]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=786243106]
+layout_mode = 2
+
+[node name="PROLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer6" unique_id=1683129666]
+layout_mode = 2
+text = "+PRO"
+
+[node name="PROValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer6" unique_id=179506545]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProwessSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1415260873]
+layout_mode = 2
+
+[node name="ProwessSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=2018080431]
+layout_mode = 2
+
+[node name="ProwessGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1141290965]
+layout_mode = 2
+
+[node name="EnduranceLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=437482207]
+layout_mode = 2
+text = "Prowess"
+horizontal_alignment = 1
+
+[node name="EnduranceRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1770678487]
+layout_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1543553290]
+layout_mode = 2
+
+[node name="ENDLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer7" unique_id=1217813846]
+layout_mode = 2
+text = "+PRO"
+
+[node name="ENDValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer7" unique_id=333105192]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EnduranceSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1026914969]
+layout_mode = 2
+
+[node name="EnduranceSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1424244681]
+layout_mode = 2
+
+[node name="EnduranceGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1780051742]
+layout_mode = 2
+
+[node name="RollAttributesButton" type="Button" parent="Rolls/Attributes/VBoxContainer" unique_id=2079117427]
+layout_mode = 2
+text = "Roll Attributes"
