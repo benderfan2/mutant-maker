@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://qepwjdkkhymc"]
 
+[ext_resource type="Script" uid="uid://ckehdcx6ki17t" path="res://main.gd" id="1_ig7tw"]
+
 [node name="Control" type="TabContainer" unique_id=926314309]
 anchors_preset = 15
 anchor_right = 1.0
@@ -7,252 +9,646 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 current_tab = 0
+script = ExtResource("1_ig7tw")
 
-[node name="Rolls" type="ScrollContainer" parent="." unique_id=17168571]
+[node name="Create" type="VBoxContainer" parent="." unique_id=1835558887]
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Attributes" type="FoldableContainer" parent="Rolls" unique_id=122389512]
+[node name="Info" type="HBoxContainer" parent="Create" unique_id=315177642]
+layout_mode = 2
+
+[node name="TakebacksLabel" type="Label" parent="Create/Info" unique_id=743907689]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Takebacks:"
+
+[node name="GroupTakebacksLabel" type="Label" parent="Create/Info" unique_id=861071556]
 layout_mode = 2
 size_flags_horizontal = 3
-title = "Attributes"
+text = "Group Takebacks:"
+horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Rolls/Attributes" unique_id=1930868276]
+[node name="Rolls" type="ScrollContainer" parent="Create" unique_id=17168571]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Create/Rolls" unique_id=1824299559]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Step1" type="FoldableContainer" parent="Create/Rolls/VBoxContainer" unique_id=1864089095]
+layout_mode = 2
+title = "Step #1 - Getting Together"
+
+[node name="HBoxContainer" type="GridContainer" parent="Create/Rolls/VBoxContainer/Step1" unique_id=328002622]
+layout_mode = 2
+columns = 2
+
+[node name="GroupTypeLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step1/HBoxContainer" unique_id=261511487]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Group Type"
+horizontal_alignment = 1
+
+[node name="GroupType" type="OptionButton" parent="Create/Rolls/VBoxContainer/Step1/HBoxContainer" unique_id=2042408288]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+popup/item_0/text = "Diverse Group"
+popup/item_0/id = 0
+popup/item_1/text = "Connected Group"
+popup/item_1/id = 1
+popup/item_2/text = "Family Group"
+popup/item_2/id = 2
+
+[node name="Step2" type="FoldableContainer" parent="Create/Rolls/VBoxContainer" unique_id=1996927350]
+layout_mode = 2
+title = "Step #2 - Cursing Your Dice"
+
+[node name="VBoxContainer" type="GridContainer" parent="Create/Rolls/VBoxContainer/Step2" unique_id=1493643121]
+layout_mode = 2
+columns = 2
+
+[node name="TakebacksOverrideButton" type="CheckButton" parent="Create/Rolls/VBoxContainer/Step2/VBoxContainer" unique_id=1331632284]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Takebacks Override"
+alignment = 1
+
+[node name="TakebacksOverrideAmount" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step2/VBoxContainer" unique_id=523900001]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Write The Number Of Takebacks You Want Here"
+editable = false
+
+[node name="TakebacksModifierLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step2/VBoxContainer" unique_id=850270569]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Takebacks Modifier"
+horizontal_alignment = 1
+
+[node name="TakebacksModifierAmount" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step2/VBoxContainer" unique_id=695671907]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+
+[node name="GroupTakebacksOverrideButton" type="CheckButton" parent="Create/Rolls/VBoxContainer/Step2/VBoxContainer" unique_id=1974991723]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Group Takebacks Override"
+alignment = 1
+
+[node name="GroupTakebacksOverrideAmount" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step2/VBoxContainer" unique_id=58941092]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Write The Number Of Takebacks You Want Here"
+editable = false
+
+[node name="GroupTakebacksModifierLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step2/VBoxContainer" unique_id=1069109811]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Group Takebacks Modifier"
+horizontal_alignment = 1
+
+[node name="GroupTakebacksModifierAmount" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step2/VBoxContainer" unique_id=150308768]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+
+[node name="Step3" type="FoldableContainer" parent="Create/Rolls/VBoxContainer" unique_id=122389512]
+layout_mode = 2
+size_flags_horizontal = 3
+folded = true
+title = "Step #3 - You're Good At..."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Create/Rolls/VBoxContainer/Step3" unique_id=1930868276]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="GridContainer" type="GridContainer" parent="Rolls/Attributes/VBoxContainer" unique_id=870549800]
+[node name="GridContainer" type="GridContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer" unique_id=870549800]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/h_separation = 16
-columns = 6
+columns = 8
 
-[node name="AttributeNameColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1778208914]
+[node name="AttributeNameColumnLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1778208914]
 layout_mode = 2
 text = "Attribute"
 horizontal_alignment = 1
 
-[node name="RollColumLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1801277632]
+[node name="RollColumLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1801277632]
 layout_mode = 2
 text = "Roll"
 horizontal_alignment = 1
 
-[node name="PrimeModColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1548350954]
+[node name="PrimeModColumnLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1548350954]
 layout_mode = 2
 text = "Prime Mod"
 horizontal_alignment = 1
 
-[node name="SkillBaseColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1065372630]
+[node name="SkillBaseColumnLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1065372630]
 layout_mode = 2
 text = "Skill Base"
 horizontal_alignment = 1
 
-[node name="SkillGainColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=133417846]
+[node name="SkillGainColumnLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=133417846]
 layout_mode = 2
 text = "Skill Gain"
 horizontal_alignment = 1
 
-[node name="GOOPBonusColumnLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1933796931]
+[node name="GOOPBonusColumnLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1933796931]
 layout_mode = 2
 text = "GOO-P Bonus"
 horizontal_alignment = 1
 
-[node name="CognitionLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1192430446]
+[node name="MarkedColumnLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1256317133]
+layout_mode = 2
+text = "Marked?"
+horizontal_alignment = 1
+
+[node name="RerollButtonColumLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=387966946]
+layout_mode = 2
+
+[node name="CognitionLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1192430446]
 layout_mode = 2
 text = "Cognition"
 horizontal_alignment = 1
 
-[node name="CognitionRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=709201583]
+[node name="CognitionRoll" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=709201583]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=882564800]
+[node name="HBoxContainer" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=882564800]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="COGLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer" unique_id=1165101600]
+[node name="COGLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer" unique_id=1165101600]
 layout_mode = 2
 text = "+COG"
 
-[node name="COGValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer" unique_id=689920450]
+[node name="COGValueLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer" unique_id=689920450]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CognitionSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1997728692]
+[node name="CognitionSkillBaseLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1997728692]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="CognitionSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=2119608177]
+[node name="CognitionSkillGainLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2119608177]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="CognitionGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=19027145]
+[node name="CognitionGOOPBonusLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=19027145]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="DeterminationLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1329612662]
+[node name="CognitionMarkedButton" type="CheckBox" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1664698020]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+text = "Marked"
+
+[node name="CognitionRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=160606857]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Re-Roll"
+
+[node name="DeterminationLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1329612662]
 layout_mode = 2
 text = "Determination"
 horizontal_alignment = 1
 
-[node name="DeterminationRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1741384530]
+[node name="DeterminationRoll" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1741384530]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1914474006]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1914474006]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="DETLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer2" unique_id=931478381]
+[node name="DETLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer2" unique_id=931478381]
 layout_mode = 2
 text = "+DET"
 
-[node name="DETValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer2" unique_id=1452707730]
+[node name="DETValueLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer2" unique_id=1452707730]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="DeterminationSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=484053143]
+[node name="DeterminationSkillBaseLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=484053143]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="DeterminationSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=669991198]
+[node name="DeterminationSkillGainLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=669991198]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="DeterminationGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1281397492]
+[node name="DeterminationGOOPBonusLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1281397492]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="AffinityLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=113594110]
+[node name="DeterminationMarkedButton" type="CheckBox" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1354711409]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+text = "Marked"
+
+[node name="DeterminationRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1393464434]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Re-Roll"
+
+[node name="AffinityLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=113594110]
 layout_mode = 2
 text = "Affinity"
 horizontal_alignment = 1
 
-[node name="AffinityRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1513318018]
+[node name="AffinityRoll" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1513318018]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=749829657]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=749829657]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="AFFLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer3" unique_id=1283844304]
+[node name="AFFLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer3" unique_id=1283844304]
 layout_mode = 2
 text = "+AFF"
 
-[node name="AFFValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer3" unique_id=440095996]
+[node name="AFFValueLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer3" unique_id=440095996]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="AffinitySkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=42321379]
+[node name="AffinitySkillBaseLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=42321379]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="AffinitySkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=975763067]
+[node name="AffinitySkillGainLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=975763067]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="AffinityGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1793103824]
+[node name="AffinityGOOPBonusLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1793103824]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PerceptionLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1699889711]
+[node name="AffinityMarkedButton" type="CheckBox" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=900392866]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+text = "Marked"
+
+[node name="AffinityRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=418797526]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Re-Roll"
+
+[node name="PerceptionLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1699889711]
 layout_mode = 2
 text = "Perception"
 horizontal_alignment = 1
 
-[node name="PerceptionRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1319212271]
+[node name="PerceptionRoll" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1319212271]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1274165609]
+[node name="HBoxContainer4" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1274165609]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="PERLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer4" unique_id=2072115835]
+[node name="PERLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer4" unique_id=2072115835]
 layout_mode = 2
 text = "+PER"
 
-[node name="PERValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer4" unique_id=1023191026]
+[node name="PERValueLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer4" unique_id=1023191026]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PerceptionSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=689628677]
+[node name="PerceptionSkillBaseLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=689628677]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PerceptionSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1853521642]
+[node name="PerceptionSkillGainLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1853521642]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PerceptionGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1878050564]
+[node name="PerceptionGOOPBonusLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1878050564]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="StrengthLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=338298415]
+[node name="PerceptionMarkedButton" type="CheckBox" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=557350595]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+text = "Marked"
+
+[node name="PerceptionRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=298825387]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Re-Roll"
+
+[node name="StrengthLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=338298415]
 layout_mode = 2
 text = "Strength"
 horizontal_alignment = 1
 
-[node name="StrengthRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=990691042]
+[node name="StrengthRoll" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=990691042]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=212774891]
+[node name="HBoxContainer5" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=212774891]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="STRLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer5" unique_id=2024218147]
+[node name="STRLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer5" unique_id=2024218147]
 layout_mode = 2
 text = "+STR"
 
-[node name="STRValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer5" unique_id=732704608]
+[node name="STRValueLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer5" unique_id=732704608]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="StrengthSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=88179535]
+[node name="StrengthSkillBaseLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=88179535]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="StrengthSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=14240575]
+[node name="StrengthSkillGainLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=14240575]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="StrengthGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1546365906]
+[node name="StrengthGOOPBonusLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1546365906]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="ProwessLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1911409774]
+[node name="StrengthMarkedButton" type="CheckBox" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1756812473]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+text = "Marked"
+
+[node name="StrengthRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1237115729]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Re-Roll"
+
+[node name="ProwessLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1911409774]
 layout_mode = 2
 text = "Prowess"
 horizontal_alignment = 1
 
-[node name="ProwessRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=947053165]
+[node name="ProwessRoll" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=947053165]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=786243106]
+[node name="HBoxContainer6" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=786243106]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="PROLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer6" unique_id=1683129666]
+[node name="PROLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer6" unique_id=1683129666]
 layout_mode = 2
 text = "+PRO"
 
-[node name="PROValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer6" unique_id=179506545]
+[node name="PROValueLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer6" unique_id=179506545]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ProwessSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1415260873]
+[node name="ProwessSkillBaseLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1415260873]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="ProwessSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=2018080431]
+[node name="ProwessSkillGainLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2018080431]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="ProwessGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1141290965]
+[node name="ProwessGOOPBonusLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1141290965]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="EnduranceLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=437482207]
+[node name="ProwessMarkedButton" type="CheckBox" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1326679819]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Prowess"
+theme_override_constants/h_separation = 8
+text = "Marked"
+
+[node name="ProwessRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2093494593]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Re-Roll"
+
+[node name="EnduranceLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=437482207]
+layout_mode = 2
+text = "Endurance"
 horizontal_alignment = 1
 
-[node name="EnduranceRoll" type="LineEdit" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1770678487]
+[node name="EnduranceRoll" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1770678487]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1543553290]
+[node name="HBoxContainer7" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1543553290]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="ENDLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer7" unique_id=1217813846]
+[node name="ENDLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer7" unique_id=1217813846]
 layout_mode = 2
-text = "+PRO"
+text = "+END"
 
-[node name="ENDValueLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer/HBoxContainer7" unique_id=333105192]
+[node name="ENDValueLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer7" unique_id=333105192]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EnduranceSkillBaseLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1026914969]
+[node name="EnduranceSkillBaseLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1026914969]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="EnduranceSkillGainLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1424244681]
+[node name="EnduranceSkillGainLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1424244681]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="EnduranceGOOPBonusLabel" type="Label" parent="Rolls/Attributes/VBoxContainer/GridContainer" unique_id=1780051742]
+[node name="EnduranceGOOPBonusLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1780051742]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="RollAttributesButton" type="Button" parent="Rolls/Attributes/VBoxContainer" unique_id=2079117427]
+[node name="EnduranceMarkedButton" type="CheckBox" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=23794582]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+text = "Marked"
+
+[node name="EnduranceRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1301927873]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Re-Roll"
+
+[node name="SpeedLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=243016005]
+layout_mode = 2
+text = "Speed"
+horizontal_alignment = 1
+
+[node name="SpeedRoll" type="LineEdit" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=428292657]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1803907232]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SPDLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer8" unique_id=1147020910]
+layout_mode = 2
+text = "+SPD"
+
+[node name="SPDValueLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer8" unique_id=2089626840]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpeedSkillBaseLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1328975940]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SpeedSkillGainLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1189724829]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SpeedGOOPBonusLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1541177836]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SpeedMarkedButton" type="CheckBox" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=68370909]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 8
+text = "Marked"
+
+[node name="SpeedRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1681127112]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Re-Roll"
+
+[node name="RollAttributesButton" type="Button" parent="Create/Rolls/VBoxContainer/Step3/VBoxContainer" unique_id=2079117427]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Roll Attributes"
+
+[node name="Step4" type="FoldableContainer" parent="Create/Rolls/VBoxContainer" unique_id=1785939915]
+layout_mode = 2
+title = "Step #4 - Your Origin Story"
+
+[node name="OriginStoryContainer" type="VBoxContainer" parent="Create/Rolls/VBoxContainer/Step4" unique_id=533227301]
+layout_mode = 2
+
+[node name="SourceOfMutationContainer" type="VBoxContainer" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer" unique_id=30890372]
+layout_mode = 2
+
+[node name="SourceOfMutationLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer" unique_id=1410079159]
+layout_mode = 2
+text = "Table A-1: Source of Mutation"
+horizontal_alignment = 1
+
+[node name="SourceOfMutationRollContainer" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer" unique_id=1565287023]
+layout_mode = 2
+
+[node name="SourceOfMutationRollLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer" unique_id=1270221878]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Table Roll"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SourceOfMutationRoll" type="Label" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer" unique_id=312319288]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SourceOfMutationRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer" unique_id=930507177]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Reroll"
+
+[node name="SourceOfMutationSwapButton" type="Button" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer" unique_id=713642645]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Swap"
+
+[node name="SourceOfMutationDescriptionLabel" type="RichTextLabel" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer" unique_id=833883338]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Source of Mutation Description Goes Here."
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer" unique_id=902714540]
+layout_mode = 2
+
+[node name="BackgroundTableLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/HBoxContainer" unique_id=1122393734]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Background Table"
+horizontal_alignment = 1
+
+[node name="BackgroundTable" type="OptionButton" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/HBoxContainer" unique_id=1543066093]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 3
+popup/item_0/text = "Table B-1: City Background"
+popup/item_0/id = 0
+popup/item_1/text = "Table B-2: Rural Background"
+popup/item_1/id = 1
+popup/item_2/text = "Table B-3: Institutional Background"
+popup/item_2/id = 2
+
+[node name="BackgroundTableRollContainer" type="HBoxContainer" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer" unique_id=1240658889]
+layout_mode = 2
+
+[node name="BackgroundTableRollLabel" type="Label" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundTableRollContainer" unique_id=568283159]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Table Roll"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackgroundTableRoll" type="Label" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundTableRollContainer" unique_id=2096510446]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackgroundTableRerollButton" type="Button" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundTableRollContainer" unique_id=1248120075]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Reroll"
+
+[node name="BackgroundTableSwapButton" type="Button" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundTableRollContainer" unique_id=73098017]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Swap"
+
+[node name="BackgroundTableResultDescriptionLabel" type="RichTextLabel" parent="Create/Rolls/VBoxContainer/Step4/OriginStoryContainer" unique_id=1831758730]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Background Description Goes Here."
+fit_content = true

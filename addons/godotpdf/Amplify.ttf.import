@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dcrae7vai035i"
-path="res://.godot/imported/Amplify.ttf-0017a3899570a5a84638b9c962eb2b36.fontdata"
+path="res://.godot/imported/Amplify.ttf-d4b283959359c3bbc9efb4113da12f63.fontdata"
 
 [deps]
 
-source_file="res://GodotPDF-5299f27cf7321dda79b400302af561dae0872955/addons/godotpdf/Amplify.ttf"
-dest_files=["res://.godot/imported/Amplify.ttf-0017a3899570a5a84638b9c962eb2b36.fontdata"]
+source_file="res://addons/godotpdf/Amplify.ttf"
+dest_files=["res://.godot/imported/Amplify.ttf-d4b283959359c3bbc9efb4113da12f63.fontdata"]
 
 [params]
 
