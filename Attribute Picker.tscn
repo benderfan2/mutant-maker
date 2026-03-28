@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b23j2d553syct"]
+
+[ext_resource type="Script" uid="uid://bthxjo2pju632" path="res://attribute_picker.gd" id="1_7520t"]
+
+[node name="AttributePicker" type="PopupPanel" unique_id=529555240]
+oversampling_override = 1.0
+size = Vector2i(243, 101)
+visible = true
+script = ExtResource("1_7520t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1093611063]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 239.0
+offset_bottom = 97.0
+
+[node name="MessageLabel" type="Label" parent="VBoxContainer" unique_id=320543395]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Pick an Atttribute to decrease."
+
+[node name="AttributeChoiceButton" type="OptionButton" parent="VBoxContainer" unique_id=977177837]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 8
+popup/item_0/text = "Cognition"
+popup/item_0/id = 0
+popup/item_1/text = "Determination"
+popup/item_1/id = 1
+popup/item_2/text = "Affinity"
+popup/item_2/id = 2
+popup/item_3/text = "Perception"
+popup/item_3/id = 3
+popup/item_4/text = "Strength"
+popup/item_4/id = 4
+popup/item_5/text = "Prowess"
+popup/item_5/id = 5
+popup/item_6/text = "Endurance"
+popup/item_6/id = 6
+popup/item_7/text = "Speed"
+popup/item_7/id = 7
+
+[node name="ConfirmButton" type="Button" parent="VBoxContainer" unique_id=1073051635]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Confirm"
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
+[connection signal="pressed" from="VBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]
