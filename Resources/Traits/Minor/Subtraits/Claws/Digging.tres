@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bwnnug5o4cy4m"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ldmll"]
+
+[resource]
+script = ExtResource("1_ldmll")
+name = "Digging"
+type = 1
+cost = 1
+description = "Your claws gain Piercing 2."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

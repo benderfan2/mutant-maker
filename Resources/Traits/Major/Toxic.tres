@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bhjw0dhyqt38"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_vibrh"]
+[ext_resource type="Resource" uid="uid://bdq3hw8jsuthv" path="res://Resources/Traits/Major/Subtraits/Toxic/Gamma Bufotoxin.tres" id="2_mjoiy"]
+
+[resource]
+script = ExtResource("1_vibrh")
+name = "Toxic"
+cost = 10
+description = "You are covered in a toxin that makes your skin poisonous. Any foe biting or grabbing you unarmed (without a weapon that supports grab) gains the envenomed state and has an additional effect as detailed below. You may only have one type of venom, dictated by your species."
+subtraits = Array[ExtResource("1_vibrh")]([ExtResource("2_mjoiy")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

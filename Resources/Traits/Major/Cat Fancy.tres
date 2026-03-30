@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bao27sr0vfgbj"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_8aild"]
+
+[resource]
+script = ExtResource("1_8aild")
+name = "Cat Fancy"
+cost = 5
+description = "When you make a dramatic roll for social interaction to get something you want from a human, gain +A and skip one step."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

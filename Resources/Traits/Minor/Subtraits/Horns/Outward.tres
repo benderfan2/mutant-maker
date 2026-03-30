@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c4petdf5ptuws"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_s2h1l"]
+
+[resource]
+script = ExtResource("1_s2h1l")
+name = "Outward"
+type = 1
+cost = 1
+description = "These horns have the edged type instead of blunt. When they inflict HP damage, they inflict two injuries instead of one."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

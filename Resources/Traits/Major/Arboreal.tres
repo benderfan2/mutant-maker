@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cmvkwcc3elarr"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_6amyx"]
+[ext_resource type="Resource" uid="uid://cig7j2g3n7o3c" path="res://Resources/Traits/Major/Subtraits/Arboreal/Head-First.tres" id="2_7v57u"]
+
+[resource]
+script = ExtResource("1_6amyx")
+name = "Arboreal"
+cost = 5
+description = "You gain the Climbing skill as a specialty skill and may climb horizontally on any surface or area with widespread handholds or branches at your full MOVE, or vertically with a MOVE restriction of 1⁄2. If you’re also trained in the Climbing skill, make it a specialty skill and advance the skill three times."
+subtraits = Array[ExtResource("1_6amyx")]([ExtResource("2_7v57u")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

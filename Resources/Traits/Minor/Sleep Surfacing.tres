@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bh6elycom5su3"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_x07yt"]
+
+[resource]
+script = ExtResource("1_x07yt")
+name = "Sleep Surfacing"
+type = 1
+cost = 1
+description = "You can periodically surfaceunconsciously to breathe while sleeping, allowing you to rest in aquatic environs even if not Water-Breathing."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

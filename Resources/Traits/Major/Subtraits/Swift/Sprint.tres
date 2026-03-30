@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cspjhw8ode0l2"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_abij8"]
+
+[resource]
+script = ExtResource("1_abij8")
+name = "Sprint"
+cost = -3
+is_universal = true
+description = "You can only add 100% to your MOVE for +END turns (minimum 1), during which you gain +A on move actions and replace inactive on charges with distracted as noted above. At the end of this period or when you stop moving for a turn, gain the tired status. This trait cannot be used while tired."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

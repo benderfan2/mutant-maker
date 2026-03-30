@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c23su1ayvriv8"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_w37k0"]
+[ext_resource type="Resource" uid="uid://5e02xe36n64w" path="res://Resources/Traits/Minor/Subtraits/Claws/Ascent.tres" id="2_qtca3"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="3_7t1mu"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="4_jhpju"]
+[ext_resource type="Resource" uid="uid://daen7y88peun5" path="res://Resources/Traits/Minor/Subtraits/Claws/Hooked.tres" id="5_kbg04"]
+[ext_resource type="Resource" uid="uid://bike6etqqbcxc" path="res://Resources/Traits/Minor/Subtraits/Claws/Mauling.tres" id="6_qiptr"]
+[ext_resource type="Resource" uid="uid://dr74emqnwuqgd" path="res://Resources/Traits/Minor/Subtraits/Claws/Perching.tres" id="7_yr8tk"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="8_w8mk0"]
+[ext_resource type="Resource" uid="uid://crk84tyq250er" path="res://Resources/Traits/Minor/Subtraits/Claws/Retractable.tres" id="9_jc74y"]
+[ext_resource type="Resource" uid="uid://rgoahy2ntvqe" path="res://Resources/Traits/Minor/Subtraits/Claws/Talons.tres" id="10_sb717"]
+
+[resource]
+script = ExtResource("1_w37k0")
+name = "Claws"
+type = 1
+cost = 1
+description = "These are natural weapons that do 1d10 weapon damage with the following maneuvers: bully and press. It has the edged type."
+subtraits = Array[ExtResource("1_w37k0")]([ExtResource("2_qtca3"), ExtResource("3_7t1mu"), ExtResource("4_jhpju"), ExtResource("5_kbg04"), ExtResource("6_qiptr"), ExtResource("7_yr8tk"), ExtResource("8_w8mk0"), ExtResource("9_jc74y"), ExtResource("10_sb717")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

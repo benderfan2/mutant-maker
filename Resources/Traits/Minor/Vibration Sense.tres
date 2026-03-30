@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bso8mn2qs7gh6"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_4lri1"]
+
+[resource]
+script = ExtResource("1_4lri1")
+name = "Vibration Sense"
+type = 1
+cost = 1
+description = "You can sense other creatures by impacts they make on the earth, preventing you from gaining +D on any dramatic roll to sense creatures. You cannot sense creatures with a size rating of 4 less than you in this fashion. This only provides vague information (rough size, footfall pattern). This can be used while digging to sense creatures on the surface."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

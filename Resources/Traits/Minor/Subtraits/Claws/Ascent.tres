@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://5e02xe36n64w"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_nrrwc"]
+
+[resource]
+script = ExtResource("1_nrrwc")
+name = "Ascent"
+type = 1
+cost = 1
+description = "+A to dramatic rolls or traversal actions when climbing up a surface your claws can grip, but no benefit when trying to get down."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

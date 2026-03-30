@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://crumv64do4jwc"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_766ce"]
+
+[resource]
+script = ExtResource("1_766ce")
+name = "Spigots"
+cost = 5
+description = "You can produce silk directly from your hands or feet. Whenever a foe you have grabbed with the grab maneuver fails to grab you, they become unbalanced."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

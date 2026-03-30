@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://w2v2c5opw5yq"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_2kqfv"]
+
+[resource]
+script = ExtResource("1_2kqfv")
+name = "Fluffy"
+type = 1
+cost = 1
+description = "Gain Blunt Resistance 2. When resting, +A on any roll against cold conditions for a single character in contact with you."
+stat_modifications = Dictionary[String, int]({
+"Resistance (Blunt)": 2
+})
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

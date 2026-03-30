@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cvnfhmsgosygq"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_8aae0"]
+
+[resource]
+script = ExtResource("1_8aae0")
+name = "Crane Legs"
+type = 1
+cost = 1
+description = "Your legs are exceptionally long, increasing your height by roughly 25%, and you need not use the traversal action or suffer +D to pass through tall grass or shallow water. In addition, you gain the reach ability on your unarmed attacks."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

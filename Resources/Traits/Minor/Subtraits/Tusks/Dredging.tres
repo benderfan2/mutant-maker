@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bud28eofo4gls"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_kkxuj"]
+
+[resource]
+script = ExtResource("1_kkxuj")
+name = "Dredging"
+type = 1
+cost = 1
+description = "When a foe enters melee with you, they can relinquish the chance to inflict unbalanced on you. If they do not, you may inflict your weapon damage on them."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

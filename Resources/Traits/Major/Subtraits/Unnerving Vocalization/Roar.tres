@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://qfnopdd1jx2b"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qjea0"]
+
+[resource]
+script = ExtResource("1_qjea0")
+name = "Roar"
+cost = 5
+description = "The first time you bully a target during a fight scene, you inflict the stunned status instead of disoriented."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

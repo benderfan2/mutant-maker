@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d3llx3uuou06e"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_irhab"]
+
+[resource]
+script = ExtResource("1_irhab")
+name = "Apex Predator"
+type = 1
+cost = 1
+description = "When in your species’ natural environment, no natural, non-mutated animal will initiate a fight with you unless you attack or threaten them first. If something unnatural drives them to do so, they are +D on maneuvers against you unless you perform a maneuver against them or actively harm them."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

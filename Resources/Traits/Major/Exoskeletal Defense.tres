@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dqgmiawdshgwa"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_jib52"]
+
+[resource]
+script = ExtResource("1_jib52")
+name = "Exoskeletal Defense"
+cost = 15
+description = "Thanks to scutes, exoskeleton, or other external protection, you gain Resistance 4."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

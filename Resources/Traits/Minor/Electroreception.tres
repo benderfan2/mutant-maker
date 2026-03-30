@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://6slsp1xc5fmq"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_j4kdv"]
+
+[resource]
+script = ExtResource("1_j4kdv")
+name = "Electroreception"
+type = 1
+cost = 1
+description = "Your species can detect the electric fields of other living beings underwater. This works like the Aquatic variant of Echolocation, but only senses other animals and their comparative size (bigger, smaller, similar)."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

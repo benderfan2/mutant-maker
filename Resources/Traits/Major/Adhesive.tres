@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bydgdm6pmcn4i"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_dlsjy"]
+
+[resource]
+script = ExtResource("1_dlsjy")
+name = "Adhesive"
+cost = 5
+description = "You can travel on any surface that can hold your weight and isn’t smooth (like glass, polished metal) reducing MOVE to 1⁄2; even upside-down!"
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

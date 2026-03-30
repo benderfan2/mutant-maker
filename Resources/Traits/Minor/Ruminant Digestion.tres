@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ia0wc1wpalu5"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_1uoy0"]
+
+[resource]
+script = ExtResource("1_1uoy0")
+name = "Ruminant Digestion"
+type = 1
+cost = 1
+description = "You can feed on hardy, plentiful plants, but chewing your cud may be stinky and off-putting to some."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

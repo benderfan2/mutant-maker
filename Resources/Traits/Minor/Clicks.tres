@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dcj50jj8oe2bi"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_s5tnf"]
+
+[resource]
+script = ExtResource("1_s5tnf")
+name = "Clicks"
+type = 1
+cost = 1
+description = "You can use high-frequency clicks to communicate with other cetaceans under SR 15 within +AFF miles. Such communications only consist of one simple word, but you may have social interactions with such cetaceans by using this."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://daigw8kg53ga"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_koi4r"]
+
+[resource]
+script = ExtResource("1_koi4r")
+name = "Alpha Neurotoxin"
+cost = 10
+description = "This is a toxin rated 1d10 that inhibits the operation of muscles by attacking their nervous system. While your foe is envenomed, they are unbalanced. If they succeed at a roll while envenomed, they become tired as well."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

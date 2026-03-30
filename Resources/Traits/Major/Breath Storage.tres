@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bxwey51jvycqg"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ceu17"]
+
+[resource]
+script = ExtResource("1_ceu17")
+name = "Breath Storage"
+cost = 5
+description = "You can hold your breath longer than normal, up to your Endurance in minutes."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

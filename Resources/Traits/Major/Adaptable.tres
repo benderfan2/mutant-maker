@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c3ebt3akdw270"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ysodi"]
+
+[resource]
+script = ExtResource("1_ysodi")
+name = "Adaptable"
+cost = 5
+description = "Your species thrives in a variety of environments and circumstances. You can always find available food and water without a roll as long as you aren’t confined. When suffering +D on rolls due to the environment, status, or a state, any WILL you spend to gain +A is hardened."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

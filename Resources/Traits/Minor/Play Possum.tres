@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cxvmg4pybhlpu"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_13so3"]
+
+[resource]
+script = ExtResource("1_13so3")
+name = "Play Possum"
+type = 1
+cost = 1
+description = "You can go still, slow your heartbeat, and release a stench that would convince most that you’re dead, and you have +A on dramatic rolls to do so. You may use this as an action in a fight scene, and foes will not typically target you unless they’re familiar with your trick or if you’ve taken no injuries. When you do so, gain the inactive status that only remains while you skip actions or turns to maintain the effect."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

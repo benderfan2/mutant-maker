@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dogjwef6axh60"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_af2lt"]
+[ext_resource type="Resource" uid="uid://csk1jwmxwymkp" path="res://Resources/Traits/Minor/Subtraits/Mandibles/Chewing.tres" id="2_rjp3v"]
+[ext_resource type="Resource" uid="uid://ckhq2rk6e2wwm" path="res://Resources/Traits/Minor/Subtraits/Mandibles/Hollow.tres" id="3_whpyo"]
+[ext_resource type="Resource" uid="uid://c6lrwttp5s1ps" path="res://Resources/Traits/Minor/Subtraits/Mandibles/Piercing.tres" id="4_d15rt"]
+
+[resource]
+script = ExtResource("1_af2lt")
+name = "Mandibles"
+type = 1
+cost = 1
+description = "These are mouth parts that serve as a natural weapon doing 1d8 weapon damage with the following supported maneuvers: grab and pummel. It has the edged type."
+subtraits = Array[ExtResource("1_af2lt")]([ExtResource("2_rjp3v"), ExtResource("3_whpyo"), ExtResource("4_d15rt")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://crdn842487oos"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_s30sx"]
+
+[resource]
+script = ExtResource("1_s30sx")
+name = "Ultraviolet Sight"
+type = 1
+cost = 1
+description = "In addition to the human spectrum of light, you can see some amount of the ultraviolet spectrum. This is most often used to notice food (such as lichens or flowers that are more recognizable under UV), particular markings left by some species, special mating plumages, or artificially created UV-florescent materials."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

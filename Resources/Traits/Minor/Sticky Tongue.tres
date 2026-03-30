@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://hr0ebtrpnoti"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_4i8nu"]
+
+[resource]
+script = ExtResource("1_4i8nu")
+name = "Sticky Tongue"
+type = 1
+cost = 1
+description = "You have a long, sticky tongue that can be used to forage through insect nests or grasp tiny items in small, hard-to-reach spaces. It has a length equal to 20% of your total height or length."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cawag3jjaa4kp"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qk8ex"]
+
+[resource]
+script = ExtResource("1_qk8ex")
+name = "Bottling"
+type = 1
+cost = 1
+description = "You can sleep while swimming by resting on your back with your nose above the water to breathe, allowing you to survive in aquatic environments for extended periods."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

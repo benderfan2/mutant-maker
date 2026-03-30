@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cc3rxmqd81me0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ajho7"]
+
+[resource]
+script = ExtResource("1_ajho7")
+name = "Compress"
+type = 1
+cost = 1
+description = "Your species is particularly pliable, likely due to the lack of a skeletal structure. You can fit and move through spaces four sizes smaller than you normally could, but it removes MOVE to 1⁄10."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

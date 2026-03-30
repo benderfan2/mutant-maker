@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cl7qd5j436i11"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_yxixg"]
+
+[resource]
+script = ExtResource("1_yxixg")
+name = "Subterranean"
+cost = 5
+description = "Your MOVE reduction while digging becomes 1⁄4, and you gain +A on the next maneuver you perform the same turn you surface. If you have the Tunnel trait, treat your size rating as 2 higher for purposes of calculating the time it takes to build chambers and tunnels."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

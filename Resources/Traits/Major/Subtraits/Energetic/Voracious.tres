@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://hur3epq1opml"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_spqob"]
+
+[resource]
+script = ExtResource("1_spqob")
+name = "Voracious"
+cost = -5
+is_universal = true
+description = "You require an extraordinary amount of food, roughly 1⁄2 your body weight every day if you feed on meat, or your full body weight if you feed on plants. If you fall short, you suffer 1d12 non-injuring, absolute damage directly to HP every 24 hours and gain the tired status. This damage cannot be recovered and the status is unremovable until you consume sufficient food."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

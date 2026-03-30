@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dekr6e8qmrw2c"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_b07p1"]
+
+[resource]
+script = ExtResource("1_b07p1")
+name = "Fall Righting"
+type = 1
+cost = 1
+description = "You can ignore damage from falls up to Prowess yards in distance. Otherwise, gain Resistance 6 on any damage from a fall. Negate this trait if you are suffering from a status."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

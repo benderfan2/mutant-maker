@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cu5jp1dbcg32"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_wit30"]
+
+[resource]
+script = ExtResource("1_wit30")
+name = "Mule Kick"
+type = 1
+cost = 1
+description = "You may kick out with both rear legs, adding an additional unarmed weapon or size damage die but renders you inactive afterwards. This cannot be performed while you have the inactive status."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

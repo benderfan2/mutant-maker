@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://q54nymoqsy5d"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_jebwl"]
+
+[resource]
+script = ExtResource("1_jebwl")
+name = "Spring Leap"
+type = 1
+cost = 1
+description = "When jumping, you jump as if your size rating was 2 higher (pg. 77). If this is done a part of a charge, your foes remain unbalanced until the end of their turn."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

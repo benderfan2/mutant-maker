@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://mcphbikc1pu1"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_3bhux"]
+
+[resource]
+script = ExtResource("1_3bhux")
+name = "Rooting"
+cost = 2
+description = "You may use Enhanced Scent to attempt to detect buried items or food and suffer no +D for such. You also gain +A and halve the time on any action to dig them up."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

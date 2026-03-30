@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dwosnid3gtqjf"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_24881"]
+
+[resource]
+script = ExtResource("1_24881")
+name = "Mimicry"
+type = 1
+cost = 1
+description = "Gain +A on any dramatic roll to mimic a sound. The relevant skill is often determined by the sound, like Livestock to mimic a cow."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

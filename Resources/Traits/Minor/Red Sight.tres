@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d1hmoppo5ufuu"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_vmc8g"]
+
+[resource]
+script = ExtResource("1_vmc8g")
+name = "Red Sight"
+type = 1
+cost = 1
+description = "In addition to the human spectrum of light, you can see into the far-red spectrum, not to be confused with infrared. This is useful in picking out plants from other visual elements, and some underwater creatures that use far-red coloration to hide."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

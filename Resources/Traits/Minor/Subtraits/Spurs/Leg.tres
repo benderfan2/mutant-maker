@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://lcqf3pswtyv6"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_tm0ep"]
+
+[resource]
+script = ExtResource("1_tm0ep")
+name = "Leg"
+type = 1
+cost = 1
+description = "Add lash as a supported maneuver, and increase damage with your spines to 1d10."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

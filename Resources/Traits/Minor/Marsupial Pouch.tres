@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c7qfouyu2rmm"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_bav5t"]
+
+[resource]
+script = ExtResource("1_bav5t")
+name = "Marsupial Pouch"
+type = 1
+cost = 1
+description = "Though typically used to hold young, this can be used to hold several small items or one large item relative to your size."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

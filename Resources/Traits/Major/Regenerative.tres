@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://yfr1wo5x788o"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_m2tyl"]
+[ext_resource type="Resource" uid="uid://blhphogfbwajr" path="res://Resources/Traits/Major/Subtraits/Regenerative/Bisection.tres" id="2_wusgv"]
+
+[resource]
+script = ExtResource("1_m2tyl")
+name = "Regenerative"
+cost = 5
+description = "You heal 100% faster. By spending 1 WILL, you may heal Endurance dice in damage worth of SHT as a moment in a fight scene. If your SHT is 0, you may not perform this effect. You may also spend 1 WILL to make a severing injury non-severing."
+subtraits = Array[ExtResource("1_m2tyl")]([ExtResource("2_wusgv")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

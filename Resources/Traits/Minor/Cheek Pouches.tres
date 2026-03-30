@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bh0ux3jeafe3h"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_l8iyf"]
+
+[resource]
+script = ExtResource("1_l8iyf")
+name = "Cheek Pouches"
+type = 1
+cost = 1
+description = "You have pouches in your cheeks that can store one small item (relative to your size). People are +D to notice or discover it unless they’re familiar with this trick."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

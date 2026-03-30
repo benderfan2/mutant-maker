@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ckhq2rk6e2wwm"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_50inn"]
+
+[resource]
+script = ExtResource("1_50inn")
+name = "Hollow"
+type = 1
+cost = 1
+description = "Gain the injector trait. At the end of any turn you keep a target grabbed, increase any envenomed value they have by 1."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

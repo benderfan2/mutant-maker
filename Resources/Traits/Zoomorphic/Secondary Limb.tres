@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://crcueyvidm87n"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_js1ax"]
+[ext_resource type="Script" uid="uid://bf2tb5h3h8o6v" path="res://Scripts/trait_requirement.gd" id="1_r3vso"]
+[ext_resource type="Resource" uid="uid://cin37a48a4tmm" path="res://Resources/Traits/Minor/Prehensile Tail.tres" id="3_c5wwi"]
+[ext_resource type="Resource" uid="uid://dwn28450d5dcm" path="res://Resources/Traits/Minor/Prehensile Tongue.tres" id="4_v111r"]
+[ext_resource type="Resource" uid="uid://vnln3ttdhg1m" path="res://Resources/Traits/Minor/Prehensile Trunk.tres" id="5_0r8pf"]
+
+[sub_resource type="Resource" id="Resource_v111r"]
+script = ExtResource("1_r3vso")
+traits_list = Array[ExtResource("1_js1ax")]([ExtResource("3_c5wwi"), ExtResource("4_v111r"), ExtResource("5_0r8pf")])
+metadata/_custom_type_script = "uid://bf2tb5h3h8o6v"
+
+[resource]
+script = ExtResource("1_js1ax")
+name = "Secondary Limb"
+type = 2
+cost = 2
+description = "This upgrades a tail, tongue, or trunk to full prehensility, and you may use it to manipulate and hold objects like a human arm and hand."
+requirements = [SubResource("Resource_v111r")]
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

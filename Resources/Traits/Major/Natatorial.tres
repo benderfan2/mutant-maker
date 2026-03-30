@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d0l88sevixcu7"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_uph8w"]
+
+[resource]
+script = ExtResource("1_uph8w")
+name = "Natatorial"
+cost = 5
+description = "Your species is at home in the water. You gain the Swimming skill as a specialty skill and may swim at your full MOVE. If you’re already trained in the Swimming skill, make it a specialty skill and advance the skill three times."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

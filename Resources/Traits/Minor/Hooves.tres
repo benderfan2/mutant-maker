@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cwvsugmh5yvj4"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_2pkwj"]
+[ext_resource type="Resource" uid="uid://cu5jp1dbcg32" path="res://Resources/Traits/Minor/Subtraits/Hooves/Mule Kick.tres" id="2_4vsy6"]
+
+[resource]
+script = ExtResource("1_2pkwj")
+name = "Hooves"
+type = 1
+cost = 1
+description = "You have hooved feet. When used as a natural weapon for kicks, treat your size rating as if it were 1 larger for purposes of unarmed damage. In addition, you gain Resistance 4 against hazards inflicted by you stepping on them (like hot coals, caltrops, etc.)."
+subtraits = Array[ExtResource("1_2pkwj")]([ExtResource("2_4vsy6")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

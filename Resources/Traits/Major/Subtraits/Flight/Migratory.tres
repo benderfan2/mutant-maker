@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://4sbre7spx5fb"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_gpkqy"]
+
+[resource]
+script = ExtResource("1_gpkqy")
+name = "Migratory"
+cost = 5
+description = "You can fly for extended periods by using gusts and drafts. Roll 1d8. A 3 or less means you can stay aloft for (+END [minimum 1] x 8) hours, and a 4 or more means you can only remain for +END (minimum 1) hours. In good weather, roll 1d6 instead."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

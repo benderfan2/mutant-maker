@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://hop7fthxsnpv"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_3wpcm"]
+
+[resource]
+script = ExtResource("1_3wpcm")
+name = "Heat Sense"
+type = 1
+cost = 1
+description = "You can roughly sense infrared information, like a “hot or cold” sensation, up to (Perception) feet. This does not provide specific shapes or identifying information, but just a rough sense of relative temperature."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

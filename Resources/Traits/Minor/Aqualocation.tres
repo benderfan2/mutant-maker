@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bt5cyrhprxs4t"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_fguy1"]
+
+[resource]
+script = ExtResource("1_fguy1")
+name = "Aqualocation"
+type = 1
+cost = 1
+description = "You can sense vibrations underwater through a trigeminal sense, lateral line organs, bumpy tubercles, or specialized whiskers, granting +A to notice any motion within Perception feet while submerged."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

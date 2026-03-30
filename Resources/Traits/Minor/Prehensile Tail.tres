@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cin37a48a4tmm"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_2e32w"]
+
+[resource]
+script = ExtResource("1_2e32w")
+name = "Prehensile Tail"
+type = 1
+cost = 1
+description = "Your tail can be used as if it were a limb with the grasping level of prehensility."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

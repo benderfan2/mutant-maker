@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://djd56kp46iaby"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_3iben"]
+
+[resource]
+script = ExtResource("1_3iben")
+name = "Diving"
+cost = 5
+description = "By losing altitude, you can increase your MOVE bonus to 300% for a turn and maximize your size or weapon damage dice (your choice) for any maneuver performed that turn. Recovering the necessary altitude to dive again takes 1d6 dash or sprint actions. Reduce this recovery time by 50% (rounded up) in good flying weather."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

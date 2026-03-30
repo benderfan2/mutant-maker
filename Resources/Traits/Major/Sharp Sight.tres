@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bb4d7frpl77cw"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_7undd"]
+
+[resource]
+script = ExtResource("1_7undd")
+name = "Sharp Sight"
+cost = 5
+description = "You suffer no +D for dramatic rolls done to notice details or creatures while sprinting, and you do not suffer +D to use a maneuver against a sprinting target. In addition, you gain +A on maneuvers if you have moved this turn."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

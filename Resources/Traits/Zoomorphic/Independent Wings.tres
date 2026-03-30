@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bm138xahv8gdh"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_0swkw"]
+
+[resource]
+script = ExtResource("1_0swkw")
+name = "Independent Wings"
+type = 2
+cost = 5
+description = "Your wings are separate limbs from your arms, allowing you to fly and manipulate objects at the same time."
+requirements = ["Winged"]
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

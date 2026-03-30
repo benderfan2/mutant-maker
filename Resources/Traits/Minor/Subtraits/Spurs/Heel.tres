@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cywiapyv0fil4"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_0jrl0"]
+
+[resource]
+script = ExtResource("1_0jrl0")
+name = "Heel"
+type = 1
+cost = 1
+description = "When you are surprised by a foe that moves into melee with you, have no +D to perform a strike with your spurs in the first turn of a fight scene, and their damage is increased to 2d8. When you perform such a strike, lose the unbalanced status if you have it before rolling."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

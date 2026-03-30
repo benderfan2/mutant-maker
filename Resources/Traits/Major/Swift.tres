@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c17ob0dacm23"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_4232y"]
+[ext_resource type="Resource" uid="uid://2qoxma8ybhwy" path="res://Resources/Traits/Major/Subtraits/Swift/Saltation.tres" id="2_xhlu5"]
+[ext_resource type="Resource" uid="uid://cspjhw8ode0l2" path="res://Resources/Traits/Major/Subtraits/Swift/Sprint.tres" id="3_ak1hg"]
+[ext_resource type="Resource" uid="uid://bujgoce3ed40e" path="res://Resources/Traits/Major/Subtraits/Swift/Swimmer.tres" id="4_s3nge"]
+
+[resource]
+script = ExtResource("1_4232y")
+name = "Swift"
+cost = 8
+description = "As a particularly quick creature, you add 100% to MOVE on land. When performing a charge, you become distracted rather than inactive. You also gain +A on move actions that don’t involve climbing, swimming, or mutation-based forms of movement (burrowing, flying, etc.)."
+subtraits = Array[ExtResource("1_4232y")]([ExtResource("2_xhlu5"), ExtResource("3_ak1hg"), ExtResource("4_s3nge")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

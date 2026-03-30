@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://daen7y88peun5"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_6coyg"]
+
+[resource]
+script = ExtResource("1_6coyg")
+name = "Hooked"
+type = 1
+cost = 1
+description = "Your claws can grip prey. Treat grab as a supported maneuver for this weapon."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

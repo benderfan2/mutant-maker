@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bkkleb0lsg4lr"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_hl65d"]
+
+[resource]
+script = ExtResource("1_hl65d")
+name = "Communal"
+type = 1
+cost = 1
+description = "You’re used to living in a group environment. Add +2 to +AFF when performing teamwork as part of a dramatic roll."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ciqnvsu0ydcex"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_3ih7u"]
+
+[resource]
+script = ExtResource("1_3ih7u")
+name = "Hood"
+type = 1
+cost = 1
+description = "You have a loose flap of skin that can extended to make you look larger and more threatening. Gain bully as a maneuver for your fighting style. If you become unbalanced due to a foe’s dash or charge, you can spend 1 WILL to make the foe that just entered melee unbalanced, and end your unbalanced condition."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://br1kqremlpags"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_cvqts"]
+[ext_resource type="Resource" uid="uid://dsalxnv4nxmg8" path="res://Resources/Traits/Minor/Subtraits/Camouflage/Color Shift.tres" id="2_7gab0"]
+
+[resource]
+script = ExtResource("1_cvqts")
+name = "Camouflage"
+type = 1
+cost = 1
+description = "When in the natural environment for your species, gain +A on any dramatic roll to go unnoticed. Urban environments are considered unnatural for the purposes of this trait."
+subtraits = Array[ExtResource("1_cvqts")]([ExtResource("2_7gab0")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

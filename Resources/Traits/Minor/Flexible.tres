@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bdihns3okd56b"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_padqm"]
+
+[resource]
+script = ExtResource("1_padqm")
+name = "Flexible"
+type = 2
+cost = 1
+description = "+A to slip into small spaces or openings. When grabbed, you cannot suffer +D on any attempt to use the grab maneuver on the grabbing foe."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://2qoxma8ybhwy"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_hnv6c"]
+
+[resource]
+script = ExtResource("1_hnv6c")
+name = "Saltation"
+cost = 2
+description = "You make broad, long leaps when traveling quickly. You can jump as if your size rating was 5 higher. Gain +A to move actions in a fight scene and +A in dramatic rolls where obstacles and gaps are an issue (like chases across rooftops, travel across hazardous areas, or pursuit through an open-air market)."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

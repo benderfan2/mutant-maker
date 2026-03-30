@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://wa308j3wsjv6"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_3iphi"]
+[ext_resource type="Resource" uid="uid://bcd8nhmgge0tk" path="res://Resources/Traits/Major/Subtraits/Unnerving Vocalization/Bark.tres" id="2_14l58"]
+[ext_resource type="Resource" uid="uid://b6k3u0f5ik7po" path="res://Resources/Traits/Major/Subtraits/Unnerving Vocalization/Bellow.tres" id="3_lstdd"]
+[ext_resource type="Resource" uid="uid://cm2niwbyp6ymp" path="res://Resources/Traits/Major/Subtraits/Unnerving Vocalization/Snicker.tres" id="4_wfi5i"]
+[ext_resource type="Resource" uid="uid://qfnopdd1jx2b" path="res://Resources/Traits/Major/Subtraits/Unnerving Vocalization/Roar.tres" id="5_q0eio"]
+
+[resource]
+script = ExtResource("1_3iphi")
+name = "Unnerving Vocalization"
+cost = 3
+description = "Your species has an eerie call, howl, trumpet, or snicker that can alarm other species. When you bully a foe, they become disoriented in addition to startled. You add the bully maneuver to your fighting style. This does not affect targets that have the same classification type as you. If you have multiple sub-traits that enhance this, only one may be used per bully maneuver."
+subtraits = Array[ExtResource("1_3iphi")]([ExtResource("2_14l58"), ExtResource("3_lstdd"), ExtResource("4_wfi5i"), ExtResource("5_q0eio")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

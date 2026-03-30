@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dvni6x7ifkw4h"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_vnau3"]
+
+[resource]
+script = ExtResource("1_vnau3")
+name = "Pack Hunter"
+type = 1
+cost = 1
+description = "When hunting cooperatively, you add +1 to your +AFF when determining the benefits of teamwork on dramatic rolls related to the hunt. Add an additional +1 for each ally participating in teamwork that also has the Pack Hunter trait."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

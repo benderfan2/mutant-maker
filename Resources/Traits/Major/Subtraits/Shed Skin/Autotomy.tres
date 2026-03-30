@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c6djt1nmp7b47"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_kdayu"]
+
+[resource]
+script = ExtResource("1_kdayu")
+name = "Autotomy"
+cost = 3
+description = "You may also lose your tail to assist a saving throw against a grapple or swallow maneuver. When you do so, you may automatically succeed, taking the damage listed above, as well as any damage still suffered normally. Like Shed Skin, this cannot be used if you have HP damage, and grants temporary WILL after an escape."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"
