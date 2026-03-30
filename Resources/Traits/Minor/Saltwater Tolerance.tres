@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cfqa1fkduipnj"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_s32lk"]
+
+[resource]
+script = ExtResource("1_s32lk")
+name = "Saltwater Tolerance"
+type = 1
+cost = 1
+description = "You suffer no harm or +D for remaining in saltwater environments and can drink saltwater without harm."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

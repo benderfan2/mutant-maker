@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dlg3opw30eb4p"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_44ipk"]
+
+[resource]
+script = ExtResource("1_44ipk")
+name = "Suction Cups"
+type = 1
+cost = 1
+description = "You can climb up sheer and slippery surfaces, though you still require a dramatic roll to do so."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

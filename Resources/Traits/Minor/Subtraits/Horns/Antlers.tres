@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dhdbk7vtr2y1o"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_8j2cb"]
+
+[resource]
+script = ExtResource("1_8j2cb")
+name = "Antlers"
+type = 1
+cost = 1
+description = "If a foe tries to counter an attack from your horns, roll your weapon damage, and reduce the damage of their counter by that much. This effect does not inflict damage."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

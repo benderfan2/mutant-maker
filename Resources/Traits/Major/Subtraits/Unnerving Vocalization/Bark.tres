@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bcd8nhmgge0tk"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_oebpm"]
+[ext_resource type="Script" uid="uid://bf2tb5h3h8o6v" path="res://Scripts/trait_requirement.gd" id="1_qm7o6"]
+[ext_resource type="Resource" uid="uid://b6k3u0f5ik7po" path="res://Resources/Traits/Major/Subtraits/Unnerving Vocalization/Bellow.tres" id="3_j8bis"]
+
+[sub_resource type="Resource" id="Resource_v3svb"]
+script = ExtResource("1_qm7o6")
+traits_list = Array[ExtResource("1_oebpm")]([ExtResource("3_j8bis")])
+require_not_having = true
+metadata/_custom_type_script = "uid://bf2tb5h3h8o6v"
+
+[resource]
+script = ExtResource("1_oebpm")
+name = "Bark"
+cost = 2
+description = "If you successfully bully a foe, they cannot reenter melee with you while they have any disoriented status you’ve inflicted. You cannot have this sub-trait if you have the Bellow sub-trait."
+requirements = [SubResource("Resource_v3svb")]
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

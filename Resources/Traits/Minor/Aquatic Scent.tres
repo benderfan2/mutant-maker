@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://lhovfgshxid0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_11053"]
+
+[resource]
+script = ExtResource("1_11053")
+name = "Aquatic Scent"
+type = 1
+cost = 1
+description = "You may detect scents underwater."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

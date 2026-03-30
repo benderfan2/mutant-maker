@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dbjv5755uodw0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_g05fo"]
+[ext_resource type="Resource" uid="uid://bs1wnu3birgu3" path="res://Resources/Traits/Major/Subtraits/Musk/Smelly.tres" id="2_bllg4"]
+[ext_resource type="Resource" uid="uid://b1cwxa7vp4j30" path="res://Resources/Traits/Major/Subtraits/Musk/Spray.tres" id="3_rpb47"]
+
+[resource]
+script = ExtResource("1_g05fo")
+name = "Musk"
+cost = 10
+description = "You have a powerful smell. When somebody enters melee with you, they become unbalanced. Furthermore, when you enter melee with somebody else, the unbalanced status lasts until the end of their next turn."
+subtraits = Array[ExtResource("1_g05fo")]([ExtResource("2_bllg4"), ExtResource("3_rpb47")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

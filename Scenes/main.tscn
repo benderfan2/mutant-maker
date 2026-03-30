@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://qepwjdkkhymc"]
 
-[ext_resource type="Script" uid="uid://ckehdcx6ki17t" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://ckehdcx6ki17t" path="res://Scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Theme" uid="uid://dtsi5cphcij6i" path="res://marked_attribute_theme.tres" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://b23j2d553syct" path="res://Attribute Picker.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b23j2d553syct" path="res://Scenes/Attribute Picker.tscn" id="3_h2yge"]
 
 [node name="Control" type="PanelContainer" unique_id=162022356]
 anchors_preset = 15
@@ -789,6 +789,7 @@ visible = false
 layout_mode = 2
 
 [node name="RollBackgroundButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundContainer" unique_id=798908786]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Roll Background"
 
@@ -841,12 +842,39 @@ layout_mode = 2
 disabled = true
 text = "Swap"
 
+[node name="BackgroundTableLockButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundContainer/BackgroundTableRollContainer" unique_id=1631179645]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Lock"
+
 [node name="BackgroundTableResultDescriptionLabel" type="RichTextLabel" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundContainer" unique_id=1831758730]
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
 text = "Background Description Goes Here."
 fit_content = true
+
+[node name="SpeciesContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer" unique_id=1470057060]
+visible = false
+layout_mode = 2
+
+[node name="RollSpeciesButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer" unique_id=642560515]
+layout_mode = 2
+
+[node name="SpeciesTableContainer" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer" unique_id=1890273795]
+layout_mode = 2
+
+[node name="SpeciesTableLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/SpeciesTableContainer" unique_id=1709544577]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Background Table"
+horizontal_alignment = 1
+
+[node name="SpeciesTable" type="OptionButton" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/SpeciesTableContainer" unique_id=449784244]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
 
 [node name="AttributePicker" parent="TabContainer/Create/Rolls/VBoxContainer" unique_id=529555240 instance=ExtResource("3_h2yge")]
 unique_name_in_owner = true
@@ -867,3 +895,4 @@ visible = false
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer/SourceOfMutationRerollButton" to="." method="_on_source_of_mutation_reroll_button_pressed"]
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer/SourceOfMutationSwapButton" to="." method="_on_source_of_mutation_swap_button_pressed"]
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer/SourceOfMutationLockButton" to="." method="_on_source_of_mutation_lock_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundContainer/RollBackgroundButton" to="." method="_on_roll_background_button_pressed"]

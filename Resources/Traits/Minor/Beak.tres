@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://i5eu444p2lgi"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_s8i2q"]
+[ext_resource type="Resource" uid="uid://c05hb8ebs4ryh" path="res://Resources/Traits/Minor/Subtraits/Beak/Hooked.tres" id="2_fj7d8"]
+[ext_resource type="Resource" uid="uid://bg30pfss6777g" path="res://Resources/Traits/Minor/Subtraits/Beak/Nutcracker.tres" id="3_pvdyb"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="4_cjgrh"]
+[ext_resource type="Resource" uid="uid://fk0j8qfupy2a" path="res://Resources/Traits/Minor/Subtraits/Beak/Poking.tres" id="5_j2s2x"]
+
+[resource]
+script = ExtResource("1_s8i2q")
+name = "Beak"
+type = 1
+cost = 1
+description = "This is a natural weapon that does 1d8 weapon damage with the following supported maneuvers: counter and lash. It has the edged type."
+subtraits = Array[ExtResource("1_s8i2q")]([ExtResource("2_fj7d8"), ExtResource("3_pvdyb"), ExtResource("4_cjgrh"), ExtResource("5_j2s2x")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

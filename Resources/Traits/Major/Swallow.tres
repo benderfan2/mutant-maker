@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bb5p0skr75bd0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_cxr38"]
+
+[resource]
+script = ExtResource("1_cxr38")
+name = "Swallow"
+cost = 10
+description = "Your species typically swallows their prey whole. If you are grabbing a foe with a size rating at least 2 lower than your own, you may make a second grab attempt to swallow them. A success replaces the grabbed status with the swallowed status (pg. 85) and your grabbing status with the swallowing status (pg. 85). If you cannot digest what you’re swallowing due to dietary limitations, the +D on all actions while having a target swallowed is hardened due to indigestion."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

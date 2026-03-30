@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://iu04sudfa1ld"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qa3vo"]
+[ext_resource type="Resource" uid="uid://cywiapyv0fil4" path="res://Resources/Traits/Minor/Subtraits/Spurs/Heel.tres" id="2_i1j87"]
+[ext_resource type="Resource" uid="uid://lcqf3pswtyv6" path="res://Resources/Traits/Minor/Subtraits/Spurs/Leg.tres" id="3_hmdde"]
+[ext_resource type="Resource" uid="uid://b8wryga8olesq" path="res://Resources/Traits/Minor/Subtraits/Spurs/Belly.tres" id="4_vls7h"]
+[ext_resource type="Resource" uid="uid://dbogp4ur0r846" path="res://Resources/Traits/Minor/Subtraits/Spurs/Back.tres" id="5_3xeey"]
+
+[resource]
+script = ExtResource("1_qa3vo")
+name = "Spurs"
+type = 1
+cost = 1
+description = "This represents a variety of spiky growths that inflict 1d8 weapon damage at +D, with the supported maneuver: counter. This +D is negated if your spurs are performing a maneuver supported by this trait or you have the grabbed status and are targeting your grabbing foe. They have the edged type."
+subtraits = Array[ExtResource("1_qa3vo")]([ExtResource("2_i1j87"), ExtResource("3_hmdde"), ExtResource("4_vls7h"), ExtResource("5_3xeey")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

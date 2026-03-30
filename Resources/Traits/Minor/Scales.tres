@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ckpt5coeqiea2"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_0tnc5"]
+
+[resource]
+script = ExtResource("1_0tnc5")
+name = "Scales"
+type = 1
+cost = 1
+description = "Gain Resistance 1."
+stat_modifications = Dictionary[String, int]({
+"Resistance": 1
+})
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

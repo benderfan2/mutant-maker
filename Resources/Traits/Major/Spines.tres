@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bo6jf3dxrigps"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_tv4er"]
+[ext_resource type="Resource" uid="uid://bmbtvnd5bkdjr" path="res://Resources/Traits/Major/Subtraits/Spines/Darts.tres" id="2_av47g"]
+
+[resource]
+script = ExtResource("1_tv4er")
+name = "Spines"
+cost = 15
+description = "Your body is covered in sharp spines. This grants Resistance 3, and any damage dice negated by this Resistance in melee are instead inflicted on the attacker. Any attempt by a foe to grab you inflicts your size damage dice on them whether the grab is successful or not."
+subtraits = Array[ExtResource("1_tv4er")]([ExtResource("2_av47g")])
+stat_modifications = Dictionary[String, int]({
+"Resistance": 3
+})
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

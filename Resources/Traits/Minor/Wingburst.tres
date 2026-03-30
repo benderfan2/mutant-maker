@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dscj2y75tnqwd"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_kis7y"]
+
+[resource]
+script = ExtResource("1_kis7y")
+name = "Wingburst"
+type = 1
+cost = 1
+description = "You can use your wings to enhance your ground-running. Gain +A on traverse actions that don’t involve digging, flying, climbing, or swimming. When performing only move actions in a turn, you may add 50% to your MOVE. This pace can be maintained for +END turns (minimum 1), after which you become tired. You cannot use this trait while you have the tired status."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bs1wnu3birgu3"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_k6jon"]
+
+[resource]
+script = ExtResource("1_k6jon")
+name = "Smelly"
+cost = -5
+is_universal = true
+description = "You cannot hide your scent from others in the area, even if you remain hidden visually. Any creature with Scent gains +A on attempts to find you as long as you’re in proximity (approximately your Endurance in feet), or they’ve otherwise clued into your recent presence (such as through tracking). Attempts to track you with Enhanced Scent are also +A."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

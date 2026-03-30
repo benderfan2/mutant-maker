@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bmtyynarowxx4"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_sxrhl"]
+
+[resource]
+script = ExtResource("1_sxrhl")
+name = "Blunt"
+type = 1
+cost = 1
+description = "These only do 1d8 damage, but any foe hit gains the prone status."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

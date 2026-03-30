@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://sn6n4udfs8o1"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_fa3ua"]
+
+[resource]
+script = ExtResource("1_fa3ua")
+name = "Long Neck"
+type = 1
+cost = 1
+description = "Your neck increases your height by roughly 50% and negates +D on dramatic rolls due to obstructions like grass, some walls, bushes, etc."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

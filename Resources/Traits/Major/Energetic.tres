@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d0a0n266f6avr"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_q14ei"]
+[ext_resource type="Resource" uid="uid://hur3epq1opml" path="res://Resources/Traits/Major/Subtraits/Energetic/Voracious.tres" id="2_0qaqq"]
+
+[resource]
+script = ExtResource("1_q14ei")
+name = "Energetic"
+cost = 15
+description = "You have a high metabolic rate, which allows you to gain an additional move action or moment each turn. However, you cannot focus unless you skip using that move action or moment."
+subtraits = Array[ExtResource("1_q14ei")]([ExtResource("2_0qaqq")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

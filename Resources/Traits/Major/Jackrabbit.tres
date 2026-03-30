@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b6okokd4ipvyj"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_sqya3"]
+
+[resource]
+script = ExtResource("1_sqya3")
+name = "Jackrabbit"
+cost = 5
+description = "Gain +A on initiative. If you already have +A on initiative, harden it. All foes targeting you with maneuvers for your first turn in a fight scene gain +D. This +D does not apply if you voluntarily enter a melee or use a maneuver against a foe."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

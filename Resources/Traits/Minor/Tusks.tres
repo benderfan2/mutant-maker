@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dr2khibmxxpbd"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_x6gwe"]
+[ext_resource type="Resource" uid="uid://gqa2j6nxmspf" path="res://Resources/Traits/Minor/Subtraits/Tusks/Defensive.tres" id="2_kc5i4"]
+[ext_resource type="Resource" uid="uid://bud28eofo4gls" path="res://Resources/Traits/Minor/Subtraits/Tusks/Dredging.tres" id="3_qdq5t"]
+[ext_resource type="Resource" uid="uid://bymplldyi6x4p" path="res://Resources/Traits/Minor/Subtraits/Tusks/Goring.tres" id="4_ha50j"]
+
+[resource]
+script = ExtResource("1_x6gwe")
+name = "Tusks"
+type = 1
+cost = 1
+description = "These are natural defensive weapons that inflict 1d10 weapon damage at +D on strikes but are triggered by special circumstances. These have the edged type."
+subtraits = Array[ExtResource("1_x6gwe")]([ExtResource("2_kc5i4"), ExtResource("3_qdq5t"), ExtResource("4_ha50j")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

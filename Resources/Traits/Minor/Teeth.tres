@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b035fmvxm5vix"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_fx83s"]
+[ext_resource type="Resource" uid="uid://dxccbsmwvplbx" path="res://Resources/Traits/Minor/Subtraits/Teeth/Baleen.tres" id="2_06pmf"]
+[ext_resource type="Resource" uid="uid://bmunn0y3qbi21" path="res://Resources/Traits/Minor/Subtraits/Teeth/Crushing.tres" id="3_mxo8m"]
+[ext_resource type="Resource" uid="uid://c8wbmqbrsa6ub" path="res://Resources/Traits/Minor/Subtraits/Teeth/Fanged.tres" id="4_c1dkv"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="5_6502e"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="6_pveng"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="7_oenxx"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="8_g8w5s"]
+[ext_resource type="Resource" uid="uid://dboslq5lcqxhm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Slaying.tres" id="9_y4wef"]
+
+[resource]
+script = ExtResource("1_fx83s")
+name = "Teeth"
+type = 1
+cost = 1
+description = "These are natural weapons that inflict 1d8 weapon damage with the following supported maneuvers: grab and knockdown. It has the edged type."
+subtraits = Array[ExtResource("1_fx83s")]([ExtResource("2_06pmf"), ExtResource("3_mxo8m"), ExtResource("4_c1dkv"), ExtResource("5_6502e"), ExtResource("6_pveng"), ExtResource("7_oenxx"), ExtResource("8_g8w5s"), ExtResource("9_y4wef")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bujgoce3ed40e"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_cfq43"]
+
+[resource]
+script = ExtResource("1_cfq43")
+name = "Swimmer"
+cost = -3
+description = "You add your movement bonus to aquatic movement rather than land movement, and the benefits of Swift only apply while swimming."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

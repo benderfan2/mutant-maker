@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://gqa2j6nxmspf"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_82xcj"]
+
+[resource]
+script = ExtResource("1_82xcj")
+name = "Defensive"
+type = 1
+cost = 1
+description = "If a foe misses you and has a raw roll of 1 or 2, you may inflict your weapon damage."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

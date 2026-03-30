@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b0k7xvwttpblk"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qbml1"]
+
+[resource]
+script = ExtResource("1_qbml1")
+name = "Rot Digestion"
+type = 1
+cost = 1
+description = "For carnivore species, you can consume spoiled food without serious issue. For herbivore species, you can consume decaying plant matter and topsoil (though the latter isn’t as nutritious). Note that detritivores already make soil and decaying matter their chief form of sustenance, and don’t need this trait unless they have evolved beyond that form of diet."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

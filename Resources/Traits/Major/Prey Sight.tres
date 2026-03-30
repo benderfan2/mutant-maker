@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://yi4a6fiv1e8q"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_tfv0d"]
+[ext_resource type="Resource" uid="uid://dtxhgp8fx3orm" path="res://Resources/Traits/Major/Subtraits/Prey Sight/Nearsighted.tres" id="2_j0nls"]
+
+[resource]
+script = ExtResource("1_tfv0d")
+name = "Prey Sight"
+cost = 5
+description = "+A on all rolls to notice movement or avoid surprise, and you can ignore the unbalanced condition on rolls to retreat."
+subtraits = Array[ExtResource("1_tfv0d")]([ExtResource("2_j0nls")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

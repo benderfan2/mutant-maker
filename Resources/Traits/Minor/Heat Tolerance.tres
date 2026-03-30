@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cpyd8qym2kgr1"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_mc02f"]
+
+[resource]
+script = ExtResource("1_mc02f")
+name = "Heat Tolerance"
+type = 1
+cost = 1
+description = "You suffer no harm or +D for a hot environment within your species’ natural habitat."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

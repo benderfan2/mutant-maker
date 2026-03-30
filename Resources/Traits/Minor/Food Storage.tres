@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b2h18k52aow2h"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_40sui"]
+
+[resource]
+script = ExtResource("1_40sui")
+name = "Food Storage"
+type = 1
+cost = 1
+description = "By consuming 100% extra food for +END days, you can go Endurance days without food before tracking the time it would take to begin starving."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

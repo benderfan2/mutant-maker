@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://qpoj52a7eogt"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_e6wxn"]
+
+[resource]
+script = ExtResource("1_e6wxn")
+name = "Longevity"
+type = 1
+cost = 1
+description = "You take longer to die of age-related causes and will live 100% longer than a human of comparable health. Gain +2 SHT."
+stat_modifications = Dictionary[String, int]({
+"SHT": 2
+})
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

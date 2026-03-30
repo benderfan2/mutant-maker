@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dyj3khmmbufe0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_okcwx"]
+
+[resource]
+script = ExtResource("1_okcwx")
+name = "Inspirational"
+type = 1
+cost = 1
+description = "Your species has a fighting style modeled after it, and you can select that fighting style even if your background doesn’t offer it. In addition, choose a maneuver used by your style and a natural weapon that does not use that maneuver. That natural weapon now supports that maneuver."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

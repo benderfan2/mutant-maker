@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bdq3hw8jsuthv"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_xqsia"]
+
+[resource]
+script = ExtResource("1_xqsia")
+name = "Gamma Bufotoxin"
+cost = 5
+description = "This is a toxin rated 1d8 that inhibits the circulatory system and inflicts hallucinogenic effects. While your foe is envenomed, they are disoriented. If you’re grabbed, the toxin is only 1d6."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

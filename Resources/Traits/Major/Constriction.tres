@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d00xdfslrjtuw"]
+
+[ext_resource type="Script" uid="uid://bf2tb5h3h8o6v" path="res://Scripts/trait_requirement.gd" id="1_ky4d5"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qqahi"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="3_huood"]
+
+[sub_resource type="Resource" id="Resource_apfjp"]
+script = ExtResource("1_ky4d5")
+traits_list = Array[ExtResource("1_qqahi")]([ExtResource("3_huood")])
+metadata/_custom_type_script = "uid://bf2tb5h3h8o6v"
+
+[resource]
+script = ExtResource("1_qqahi")
+name = "Constriction"
+cost = 5
+description = "When you grab a target with your hands or body, +A on rolls with the knockout or pummel maneuvers, and treat them as supported maneuvers by your fighting style while grappling."
+requirements = [SubResource("Resource_apfjp")]
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

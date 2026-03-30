@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dn0isbtmed402"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_kc5yw"]
+
+[resource]
+script = ExtResource("1_kc5yw")
+name = "Rock Climber"
+type = 1
+cost = 1
+description = "You gain no +D or MOVE loss for moving across mountainous or rocky terrain, and you may ascend with MOVE reduced to 1⁄2 on a reasonable grade (that is, not flatly vertical, and with footholds) without needing a dramatic roll."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

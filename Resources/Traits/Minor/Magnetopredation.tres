@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c63hasr3dtjjg"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_pw3q0"]
+
+[resource]
+script = ExtResource("1_pw3q0")
+name = "Magnetopredation"
+type = 1
+cost = 1
+description = "You can use the magnetic field to sense the precise angle to strike. When you attack a foe by surprise, maximize your lowest single damage die."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

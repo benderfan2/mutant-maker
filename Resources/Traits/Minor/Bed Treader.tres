@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://byhyi24ci3tfy"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_uo4yx"]
+
+[resource]
+script = ExtResource("1_uo4yx")
+name = "Bed Treader"
+type = 1
+cost = 1
+description = "Instead of swimming, you may move along the bed of a body of water, moving at 3⁄4 of your land MOVE. This doesn’t require a roll outside of powerful currents, but it is limited by your ability to breathe."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

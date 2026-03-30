@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d07jai4noyqvu"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_us6ex"]
+
+[resource]
+script = ExtResource("1_us6ex")
+name = "Death Roll"
+type = 1
+cost = 1
+description = "When grabbing a target while in water deep enough to submerse you both, you inflict the disoriented status that does not end while your target remains grabbed and in water."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

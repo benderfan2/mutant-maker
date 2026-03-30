@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dtxhgp8fx3orm"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_vvlpb"]
+
+[resource]
+script = ExtResource("1_vvlpb")
+name = "Nearsighted"
+cost = -3
+is_universal = true
+description = "You gain +D on any ranged maneuver keyed to Prowess or Speed."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

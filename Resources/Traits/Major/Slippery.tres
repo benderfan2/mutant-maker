@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://3id5xuxkmatj"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_4seol"]
+
+[resource]
+script = ExtResource("1_4seol")
+name = "Slippery"
+cost = 5
+description = "You’re remarkably smooth or slimy. Foes are +D to grab you."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

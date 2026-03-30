@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b0csl80jfgdad"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_2ebat"]
+
+[resource]
+script = ExtResource("1_2ebat")
+name = "Warding"
+type = 1
+cost = 1
+description = "When a foe is in melee with you and you are not suffering a status, these grant Resistance 2."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

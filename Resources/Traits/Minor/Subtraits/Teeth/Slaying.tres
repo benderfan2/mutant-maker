@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dboslq5lcqxhm"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_1inpr"]
+
+[resource]
+script = ExtResource("1_1inpr")
+name = "Slaying"
+type = 1
+cost = 1
+description = "Strikes with these teeth are at +A if the opponent is prone or grabbed."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

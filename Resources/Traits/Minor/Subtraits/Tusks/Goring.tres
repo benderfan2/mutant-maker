@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bymplldyi6x4p"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_or16a"]
+
+[resource]
+script = ExtResource("1_or16a")
+name = "Goring"
+type = 1
+cost = 1
+description = "Add knockdown as a supported maneuver and inflict 1d12 weapon damage when using these tusks as part of a knockdown."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

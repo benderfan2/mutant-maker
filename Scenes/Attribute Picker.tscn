@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b23j2d553syct"]
 
-[ext_resource type="Script" uid="uid://bthxjo2pju632" path="res://attribute_picker.gd" id="1_7520t"]
+[ext_resource type="Script" uid="uid://bthxjo2pju632" path="res://Scripts/attribute_picker.gd" id="1_7520t"]
 
 [node name="AttributePicker" type="PopupPanel" unique_id=529555240]
 oversampling_override = 1.0

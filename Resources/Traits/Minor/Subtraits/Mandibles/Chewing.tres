@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://csk1jwmxwymkp"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ixwn2"]
+
+[resource]
+script = ExtResource("1_ixwn2")
+name = "Chewing"
+type = 1
+cost = 1
+description = "If you strike a foe successfully with mandibles, you increase your damage die twice for mandibles on the next strike against the same foe on your next turn. However, if you miss that strike or are no longer in melee with said foe, you lose this benefit."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

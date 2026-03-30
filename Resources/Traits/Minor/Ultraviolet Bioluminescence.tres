@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bsvrf3xx547vj"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_lpvdj"]
+
+[resource]
+script = ExtResource("1_lpvdj")
+name = "Ultraviolet Bioluminescence"
+type = 1
+cost = 1
+description = "You can glow in the ultraviolet spectrum. Only characters with ultraviolet sight can notice this, but such characters gain +A to notice you."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

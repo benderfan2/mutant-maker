@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c4rp46fpmq1cm"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_hp8n7"]
+
+[resource]
+script = ExtResource("1_hp8n7")
+name = "Gnawing"
+type = 1
+cost = 1
+description = "These teeth gain Piercing 1, and additionally reduce Armor by 1 on a successful attack that would do HP damage. This reduction remains until the end of the scene, and is cumulative."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

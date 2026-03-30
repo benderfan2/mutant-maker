@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ddrd0wki6dwxd"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_uk7mi"]
+
+[resource]
+script = ExtResource("1_uk7mi")
+name = "Good Dog"
+cost = 5
+description = "Most humans will do their best to avoid harming you if you have not injured or threatened them, and they gain +D to attack you while you have not targeted them or their allies with a maneuver. Gain +A on any roll to try and deescalate a situation."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

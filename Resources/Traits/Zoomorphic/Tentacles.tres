@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://db62b5t07jp5g"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_4pkg4"]
+
+[resource]
+script = ExtResource("1_4pkg4")
+name = "Tentacles"
+type = 2
+description = "his is a free trait for species that feature it. When you spend WILL to gain +A on a grab or disarm roll, that advantage is hardened."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

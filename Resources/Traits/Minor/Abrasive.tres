@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c8xfp0pmyxer"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_1tvp4"]
+
+[resource]
+script = ExtResource("1_1tvp4")
+name = "Abrasive"
+type = 1
+cost = 1
+description = "Whenever you’re grabbed, the character grabbing you takes 2 non-injuring damage at the end of each of their turns while they have maintained the grabbing state (even if they end the grabbing state partway through the turn)."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

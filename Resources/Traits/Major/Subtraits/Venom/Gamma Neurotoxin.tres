@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dp7aky7srybii"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_gi7jg"]
+
+[resource]
+script = ExtResource("1_gi7jg")
+name = "Gamma Neurotoxin"
+description = "This is a small dose of a 1d6 toxin that attacks the central nervous system. While your foe is envenomed, they become tired."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://duiu5dsnbwcim"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_a4yb4"]
+[ext_resource type="Resource" uid="uid://0po20huyfym7" path="res://Resources/Traits/Major/Subtraits/Burrow/Tunnel.tres" id="2_hv7go"]
+[ext_resource type="Resource" uid="uid://cl7qd5j436i11" path="res://Resources/Traits/Major/Subtraits/Burrow/Subterranean.tres" id="3_ep3bo"]
+[ext_resource type="Resource" uid="uid://bk8qyylh4rbdw" path="res://Resources/Traits/Major/Subtraits/Burrow/Slow.tres" id="4_8kods"]
+
+[resource]
+script = ExtResource("1_a4yb4")
+name = "Burrow"
+cost = 10
+description = "You may move through earth, soil, and sand with MOVE reduced to 1⁄10, as well as craft simple dens appropriate to your size, given the proper earth."
+subtraits = Array[ExtResource("1_a4yb4")]([ExtResource("2_hv7go"), ExtResource("3_ep3bo"), ExtResource("4_8kods")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

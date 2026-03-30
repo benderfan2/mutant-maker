@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dsqigdsvxw862"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_m4nha"]
+[ext_resource type="Resource" uid="uid://bkiyviwp87l18" path="res://Resources/Traits/Major/Subtraits/Echolocation/Aquatic.tres" id="2_0qn1b"]
+
+[resource]
+script = ExtResource("1_m4nha")
+name = "Echolocation"
+cost = 10
+description = "You can use echoes to find your way in complete darkness, though you must make appropriate noises to do so. You do not suffer +D from lighting or the blind status, but this sense has dramatic limitations (like the inability to tell color or read text). This does not function in water."
+subtraits = Array[ExtResource("1_m4nha")]([ExtResource("2_0qn1b")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

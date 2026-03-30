@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bmunn0y3qbi21"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_b1yt2"]
+
+[resource]
+script = ExtResource("1_b1yt2")
+name = "Crushing"
+type = 1
+cost = 1
+description = "If you successfully grab using teeth, you may inflict your teeth’s weapon damage at the end of any turn you fail to perform a maneuver against them while they remain grabbed."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

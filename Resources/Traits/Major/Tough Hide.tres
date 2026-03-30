@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c7ns8octuu8"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_v3o87"]
+
+[resource]
+script = ExtResource("1_v3o87")
+name = "Tough Hide"
+cost = 5
+description = "Thanks to thick skin, you gain additional SHT equal to your Endurance."
+stat_modifications = Dictionary[String, int]({
+"SHT": -7
+})
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

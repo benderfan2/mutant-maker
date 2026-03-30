@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://blhphogfbwajr"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_fifah"]
+
+[resource]
+script = ExtResource("1_fifah")
+name = "Bisection"
+cost = 3
+description = "When you would become unconscious due to taking an injury twice from a edged attack or being reduced to 0 HP from a edged attack, you may remain conscious with 1 HP and regain your Constitution in SHT by taking three severing injuries, as half of you survives what would otherwise be a lethal attack. The gamemaster may dictate the injuries or roll randomly. You may not use this again until you’ve recovered from all severing injuries."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

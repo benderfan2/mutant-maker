@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://0po20huyfym7"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qcv44"]
+
+[resource]
+script = ExtResource("1_qcv44")
+name = "Tunnel"
+cost = 2
+description = "You can construct large chambers and steady tunnels given time. Constructing a chamber takes a number of weeks equal the difference in size rating between you and the chamber squared; so if you were to make a hive with a size rating four larger than yourself, it would take sixteen weeks. Constructing a tunnel requires days instead of weeks. If multiple mutants with the Communal trait cooperate, add 1 to the effective size rating of the largest mutant for each assistant that’s no smaller than 4 size ratings below that of the leader. (So a size rating 9 prairie dog could have assistants of size rating 5 or larger.) Smaller chambers can be done in a day. If all of your assistants have the Hive sub-trait, add another 1 to the size rating of the largest mutant."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

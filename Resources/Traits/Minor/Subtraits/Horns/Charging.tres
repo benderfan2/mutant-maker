@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bpwuk0s4ijcb0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_5ld83"]
+
+[resource]
+script = ExtResource("1_5ld83")
+name = "Charging"
+type = 1
+cost = 1
+description = "These do 2d8 damage if you have performed a charge this turn."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

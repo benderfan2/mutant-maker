@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dn86h0q2h4wyo"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_mr31k"]
+[ext_resource type="Resource" uid="uid://df7sunduqqbqs" path="res://Resources/Traits/Major/Subtraits/Nightsight/Colorblind.tres" id="2_hbds6"]
+
+[resource]
+script = ExtResource("1_mr31k")
+name = "Nightsight"
+cost = 5
+description = "You can see in low-light conditions and suffer no +D for such. The character is still blind in pure darkness."
+subtraits = Array[ExtResource("1_mr31k")]([ExtResource("2_hbds6")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

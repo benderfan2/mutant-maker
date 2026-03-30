@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cuptu82s2go57"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_0hxci"]
+[ext_resource type="Script" uid="uid://bf2tb5h3h8o6v" path="res://Scripts/trait_requirement.gd" id="1_icwlk"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="3_vpale"]
+
+[sub_resource type="Resource" id="Resource_7ydnc"]
+script = ExtResource("1_icwlk")
+traits_list = Array[ExtResource("1_0hxci")]([ExtResource("3_vpale")])
+metadata/_custom_type_script = "uid://bf2tb5h3h8o6v"
+
+[resource]
+script = ExtResource("1_0hxci")
+name = "Rake"
+cost = 5
+description = "When you are inflicting the grabbed status, you may add an additional weapon damage die when using claws to damage your grabbed target."
+requirements = [SubResource("Resource_7ydnc")]
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

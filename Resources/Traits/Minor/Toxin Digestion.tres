@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://i6tfx8m7d87y"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_hbxpf"]
+
+[resource]
+script = ExtResource("1_hbxpf")
+name = "Toxin Digestion"
+type = 1
+cost = 1
+description = "You can consume poisons or toxins normally consumed by your species without harm."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

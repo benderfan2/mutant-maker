@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://br0gfpys4g3dw"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_nkn2h"]
+
+[resource]
+script = ExtResource("1_nkn2h")
+name = "Silent"
+cost = 5
+description = "When flying, +A on dramatic rolls to remain unheard or establish surprise."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

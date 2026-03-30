@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://my2jcgkkihnl"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_6qxmt"]
+[ext_resource type="Resource" uid="uid://djd56kp46iaby" path="res://Resources/Traits/Major/Subtraits/Flight/Diving.tres" id="2_1nqfb"]
+[ext_resource type="Resource" uid="uid://dijab1kd2a0iu" path="res://Resources/Traits/Major/Subtraits/Flight/Hover.tres" id="3_epdw5"]
+[ext_resource type="Resource" uid="uid://4sbre7spx5fb" path="res://Resources/Traits/Major/Subtraits/Flight/Migratory.tres" id="4_vqj2e"]
+[ext_resource type="Resource" uid="uid://br0gfpys4g3dw" path="res://Resources/Traits/Major/Subtraits/Flight/Silent.tres" id="5_ka85j"]
+[ext_resource type="Resource" uid="uid://cn4hhiuh8ouqx" path="res://Resources/Traits/Major/Subtraits/Flight/Burst.tres" id="6_6lcqc"]
+[ext_resource type="Resource" uid="uid://ck2vbmhm8elti" path="res://Resources/Traits/Major/Subtraits/Flight/Gliding.tres" id="7_mbhl6"]
+
+[resource]
+script = ExtResource("1_6qxmt")
+name = "Flight"
+cost = 15
+description = "This allows you to fly with a 100% MOVE bonus if you have enough space to use your wings. However, unless you have the independent wings special trait, you cannot hold or manipulate objects while doing so, as your arms double as wings. You can remain aloft for Endurance in minutes, or triple that time in good flying weather (spring, summer, high mountaintops, or convergence zones), before gaining the tired status. You cannot fly again until that status is cleared."
+subtraits = Array[ExtResource("1_6qxmt")]([ExtResource("2_1nqfb"), ExtResource("3_epdw5"), ExtResource("4_vqj2e"), ExtResource("5_ka85j"), ExtResource("6_6lcqc"), ExtResource("7_mbhl6")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

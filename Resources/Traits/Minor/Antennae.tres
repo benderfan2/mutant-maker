@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cu7qeg1a6b5ll"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_bsoqx"]
+
+[resource]
+script = ExtResource("1_bsoqx")
+name = "Antennae"
+type = 1
+cost = 1
+description = "When you would be surprised, you may make a saving throw. If successful, you are no longer surprised. If you fail, you’re unbalanced in addition to being surprised."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

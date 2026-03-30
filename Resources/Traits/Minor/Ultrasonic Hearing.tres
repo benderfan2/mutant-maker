@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ccv32cjvyqjk4"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_rvg3f"]
+
+[resource]
+script = ExtResource("1_rvg3f")
+name = "Ultrasonic Hearing"
+type = 1
+cost = 1
+description = "In addition to the normal range of hearing, you can hear sounds in the ultrasonic range. Some animals use these frequencies in echolocation, and some electrical systems create this sound, like light bulbs."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

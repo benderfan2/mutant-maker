@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://u7pfe8mefud"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_gkq4u"]
+
+[resource]
+script = ExtResource("1_gkq4u")
+name = "Float"
+type = 1
+cost = 1
+description = "You cannot sink in water unless you choose to dive, and you do not need to make rolls to travel on the surface outside of unusually rough conditions. Moving on water this way reduces your MOVE to 1⁄2 unless you have Natatorial."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

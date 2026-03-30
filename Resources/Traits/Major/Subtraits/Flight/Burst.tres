@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cn4hhiuh8ouqx"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_thawy"]
+
+[resource]
+script = ExtResource("1_thawy")
+name = "Burst"
+cost = -10
+is_universal = true
+description = "You can fly only for a singleturn. If you do not land by the end of your turn,you fall from that point. Cannot be combined withGliding, Migratory, or Hover."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

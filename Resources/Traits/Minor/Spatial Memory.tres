@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://djiq5u2gn622h"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_l8qb4"]
+
+[resource]
+script = ExtResource("1_l8qb4")
+name = "Spatial Memory"
+type = 1
+cost = 1
+description = "You can store up to +COG (minimum 1) locations in your memory. You can always find your way back to them presuming you’re in the same region (roughly the same county) without a dramatic roll."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://jq5l3gnorkm8"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_oki1i"]
+
+[resource]
+script = ExtResource("1_oki1i")
+name = "Whalesong"
+type = 1
+cost = 1
+description = "You may communicate with cetaceans of size 15 or greater while immersed in water, up to a distance of Endurance miles. The concepts you communicate are limited to a single word; “danger”, “come”, “’sup”, etc. This allows you to conduct social interaction with cetaceans of that size."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

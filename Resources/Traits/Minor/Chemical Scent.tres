@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bn2l4c4g36hn2"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_77pv0"]
+
+[resource]
+script = ExtResource("1_77pv0")
+name = "Chemical Scent"
+type = 1
+cost = 1
+description = "+A to noticing the odors of dangerous chemicals and gases with your scent. If the scent is a hazard, this +A is hardened."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

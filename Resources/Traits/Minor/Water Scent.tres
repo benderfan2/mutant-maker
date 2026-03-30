@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://df8uc8b3lvf3o"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_1ogsw"]
+
+[resource]
+script = ExtResource("1_1ogsw")
+name = "Water Scent"
+type = 1
+cost = 1
+description = "You may detect the nearest source of water within Perception miles. This may require a dramatic roll if water is particularly scarce."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

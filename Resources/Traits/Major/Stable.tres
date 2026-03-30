@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dhkyb35xolir2"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_v142y"]
+
+[resource]
+script = ExtResource("1_v142y")
+name = "Stable"
+cost = 5
+description = "Foes are +D to perform any maneuver that would inflict prone on you (like the knockdown maneuver)."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

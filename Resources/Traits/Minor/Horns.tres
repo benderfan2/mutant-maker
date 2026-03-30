@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://pat37m2ckbeb"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_s8gd8"]
+[ext_resource type="Resource" uid="uid://dhdbk7vtr2y1o" path="res://Resources/Traits/Minor/Subtraits/Horns/Antlers.tres" id="2_kb5aw"]
+[ext_resource type="Resource" uid="uid://bmtyynarowxx4" path="res://Resources/Traits/Minor/Subtraits/Horns/Blunt.tres" id="3_4rg82"]
+[ext_resource type="Resource" uid="uid://bpwuk0s4ijcb0" path="res://Resources/Traits/Minor/Subtraits/Horns/Charging.tres" id="4_oeavp"]
+[ext_resource type="Resource" uid="uid://c4petdf5ptuws" path="res://Resources/Traits/Minor/Subtraits/Horns/Outward.tres" id="5_6ilh6"]
+[ext_resource type="Resource" uid="uid://b0csl80jfgdad" path="res://Resources/Traits/Minor/Subtraits/Horns/Warding.tres" id="6_ptvpe"]
+
+[resource]
+script = ExtResource("1_s8gd8")
+name = "Horns"
+type = 1
+cost = 1
+description = "This is a natural weapon that does 1d10 weapon damage at +D on strikes. This +D is negated if you have performed a charge this turn. It has the blunt type."
+subtraits = Array[ExtResource("1_s8gd8")]([ExtResource("2_kb5aw"), ExtResource("3_4rg82"), ExtResource("4_oeavp"), ExtResource("5_6ilh6"), ExtResource("6_ptvpe")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

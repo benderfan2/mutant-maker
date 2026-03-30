@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://umb3677mdvi6"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_52dk0"]
+
+[resource]
+script = ExtResource("1_52dk0")
+name = "Chameleon"
+cost = 15
+description = "By changing your color to match that of the area you’re in, gain +A on any roll to go unnoticed. In fight scenes, you may take an action to adapt your body to the environment, giving foes +D to target you with maneuvers while you have no statuses. If you move to a location with significantly different coloration, you lose this effect and must spend another action to regain it."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

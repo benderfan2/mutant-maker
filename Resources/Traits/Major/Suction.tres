@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://yoeqmsqi754h"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_4f3ad"]
+
+[resource]
+script = ExtResource("1_4f3ad")
+name = "Suction"
+cost = 5
+description = "You can pull water through your body to draw in prey. When underwater, you may take an action to pull a foe or ally into melee with you. This occurs automatically, but they may attempt a saving throw against it. If they succeed, they do not move, but if they fail, they become inactive and enter melee with you."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

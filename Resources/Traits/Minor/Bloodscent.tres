@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://f3tgtkvtod72"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_xj520"]
+
+[resource]
+script = ExtResource("1_xj520")
+name = "Bloodscent"
+type = 1
+cost = 1
+description = "You detect the smell of blood up to +PER miles away (minimum 1). If you have Aquatic Scent, this increases to (Perception) miles while underwater."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

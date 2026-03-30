@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dxccbsmwvplbx"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_bkmwy"]
+
+[resource]
+script = ExtResource("1_bkmwy")
+name = "Baleen"
+type = 1
+cost = 1
+description = "+A to attempts to find food for yourself in marine environments. These teeth only inflict 1d6 damage, but you can grab foes with your teeth with a size rating of at least 8 smaller than you as a moment instead of an action while in an aquatic environment."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

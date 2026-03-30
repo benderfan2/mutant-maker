@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d036s43eb005l"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_yhfjr"]
+
+[resource]
+script = ExtResource("1_yhfjr")
+name = "Whiptail"
+type = 1
+cost = 1
+description = "You have a heavy tail that does 1d8 weapon damage with the following supported maneuvers: disarm, knockdown, and lash."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

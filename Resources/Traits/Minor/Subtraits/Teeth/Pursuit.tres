@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d30fwme770a7k"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_tnc7p"]
+
+[resource]
+script = ExtResource("1_tnc7p")
+name = "Pursuit"
+type = 1
+cost = 1
+description = "Gain +A on maneuvers with these teeth if you have performed a move action this turn."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

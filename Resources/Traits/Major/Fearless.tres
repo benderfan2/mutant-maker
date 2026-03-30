@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ejca065bwp08"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_lyb2x"]
+
+[resource]
+script = ExtResource("1_lyb2x")
+name = "Fearless"
+cost = 5
+description = "+A on any saving throw against a maneuver or ability that would cause you to gain the startled condition, and you never become unbalanced when a foe moves into melee with you."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

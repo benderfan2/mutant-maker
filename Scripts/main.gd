@@ -275,6 +275,117 @@ func update_stats() -> void:
 	update_speed()
 
 
+func determine_source_of_mutation() -> MutationSources:
+	var die_roll = randi_range(1,100)
+	
+	if die_roll in range(1,41):
+		return MutationSources.CITY
+	elif die_roll in range(41,71):
+		return MutationSources.RURAL
+	else:
+		return MutationSources.INSTITUTION
+
+
+func determine_background() -> String:
+	var die_roll = randi_range(1,100)
+	var background_decided = false
+	var result = ""
+	
+	while !background_decided:
+		match %BackgroundTable.selected:
+			MutationSources.CITY:
+				if die_roll in range(1,11):
+					result += "[b]SELF-TAUGHT SURVIVOR:[/b] You scraped by alone. While you’ve had contact with humans, you had no guardian and survived via instincts and hard lessons. Gain: one basic or wild skill package, an additional wild skill package, four hobbies, a survivor equipment package (scavenger or urban), +2 Determination, +2 Will, +10 SHT, and +A on initiative rolls."
+					background_decided = true
+				elif die_roll in range(11,31):
+					result += "[b]FRINGES OF SOCIETY:[/b] A street community adopted you: a homeless community, undocumented immigrants, runaways, etc. In turn, you assist them. Gain: one basic skill package, one street skill package, one wild skill package, four hobbies, a survivor equipment package (scavenger or urban), +2 to Perception, +1 CTCT, and +5 SHT."
+					background_decided = true
+				elif die_roll in range(31,41):
+					result += "[b]RAISED BY A HUMAN:[/b] A human or human family adopted and raised you in secret. This is a relatively healthy home; if you want a more troubled past, check with your group first. Gain: two basic skill packages, one professional skill package, five hobbies, one basic equipment package, +2 to Cognition, and +1 CTCT."
+					background_decided = true
+				elif die_roll in range(41,51):
+					result += "[b]RAISED BY A MUTANT:[/b] An experienced mutant mentored you. Roll for the mutant’s source and background, then gain the same packages and bonuses.[br][br]"
+					die_roll = randi_range(1,100)
+				elif die_roll in range(51,66):
+					result += "[b]RAISED BY A MUTANT COMMUNITY:[/b] A clandestine group of mutant animals found and raised you. In return, you keep their secrets. Gain: one basic skill package, one street skill package, one wild skill package, four hobbies, one survivor or basic equipment package, +2 Speed, +1 WILL, and Value: Community."
+					background_decided = true
+				elif die_roll in range(66,81):
+					result += "[b]ADOPTED BY AN INSTITUTION:[/b] A large institution caught you early in life, and you grew up there.[br][br]"
+					die_roll = randi_range(1,100)
+					%BackgroundTable.select(MutationSources.INSTITUTION)
+				elif die_roll in range(81,86):
+					result += "[b]FLED TO THE WILD:[/b] You escaped the city early in life, growing up in the wild.[br][br]"
+					die_roll = randi_range(1,100)
+					%BackgroundTable.select(MutationSources.RURAL)
+				else:
+					result += "[b]SWALLOWED BY THE SHADOWS:[/b] A covert group (criminal or espionage) raised you as an agent. Gain: two covert skill packages, one basic skill package, one hobby, one agent equipment package, +2 Prowess, +2 Speed, and +A on dramatic rolls to avoid notice. Your fighting style may be a secret fighting style."
+					background_decided = true
+			MutationSources.RURAL:
+				if die_roll in range(1,21):
+					result += "[b]LARGELY FERAL:[/b] You have avoided meaningful contact with humanity and have yet to be encultured. Gain: two wild skill packages, five hobbies, a survivor equipment package (scavenger or wild), +2 Strength, +2 Endurance, +2 Speed, and +A to any dramatic roll to find food, shelter, or avoid danger in the wild. The character starts without language. To understand and speak a language, they must spend a hobby to do so, and an additional hobby to write."
+					background_decided = true
+				elif die_roll in range(21,41):
+					result += "[b]SELF-TAUGHT SURVIVOR:[/b] You scraped by alone. While you’ve had contact with humans, you had no guardian and survived via instincts and hard lessons. Gain: one basic or wild skill package, an additional wild skill package, four hobbies, a survivor equipment package (scavenger or wild), +2 Determination, +2 Will, +10 SHT, and +A on initiative rolls."
+					background_decided = true
+				elif die_roll in range(41,51):
+					result += "[b]BACK-TO-THE-LANDER:[/b] A person or community separated from wider society adopted you. This may be a self-isolating enclave, a counterculture group, an indigenous community, etc. Gain: two basic skill packages, one military or professional skill package, five hobbies, a basic or survivor equipment package, +1 CTCT, +1 WILL, and Value: Community."
+					background_decided = true
+				elif die_roll in range(51,56):
+					result += "[b]RAISED BY A HUMAN:[/b] A human or human family adopted and raised you in secret. This is a relatively healthy home; if you want a more troubled past, check with your group first. Gain: two basic skill packages, one wild skill package, five hobbies, one basic equipment package, +2 to Cognition, and +1 CTCT."
+					background_decided = true
+				elif die_roll in range(56,61):
+					result += "[b]RAISED BY A MUTANT:[/b] An experienced mutant mentored you. Roll for the mutant’s source and background, then gain the same packages and bonuses.[br][br]"
+					die_roll = randi_range(1,100)
+				elif die_roll in range(61,81):
+					result += "[b]FARM LIVING:[/b] A small farm family or community raised you. Gain: two basic skill packages, one professional skill package, four hobbies, one basic equipment package, +2 STR, +2 END."
+					background_decided = true
+				elif die_roll in range(81,97):
+					result += "[b]URBAN IMMIGRANT:[/b] Though you mutated in the wild, you migrated to “civilization”.[br][br]"
+					die_roll = randi_range(1,100)
+					%BackgroundTable.select(MutationSources.CITY)
+				else:
+					result += "[b]ADOPTED BY AN ORGANIZATION:[/b] Though you mutated in the wild, an institution claimed you early in life.[br][br]"
+					die_roll = randi_range(1,100)
+					%BackgroundTable.select(MutationSources.INSTITUTION)
+			MutationSources.INSTITUTION:
+				if die_roll in range(1,11):
+					result += "[b]RURAL ESCAPE:[/b] The organization released you, or you escaped soon after your mutation.[br][br]"
+					die_roll = randi_range(1,100)
+					%BackgroundTable.select(MutationSources.RURAL)
+				elif die_roll in range(11,16):
+					result += "[b]URBAN ESCAPE:[/b] The organization released you, or you escaped soon after your mutation.[br][br]"
+					die_roll = randi_range(1,100)
+					%BackgroundTable.select(MutationSources.CITY)
+				elif die_roll in range(16,31):
+					result += "[b]LAB SUBJECT, SOLITARY:[/b] A lab raised you as an experiment, but you escaped, or the organization released you. There has not been immediate pursuit. Gain: two basic skill packages, one professional or science skill package, one hobby, one escapee equipment package, +2 Cognition, +2 Perception, and +A to dramatic rolls to escape from confinement."
+					background_decided = true
+				elif die_roll in range(31,36):
+					result += "[b]RAISED BY A MUTANT:[/b] An older mutant raised you while in captivity. Roll for the mutant’s source and background, then gain the same packages and bonuses, replacing any equipment with an escapee equipment package.[br][br]"
+					die_roll = randi_range(1,100)
+				elif die_roll in range(36,46):
+					result += "[b]RAISED BY A HUMAN:[/b] The institution had a member raise you like one of their own. This is a relatively healthy home; if you want a more troubled past, check with your group first. Gain: two basic skill packages, one wild skill package, five hobbies, one basic equipment package, +2 to Cognition, and +1 CTCT."
+					background_decided = true
+				elif die_roll in range(46,61):
+					result += "[b]ASSISTED ESCAPEE:[/b] A member of the institution fled with you, raising you on the run. "
+					var x = randi_range(1,100)
+					if x in range(1,31):
+						result += "You’ve successfully gone underground. "
+					else:
+						result += "you’re still hunted by the institution, possibly with the help of law enforcement or government organizations. "
+					result += "Gain: one basic skill package, one covert skill package, one science skill package, three hobbies, one basic equipment package, +2 Perception, +1 CTCT, and +1 WILL."
+					background_decided = true
+				elif die_roll in range(61,71):
+					result += "[b]PUBLIC MASCOT:[/b] The institution raised you as a public relations symbol. Your feelings depend on your experience, but it has likely been a difficult existence due to high expectations and a restricted life. Gain: one basic skill package, a basic or professional skill package, six hobbies, one basic equipment package, and +4 Affinity."
+					background_decided = true
+				elif die_roll in range(71,96):
+					result += "[b]AGENT/EMPLOYEE:[/b] The institution raised you to aid them with your unique genetic abilities. While broadly treated as an employee, the institution won’t allow you to easily leave their service. Gain: one basic skill package, two covert, military, or professional skill packages, two hobbies, one basic or agent equipment package, +10 SHT, +2 Prowess, and +1 WILL. Your fighting style may be a secret fighting style."
+					background_decided = true
+				else:
+					result += "[b]SPONSORED FREEDOM:[/b] The organization raised you publicly as an adopted ward with monetary support. Their reasons could be charitable, scientific, or self-serving. Gain: three skill packages from the following categories: basic, professional, or science, four hobbies, a basic equipment package, and +3 Cognition."
+	
+	return result
+
+
 func _on_group_type_item_selected(index: int) -> void:
 	match index:
 		0:
@@ -656,19 +767,7 @@ func _on_lock_attributes_button_pressed() -> void:
 
 
 func _on_roll_source_of_mutation_button_pressed() -> void:
-	var die_roll = randi_range(1,100)
 	
-	%SourceOfMutationRoll.text = str(die_roll)
-	
-	if die_roll in range(1,41):
-		source_of_mutation = MutationSources.CITY
-		%SourceOfMutationDescriptionLabel.text = "[b]CHEMICAL LEAK:[/b] Goop leaked from an industrial site, commercial laboratory, or personal lab, either by negligence or sabotage."
-	elif die_roll in range(41,71):
-		source_of_mutation = MutationSources.RURAL
-		%SourceOfMutationDescriptionLabel.text = "[b]TRANSPORTATION ACCIDENT:[/b] Goop spilled due to a crash, theft, or mishap."
-	else:
-		source_of_mutation = MutationSources.INSTITUTION
-		%SourceOfMutationDescriptionLabel.text = "[b]EXPERIMENTATION RESULT:[/b] There was a deliberate experiment on an animal using Goop."
 	
 	%SourceOfMutationLockButton.disabled = false
 	%SourceOfMutationRerollButton.disabled = false
@@ -722,3 +821,10 @@ func _on_source_of_mutation_lock_button_pressed() -> void:
 	%BackgroundTable.select(source_of_mutation)
 	
 	%BackgroundContainer.visible = true
+
+
+func _on_roll_background_button_pressed() -> void:
+	%BackgroundTableResultDescriptionLabel.text = determine_background()
+	%BackgroundTableRerollButton.disabled = false
+	%BackgroundTableSwapButton.disabled = false
+	%BackgroundTableLockButton.disabled = false

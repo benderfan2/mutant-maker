@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bgerwn04ldad"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_54bqa"]
+
+[resource]
+script = ExtResource("1_54bqa")
+name = "Water Storage"
+type = 1
+cost = 1
+description = "You can forgo drinking water for (END + 2) days (minimum 3) before beginning to suffer dehydration if you’ve had regular access to water."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

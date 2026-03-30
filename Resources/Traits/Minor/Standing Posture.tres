@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bcqpvwdtojfkk"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_tid1j"]
+
+[resource]
+script = ExtResource("1_tid1j")
+name = "Standing Posture"
+type = 1
+cost = 1
+description = "You may take an action to stand on your hind legs to reach higher or to use your forelimbs as weapons, but you cannot take a move action while doing so. When attacking with your forelimbs while using this trait, you increase your lowest damage die but gain the distracted status."
+requirements = ["Quadrupedal"]
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

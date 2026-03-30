@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c05hb8ebs4ryh"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_40ofi"]
+
+[resource]
+script = ExtResource("1_40ofi")
+name = "Hooked"
+type = 1
+cost = 1
+description = "If your foe is grappled or prone, this does 1d12 damage instead. Your beak gains the injector trait."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

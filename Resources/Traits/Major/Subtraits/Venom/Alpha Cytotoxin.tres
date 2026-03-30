@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d1mpb6t85ugm2"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_x0lqy"]
+
+[resource]
+script = ExtResource("1_x0lqy")
+name = "Alpha Cytotoxin"
+cost = 10
+description = "This is a toxin rated 1d10 that inflicts damage to cellular structures throughout the body. While your foe is envenomed, they are unbalanced. If they succeed at a roll while envenomed, they suffer agony as well."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

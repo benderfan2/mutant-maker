@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cmhaxypfn8lgs"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_rttti"]
+
+[resource]
+script = ExtResource("1_rttti")
+name = "Compound Sight"
+cost = 5
+description = "You can see in a very wide arc around yourself with almost no blind spots. When others are trying to gain surprise on you or otherwise pass by you without notice, +D on their roll."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bg0bcqgl85yfk"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_was3n"]
+
+[resource]
+script = ExtResource("1_was3n")
+name = "Territorial"
+type = 1
+cost = 1
+description = "You set and establish a territory through scent markers or just bullheadedness. Mark one area (roughly +PER in square miles) to be your territory. When a fight scene begins in your territory, gain 1 temporary WILL."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://brin4v2hf63i8"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_oyr4b"]
+
+[resource]
+script = ExtResource("1_oyr4b")
+name = "Crushing Jaw"
+type = 1
+cost = 1
+description = "Your teeth now do massive damage. If you do not have a teeth mutation, this can substitute for it, but you only do 1d6 with a bite."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"
