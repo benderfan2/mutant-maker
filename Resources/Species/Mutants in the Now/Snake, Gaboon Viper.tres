@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bjhdybrke3y8m"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_iqf17"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_wvmdu"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ydcom"]
+[ext_resource type="Resource" uid="uid://d1mpb6t85ugm2" path="res://Resources/Traits/Major/Subtraits/Venom/Alpha Cytotoxin.tres" id="3_xo6ia"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_iu4pm"]
+[ext_resource type="Resource" uid="uid://c452443gjdgdb" path="res://Resources/Traits/Major/Shed Skin.tres" id="5_0xxos"]
+[ext_resource type="Resource" uid="uid://bb5p0skr75bd0" path="res://Resources/Traits/Major/Swallow.tres" id="6_pwap8"]
+[ext_resource type="Resource" uid="uid://ctambddjc858x" path="res://Resources/Traits/Major/Venom.tres" id="7_dnybi"]
+[ext_resource type="Resource" uid="uid://c8wbmqbrsa6ub" path="res://Resources/Traits/Minor/Subtraits/Teeth/Fanged.tres" id="8_k2cvw"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="9_oj2k4"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="10_101su"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="11_2r10v"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="12_6ncfn"]
+[ext_resource type="Resource" uid="uid://dyj3khmmbufe0" path="res://Resources/Traits/Minor/Inspirational.tres" id="13_nleb3"]
+[ext_resource type="Resource" uid="uid://8511d51arja7" path="res://Resources/Traits/Minor/Languid.tres" id="14_vi7x3"]
+[ext_resource type="Resource" uid="uid://ckpt5coeqiea2" path="res://Resources/Traits/Minor/Scales.tres" id="15_l3x0w"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="16_suhmo"]
+[ext_resource type="Resource" uid="uid://06737g5ofekg" path="res://Resources/Traits/Minor/Subtraits/Lidless Sleep/Eyeguard.tres" id="17_hswdq"]
+[ext_resource type="Resource" uid="uid://dqbeg2iaftswd" path="res://Resources/Traits/Minor/Lidless Sleep.tres" id="18_c7pi0"]
+[ext_resource type="Resource" uid="uid://sirvml74vke3" path="res://Resources/Traits/Unique/Two-Inch Fangs.tres" id="20_xo6ia"]
+
+[sub_resource type="Resource" id="Resource_kp2wf"]
+script = ExtResource("1_iqf17")
+traits = Array[ExtResource("2_ydcom")]([ExtResource("4_iu4pm"), ExtResource("5_0xxos"), ExtResource("6_pwap8"), ExtResource("7_dnybi")])
+subtraits = Dictionary[ExtResource("2_ydcom"), bool]({
+ExtResource("3_xo6ia"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_lnbe2"]
+script = ExtResource("1_iqf17")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_inhxy"]
+script = ExtResource("1_iqf17")
+traits = Array[ExtResource("2_ydcom")]([ExtResource("10_101su"), ExtResource("11_2r10v"), ExtResource("12_6ncfn"), ExtResource("13_nleb3"), ExtResource("14_vi7x3"), ExtResource("15_l3x0w"), ExtResource("16_suhmo")])
+subtraits = Dictionary[ExtResource("2_ydcom"), bool]({
+ExtResource("8_k2cvw"): false,
+ExtResource("9_oj2k4"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_vlygh"]
+script = ExtResource("1_iqf17")
+traits = Array[ExtResource("2_ydcom")]([ExtResource("18_c7pi0")])
+subtraits = Dictionary[ExtResource("2_ydcom"), bool]({
+ExtResource("17_hswdq"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_wvmdu")
+name = "Snake, Gaboon Viper"
+description = "One of the most venomous snakes in the world, with massive fangs."
+base_goop = 25
+size_rating = 12
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 32"
+major_traits = Dictionary[String, ExtResource("1_iqf17")]({
+"Mutants in the Next": SubResource("Resource_lnbe2"),
+"Mutants in the Now": SubResource("Resource_kp2wf")
+})
+minor_traits = Dictionary[String, ExtResource("1_iqf17")]({
+"Mutants in the Next": SubResource("Resource_vlygh"),
+"Mutants in the Now": SubResource("Resource_inhxy")
+})
+unique_trait = ExtResource("20_xo6ia")
+basic_traits = ["Type: Serpentes", "Diet: Carnivore", "Movement: Limbless", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

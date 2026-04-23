@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_cynph")
 name = "Slow"
+source = "Mutants in the Now, pg. 42"
+type = 4
 cost = -5
 is_universal = true
 description = "Your digging occurs at a rate ineffectual for fight scenes, with MOVE reduced to 1/50th."

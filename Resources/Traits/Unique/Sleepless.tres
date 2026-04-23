@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bu5varjo32w30"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_28n02"]
+
+[resource]
+script = ExtResource("1_28n02")
+name = "Sleepless"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 5
+description = "You may stay awake for +END (minimum 2) days. For each day beyond the first, you sleep 50% longer when you do."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

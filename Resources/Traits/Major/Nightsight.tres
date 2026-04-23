@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_mr31k")
 name = "Nightsight"
+source = "Mutants in the Now, pg. 43"
 cost = 5
 description = "You can see in low-light conditions and suffer no +D for such. The character is still blind in pure darkness."
 subtraits = Array[ExtResource("1_mr31k")]([ExtResource("2_hbds6")])

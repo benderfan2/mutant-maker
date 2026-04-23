@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b73qtkdjkudwn"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_etb6w"]
+
+[resource]
+script = ExtResource("1_etb6w")
+name = "Pressure Tolerance"
+source = "Mutants in the Next, pg. 91"
+cost = 3
+description = "When underwater, you can descend to a depth typical for your species without harm. Descending further subtracts that depth from the point you would start taking damage (Now, pg. 77), and you can descend an additional (Endurance x 50) feet without harm. Conventional SCUBA gear doesn’t function or assist at those depths. You can’t purchase Pressure Resistance."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

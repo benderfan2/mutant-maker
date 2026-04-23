@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dm2o48ketq7wt"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_5a8om"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ss58y"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="3_8g3o6"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="4_yb6kt"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_migpc"]
+[ext_resource type="Resource" uid="uid://cnk3bcj363ijj" path="res://Resources/Traits/Major/Subtraits/Stable/Aquatic.tres" id="6_1hu3t"]
+[ext_resource type="Resource" uid="uid://b73qtkdjkudwn" path="res://Resources/Traits/Major/Pressure Tolerance.tres" id="7_yy0ft"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="8_2m53l"]
+[ext_resource type="Resource" uid="uid://c05hb8ebs4ryh" path="res://Resources/Traits/Minor/Subtraits/Beak/Hooked.tres" id="9_xma74"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="10_mp7vy"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="11_4bmnt"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="12_ec2qn"]
+[ext_resource type="Resource" uid="uid://cfqa1fkduipnj" path="res://Resources/Traits/Minor/Saltwater Tolerance.tres" id="13_j5rvt"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="14_ib31w"]
+[ext_resource type="Resource" uid="uid://6jxq878g24xp" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Brief.tres" id="15_v1uhy"]
+[ext_resource type="Resource" uid="uid://ktaw303a6sr7" path="res://Resources/Traits/Minor/Breach Leap.tres" id="16_ghnan"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="17_hbkmw"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="18_qqfxf"]
+[ext_resource type="Resource" uid="uid://cavrygagxdtp2" path="res://Resources/Traits/Unique/Deep Diver (Now).tres" id="19_6mxsh"]
+
+[sub_resource type="Resource" id="Resource_rh6gj"]
+script = ExtResource("1_5a8om")
+traits = Array[ExtResource("2_ss58y")]([ExtResource("3_8g3o6"), ExtResource("4_yb6kt"), ExtResource("5_migpc")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_pf2gp"]
+script = ExtResource("1_5a8om")
+traits = Array[ExtResource("2_ss58y")]([ExtResource("7_yy0ft"), ExtResource("8_2m53l")])
+subtraits = Dictionary[ExtResource("2_ss58y"), bool]({
+ExtResource("6_1hu3t"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0gbol"]
+script = ExtResource("1_5a8om")
+traits = Array[ExtResource("2_ss58y")]([ExtResource("10_mp7vy"), ExtResource("11_4bmnt"), ExtResource("12_ec2qn"), ExtResource("13_j5rvt"), ExtResource("14_ib31w")])
+subtraits = Dictionary[ExtResource("2_ss58y"), bool]({
+ExtResource("9_xma74"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_vfxld"]
+script = ExtResource("1_5a8om")
+traits = Array[ExtResource("2_ss58y")]([ExtResource("16_ghnan"), ExtResource("17_hbkmw")])
+subtraits = Dictionary[ExtResource("2_ss58y"), bool]({
+ExtResource("15_v1uhy"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("18_qqfxf")
+name = "Penguin, Emperor"
+description = "The largest penguin, evolved to survive in the harshest cold."
+base_goop = 17
+size_rating = 9
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 29"
+major_traits = Dictionary[String, ExtResource("1_5a8om")]({
+"Mutants in the Next": SubResource("Resource_pf2gp"),
+"Mutants in the Now": SubResource("Resource_rh6gj")
+})
+minor_traits = Dictionary[String, ExtResource("1_5a8om")]({
+"Mutants in the Next": SubResource("Resource_vfxld"),
+"Mutants in the Now": SubResource("Resource_0gbol")
+})
+unique_trait = ExtResource("19_6mxsh")
+basic_traits = ["Type: Sphenisciformes", "Diet: Carnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Finned"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

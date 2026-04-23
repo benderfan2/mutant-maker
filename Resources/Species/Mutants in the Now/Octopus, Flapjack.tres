@@ -1,0 +1,77 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://durccvwt742b1"]
+
+[ext_resource type="Resource" uid="uid://db62b5t07jp5g" path="res://Resources/Traits/Zoomorphic/Tentacles.tres" id="1_h5bgp"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_jh1lq"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_h5bgp"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="3_3xghd"]
+[ext_resource type="Resource" uid="uid://dp7aky7srybii" path="res://Resources/Traits/Major/Subtraits/Venom/Gamma Neurotoxin.tres" id="4_51r3d"]
+[ext_resource type="Resource" uid="uid://bydgdm6pmcn4i" path="res://Resources/Traits/Major/Adhesive.tres" id="5_c2vue"]
+[ext_resource type="Resource" uid="uid://umb3677mdvi6" path="res://Resources/Traits/Major/Chameleon.tres" id="6_oj8u4"]
+[ext_resource type="Resource" uid="uid://cdv3eplgyin4o" path="res://Resources/Traits/Major/Ink.tres" id="7_bjs3i"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="8_1v7y7"]
+[ext_resource type="Resource" uid="uid://yfr1wo5x788o" path="res://Resources/Traits/Major/Regenerative.tres" id="9_uxodt"]
+[ext_resource type="Resource" uid="uid://3id5xuxkmatj" path="res://Resources/Traits/Major/Slippery.tres" id="10_dp4hx"]
+[ext_resource type="Resource" uid="uid://ctambddjc858x" path="res://Resources/Traits/Major/Venom.tres" id="11_p0eyk"]
+[ext_resource type="Resource" uid="uid://80tq5esgl4cb" path="res://Resources/Traits/Major/Splay.tres" id="12_c2vue"]
+[ext_resource type="Resource" uid="uid://b73qtkdjkudwn" path="res://Resources/Traits/Major/Pressure Tolerance.tres" id="13_oj8u4"]
+[ext_resource type="Resource" uid="uid://c05hb8ebs4ryh" path="res://Resources/Traits/Minor/Subtraits/Beak/Hooked.tres" id="14_0vlwv"]
+[ext_resource type="Resource" uid="uid://bt5cyrhprxs4t" path="res://Resources/Traits/Minor/Aqualocation.tres" id="15_fi63j"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="16_m0rr0"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="17_8wf6b"]
+[ext_resource type="Resource" uid="uid://cc3rxmqd81me0" path="res://Resources/Traits/Minor/Compress.tres" id="18_rbh7x"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="19_j3aym"]
+[ext_resource type="Resource" uid="uid://cfqa1fkduipnj" path="res://Resources/Traits/Minor/Saltwater Tolerance.tres" id="20_infw5"]
+[ext_resource type="Resource" uid="uid://dlg3opw30eb4p" path="res://Resources/Traits/Minor/Suction Cups.tres" id="21_o78qd"]
+[ext_resource type="Resource" uid="uid://bso8mn2qs7gh6" path="res://Resources/Traits/Minor/Vibration Sense.tres" id="22_7h1o1"]
+[ext_resource type="Resource" uid="uid://6jxq878g24xp" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Brief.tres" id="23_8wf6b"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="24_rbh7x"]
+[ext_resource type="Resource" uid="uid://cxa26alvnn8qs" path="res://Resources/Traits/Minor/Reduced Sleep.tres" id="25_j3aym"]
+[ext_resource type="Resource" uid="uid://b1t8ls5mhsdbi" path="res://Resources/Traits/Unique/Pancake.tres" id="27_rbh7x"]
+
+[sub_resource type="Resource" id="Resource_3xghd"]
+script = ExtResource("1_jh1lq")
+traits = Array[ExtResource("3_3xghd")]([ExtResource("12_c2vue"), ExtResource("13_oj8u4")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_swt4w"]
+script = ExtResource("1_jh1lq")
+traits = Array[ExtResource("3_3xghd")]([ExtResource("5_c2vue"), ExtResource("6_oj8u4"), ExtResource("7_bjs3i"), ExtResource("8_1v7y7"), ExtResource("9_uxodt"), ExtResource("10_dp4hx"), ExtResource("11_p0eyk")])
+subtraits = Dictionary[ExtResource("3_3xghd"), bool]({
+ExtResource("4_51r3d"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_infw5"]
+script = ExtResource("1_jh1lq")
+traits = Array[ExtResource("3_3xghd")]([ExtResource("24_rbh7x"), ExtResource("25_j3aym")])
+subtraits = Dictionary[ExtResource("3_3xghd"), bool]({
+ExtResource("23_8wf6b"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_l0kb7"]
+script = ExtResource("1_jh1lq")
+traits = Array[ExtResource("3_3xghd")]([ExtResource("15_fi63j"), ExtResource("16_m0rr0"), ExtResource("17_8wf6b"), ExtResource("18_rbh7x"), ExtResource("19_j3aym"), ExtResource("20_infw5"), ExtResource("21_o78qd"), ExtResource("22_7h1o1")])
+subtraits = Dictionary[ExtResource("3_3xghd"), bool]({
+ExtResource("14_0vlwv"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_h5bgp")
+name = "Octopus, Flapjack"
+description = "Known as “adorabilis” for it’s cute qualities."
+base_goop = 43
+enhancable_attributes = Array[String](["Determination", "Affinity", "Prowess"])
+source = "Mutants in the Now, pg. 28"
+major_traits = Dictionary[String, ExtResource("1_jh1lq")]({
+"Mutants in the Next": SubResource("Resource_3xghd"),
+"Mutants in the Now": SubResource("Resource_swt4w")
+})
+minor_traits = Dictionary[String, ExtResource("1_jh1lq")]({
+"Mutants in the Next": SubResource("Resource_infw5"),
+"Mutants in the Now": SubResource("Resource_l0kb7")
+})
+unique_trait = ExtResource("27_rbh7x")
+basic_traits = ["Type: Cephalopod", "Diet: Carnivore", "Movement: Octopodal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Water-Breathing", "Senses: Sight", "Senses: Deaf", "Senses: Scent", ExtResource("1_h5bgp")]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://p3ljwbl0yxwu"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_f5nkg"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_8py8q"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_yspbk"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_pa286"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="4_5emwh"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_6gifh"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="6_tu7ki"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="7_f7by1"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="8_u376s"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="9_ydtx7"]
+[ext_resource type="Resource" uid="uid://w2v2c5opw5yq" path="res://Resources/Traits/Minor/Fluffy.tres" id="10_32u5y"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="11_tpnm3"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="12_wr77p"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="13_5emwh"]
+[ext_resource type="Resource" uid="uid://cxa26alvnn8qs" path="res://Resources/Traits/Minor/Reduced Sleep.tres" id="14_6gifh"]
+[ext_resource type="Resource" uid="uid://lnf2eo5xam16" path="res://Resources/Traits/Unique/Rugged.tres" id="16_6gifh"]
+
+[sub_resource type="Resource" id="Resource_qbog1"]
+script = ExtResource("1_f5nkg")
+traits = Array[ExtResource("2_8py8q")]([ExtResource("3_pa286"), ExtResource("4_5emwh"), ExtResource("5_6gifh"), ExtResource("6_tu7ki")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_bd1ni"]
+script = ExtResource("1_f5nkg")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ofcqs"]
+script = ExtResource("1_f5nkg")
+traits = Array[ExtResource("2_8py8q")]([ExtResource("7_f7by1"), ExtResource("8_u376s"), ExtResource("9_ydtx7"), ExtResource("10_32u5y"), ExtResource("11_tpnm3"), ExtResource("12_wr77p")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_tu7ki"]
+script = ExtResource("1_f5nkg")
+traits = Array[ExtResource("2_8py8q")]([ExtResource("13_5emwh"), ExtResource("14_6gifh")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_yspbk")
+name = "Sheep, Hampshire"
+description = "The iconic sheep with white wool, dark face, and dark legs."
+base_goop = 25
+size_rating = 10
+enhancable_attributes = Array[String](["Determination", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 32"
+major_traits = Dictionary[String, ExtResource("1_f5nkg")]({
+"Mutants in the Next": SubResource("Resource_bd1ni"),
+"Mutants in the Now": SubResource("Resource_qbog1")
+})
+minor_traits = Dictionary[String, ExtResource("1_f5nkg")]({
+"Mutants in the Next": SubResource("Resource_tu7ki"),
+"Mutants in the Now": SubResource("Resource_ofcqs")
+})
+unique_trait = ExtResource("16_6gifh")
+basic_traits = ["Type: Bovidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

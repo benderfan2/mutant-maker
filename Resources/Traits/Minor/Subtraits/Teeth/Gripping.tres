@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_sh0hb")
 name = "Gripping"
-type = 1
+type = 5
 cost = 1
 description = "Used for holding prey, these teeth only inflict 1d6 damage. When used to grab, they inflict +D on grabbed individuals trying to grab you while you’re grabbing them."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

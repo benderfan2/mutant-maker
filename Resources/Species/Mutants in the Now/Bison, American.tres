@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dlt1f0uanc0mi"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_lhwhn"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_tf5nf"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="2_16tye"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="3_mlxy0"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="4_7qniq"]
+[ext_resource type="Resource" uid="uid://bbla7lr5jaw3o" path="res://Resources/Traits/Major/Stampede.tres" id="5_8duob"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="6_wgtav"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="7_v8hyi"]
+[ext_resource type="Resource" uid="uid://bpwuk0s4ijcb0" path="res://Resources/Traits/Minor/Subtraits/Horns/Charging.tres" id="8_f51vv"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="9_nn6sl"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="10_sjpkw"]
+[ext_resource type="Resource" uid="uid://pat37m2ckbeb" path="res://Resources/Traits/Minor/Horns.tres" id="11_lm3y2"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="12_rk2rv"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="13_3styi"]
+[ext_resource type="Resource" uid="uid://dwq112tqmm3c0" path="res://Resources/Traits/Unique/Buffalo Buffalo.tres" id="14_jjdrq"]
+
+[sub_resource type="Resource" id="Resource_tvsxn"]
+script = ExtResource("1_tf5nf")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_g78xu"]
+script = ExtResource("1_tf5nf")
+traits = Array[ExtResource("1_lhwhn")]([ExtResource("2_16tye"), ExtResource("3_mlxy0"), ExtResource("5_8duob"), ExtResource("6_wgtav"), ExtResource("4_7qniq"), ExtResource("7_v8hyi")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_mlxy0"]
+script = ExtResource("1_tf5nf")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_16tye"]
+script = ExtResource("1_tf5nf")
+traits = Array[ExtResource("1_lhwhn")]([ExtResource("9_nn6sl"), ExtResource("10_sjpkw"), ExtResource("11_lm3y2"), ExtResource("12_rk2rv")])
+subtraits = Dictionary[ExtResource("1_lhwhn"), bool]({
+ExtResource("8_f51vv"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("13_3styi")
+name = "Bison, American"
+description = "Activists rescued the “buffalo” from the brink of extinction."
+base_goop = 10
+size_rating = 13
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 20"
+major_traits = Dictionary[String, ExtResource("1_tf5nf")]({
+"Mutants in the Next": SubResource("Resource_tvsxn"),
+"Mutants in the Now": SubResource("Resource_g78xu")
+})
+minor_traits = Dictionary[String, ExtResource("1_tf5nf")]({
+"Mutants in the Next": SubResource("Resource_mlxy0"),
+"Mutants in the Now": SubResource("Resource_16tye")
+})
+unique_trait = ExtResource("14_jjdrq")
+basic_traits = ["Type: Bovidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

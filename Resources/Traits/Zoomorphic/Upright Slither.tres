@@ -8,5 +8,5 @@ name = "Upright Slither"
 type = 2
 cost = 20
 description = "Despite being legless, you can slither with your torso positioned vertically, moving as if you were bipedal. While this maintains the 1⁄2 MOVE penalty for being limbless, it gives +A on initiative. If you already have +A on initiative, that bonus becomes hardened."
-requirements = ["Limbless OR Forelimbs"]
+requirements = Array[String](["Movement: Limbless", "OR", "Movement: Forelimbs"])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

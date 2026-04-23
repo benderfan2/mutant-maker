@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://6jxq878g24xp"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_2yhs2"]
+
+[resource]
+script = ExtResource("1_2yhs2")
+name = "Brief"
+source = "Next"
+type = 5
+cost = 1
+description = "You can sleep with intense brevity. Your naps can be as short as (10 - +END) minutes."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

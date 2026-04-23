@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dhupckl21s0rg"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_wnlgq"]
+
+[resource]
+script = ExtResource("1_wnlgq")
+name = "Rideable"
+source = "Mutants in the Next, pg. 93"
+cost = 5
+description = "Your species is domesticated as a riding animal. Allies of lesser size rating may automatically cling to you as a moment if you’re willing. Their weight is treated as 1/2 for LOAD, 1/3 if they have Cling, and they don’t suffer +D on melee maneuvers from clinging."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

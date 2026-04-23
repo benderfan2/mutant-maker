@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ca67j7u85cwq"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_fa2ve"]
+
+[resource]
+script = ExtResource("1_fa2ve")
+name = "Deep Diver"
+source = "Mutants in the Next, pg. 71"
+type = 3
+cost = 2
+description = "Increase the amount of time you can hold your breath to (Endurance x 2) minutes. In addition, add +A to any retreat or traverse action that involves diving into water."
+requirements = Array[String](["Breath Storage AND Pressure Tolerance"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

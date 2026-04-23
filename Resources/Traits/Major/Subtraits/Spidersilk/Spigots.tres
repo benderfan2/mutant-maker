@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_766ce")
 name = "Spigots"
+source = "Mutants in the Now, pg. 44"
+type = 4
 cost = 5
 description = "You can produce silk directly from your hands or feet. Whenever a foe you have grabbed with the grab maneuver fails to grab you, they become unbalanced."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cyl7hii2yqq8d"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_yrs2b"]
+
+[resource]
+script = ExtResource("1_yrs2b")
+name = "Adhere"
+source = "Mutants in the Next, pg. 91"
+type = 4
+cost = 3
+description = "You have a dorsal sucker or cement gland evolved to attach to creatures and objects. When you are clinging and declare this ability, characters are +HD to grab you, but you don’t gain the +A or +HA to perform maneuvers against the character you’re clinging to. You can also adhere to surfaces, vehicles, etc., even while unconscious."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

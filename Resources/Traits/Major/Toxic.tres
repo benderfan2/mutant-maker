@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_vibrh")
 name = "Toxic"
+source = "Mutants in the Now, pg. 45"
 cost = 10
 description = "You are covered in a toxin that makes your skin poisonous. Any foe biting or grabbing you unarmed (without a weapon that supports grab) gains the envenomed state and has an additional effect as detailed below. You may only have one type of venom, dictated by your species."
 subtraits = Array[ExtResource("1_vibrh")]([ExtResource("2_mjoiy")])

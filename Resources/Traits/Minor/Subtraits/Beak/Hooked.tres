@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_40ofi")
 name = "Hooked"
-type = 1
+type = 5
 cost = 1
 description = "If your foe is grappled or prone, this does 1d12 damage instead. Your beak gains the injector trait."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

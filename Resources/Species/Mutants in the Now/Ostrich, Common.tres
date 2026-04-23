@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bfqy1cudyechu"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_g8vsc"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_43veo"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_rylfe"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="3_svbkt"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_y2sai"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="5_xxcgy"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="6_v3uvt"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="7_tvco6"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="8_quksi"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="9_lvlce"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_qeihv"]
+[ext_resource type="Resource" uid="uid://cpyd8qym2kgr1" path="res://Resources/Traits/Minor/Heat Tolerance.tres" id="11_a48qv"]
+[ext_resource type="Resource" uid="uid://sn6n4udfs8o1" path="res://Resources/Traits/Minor/Long Neck.tres" id="12_c66cn"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="13_32fgf"]
+[ext_resource type="Resource" uid="uid://bgerwn04ldad" path="res://Resources/Traits/Minor/Water Storage.tres" id="14_q6mun"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="15_svbkt"]
+[ext_resource type="Resource" uid="uid://b3de4xwv4h0o0" path="res://Resources/Traits/Unique/Winganuver.tres" id="17_y2sai"]
+
+[sub_resource type="Resource" id="Resource_o0mmd"]
+script = ExtResource("1_g8vsc")
+traits = Array[ExtResource("2_rylfe")]([ExtResource("3_svbkt"), ExtResource("4_y2sai"), ExtResource("5_xxcgy"), ExtResource("6_v3uvt")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_epdpo"]
+script = ExtResource("1_g8vsc")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_eg6jv"]
+script = ExtResource("1_g8vsc")
+traits = Array[ExtResource("2_rylfe")]([ExtResource("9_lvlce"), ExtResource("10_qeihv"), ExtResource("11_a48qv"), ExtResource("12_c66cn"), ExtResource("13_32fgf"), ExtResource("14_q6mun")])
+subtraits = Dictionary[ExtResource("2_rylfe"), bool]({
+ExtResource("7_tvco6"): false,
+ExtResource("8_quksi"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_y2sai"]
+script = ExtResource("1_g8vsc")
+traits = Array[ExtResource("2_rylfe")]([ExtResource("15_svbkt")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_43veo")
+name = "Ostrich, Common"
+description = "The world’s largest bird and a flightless ground hunter."
+base_goop = 14
+size_rating = 10
+enhancable_attributes = Array[String](["Perception", "Strength", "Speed"])
+source = "Mutants in the Now, pg. 29"
+major_traits = Dictionary[String, ExtResource("1_g8vsc")]({
+"Mutants in the Next": SubResource("Resource_epdpo"),
+"Mutants in the Now": SubResource("Resource_o0mmd")
+})
+minor_traits = Dictionary[String, ExtResource("1_g8vsc")]({
+"Mutants in the Next": SubResource("Resource_y2sai"),
+"Mutants in the Now": SubResource("Resource_eg6jv")
+})
+unique_trait = ExtResource("17_y2sai")
+basic_traits = ["Type: Palaeognathae", "Diet: Facultative Herbivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

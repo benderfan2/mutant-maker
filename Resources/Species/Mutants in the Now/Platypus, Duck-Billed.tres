@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://f2j0c2lef1t0"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_2eu6l"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_qples"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_umjn7"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="3_2o0br"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_x4lgd"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="5_ftsf7"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="6_y2e2t"]
+[ext_resource type="Resource" uid="uid://cywiapyv0fil4" path="res://Resources/Traits/Minor/Subtraits/Spurs/Heel.tres" id="7_a5b06"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="8_j12ij"]
+[ext_resource type="Resource" uid="uid://bh0ux3jeafe3h" path="res://Resources/Traits/Minor/Cheek Pouches.tres" id="9_7bo00"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="10_blv66"]
+[ext_resource type="Resource" uid="uid://6slsp1xc5fmq" path="res://Resources/Traits/Minor/Electroreception.tres" id="11_f45bv"]
+[ext_resource type="Resource" uid="uid://iu04sudfa1ld" path="res://Resources/Traits/Minor/Spurs.tres" id="12_24jxy"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_lyubl"]
+[ext_resource type="Resource" uid="uid://bsvrf3xx547vj" path="res://Resources/Traits/Minor/Ultraviolet Bioluminescence.tres" id="14_s3plh"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="15_j12ij"]
+[ext_resource type="Resource" uid="uid://t6irqmhqb0jq" path="res://Resources/Traits/Unique/Poison Spurs.tres" id="17_7bo00"]
+
+[sub_resource type="Resource" id="Resource_jx7q0"]
+script = ExtResource("1_2eu6l")
+traits = Array[ExtResource("2_qples")]([ExtResource("3_2o0br"), ExtResource("4_x4lgd"), ExtResource("5_ftsf7"), ExtResource("6_y2e2t")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6s60l"]
+script = ExtResource("1_2eu6l")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_mr81y"]
+script = ExtResource("1_2eu6l")
+traits = Array[ExtResource("2_qples")]([ExtResource("9_7bo00"), ExtResource("10_blv66"), ExtResource("11_f45bv"), ExtResource("12_24jxy"), ExtResource("13_lyubl"), ExtResource("14_s3plh")])
+subtraits = Dictionary[ExtResource("2_qples"), bool]({
+ExtResource("7_a5b06"): false,
+ExtResource("8_j12ij"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_7bo00"]
+script = ExtResource("1_2eu6l")
+traits = Array[ExtResource("2_qples")]([ExtResource("15_j12ij")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_umjn7")
+name = "Platypus, Duck-Billed"
+description = "One of the few surviving, famously unique monotremes."
+base_goop = 36
+size_rating = 4
+enhancable_attributes = Array[String](["Determination", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 30"
+major_traits = Dictionary[String, ExtResource("1_2eu6l")]({
+"Mutants in the Next": SubResource("Resource_6s60l"),
+"Mutants in the Now": SubResource("Resource_jx7q0")
+})
+minor_traits = Dictionary[String, ExtResource("1_2eu6l")]({
+"Mutants in the Next": SubResource("Resource_7bo00"),
+"Mutants in the Now": SubResource("Resource_mr81y")
+})
+unique_trait = ExtResource("17_7bo00")
+basic_traits = ["Type: Monotremata", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

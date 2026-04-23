@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_8u120")
 name = "Pursuit"
-type = 1
+type = 5
 cost = 1
 description = "Your claws provide running stability. You are +A in your natural habitat to pursue prey, and foes increase the difficulty to Retreat from you by +3."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

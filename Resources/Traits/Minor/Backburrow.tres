@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://batbjfyb6ocjn"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_g4pub"]
+
+[resource]
+script = ExtResource("1_g4pub")
+name = "Backburrow"
+source = "Mutants in the Next, pg. 96"
+type = 1
+cost = 1
+description = "Your species retreats into burrows backwards, allowing you to defend yourself more easily. You gain +A on retreat rolls when burrowing or in small spaces."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

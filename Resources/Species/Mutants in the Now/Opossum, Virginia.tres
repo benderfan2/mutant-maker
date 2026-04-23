@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://c007wmkdjlv8n"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_2s30l"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_35mep"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_k43ow"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="3_ypbn6"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_3smd5"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="5_eh14x"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="6_ui8qj"]
+[ext_resource type="Resource" uid="uid://bsrheoag7qrio" path="res://Resources/Traits/Major/Toxin Resistance.tres" id="7_wkaaf"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="8_cm55x"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="9_3ueee"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="10_r35or"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="11_op16g"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="12_v5d4o"]
+[ext_resource type="Resource" uid="uid://cxvmg4pybhlpu" path="res://Resources/Traits/Minor/Play Possum.tres" id="13_1jswj"]
+[ext_resource type="Resource" uid="uid://cin37a48a4tmm" path="res://Resources/Traits/Minor/Prehensile Tail.tres" id="14_aa6nj"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="15_biugj"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="16_abksb"]
+[ext_resource type="Resource" uid="uid://dk6syhr81dyww" path="res://Resources/Traits/Unique/Skilled Scavenger.tres" id="18_ypbn6"]
+
+[sub_resource type="Resource" id="Resource_xbqsd"]
+script = ExtResource("1_2s30l")
+traits = Array[ExtResource("2_k43ow")]([ExtResource("3_ypbn6"), ExtResource("4_3smd5"), ExtResource("5_eh14x"), ExtResource("6_ui8qj"), ExtResource("7_wkaaf")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_dqoqk"]
+script = ExtResource("1_2s30l")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_bxuuo"]
+script = ExtResource("1_2s30l")
+traits = Array[ExtResource("2_k43ow")]([ExtResource("11_op16g"), ExtResource("12_v5d4o"), ExtResource("13_1jswj"), ExtResource("14_aa6nj"), ExtResource("15_biugj"), ExtResource("16_abksb")])
+subtraits = Dictionary[ExtResource("2_k43ow"), bool]({
+ExtResource("8_cm55x"): false,
+ExtResource("9_3ueee"): false,
+ExtResource("10_r35or"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_5t0li"]
+script = ExtResource("1_2s30l")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_35mep")
+name = "Opossum, Virginia"
+description = "An opossum of North America well-adapted to human habitats."
+base_goop = 26
+size_rating = 6
+enhancable_attributes = Array[String](["Determination", "Prowess", "Endurance"])
+source = "Mutants in the Now, pg. 28"
+major_traits = Dictionary[String, ExtResource("1_2s30l")]({
+"Mutants in the Next": SubResource("Resource_dqoqk"),
+"Mutants in the Now": SubResource("Resource_xbqsd")
+})
+minor_traits = Dictionary[String, ExtResource("1_2s30l")]({
+"Mutants in the Next": SubResource("Resource_5t0li"),
+"Mutants in the Now": SubResource("Resource_bxuuo")
+})
+unique_trait = ExtResource("18_ypbn6")
+basic_traits = ["Type: Didelphimorphia", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Grasping", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

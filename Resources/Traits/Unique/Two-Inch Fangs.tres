@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://sirvml74vke3"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_gog7v"]
+
+[resource]
+script = ExtResource("1_gog7v")
+name = "Two-Inch Fangs"
+source = "Mutants in the Now, pg. 32"
+type = 3
+cost = 5
+description = "Your base weapon damage for your teeth increases to 2d10."
+requirements = Array[String](["Teeth"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

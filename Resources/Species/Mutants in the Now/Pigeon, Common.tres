@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://1qo02t7vnp2l"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_toj8r"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_0swum"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_yb5f8"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="3_o7gc5"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="4_iwwd7"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_f2kie"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="6_qlgy5"]
+[ext_resource type="Resource" uid="uid://dr74emqnwuqgd" path="res://Resources/Traits/Minor/Subtraits/Claws/Perching.tres" id="7_n0ufj"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="8_apcx3"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_sigbg"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="10_f01qx"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="11_o7gc5"]
+[ext_resource type="Resource" uid="uid://ds6jncxpna5t7" path="res://Resources/Traits/Unique/Homing Instincts.tres" id="13_iwwd7"]
+
+[sub_resource type="Resource" id="Resource_w6x5g"]
+script = ExtResource("1_toj8r")
+traits = Array[ExtResource("2_0swum")]([ExtResource("3_o7gc5"), ExtResource("4_iwwd7"), ExtResource("5_f2kie")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ybpjv"]
+script = ExtResource("1_toj8r")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_8847w"]
+script = ExtResource("1_toj8r")
+traits = Array[ExtResource("2_0swum")]([ExtResource("8_apcx3"), ExtResource("9_sigbg"), ExtResource("10_f01qx")])
+subtraits = Dictionary[ExtResource("2_0swum"), bool]({
+ExtResource("6_qlgy5"): false,
+ExtResource("7_n0ufj"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_iwwd7"]
+script = ExtResource("1_toj8r")
+traits = Array[ExtResource("2_0swum")]([ExtResource("11_o7gc5")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_yb5f8")
+name = "Pigeon, Common"
+description = "Feral rock doves have become a common sight in urban landscapes."
+base_goop = 26
+size_rating = 2
+enhancable_attributes = Array[String](["Cognition", "Affinity", "Speed"])
+source = "Mutants in the Now, pg. 30"
+major_traits = Dictionary[String, ExtResource("1_toj8r")]({
+"Mutants in the Next": SubResource("Resource_ybpjv"),
+"Mutants in the Now": SubResource("Resource_w6x5g")
+})
+minor_traits = Dictionary[String, ExtResource("1_toj8r")]({
+"Mutants in the Next": SubResource("Resource_iwwd7"),
+"Mutants in the Now": SubResource("Resource_8847w")
+})
+unique_trait = ExtResource("13_iwwd7")
+basic_traits = ["Type: Columbimorphae", "Diet: Omnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

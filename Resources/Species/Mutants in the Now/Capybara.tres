@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://uwhgi5cysshu"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_43a3w"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_cbskk"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="2_8disi"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_2sbpy"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="4_8llal"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_ineby"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="6_yt6t0"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="7_dcs4v"]
+[ext_resource type="Resource" uid="uid://lhovfgshxid0" path="res://Resources/Traits/Minor/Aquatic Scent.tres" id="8_busfe"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="9_etsta"]
+[ext_resource type="Resource" uid="uid://cawag3jjaa4kp" path="res://Resources/Traits/Minor/Bottling.tres" id="10_lct0b"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="11_lfdi7"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="12_3kt55"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="13_37fws"]
+[ext_resource type="Resource" uid="uid://bcqpvwdtojfkk" path="res://Resources/Traits/Minor/Standing Posture.tres" id="14_j0qcb"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="15_lcvox"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="16_meqdo"]
+[ext_resource type="Resource" uid="uid://bc04boxo4sqha" path="res://Resources/Traits/Minor/Meme.tres" id="17_2sbpy"]
+[ext_resource type="Resource" uid="uid://di1y5vkbvp165" path="res://Resources/Traits/Unique/Placid.tres" id="17_5ymwy"]
+
+[sub_resource type="Resource" id="Resource_2noat"]
+script = ExtResource("1_cbskk")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_txpec"]
+script = ExtResource("1_cbskk")
+traits = Array[ExtResource("1_43a3w")]([ExtResource("2_8disi"), ExtResource("3_2sbpy"), ExtResource("4_8llal"), ExtResource("5_ineby")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ineby"]
+script = ExtResource("1_cbskk")
+traits = Array[ExtResource("1_43a3w")]([ExtResource("17_2sbpy")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_8llal"]
+script = ExtResource("1_cbskk")
+traits = Array[ExtResource("1_43a3w")]([ExtResource("8_busfe"), ExtResource("9_etsta"), ExtResource("10_lct0b"), ExtResource("11_lfdi7"), ExtResource("12_3kt55"), ExtResource("13_37fws"), ExtResource("14_j0qcb"), ExtResource("15_lcvox")])
+subtraits = Dictionary[ExtResource("1_43a3w"), bool]({
+ExtResource("6_yt6t0"): false,
+ExtResource("7_dcs4v"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("16_meqdo")
+name = "Capybara"
+description = "This peaceful creature is the largest rodent in the world."
+base_goop = 25
+size_rating = 10
+enhancable_attributes = Array[String](["Affinity", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 21"
+major_traits = Dictionary[String, ExtResource("1_cbskk")]({
+"Mutants in the Next": SubResource("Resource_2noat"),
+"Mutants in the Now": SubResource("Resource_txpec")
+})
+minor_traits = Dictionary[String, ExtResource("1_cbskk")]({
+"Mutants in the Next": SubResource("Resource_ineby"),
+"Mutants in the Now": SubResource("Resource_8llal")
+})
+unique_trait = ExtResource("17_5ymwy")
+basic_traits = ["Type: Rodentia", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

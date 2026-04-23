@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bni2cjjmjyqll"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_inog7"]
+
+[resource]
+script = ExtResource("1_inog7")
+name = "Heavy Landing"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 5
+description = "When moving into a melee while flying, any attempt by you to knockdown or press is +A until the end of your turn."
+requirements = Array[String](["Flight"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

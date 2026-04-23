@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://daapc7e0vvw7t"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_qiole"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_ews3v"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_hcvpm"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="3_kqegy"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_2rhtd"]
+[ext_resource type="Resource" uid="uid://bg30pfss6777g" path="res://Resources/Traits/Minor/Subtraits/Beak/Nutcracker.tres" id="5_6uvp2"]
+[ext_resource type="Resource" uid="uid://dr74emqnwuqgd" path="res://Resources/Traits/Minor/Subtraits/Claws/Perching.tres" id="6_25n0b"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="7_14qf2"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="8_yt2bi"]
+[ext_resource type="Resource" uid="uid://bhp4puhbdestn" path="res://Resources/Traits/Minor/Flamboyant.tres" id="9_n53s2"]
+[ext_resource type="Resource" uid="uid://dwosnid3gtqjf" path="res://Resources/Traits/Minor/Mimicry.tres" id="10_mxr43"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="11_obl4c"]
+[ext_resource type="Resource" uid="uid://bba8auvwb7e2f" path="res://Resources/Traits/Unique/Companion Bird.tres" id="13_kqegy"]
+
+[sub_resource type="Resource" id="Resource_sbgu4"]
+script = ExtResource("1_qiole")
+traits = Array[ExtResource("2_hcvpm")]([ExtResource("3_kqegy"), ExtResource("4_2rhtd")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_uo2p6"]
+script = ExtResource("1_qiole")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6rdk1"]
+script = ExtResource("1_qiole")
+traits = Array[ExtResource("2_hcvpm")]([ExtResource("7_14qf2"), ExtResource("8_yt2bi"), ExtResource("9_n53s2"), ExtResource("10_mxr43"), ExtResource("11_obl4c")])
+subtraits = Dictionary[ExtResource("2_hcvpm"), bool]({
+ExtResource("5_6uvp2"): false,
+ExtResource("6_25n0b"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6sall"]
+script = ExtResource("1_qiole")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_ews3v")
+name = "Parrot, Amazon"
+description = "Their mimicry and intelligence make these birds popular pets."
+base_goop = 28
+size_rating = 2
+enhancable_attributes = Array[String](["Cognition", "Affinity", "Speed"])
+source = "Mutants in the Now, pg. 29"
+major_traits = Dictionary[String, ExtResource("1_qiole")]({
+"Mutants in the Next": SubResource("Resource_uo2p6"),
+"Mutants in the Now": SubResource("Resource_sbgu4")
+})
+minor_traits = Dictionary[String, ExtResource("1_qiole")]({
+"Mutants in the Next": SubResource("Resource_6sall"),
+"Mutants in the Now": SubResource("Resource_6rdk1")
+})
+unique_trait = ExtResource("13_kqegy")
+basic_traits = ["Type: Psittaciformes", "Diet: Herbivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://k2pqq4cpnb3p"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_s3gqy"]
+
+[resource]
+script = ExtResource("1_s3gqy")
+name = "Mound-Buster"
+source = "Mutants in the Now, pg. 29"
+type = 3
+cost = 2
+description = "You gain +A on any roll to personally break a structure, and can break down non-fortified doors, small trees, signs, and similar structures no taller than the average height associated with your (Size Rating + 1) without a roll."
+requirements = Array[String](["Claws"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

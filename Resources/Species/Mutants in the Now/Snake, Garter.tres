@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://3cupnps0ig1f"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_abjt8"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_1afya"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_ss288"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_q606l"]
+[ext_resource type="Resource" uid="uid://c452443gjdgdb" path="res://Resources/Traits/Major/Shed Skin.tres" id="4_b0c0d"]
+[ext_resource type="Resource" uid="uid://bb5p0skr75bd0" path="res://Resources/Traits/Major/Swallow.tres" id="5_tt8s8"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="6_gswue"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="7_daq2h"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="8_8ixko"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="9_irn40"]
+[ext_resource type="Resource" uid="uid://dyj3khmmbufe0" path="res://Resources/Traits/Minor/Inspirational.tres" id="10_xh5ch"]
+[ext_resource type="Resource" uid="uid://8511d51arja7" path="res://Resources/Traits/Minor/Languid.tres" id="11_2wsg6"]
+[ext_resource type="Resource" uid="uid://ckpt5coeqiea2" path="res://Resources/Traits/Minor/Scales.tres" id="12_kc5mm"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_3o43k"]
+[ext_resource type="Resource" uid="uid://06737g5ofekg" path="res://Resources/Traits/Minor/Subtraits/Lidless Sleep/Eyeguard.tres" id="14_7cj4j"]
+[ext_resource type="Resource" uid="uid://dqbeg2iaftswd" path="res://Resources/Traits/Minor/Lidless Sleep.tres" id="15_msqoy"]
+[ext_resource type="Resource" uid="uid://b3ltylm2p1yha" path="res://Resources/Traits/Unique/Traces of Venom.tres" id="17_q606l"]
+
+[sub_resource type="Resource" id="Resource_sofhq"]
+script = ExtResource("1_abjt8")
+traits = Array[ExtResource("2_1afya")]([ExtResource("3_q606l"), ExtResource("4_b0c0d"), ExtResource("5_tt8s8")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ur65m"]
+script = ExtResource("1_abjt8")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xvysx"]
+script = ExtResource("1_abjt8")
+traits = Array[ExtResource("2_1afya")]([ExtResource("7_daq2h"), ExtResource("8_8ixko"), ExtResource("9_irn40"), ExtResource("10_xh5ch"), ExtResource("11_2wsg6"), ExtResource("12_kc5mm"), ExtResource("13_3o43k")])
+subtraits = Dictionary[ExtResource("2_1afya"), bool]({
+ExtResource("6_gswue"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_oqvhh"]
+script = ExtResource("1_abjt8")
+traits = Array[ExtResource("2_1afya")]([ExtResource("15_msqoy")])
+subtraits = Dictionary[ExtResource("2_1afya"), bool]({
+ExtResource("14_7cj4j"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_ss288")
+name = "Snake, Garter"
+description = "A common snake found in the wild, with myriad color variations."
+base_goop = 49
+size_rating = 1
+enhancable_attributes = Array[String](["Determination", "Perception", "Speed"])
+source = "Mutants in the Now, pg. 32"
+major_traits = Dictionary[String, ExtResource("1_abjt8")]({
+"Mutants in the Next": SubResource("Resource_ur65m"),
+"Mutants in the Now": SubResource("Resource_sofhq")
+})
+minor_traits = Dictionary[String, ExtResource("1_abjt8")]({
+"Mutants in the Next": SubResource("Resource_oqvhh"),
+"Mutants in the Now": SubResource("Resource_xvysx")
+})
+unique_trait = ExtResource("17_q606l")
+basic_traits = ["Type: Serpentes", "Diet: Carnivore", "Movement: Limbless", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://btnie0qauxqp0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_44p15"]
+
+[resource]
+script = ExtResource("1_44p15")
+name = "Lodge Builder"
+source = "Mutants in the Now, pg. 28"
+type = 3
+cost = 3
+description = "+A on dramatic rolls for construction when personally involved, and on maneuvers in a tunnel or small building (cottage or smaller) you’ve personally constructed."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

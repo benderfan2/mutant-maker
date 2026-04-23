@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://moe6j3aknm8n"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_bnrij"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_gflvg"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="2_oyg7y"]
+[ext_resource type="Resource" uid="uid://cmvkwcc3elarr" path="res://Resources/Traits/Major/Arboreal.tres" id="3_a7bwl"]
+[ext_resource type="Resource" uid="uid://wa308j3wsjv6" path="res://Resources/Traits/Major/Unnerving Vocalization.tres" id="4_h6d54"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="5_0te2m"]
+[ext_resource type="Resource" uid="uid://rucuwqsui72h" path="res://Resources/Traits/Minor/Grasping Feet.tres" id="6_ilg07"]
+[ext_resource type="Resource" uid="uid://ch45pm128e0qh" path="res://Resources/Traits/Minor/Nearly Human.tres" id="7_jgggf"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="8_5cv12"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="9_2sr6l"]
+[ext_resource type="Resource" uid="uid://c4xcv3aa1sfvh" path="res://Resources/Traits/Unique/Pan's Potential.tres" id="10_p0rx0"]
+
+[sub_resource type="Resource" id="Resource_a7bwl"]
+script = ExtResource("1_bnrij")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_oyg7y"]
+script = ExtResource("1_bnrij")
+traits = Array[ExtResource("1_gflvg")]([ExtResource("2_oyg7y"), ExtResource("3_a7bwl"), ExtResource("4_h6d54")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0te2m"]
+script = ExtResource("1_bnrij")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_h6d54"]
+script = ExtResource("1_bnrij")
+traits = Array[ExtResource("1_gflvg")]([ExtResource("5_0te2m"), ExtResource("6_ilg07"), ExtResource("7_jgggf"), ExtResource("8_5cv12")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("9_2sr6l")
+name = "Chimpanzee, Common"
+description = "The closest living relative of humanity is smart and social."
+base_goop = 15
+size_rating = 9
+enhancable_attributes = Array[String](["Cognition", "Strength", "Prowess"])
+source = "Mutants in the Now, pg. 22"
+major_traits = Dictionary[String, ExtResource("1_bnrij")]({
+"Mutants in the Next": SubResource("Resource_a7bwl"),
+"Mutants in the Now": SubResource("Resource_oyg7y")
+})
+minor_traits = Dictionary[String, ExtResource("1_bnrij")]({
+"Mutants in the Next": SubResource("Resource_0te2m"),
+"Mutants in the Now": SubResource("Resource_h6d54")
+})
+unique_trait = ExtResource("10_p0rx0")
+basic_traits = ["Type: Primates", "Diet: Omnivore", "Movement: Semi-Bipedal", "Prehensility: Grasping", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

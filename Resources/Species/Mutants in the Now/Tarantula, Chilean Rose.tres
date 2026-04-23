@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dl00bcl4suat6"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_04qia"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_6p0bo"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_bukk4"]
+[ext_resource type="Resource" uid="uid://bk8qyylh4rbdw" path="res://Resources/Traits/Major/Subtraits/Burrow/Slow.tres" id="3_wwxou"]
+[ext_resource type="Resource" uid="uid://bmbtvnd5bkdjr" path="res://Resources/Traits/Major/Subtraits/Spines/Darts.tres" id="4_ph7gq"]
+[ext_resource type="Resource" uid="uid://crumv64do4jwc" path="res://Resources/Traits/Major/Subtraits/Spidersilk/Spigots.tres" id="5_aqvfi"]
+[ext_resource type="Resource" uid="uid://dp7aky7srybii" path="res://Resources/Traits/Major/Subtraits/Venom/Gamma Neurotoxin.tres" id="6_31g5f"]
+[ext_resource type="Resource" uid="uid://bydgdm6pmcn4i" path="res://Resources/Traits/Major/Adhesive.tres" id="7_0mtof"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="8_32wx4"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="9_ywkt7"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="10_k5bv3"]
+[ext_resource type="Resource" uid="uid://bo6jf3dxrigps" path="res://Resources/Traits/Major/Spines.tres" id="11_xg3sk"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="12_i620o"]
+[ext_resource type="Resource" uid="uid://df6m1fsltm84j" path="res://Resources/Traits/Major/Spidersilk.tres" id="13_0nfps"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="14_s0h1y"]
+[ext_resource type="Resource" uid="uid://ctambddjc858x" path="res://Resources/Traits/Major/Venom.tres" id="15_pqba8"]
+[ext_resource type="Resource" uid="uid://biyj6b21rrsei" path="res://Resources/Traits/Major/Sleepless.tres" id="16_k5bv3"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="17_xg3sk"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="18_i620o"]
+[ext_resource type="Resource" uid="uid://ckhq2rk6e2wwm" path="res://Resources/Traits/Minor/Subtraits/Mandibles/Hollow.tres" id="19_0nfps"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="20_s0h1y"]
+[ext_resource type="Resource" uid="uid://dogjwef6axh60" path="res://Resources/Traits/Minor/Mandibles.tres" id="21_pqba8"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="22_qm7s7"]
+[ext_resource type="Resource" uid="uid://bso8mn2qs7gh6" path="res://Resources/Traits/Minor/Vibration Sense.tres" id="23_10bgq"]
+[ext_resource type="Resource" uid="uid://06737g5ofekg" path="res://Resources/Traits/Minor/Subtraits/Lidless Sleep/Eyeguard.tres" id="24_i620o"]
+[ext_resource type="Resource" uid="uid://dqbeg2iaftswd" path="res://Resources/Traits/Minor/Lidless Sleep.tres" id="25_0nfps"]
+[ext_resource type="Resource" uid="uid://ydpcihfc8avm" path="res://Resources/Species/Mutants in the Now/Needled.tres" id="27_0nfps"]
+
+[sub_resource type="Resource" id="Resource_qm7s7"]
+script = ExtResource("1_04qia")
+traits = Array[ExtResource("2_6p0bo")]([ExtResource("7_0mtof"), ExtResource("8_32wx4"), ExtResource("9_ywkt7"), ExtResource("10_k5bv3"), ExtResource("11_xg3sk"), ExtResource("12_i620o"), ExtResource("13_0nfps"), ExtResource("14_s0h1y"), ExtResource("15_pqba8")])
+subtraits = Dictionary[ExtResource("2_6p0bo"), bool]({
+ExtResource("3_wwxou"): true,
+ExtResource("4_ph7gq"): false,
+ExtResource("5_aqvfi"): false,
+ExtResource("6_31g5f"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0scjh"]
+script = ExtResource("1_04qia")
+traits = Array[ExtResource("2_6p0bo")]([ExtResource("16_k5bv3")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_udmch"]
+script = ExtResource("1_04qia")
+traits = Array[ExtResource("2_6p0bo")]([ExtResource("20_s0h1y"), ExtResource("21_pqba8"), ExtResource("22_qm7s7"), ExtResource("23_10bgq")])
+subtraits = Dictionary[ExtResource("2_6p0bo"), bool]({
+ExtResource("17_xg3sk"): false,
+ExtResource("18_i620o"): false,
+ExtResource("19_0nfps"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_x186o"]
+script = ExtResource("1_04qia")
+traits = Array[ExtResource("2_6p0bo")]([ExtResource("25_0nfps")])
+subtraits = Dictionary[ExtResource("2_6p0bo"), bool]({
+ExtResource("24_i620o"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_bukk4")
+name = "Tarantula, Chilean Rose"
+description = "Widely adopted as a pet due to the relative ease in capture."
+base_goop = 43
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_04qia")]({
+"Mutants in the Next": SubResource("Resource_0scjh"),
+"Mutants in the Now": SubResource("Resource_qm7s7")
+})
+minor_traits = Dictionary[String, ExtResource("1_04qia")]({
+"Mutants in the Next": SubResource("Resource_x186o"),
+"Mutants in the Now": SubResource("Resource_udmch")
+})
+unique_trait = ExtResource("27_0nfps")
+basic_traits = ["Type: Arachnida", "Diet: Carnivore", "Movement: Octopodal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Vibration", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

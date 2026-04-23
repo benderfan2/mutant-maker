@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://pvnth4dfh3ur"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_xuand"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_4s5n1"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_5agl8"]
+[ext_resource type="Resource" uid="uid://gihaifspdfti" path="res://Resources/Traits/Major/Defense Posture.tres" id="3_adgle"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_dsbed"]
+[ext_resource type="Resource" uid="uid://b3427q3rk6n44" path="res://Resources/Traits/Major/Shell.tres" id="5_1cxk0"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="6_hv6w4"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="7_ujqv3"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="8_gxglb"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_3keum"]
+[ext_resource type="Resource" uid="uid://b2h18k52aow2h" path="res://Resources/Traits/Minor/Food Storage.tres" id="10_6br3c"]
+[ext_resource type="Resource" uid="uid://8511d51arja7" path="res://Resources/Traits/Minor/Languid.tres" id="11_v2mb6"]
+[ext_resource type="Resource" uid="uid://sn6n4udfs8o1" path="res://Resources/Traits/Minor/Long Neck.tres" id="12_wj0od"]
+[ext_resource type="Resource" uid="uid://qpoj52a7eogt" path="res://Resources/Traits/Minor/Longevity.tres" id="13_svdpw"]
+[ext_resource type="Resource" uid="uid://ckpt5coeqiea2" path="res://Resources/Traits/Minor/Scales.tres" id="14_cqsf6"]
+[ext_resource type="Resource" uid="uid://d1hmoppo5ufuu" path="res://Resources/Traits/Minor/Red Sight.tres" id="15_61bgp"]
+[ext_resource type="Resource" uid="uid://bgerwn04ldad" path="res://Resources/Traits/Minor/Water Storage.tres" id="16_yxqb3"]
+[ext_resource type="Resource" uid="uid://dltcmo70l4ase" path="res://Resources/Traits/Unique/Big Shell.tres" id="18_adgle"]
+
+[sub_resource type="Resource" id="Resource_t7vqb"]
+script = ExtResource("1_xuand")
+traits = Array[ExtResource("2_4s5n1")]([ExtResource("3_adgle"), ExtResource("4_dsbed"), ExtResource("5_1cxk0")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_66wty"]
+script = ExtResource("1_xuand")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_cfeen"]
+script = ExtResource("1_xuand")
+traits = Array[ExtResource("2_4s5n1")]([ExtResource("8_gxglb"), ExtResource("9_3keum"), ExtResource("10_6br3c"), ExtResource("11_v2mb6"), ExtResource("12_wj0od"), ExtResource("13_svdpw"), ExtResource("14_cqsf6"), ExtResource("15_61bgp"), ExtResource("16_yxqb3")])
+subtraits = Dictionary[ExtResource("2_4s5n1"), bool]({
+ExtResource("6_hv6w4"): false,
+ExtResource("7_ujqv3"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_kvlp6"]
+script = ExtResource("1_xuand")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_5agl8")
+name = "Tortoise, Galapagos"
+description = "A huge and gentle reptile serving a symbol of isolated evolution."
+base_goop = 19
+size_rating = 11
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_xuand")]({
+"Mutants in the Next": SubResource("Resource_66wty"),
+"Mutants in the Now": SubResource("Resource_t7vqb")
+})
+minor_traits = Dictionary[String, ExtResource("1_xuand")]({
+"Mutants in the Next": SubResource("Resource_kvlp6"),
+"Mutants in the Now": SubResource("Resource_cfeen")
+})
+unique_trait = ExtResource("18_adgle")
+basic_traits = ["Type: Testudines", "Diet: Facultative Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

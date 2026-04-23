@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c8iaefeoyqogt"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_y4s4x"]
+
+[resource]
+script = ExtResource("2_y4s4x")
+name = "Quarter Mile"
+source = "Mutants in the Now, pg. 26"
+type = 3
+cost = 2
+description = "You may add 50% to your MOVE for (+END + 2) continuous rounds per scene (minimum 3). In addition, gain +A on dramatic rolls for any race or chase under 1/4 mile."
+requirements = Array[String](["Swift"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

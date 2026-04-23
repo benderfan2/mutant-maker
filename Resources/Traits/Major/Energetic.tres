@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_q14ei")
 name = "Energetic"
+source = "Mutants in the Now, pg. 42"
 cost = 15
 description = "You have a high metabolic rate, which allows you to gain an additional move action or moment each turn. However, you cannot focus unless you skip using that move action or moment."
 subtraits = Array[ExtResource("1_q14ei")]([ExtResource("2_0qaqq")])

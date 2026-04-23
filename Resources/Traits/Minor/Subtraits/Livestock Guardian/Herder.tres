@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dyyl3jg3kaluw"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_igxbm"]
+
+[resource]
+script = ExtResource("1_igxbm")
+name = "Herder"
+source = "Mutants in the Next, pg. 99"
+type = 5
+cost = 1
+description = "You also guide herds and groups forcefully. You gain +A on bully maneuvers against the chosen classification trait, and can perform social interactions to convince them to change direction, start movement, or stop movement."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

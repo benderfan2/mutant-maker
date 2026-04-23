@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://crdccnqe111g3"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_bu7tv"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_0xepf"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_4ggkx"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="3_cvnb6"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="4_ijemb"]
+[ext_resource type="Resource" uid="uid://gihaifspdfti" path="res://Resources/Traits/Major/Defense Posture.tres" id="5_u0wkw"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="6_d8fyc"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="7_0einn"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="8_kjhr0"]
+[ext_resource type="Resource" uid="uid://b3427q3rk6n44" path="res://Resources/Traits/Major/Shell.tres" id="9_wcpg5"]
+[ext_resource type="Resource" uid="uid://c05hb8ebs4ryh" path="res://Resources/Traits/Minor/Subtraits/Beak/Hooked.tres" id="10_0ij70"]
+[ext_resource type="Resource" uid="uid://daen7y88peun5" path="res://Resources/Traits/Minor/Subtraits/Claws/Hooked.tres" id="11_nbqal"]
+[ext_resource type="Resource" uid="uid://dbogp4ur0r846" path="res://Resources/Traits/Minor/Subtraits/Spurs/Back.tres" id="12_o7g6o"]
+[ext_resource type="Resource" uid="uid://lhovfgshxid0" path="res://Resources/Traits/Minor/Aquatic Scent.tres" id="13_qtsia"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="14_b64ig"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="15_7t47x"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="16_v5mcx"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="17_k8p8m"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="18_7yi5c"]
+[ext_resource type="Resource" uid="uid://iu04sudfa1ld" path="res://Resources/Traits/Minor/Spurs.tres" id="19_5lyw6"]
+[ext_resource type="Resource" uid="uid://dq2vjiwl0dvdt" path="res://Resources/Traits/Minor/Vermiform.tres" id="20_80dgv"]
+[ext_resource type="Resource" uid="uid://bh6elycom5su3" path="res://Resources/Traits/Minor/Sleep Surfacing.tres" id="21_cvnb6"]
+[ext_resource type="Resource" uid="uid://o3b4lb0i3y1p" path="res://Resources/Traits/Unique/Snapping.tres" id="23_ijemb"]
+
+[sub_resource type="Resource" id="Resource_14cdg"]
+script = ExtResource("1_bu7tv")
+traits = Array[ExtResource("2_0xepf")]([ExtResource("3_cvnb6"), ExtResource("4_ijemb"), ExtResource("5_u0wkw"), ExtResource("6_d8fyc"), ExtResource("7_0einn"), ExtResource("8_kjhr0"), ExtResource("9_wcpg5")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_smr0l"]
+script = ExtResource("1_bu7tv")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_43auw"]
+script = ExtResource("1_bu7tv")
+traits = Array[ExtResource("2_0xepf")]([ExtResource("13_qtsia"), ExtResource("14_b64ig"), ExtResource("15_7t47x"), ExtResource("16_v5mcx"), ExtResource("17_k8p8m"), ExtResource("18_7yi5c"), ExtResource("19_5lyw6"), ExtResource("20_80dgv")])
+subtraits = Dictionary[ExtResource("2_0xepf"), bool]({
+ExtResource("10_0ij70"): false,
+ExtResource("11_nbqal"): false,
+ExtResource("12_o7g6o"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_3r5hf"]
+script = ExtResource("1_bu7tv")
+traits = Array[ExtResource("2_0xepf")]([ExtResource("21_cvnb6")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_4ggkx")
+name = "Turtle, Alligator Snapping"
+description = "Known across the waterways of the Americas for its fierce bite."
+base_goop = 27
+size_rating = 8
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_bu7tv")]({
+"Mutants in the Next": SubResource("Resource_smr0l"),
+"Mutants in the Now": SubResource("Resource_14cdg")
+})
+minor_traits = Dictionary[String, ExtResource("1_bu7tv")]({
+"Mutants in the Next": SubResource("Resource_3r5hf"),
+"Mutants in the Now": SubResource("Resource_43auw")
+})
+unique_trait = ExtResource("23_ijemb")
+basic_traits = ["Type: Testudines", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

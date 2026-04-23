@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_4232y")
 name = "Swift"
+source = "Mutants in the Now, pg. 44"
 cost = 8
 description = "As a particularly quick creature, you add 100% to MOVE on land. When performing a charge, you become distracted rather than inactive. You also gain +A on move actions that don’t involve climbing, swimming, or mutation-based forms of movement (burrowing, flying, etc.)."
 subtraits = Array[ExtResource("1_4232y")]([ExtResource("2_xhlu5"), ExtResource("3_ak1hg"), ExtResource("4_s3nge")])

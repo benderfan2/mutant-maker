@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cnitoc6cct135"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_r2x25"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_hj82a"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_s5vbv"]
+[ext_resource type="Resource" uid="uid://bk8qyylh4rbdw" path="res://Resources/Traits/Major/Subtraits/Burrow/Slow.tres" id="3_b8l88"]
+[ext_resource type="Resource" uid="uid://bdq3hw8jsuthv" path="res://Resources/Traits/Major/Subtraits/Toxic/Gamma Bufotoxin.tres" id="4_42plq"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="5_cxc16"]
+[ext_resource type="Resource" uid="uid://djv1w5ba1ccrh" path="res://Resources/Traits/Major/Catching Tongue.tres" id="6_l84jk"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="7_xlv10"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="8_2xhdg"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="9_01m0v"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="10_4qhn0"]
+[ext_resource type="Resource" uid="uid://bb5p0skr75bd0" path="res://Resources/Traits/Major/Swallow.tres" id="11_t3i5t"]
+[ext_resource type="Resource" uid="uid://bhjw0dhyqt38" path="res://Resources/Traits/Major/Toxic.tres" id="12_kvtrm"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="13_xl6v2"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="14_8qkf4"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="15_v5ghh"]
+[ext_resource type="Resource" uid="uid://8511d51arja7" path="res://Resources/Traits/Minor/Languid.tres" id="16_b5qvh"]
+[ext_resource type="Resource" uid="uid://cgd3i2xa8bskk" path="res://Resources/Traits/Minor/Parietal Eye.tres" id="17_7rhcc"]
+[ext_resource type="Resource" uid="uid://q54nymoqsy5d" path="res://Resources/Traits/Minor/Spring Leap.tres" id="18_xj3o4"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="19_857kt"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="20_cxc16"]
+[ext_resource type="Resource" uid="uid://b1kr42q6irj53" path="res://Resources/Traits/Minor/Distasteful.tres" id="21_l84jk"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="22_xlv10"]
+[ext_resource type="Resource" uid="uid://n0tn5l51g16o" path="res://Resources/Traits/Unique/Trill.tres" id="24_l84jk"]
+
+[sub_resource type="Resource" id="Resource_gh4xb"]
+script = ExtResource("1_r2x25")
+traits = Array[ExtResource("2_s5vbv")]([ExtResource("5_cxc16"), ExtResource("6_l84jk"), ExtResource("7_xlv10"), ExtResource("8_2xhdg"), ExtResource("9_01m0v"), ExtResource("10_4qhn0"), ExtResource("11_t3i5t"), ExtResource("12_kvtrm")])
+subtraits = Dictionary[ExtResource("2_s5vbv"), bool]({
+ExtResource("3_b8l88"): true,
+ExtResource("4_42plq"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_epq17"]
+script = ExtResource("1_r2x25")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_n1iqd"]
+script = ExtResource("1_r2x25")
+traits = Array[ExtResource("2_s5vbv")]([ExtResource("14_8qkf4"), ExtResource("15_v5ghh"), ExtResource("16_b5qvh"), ExtResource("17_7rhcc"), ExtResource("18_xj3o4"), ExtResource("19_857kt")])
+subtraits = Dictionary[ExtResource("2_s5vbv"), bool]({
+ExtResource("13_xl6v2"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_e6pti"]
+script = ExtResource("1_r2x25")
+traits = Array[ExtResource("2_s5vbv")]([ExtResource("21_l84jk"), ExtResource("22_xlv10")])
+subtraits = Dictionary[ExtResource("2_s5vbv"), bool]({
+ExtResource("20_cxc16"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_hj82a")
+name = "Toad, Eastern American"
+description = "A land-going amphibian common to the American East and Midwest."
+base_goop = 30
+enhancable_attributes = Array[String](["Perception", "Prowess", "Endurance"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_r2x25")]({
+"Mutants in the Next": SubResource("Resource_epq17"),
+"Mutants in the Now": SubResource("Resource_gh4xb")
+})
+minor_traits = Dictionary[String, ExtResource("1_r2x25")]({
+"Mutants in the Next": SubResource("Resource_e6pti"),
+"Mutants in the Now": SubResource("Resource_n1iqd")
+})
+unique_trait = ExtResource("24_l84jk")
+basic_traits = ["Type: Salientia", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Amphibious", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

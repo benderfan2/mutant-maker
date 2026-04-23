@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bma6kttrjhgom"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_0m4p0"]
+
+[resource]
+script = ExtResource("1_0m4p0")
+name = "Ramhorn"
+source = "Mutants in the Now, pg. 31"
+type = 3
+cost = 5
+description = "When performing a charge and a successful strike with your horn in a single turn, maximize damage from your horn."
+requirements = Array[String](["Horns"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://utytx36gcgjx"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_a4ubq"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_vs55h"]
+[ext_resource type="Resource" uid="uid://djd56kp46iaby" path="res://Resources/Traits/Major/Subtraits/Flight/Diving.tres" id="2_rie8j"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_vs55h"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="3_txc2v"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="4_4ryu3"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="5_ea51p"]
+[ext_resource type="Resource" uid="uid://c05hb8ebs4ryh" path="res://Resources/Traits/Minor/Subtraits/Beak/Hooked.tres" id="6_jknc4"]
+[ext_resource type="Resource" uid="uid://rgoahy2ntvqe" path="res://Resources/Traits/Minor/Subtraits/Claws/Talons.tres" id="7_kqmx8"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="8_446ps"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="9_rjcja"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_lg483"]
+[ext_resource type="Resource" uid="uid://rucuwqsui72h" path="res://Resources/Traits/Minor/Grasping Feet.tres" id="11_wrhyi"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="12_vlv04"]
+[ext_resource type="Resource" uid="uid://nh7x3g0y5eh6" path="res://Resources/Traits/Unique/World's Fastest.tres" id="14_kqmx8"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="14_lg483"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="15_wrhyi"]
+
+[sub_resource type="Resource" id="Resource_rjcja"]
+script = ExtResource("1_vs55h")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_446ps"]
+script = ExtResource("1_vs55h")
+traits = Array[ExtResource("1_a4ubq")]([ExtResource("3_txc2v"), ExtResource("4_4ryu3"), ExtResource("5_ea51p")])
+subtraits = Dictionary[ExtResource("1_a4ubq"), bool]({
+ExtResource("2_rie8j"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_vlv04"]
+script = ExtResource("1_vs55h")
+traits = Array[ExtResource("1_a4ubq")]([ExtResource("15_wrhyi")])
+subtraits = Dictionary[ExtResource("1_a4ubq"), bool]({
+ExtResource("14_lg483"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_lg483"]
+script = ExtResource("1_vs55h")
+traits = Array[ExtResource("1_a4ubq")]([ExtResource("8_446ps"), ExtResource("9_rjcja"), ExtResource("10_lg483"), ExtResource("11_wrhyi"), ExtResource("12_vlv04")])
+subtraits = Dictionary[ExtResource("1_a4ubq"), bool]({
+ExtResource("6_jknc4"): false,
+ExtResource("7_kqmx8"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_vs55h")
+name = "Falcon, Peregrine"
+description = "The most widespread bird of prey and the fastest animal on Earth."
+base_goop = 27
+size_rating = 3
+enhancable_attributes = Array[String](["Perception", "Prowess", "Speed"])
+source = "Mutants in the Now, pg. 24"
+major_traits = Dictionary[String, ExtResource("1_vs55h")]({
+"Mutants in the Next": SubResource("Resource_rjcja"),
+"Mutants in the Now": SubResource("Resource_446ps")
+})
+minor_traits = Dictionary[String, ExtResource("1_vs55h")]({
+"Mutants in the Next": SubResource("Resource_vlv04"),
+"Mutants in the Now": SubResource("Resource_lg483")
+})
+unique_trait = ExtResource("14_kqmx8")
+basic_traits = ["Type: Falconiformes", "Diet: Carnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

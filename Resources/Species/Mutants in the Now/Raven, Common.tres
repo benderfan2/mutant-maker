@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://l3hwebtv43ao"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_skikl"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_4nhjd"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_pobqm"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="3_q644d"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_jit3t"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="5_gr82r"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="6_q644d"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="7_pc00s"]
+[ext_resource type="Resource" uid="uid://dr74emqnwuqgd" path="res://Resources/Traits/Minor/Subtraits/Claws/Perching.tres" id="8_6nnwv"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="9_6u7fy"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_ltnfb"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="11_sl054"]
+[ext_resource type="Resource" uid="uid://c63hasr3dtjjg" path="res://Resources/Traits/Minor/Magnetopredation.tres" id="12_y63rr"]
+[ext_resource type="Resource" uid="uid://dwosnid3gtqjf" path="res://Resources/Traits/Minor/Mimicry.tres" id="13_pmhe2"]
+[ext_resource type="Resource" uid="uid://djiq5u2gn622h" path="res://Resources/Traits/Minor/Spatial Memory.tres" id="14_5l23p"]
+[ext_resource type="Resource" uid="uid://ccv32cjvyqjk4" path="res://Resources/Traits/Minor/Ultrasonic Hearing.tres" id="15_8a0bi"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="16_inem1"]
+[ext_resource type="Resource" uid="uid://dvdiue262pk5f" path="res://Resources/Traits/Unique/Nevermore.tres" id="18_6nnwv"]
+
+[sub_resource type="Resource" id="Resource_blx6o"]
+script = ExtResource("1_skikl")
+traits = Array[ExtResource("2_4nhjd")]([ExtResource("3_q644d"), ExtResource("4_jit3t"), ExtResource("5_gr82r")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_jit3t"]
+script = ExtResource("1_skikl")
+traits = Array[ExtResource("2_4nhjd")]([ExtResource("6_q644d")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_y53op"]
+script = ExtResource("1_skikl")
+traits = Array[ExtResource("2_4nhjd")]([ExtResource("9_6u7fy"), ExtResource("10_ltnfb"), ExtResource("11_sl054"), ExtResource("12_y63rr"), ExtResource("13_pmhe2"), ExtResource("14_5l23p"), ExtResource("15_8a0bi")])
+subtraits = Dictionary[ExtResource("2_4nhjd"), bool]({
+ExtResource("7_pc00s"): false,
+ExtResource("8_6nnwv"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_62muv"]
+script = ExtResource("1_skikl")
+traits = Array[ExtResource("2_4nhjd")]([ExtResource("16_inem1")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_pobqm")
+name = "Raven, Common"
+description = "The most common of all corvids, known for its avian intelligence."
+base_goop = 25
+size_rating = 3
+enhancable_attributes = Array[String](["Cognition", "Determination", "Prowess"])
+source = "Mutants in the Now, pg. 31"
+major_traits = Dictionary[String, ExtResource("1_skikl")]({
+"Mutants in the Next": SubResource("Resource_jit3t"),
+"Mutants in the Now": SubResource("Resource_blx6o")
+})
+minor_traits = Dictionary[String, ExtResource("1_skikl")]({
+"Mutants in the Next": SubResource("Resource_62muv"),
+"Mutants in the Now": SubResource("Resource_y53op")
+})
+unique_trait = ExtResource("18_6nnwv")
+basic_traits = ["Type: Passeriformes", "Diet: Omnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

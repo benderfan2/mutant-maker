@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b7m2aidv6dxdw"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_8f0yu"]
+[ext_resource type="Resource" uid="uid://cyl7hii2yqq8d" path="res://Resources/Traits/Major/Subtraits/Cling/Adhere.tres" id="2_xgelx"]
+[ext_resource type="Resource" uid="uid://cvms20vsikjkh" path="res://Resources/Traits/Major/Subtraits/Cling/Anesthetic.tres" id="3_xbogj"]
+
+[resource]
+script = ExtResource("1_8f0yu")
+name = "Cling"
+source = "Mutants in the Next, pg. 91"
+cost = 5
+description = "Through claws, hooks, or sticky pads, you can hang onto other creatures easily. The cling maneuver (pg. 128) becomes supported for both your fighting style and natural weapons, and benefits from all your animal traits, unique traits, and style abilities that reference grab, grabbing, or grabbed now also include cling, clinged, and clinging respectively. You no longer need to spend a moment to sustain clinging, and may instead end it as a reaction after any action (but not reactions). You may also take an moment to automatically cling to a willing ally. Your weight is treated as 1/2 for the purposes of allies lifting or carrying you."
+subtraits = Array[ExtResource("1_8f0yu")]([ExtResource("2_xgelx"), ExtResource("3_xbogj")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

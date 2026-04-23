@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_cmbf5")
 name = "Venom"
+source = "Mutants in the Now, pg. 45"
 cost = 10
 description = "variety of toxins delivered to weaken or kill prey or predator alike. Each inflicts the envenomed state and has an additional effect as detailed below. You may only have one type of venom, dictated by your species. This must be delivered through a natural weapon with the injector trait (typically Stinger or Teeth) by rolling a successful strike that does not add +ESC. When you strike a foe and deliver venom, roll 1d8. If your roll is greater than your +END, you cannot use venom again until the end of the scene."
 subtraits = Array[ExtResource("1_cmbf5")]([ExtResource("2_vpae5"), ExtResource("3_qn4pw"), ExtResource("4_sm27y")])

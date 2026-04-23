@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_ceu17")
 name = "Breath Storage"
+source = "Mutants in the Now, pg. 42"
 cost = 5
 description = "You can hold your breath longer than normal, up to your Endurance in minutes."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

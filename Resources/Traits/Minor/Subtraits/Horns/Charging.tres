@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_5ld83")
 name = "Charging"
-type = 1
+type = 5
 cost = 1
 description = "These do 2d8 damage if you have performed a charge this turn."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

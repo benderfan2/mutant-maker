@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://ch2pwcbf0x18r"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_33tmd"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_vde5q"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_vw7ay"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_g0xyd"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="4_mn5qd"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="5_ls8y1"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="6_ihmtr"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="7_4boip"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="8_p5fwf"]
+[ext_resource type="Resource" uid="uid://b0csl80jfgdad" path="res://Resources/Traits/Minor/Subtraits/Horns/Warding.tres" id="9_8un2p"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="10_xotvt"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="11_i386n"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="12_rd0cy"]
+[ext_resource type="Resource" uid="uid://w2v2c5opw5yq" path="res://Resources/Traits/Minor/Fluffy.tres" id="13_k44qa"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="14_h2s0j"]
+[ext_resource type="Resource" uid="uid://pat37m2ckbeb" path="res://Resources/Traits/Minor/Horns.tres" id="15_5jiho"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="16_2cdm7"]
+[ext_resource type="Resource" uid="uid://byld6c4xs30st" path="res://Resources/Traits/Unique/Babyguard.tres" id="18_g0xyd"]
+
+[sub_resource type="Resource" id="Resource_vtmi5"]
+script = ExtResource("1_33tmd")
+traits = Array[ExtResource("2_vw7ay")]([ExtResource("3_g0xyd"), ExtResource("4_mn5qd"), ExtResource("5_ls8y1"), ExtResource("6_ihmtr"), ExtResource("7_4boip"), ExtResource("8_p5fwf")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ex5lr"]
+script = ExtResource("1_33tmd")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_kos2q"]
+script = ExtResource("1_33tmd")
+traits = Array[ExtResource("2_vw7ay")]([ExtResource("10_xotvt"), ExtResource("11_i386n"), ExtResource("12_rd0cy"), ExtResource("13_k44qa"), ExtResource("14_h2s0j"), ExtResource("15_5jiho"), ExtResource("16_2cdm7")])
+subtraits = Dictionary[ExtResource("2_vw7ay"), bool]({
+ExtResource("9_8un2p"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_vw7ay"]
+script = ExtResource("1_33tmd")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_vde5q")
+name = "Muskox"
+description = "Known for its shaggy coat, thick horns, and defensive circles."
+base_goop = 20
+size_rating = 11
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 28"
+major_traits = Dictionary[String, ExtResource("1_33tmd")]({
+"Mutants in the Next": SubResource("Resource_ex5lr"),
+"Mutants in the Now": SubResource("Resource_vtmi5")
+})
+minor_traits = Dictionary[String, ExtResource("1_33tmd")]({
+"Mutants in the Next": SubResource("Resource_vw7ay"),
+"Mutants in the Now": SubResource("Resource_kos2q")
+})
+unique_trait = ExtResource("18_g0xyd")
+basic_traits = ["Type: Bovidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

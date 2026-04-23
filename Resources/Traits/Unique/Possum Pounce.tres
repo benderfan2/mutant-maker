@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bvulroghfe716"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_nj8l5"]
+
+[resource]
+script = ExtResource("1_nj8l5")
+name = "Possum Pounce"
+source = "Mutants in the Now, pg. 28"
+type = 3
+cost = 5
+description = "When you move and grab in the same turn, you may perform a melee strike as a moment."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

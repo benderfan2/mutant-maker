@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cqf4fqw2g2y8v"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_cjlpu"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_iwycx"]
+[ext_resource type="Resource" uid="uid://b6k3u0f5ik7po" path="res://Resources/Traits/Major/Subtraits/Unnerving Vocalization/Bellow.tres" id="2_3dh7v"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_cjlpu"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_io5f8"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="4_v43wf"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_p7eix"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="6_wsd8d"]
+[ext_resource type="Resource" uid="uid://bbla7lr5jaw3o" path="res://Resources/Traits/Major/Stampede.tres" id="7_jdjb3"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="8_c2f8p"]
+[ext_resource type="Resource" uid="uid://wa308j3wsjv6" path="res://Resources/Traits/Major/Unnerving Vocalization.tres" id="9_6jb4p"]
+[ext_resource type="Resource" uid="uid://gqa2j6nxmspf" path="res://Resources/Traits/Minor/Subtraits/Tusks/Defensive.tres" id="10_vu3g4"]
+[ext_resource type="Resource" uid="uid://dhupckl21s0rg" path="res://Resources/Traits/Major/Rideable.tres" id="11_1v5uj"]
+[ext_resource type="Resource" uid="uid://bymplldyi6x4p" path="res://Resources/Traits/Minor/Subtraits/Tusks/Goring.tres" id="11_brhsu"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="12_w2d47"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="13_ft8nc"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="14_6tey7"]
+[ext_resource type="Resource" uid="uid://cpyd8qym2kgr1" path="res://Resources/Traits/Minor/Heat Tolerance.tres" id="15_tt04o"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="16_bh1o8"]
+[ext_resource type="Resource" uid="uid://vnln3ttdhg1m" path="res://Resources/Traits/Minor/Prehensile Trunk.tres" id="17_wj5le"]
+[ext_resource type="Resource" uid="uid://dr2khibmxxpbd" path="res://Resources/Traits/Minor/Tusks.tres" id="18_21ipe"]
+[ext_resource type="Resource" uid="uid://bso8mn2qs7gh6" path="res://Resources/Traits/Minor/Vibration Sense.tres" id="19_jis5l"]
+[ext_resource type="Resource" uid="uid://df8uc8b3lvf3o" path="res://Resources/Traits/Minor/Water Scent.tres" id="20_kiqh3"]
+[ext_resource type="Resource" uid="uid://bkp11x3ae0v74" path="res://Resources/Traits/Unique/Large and in Charge.tres" id="22_io5f8"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="23_c2f8p"]
+[ext_resource type="Resource" uid="uid://cxa26alvnn8qs" path="res://Resources/Traits/Minor/Reduced Sleep.tres" id="24_6jb4p"]
+[ext_resource type="Resource" uid="uid://dkkl4pmrob2ed" path="res://Resources/Traits/Minor/Standing Sleep.tres" id="25_vu3g4"]
+
+[sub_resource type="Resource" id="Resource_7u0gf"]
+script = ExtResource("1_cjlpu")
+traits = Array[ExtResource("1_iwycx")]([ExtResource("11_1v5uj")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_pntba"]
+script = ExtResource("1_cjlpu")
+traits = Array[ExtResource("1_iwycx")]([ExtResource("3_io5f8"), ExtResource("4_v43wf"), ExtResource("5_p7eix"), ExtResource("6_wsd8d"), ExtResource("7_jdjb3"), ExtResource("8_c2f8p"), ExtResource("9_6jb4p")])
+subtraits = Dictionary[ExtResource("1_iwycx"), bool]({
+ExtResource("2_3dh7v"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_brhsu"]
+script = ExtResource("1_cjlpu")
+traits = Array[ExtResource("1_iwycx")]([ExtResource("23_c2f8p"), ExtResource("24_6jb4p"), ExtResource("25_vu3g4")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_p7eix"]
+script = ExtResource("1_cjlpu")
+traits = Array[ExtResource("1_iwycx")]([ExtResource("12_w2d47"), ExtResource("13_ft8nc"), ExtResource("14_6tey7"), ExtResource("15_tt04o"), ExtResource("16_bh1o8"), ExtResource("17_wj5le"), ExtResource("19_jis5l"), ExtResource("18_21ipe"), ExtResource("20_kiqh3")])
+subtraits = Dictionary[ExtResource("1_iwycx"), bool]({
+ExtResource("10_vu3g4"): false,
+ExtResource("11_brhsu"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_cjlpu")
+name = "Elephant, African"
+description = "The largest land animal is hard to forget."
+base_goop = 5
+size_rating = 14
+enhancable_attributes = Array[String](["Cognition", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 23"
+major_traits = Dictionary[String, ExtResource("1_cjlpu")]({
+"Mutants in the Next": SubResource("Resource_7u0gf"),
+"Mutants in the Now": SubResource("Resource_pntba")
+})
+minor_traits = Dictionary[String, ExtResource("1_cjlpu")]({
+"Mutants in the Next": SubResource("Resource_brhsu"),
+"Mutants in the Now": SubResource("Resource_p7eix")
+})
+unique_trait = ExtResource("22_io5f8")
+basic_traits = ["Type: Proboscidea", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

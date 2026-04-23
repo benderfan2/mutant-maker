@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://o3n1ts0qqt8t"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_lstwl"]
+
+[resource]
+script = ExtResource("1_lstwl")
+name = "Active"
+source = "Mutants in the Next, pg. 93"
+type = 4
+cost = 3
+description = "As above, but you don’t need to lower your metabolism at all. However, you still can’t recover WILL without doing so. When you do so, you need only rest half the usual time (roughly 4 hours) to recover WILL. You only regain WILL on a 6 or higher."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

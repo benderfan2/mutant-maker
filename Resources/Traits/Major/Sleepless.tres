@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://biyj6b21rrsei"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_7nlas"]
+[ext_resource type="Resource" uid="uid://o3n1ts0qqt8t" path="res://Resources/Traits/Major/Subtraits/Sleepless/Active.tres" id="2_fdnw5"]
+
+[resource]
+script = ExtResource("1_7nlas")
+name = "Sleepless"
+source = "Mutants in the Next, pg. 93"
+cost = 5
+description = "Instead of sleeping, you go into a lower state of metabolism in which you’re still aware of your surroundings, if less attentive. During this time, you’re +D to any roll unless you “wake up”, and cannot perform any complex or difficult task (typically those that might be associated with mental attributes), at which point you are considered to have the tired status and reinforce it until you complete a full eight hours of lowered metabolism."
+subtraits = Array[ExtResource("1_7nlas")]([ExtResource("2_fdnw5")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

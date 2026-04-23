@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bibbf0ioy17mm"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_t2dmf"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_y7ltp"]
+[ext_resource type="Resource" uid="uid://2qoxma8ybhwy" path="res://Resources/Traits/Major/Subtraits/Swift/Saltation.tres" id="2_7ukh8"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_y7ltp"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_rwrr1"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="4_kwtn6"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="5_6147e"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="6_dhstq"]
+[ext_resource type="Resource" uid="uid://cuptu82s2go57" path="res://Resources/Traits/Major/Rake.tres" id="7_m2uc2"]
+[ext_resource type="Resource" uid="uid://3id5xuxkmatj" path="res://Resources/Traits/Major/Slippery.tres" id="8_axcob"]
+[ext_resource type="Resource" uid="uid://bb5p0skr75bd0" path="res://Resources/Traits/Major/Swallow.tres" id="9_7n84b"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="9_nb5i2"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="10_mxcti"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="10_qomjn"]
+[ext_resource type="Resource" uid="uid://daen7y88peun5" path="res://Resources/Traits/Minor/Subtraits/Claws/Hooked.tres" id="11_lvll5"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="12_1jaeo"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="13_yhoho"]
+[ext_resource type="Resource" uid="uid://cgd3i2xa8bskk" path="res://Resources/Traits/Minor/Parietal Eye.tres" id="14_tudd5"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="15_acyij"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="16_6qsnp"]
+[ext_resource type="Resource" uid="uid://bta0pa484xfyj" path="res://Resources/Traits/Unique/Trash Eater.tres" id="18_rwrr1"]
+
+[sub_resource type="Resource" id="Resource_dhstq"]
+script = ExtResource("1_y7ltp")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6147e"]
+script = ExtResource("1_y7ltp")
+traits = Array[ExtResource("1_t2dmf")]([ExtResource("3_rwrr1"), ExtResource("4_kwtn6"), ExtResource("6_dhstq"), ExtResource("5_6147e"), ExtResource("7_m2uc2"), ExtResource("8_axcob"), ExtResource("9_7n84b"), ExtResource("10_mxcti")])
+subtraits = Dictionary[ExtResource("1_t2dmf"), bool]({
+ExtResource("2_7ukh8"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6gc44"]
+script = ExtResource("1_y7ltp")
+traits = Array[ExtResource("1_t2dmf")]([ExtResource("10_qomjn")])
+subtraits = Dictionary[ExtResource("1_t2dmf"), bool]({
+ExtResource("9_nb5i2"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_8xeb1"]
+script = ExtResource("1_y7ltp")
+traits = Array[ExtResource("1_t2dmf")]([ExtResource("13_yhoho"), ExtResource("14_tudd5"), ExtResource("15_acyij"), ExtResource("16_6qsnp")])
+subtraits = Dictionary[ExtResource("1_t2dmf"), bool]({
+ExtResource("11_lvll5"): false,
+ExtResource("12_1jaeo"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_y7ltp")
+name = "Frog, African Clawed"
+description = "Though native to Africa, this frog is often a lab subject."
+base_goop = 27
+size_rating = 1
+enhancable_attributes = Array[String](["Determination", "Prowess", "Endurance"])
+source = "Mutants in the Now, pg. 24"
+major_traits = Dictionary[String, ExtResource("1_y7ltp")]({
+"Mutants in the Next": SubResource("Resource_dhstq"),
+"Mutants in the Now": SubResource("Resource_6147e")
+})
+minor_traits = Dictionary[String, ExtResource("1_y7ltp")]({
+"Mutants in the Next": SubResource("Resource_6gc44"),
+"Mutants in the Now": SubResource("Resource_8xeb1")
+})
+unique_trait = ExtResource("18_rwrr1")
+basic_traits = ["Type: Salienta", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Amphibious", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

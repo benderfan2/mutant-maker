@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://80tq5esgl4cb"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_66ga4"]
+
+[resource]
+script = ExtResource("1_66ga4")
+name = "Splay"
+source = "Mutants in the Next, pg. "
+cost = 5
+description = "Your species is remarkably low to the ground, or can quickly flatten. You can duck as a moment instead of a move action."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

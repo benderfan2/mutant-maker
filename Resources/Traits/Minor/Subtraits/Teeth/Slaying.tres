@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_1inpr")
 name = "Slaying"
-type = 1
+type = 5
 cost = 1
 description = "Strikes with these teeth are at +A if the opponent is prone or grabbed."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

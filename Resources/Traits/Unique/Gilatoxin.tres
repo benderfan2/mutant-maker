@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bnouy6bxopr58"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_bxyxj"]
+
+[resource]
+script = ExtResource("2_bxyxj")
+name = "Gilatoxin"
+source = "Mutants in the Now, pg. 25"
+type = 3
+cost = 10
+description = "Your bite carries a 1d6 toxin that inflicts agony on any foe you bite successfully for as long as they’re envenomed. Your teeth gain the injector trait, and this functions as if you had the venom trait."
+requirements = Array[String](["Teeth"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

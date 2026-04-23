@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b0f0v5s2skayp"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_rkojn"]
+
+[resource]
+script = ExtResource("1_rkojn")
+name = "Dam Builder"
+source = "Mutants in the Now, pg. 20"
+type = 3
+cost = 2
+description = "You are +A on dramatic rolls related to construction when directly involved, or to demolish anything made of wood or softer materials."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

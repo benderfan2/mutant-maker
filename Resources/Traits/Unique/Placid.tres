@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://di1y5vkbvp165"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_dcy3l"]
+
+[resource]
+script = ExtResource("1_dcy3l")
+name = "Placid"
+source = "Mutants in the Now, pg. 21"
+type = 3
+cost = 2
+description = "Non-carnivorous animals — or animals with a smaller size rating — will not flee or attack unless you perform a maneuver against them, and may even use you as a perch. This does not include humans."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

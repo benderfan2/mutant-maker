@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_j8abr")
 name = "Nutcracker"
-type = 1
+type = 5
 cost = 1
 description = "Attacks with this beak do severing damage, and damage is increased to 1d12 if your foe has both 0 SHT and an Armor value."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

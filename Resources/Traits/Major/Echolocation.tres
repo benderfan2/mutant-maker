@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_m4nha")
 name = "Echolocation"
+source = "Mutants in the Now, pg. 42"
 cost = 10
 description = "You can use echoes to find your way in complete darkness, though you must make appropriate noises to do so. You do not suffer +D from lighting or the blind status, but this sense has dramatic limitations (like the inability to tell color or read text). This does not function in water."
 subtraits = Array[ExtResource("1_m4nha")]([ExtResource("2_0qn1b")])

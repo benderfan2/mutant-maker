@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dxegcwgbkes6r"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_o5342"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_1svvv"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_3h6by"]
+[ext_resource type="Resource" uid="uid://bujgoce3ed40e" path="res://Resources/Traits/Major/Subtraits/Swift/Swimmer.tres" id="3_xd4am"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_34lob"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="5_rug8m"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="6_12gew"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="7_kr0kc"]
+[ext_resource type="Resource" uid="uid://b73qtkdjkudwn" path="res://Resources/Traits/Major/Pressure Tolerance.tres" id="8_rmdhk"]
+[ext_resource type="Resource" uid="uid://biyj6b21rrsei" path="res://Resources/Traits/Major/Sleepless.tres" id="9_0v48n"]
+[ext_resource type="Resource" uid="uid://bmunn0y3qbi21" path="res://Resources/Traits/Minor/Subtraits/Teeth/Crushing.tres" id="10_s400n"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="11_vifrv"]
+[ext_resource type="Resource" uid="uid://c8xfp0pmyxer" path="res://Resources/Traits/Minor/Abrasive.tres" id="12_5uu3b"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="13_ey1ps"]
+[ext_resource type="Resource" uid="uid://lhovfgshxid0" path="res://Resources/Traits/Minor/Aquatic Scent.tres" id="14_m5hiu"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="15_p4tco"]
+[ext_resource type="Resource" uid="uid://f3tgtkvtod72" path="res://Resources/Traits/Minor/Bloodscent.tres" id="16_fx7pf"]
+[ext_resource type="Resource" uid="uid://6slsp1xc5fmq" path="res://Resources/Traits/Minor/Electroreception.tres" id="17_47q02"]
+[ext_resource type="Resource" uid="uid://b2h18k52aow2h" path="res://Resources/Traits/Minor/Food Storage.tres" id="18_hxch7"]
+[ext_resource type="Resource" uid="uid://ceho4hcpypfph" path="res://Resources/Traits/Minor/Migration Sense.tres" id="19_v03kw"]
+[ext_resource type="Resource" uid="uid://ckpt5coeqiea2" path="res://Resources/Traits/Minor/Scales.tres" id="20_wvxwb"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="21_gwujn"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="22_kajb4"]
+[ext_resource type="Resource" uid="uid://ktaw303a6sr7" path="res://Resources/Traits/Minor/Breach Leap.tres" id="23_6sxxd"]
+[ext_resource type="Resource" uid="uid://dqbeg2iaftswd" path="res://Resources/Traits/Minor/Lidless Sleep.tres" id="24_3yxk0"]
+[ext_resource type="Resource" uid="uid://c26knshs1gubi" path="res://Resources/Traits/Unique/Deadly Bite.tres" id="26_xd4am"]
+
+[sub_resource type="Resource" id="Resource_kolam"]
+script = ExtResource("1_o5342")
+traits = Array[ExtResource("2_1svvv")]([ExtResource("4_34lob"), ExtResource("5_rug8m"), ExtResource("6_12gew"), ExtResource("7_kr0kc")])
+subtraits = Dictionary[ExtResource("2_1svvv"), bool]({
+ExtResource("3_xd4am"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_igggg"]
+script = ExtResource("1_o5342")
+traits = Array[ExtResource("2_1svvv")]([ExtResource("8_rmdhk"), ExtResource("9_0v48n")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_l5xm1"]
+script = ExtResource("1_o5342")
+traits = Array[ExtResource("2_1svvv")]([ExtResource("12_5uu3b"), ExtResource("13_ey1ps"), ExtResource("14_m5hiu"), ExtResource("15_p4tco"), ExtResource("16_fx7pf"), ExtResource("17_47q02"), ExtResource("18_hxch7"), ExtResource("19_v03kw"), ExtResource("20_wvxwb"), ExtResource("21_gwujn"), ExtResource("22_kajb4")])
+subtraits = Dictionary[ExtResource("2_1svvv"), bool]({
+ExtResource("10_s400n"): false,
+ExtResource("11_vifrv"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6gpob"]
+script = ExtResource("1_o5342")
+traits = Array[ExtResource("2_1svvv")]([ExtResource("23_6sxxd"), ExtResource("24_3yxk0")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_3h6by")
+name = "Shark, Great White"
+description = "The largest macropredatory fish, made famous by film."
+base_goop = 25
+size_rating = 12
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 32"
+major_traits = Dictionary[String, ExtResource("1_o5342")]({
+"Mutants in the Next": SubResource("Resource_igggg"),
+"Mutants in the Now": SubResource("Resource_kolam")
+})
+minor_traits = Dictionary[String, ExtResource("1_o5342")]({
+"Mutants in the Next": SubResource("Resource_6gpob"),
+"Mutants in the Now": SubResource("Resource_l5xm1")
+})
+unique_trait = ExtResource("26_xd4am")
+basic_traits = ["Type: Chondrichthyes", "Diet: Carnivore", "Movement: Aquatic", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Water-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Finned"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

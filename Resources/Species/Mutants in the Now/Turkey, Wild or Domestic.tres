@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://r12rah2ilcgs"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_m5yqq"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_l7mc4"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_rssx1"]
+[ext_resource type="Resource" uid="uid://cn4hhiuh8ouqx" path="res://Resources/Traits/Major/Subtraits/Flight/Burst.tres" id="3_rg7t8"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="4_1h518"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="5_hio1m"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="6_bvgch"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="7_et7tj"]
+[ext_resource type="Resource" uid="uid://b8g3u8nkwvwlj" path="res://Resources/Traits/Major/Subtraits/Flight/Strenuous.tres" id="8_07nnq"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="9_xcthx"]
+[ext_resource type="Resource" uid="uid://dr74emqnwuqgd" path="res://Resources/Traits/Minor/Subtraits/Claws/Perching.tres" id="10_hnrum"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="11_3ud0n"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="12_ch3vl"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="13_l4kc2"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="14_dr1ow"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="15_gbtec"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="16_hnrum"]
+[ext_resource type="Resource" uid="uid://b1r58noudieyo" path="res://Resources/Traits/Unique/Gobble Gobble.tres" id="18_3ud0n"]
+
+[sub_resource type="Resource" id="Resource_xcthx"]
+script = ExtResource("1_m5yqq")
+traits = Array[ExtResource("2_l7mc4")]([ExtResource("4_1h518"), ExtResource("5_hio1m"), ExtResource("6_bvgch"), ExtResource("7_et7tj")])
+subtraits = Dictionary[ExtResource("2_l7mc4"), bool]({
+ExtResource("3_rg7t8"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_hnrum"]
+script = ExtResource("1_m5yqq")
+subtraits = Dictionary[ExtResource("2_l7mc4"), bool]({
+ExtResource("8_07nnq"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_uw7v4"]
+script = ExtResource("1_m5yqq")
+traits = Array[ExtResource("2_l7mc4")]([ExtResource("12_ch3vl"), ExtResource("13_l4kc2"), ExtResource("14_dr1ow"), ExtResource("15_gbtec")])
+subtraits = Dictionary[ExtResource("2_l7mc4"), bool]({
+ExtResource("9_xcthx"): false,
+ExtResource("10_hnrum"): false,
+ExtResource("11_3ud0n"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_j18vc"]
+script = ExtResource("1_m5yqq")
+traits = Array[ExtResource("2_l7mc4")]([ExtResource("16_hnrum")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_rssx1")
+name = "Turkey, Wild/Domestic"
+description = "A ground-hunting, tree-perching bird that’s raised for its meat."
+base_goop = 21
+size_rating = 6
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_m5yqq")]({
+"Mutants in the Next": SubResource("Resource_hnrum"),
+"Mutants in the Now": SubResource("Resource_xcthx")
+})
+minor_traits = Dictionary[String, ExtResource("1_m5yqq")]({
+"Mutants in the Next": SubResource("Resource_j18vc"),
+"Mutants in the Now": SubResource("Resource_uw7v4")
+})
+unique_trait = ExtResource("18_3ud0n")
+basic_traits = ["Type: Galliformes", "Diet: Omnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dvw4r1t2n1wnv"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_bwpko"]
+
+[resource]
+script = ExtResource("1_bwpko")
+name = "Pressure Resistance"
+source = "Mutants in the Next, pg. "
+type = 1
+cost = 1
+description = "You’re adapted to deep dips. The amount you can descend in water without harm is increased to (Endurance x 50). Conventional SCUBA gear doesn’t function or assist at those depths. You can’t purchase Pressure Tolerance."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

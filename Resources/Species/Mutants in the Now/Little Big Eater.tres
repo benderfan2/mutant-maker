@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://br3r5mjlckjjc"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_mbuno"]
+
+[resource]
+script = ExtResource("1_mbuno")
+name = "Little Big Eater"
+source = "Mutants in the Now, pg. 32"
+type = 3
+cost = 10
+description = "When you successfully perform a strike with your teeth, gain 1 temporary WILL."
+requirements = Array[String](["Teeth"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

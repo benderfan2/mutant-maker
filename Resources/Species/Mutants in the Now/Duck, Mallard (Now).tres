@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dk8vn5eqa4nbe"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_doi0o"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_au08o"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="3_fqvgp"]
+[ext_resource type="Resource" uid="uid://4sbre7spx5fb" path="res://Resources/Traits/Major/Subtraits/Flight/Migratory.tres" id="3_j2jg3"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="4_0bpkf"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="4_a5s5g"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="5_507fd"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="5_rmowk"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="6_3l760"]
+[ext_resource type="Resource" uid="uid://dkkl4pmrob2ed" path="res://Resources/Traits/Minor/Standing Sleep.tres" id="6_xw146"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="7_j2jg3"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="7_y0xot"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="8_xcb8g"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="9_xcb8g"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="10_gw7e1"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_r1aol"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="11_xd6a5"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="12_48xq8"]
+[ext_resource type="Resource" uid="uid://dvni6x7ifkw4h" path="res://Resources/Traits/Minor/Pack Hunter.tres" id="13_gw7e1"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="15_j343k"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="16_i5bdd"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="17_shtda"]
+[ext_resource type="Resource" uid="uid://g8ftke0yrtcf" path="res://Resources/Traits/Unique/One Eye Open (Now).tres" id="23_gw7e1"]
+
+[sub_resource type="Resource" id="Resource_3l760"]
+script = ExtResource("1_doi0o")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rmowk"]
+script = ExtResource("1_doi0o")
+traits = Array[ExtResource("2_au08o")]([ExtResource("4_0bpkf"), ExtResource("5_rmowk"), ExtResource("6_3l760"), ExtResource("7_y0xot"), ExtResource("8_xcb8g")])
+subtraits = Dictionary[ExtResource("2_au08o"), bool]({
+ExtResource("3_j2jg3"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xcb8g"]
+script = ExtResource("1_doi0o")
+traits = Array[ExtResource("2_au08o")]([ExtResource("4_a5s5g"), ExtResource("5_507fd"), ExtResource("6_xw146")])
+subtraits = Dictionary[ExtResource("2_au08o"), bool]({
+ExtResource("3_fqvgp"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_y0xot"]
+script = ExtResource("1_doi0o")
+traits = Array[ExtResource("2_au08o")]([ExtResource("10_r1aol"), ExtResource("11_xd6a5"), ExtResource("12_48xq8"), ExtResource("13_gw7e1"), ExtResource("15_j343k"), ExtResource("16_i5bdd"), ExtResource("17_shtda")])
+subtraits = Dictionary[ExtResource("2_au08o"), bool]({
+ExtResource("9_xcb8g"): false,
+ExtResource("10_gw7e1"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("7_j2jg3")
+name = "Duck, Mallard"
+description = "Found in bodies of freshwater across the world."
+base_goop = 25
+size_rating = 3
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 23"
+major_traits = Dictionary[String, ExtResource("1_doi0o")]({
+"Mutants in the Next": SubResource("Resource_3l760"),
+"Mutants in the Now": SubResource("Resource_rmowk")
+})
+minor_traits = Dictionary[String, ExtResource("1_doi0o")]({
+"Mutants in the Next": SubResource("Resource_xcb8g"),
+"Mutants in the Now": SubResource("Resource_y0xot")
+})
+unique_trait = ExtResource("23_gw7e1")
+basic_traits = ["Type: Anseriformes", "Diet: Omnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

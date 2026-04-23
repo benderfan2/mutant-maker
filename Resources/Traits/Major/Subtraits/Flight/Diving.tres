@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_3iben")
 name = "Diving"
+source = "Mutants in the Now, pg. 43"
+type = 4
 cost = 5
 description = "By losing altitude, you can increase your MOVE bonus to 300% for a turn and maximize your size or weapon damage dice (your choice) for any maneuver performed that turn. Recovering the necessary altitude to dive again takes 1d6 dash or sprint actions. Reduce this recovery time by 50% (rounded up) in good flying weather."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

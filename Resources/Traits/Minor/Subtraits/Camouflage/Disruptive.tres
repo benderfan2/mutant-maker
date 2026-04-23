@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cm7e8n21o0j4o"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_8jlwy"]
+
+[resource]
+script = ExtResource("1_8jlwy")
+name = "Disruptive"
+source = "Mutants in the Next, pg. 97"
+type = 5
+cost = 1
+description = "A distinctive pattern blends you into a very specific environment; otherwise, it stands out. Pick a specific backdrop within your camouflage’s environment appropriate to your coloration; like tall grass on the savanna for a tiger, or branches within the jungle for a leopard. Your camouflage is limited to that specific circumstance, but gains +HA instead of +A."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

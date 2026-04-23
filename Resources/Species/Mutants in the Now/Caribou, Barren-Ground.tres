@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://7glqmsed0lh2"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_sc4dk"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_v7kv1"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="2_rf5up"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="3_cvhpv"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="4_4jkqi"]
+[ext_resource type="Resource" uid="uid://dhdbk7vtr2y1o" path="res://Resources/Traits/Minor/Subtraits/Horns/Antlers.tres" id="5_jwgub"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="6_4jbmr"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="6_s6umt"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="7_shhpc"]
+[ext_resource type="Resource" uid="uid://pat37m2ckbeb" path="res://Resources/Traits/Minor/Horns.tres" id="8_hkf3l"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="9_2hbhr"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="10_k31eg"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="11_7kq0x"]
+[ext_resource type="Resource" uid="uid://bl32butxph0iy" path="res://Resources/Traits/Unique/Antlers Out.tres" id="12_any7f"]
+
+[sub_resource type="Resource" id="Resource_1eyc6"]
+script = ExtResource("1_v7kv1")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ym8k6"]
+script = ExtResource("1_v7kv1")
+traits = Array[ExtResource("1_sc4dk")]([ExtResource("2_rf5up"), ExtResource("3_cvhpv"), ExtResource("4_4jkqi")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rf5up"]
+script = ExtResource("1_v7kv1")
+traits = Array[ExtResource("1_sc4dk")]([ExtResource("6_4jbmr")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_sc4dk"]
+script = ExtResource("1_v7kv1")
+traits = Array[ExtResource("1_sc4dk")]([ExtResource("6_s6umt"), ExtResource("7_shhpc"), ExtResource("8_hkf3l"), ExtResource("9_2hbhr"), ExtResource("10_k31eg")])
+subtraits = Dictionary[ExtResource("1_sc4dk"), bool]({
+ExtResource("5_jwgub"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("11_7kq0x")
+name = "Caribou, Barren-Ground"
+description = "The “reindeer” is the only semi-domesticated deer."
+base_goop = 20
+size_rating = 11
+enhancable_attributes = Array[String](["Affinity", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 21"
+major_traits = Dictionary[String, ExtResource("1_v7kv1")]({
+"Mutants in the Next": SubResource("Resource_1eyc6"),
+"Mutants in the Now": SubResource("Resource_ym8k6")
+})
+minor_traits = Dictionary[String, ExtResource("1_v7kv1")]({
+"Mutants in the Next": SubResource("Resource_rf5up"),
+"Mutants in the Now": SubResource("Resource_sc4dk")
+})
+unique_trait = ExtResource("12_any7f")
+basic_traits = ["Type: Cervidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

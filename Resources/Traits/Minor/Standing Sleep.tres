@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dkkl4pmrob2ed"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_3vpdo"]
+[ext_resource type="Resource" uid="uid://b6dkecmu6dxr0" path="res://Resources/Traits/Minor/Subtraits/Standing Sleep/Locked.tres" id="2_axi8d"]
+
+[resource]
+script = ExtResource("1_3vpdo")
+name = "Standing Sleep"
+source = "Mutants in the Next, pg. 100"
+type = 1
+cost = 1
+description = "You can sleep while standing and ready. If surprised while sleeping, you’re no longer inactive. When doing so, you only regain WILL on a 6 or higher."
+subtraits = Array[ExtResource("1_3vpdo")]([ExtResource("2_axi8d")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

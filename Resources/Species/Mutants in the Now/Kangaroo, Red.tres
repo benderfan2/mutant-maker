@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://1hjicwnl3afk"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_yhg1g"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_g7lee"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_p6p85"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_3leof"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_hyb6h"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="5_rlrxu"]
+[ext_resource type="Resource" uid="uid://bike6etqqbcxc" path="res://Resources/Traits/Minor/Subtraits/Claws/Mauling.tres" id="6_rpbx4"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="7_0kpou"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="8_4odj8"]
+[ext_resource type="Resource" uid="uid://cxn5ikipbjmdt" path="res://Resources/Traits/Minor/Hindrunner.tres" id="9_y23r1"]
+[ext_resource type="Resource" uid="uid://c7qfouyu2rmm" path="res://Resources/Traits/Minor/Marsupial Pouch.tres" id="10_gogbj"]
+[ext_resource type="Resource" uid="uid://q54nymoqsy5d" path="res://Resources/Traits/Minor/Spring Leap.tres" id="11_oga4h"]
+[ext_resource type="Resource" uid="uid://bcqpvwdtojfkk" path="res://Resources/Traits/Minor/Standing Posture.tres" id="12_gh7ek"]
+[ext_resource type="Resource" uid="uid://df8uc8b3lvf3o" path="res://Resources/Traits/Minor/Water Scent.tres" id="13_xvb0t"]
+[ext_resource type="Resource" uid="uid://bgerwn04ldad" path="res://Resources/Traits/Minor/Water Storage.tres" id="14_e2e7j"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="15_yp7jt"]
+[ext_resource type="Resource" uid="uid://cosjyj0hetsns" path="res://Resources/Traits/Minor/Balancing Tail.tres" id="16_3leof"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="16_pnddy"]
+[ext_resource type="Resource" uid="uid://cu3gcl0dq25bp" path="res://Resources/Traits/Unique/Power Kick.tres" id="19_hyb6h"]
+
+[sub_resource type="Resource" id="Resource_tgyuc"]
+script = ExtResource("1_yhg1g")
+traits = Array[ExtResource("2_p6p85")]([ExtResource("3_3leof"), ExtResource("4_hyb6h"), ExtResource("5_rlrxu")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_bv04y"]
+script = ExtResource("1_yhg1g")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_yvwcw"]
+script = ExtResource("1_yhg1g")
+traits = Array[ExtResource("2_p6p85")]([ExtResource("7_0kpou"), ExtResource("8_4odj8"), ExtResource("9_y23r1"), ExtResource("10_gogbj"), ExtResource("11_oga4h"), ExtResource("12_gh7ek"), ExtResource("13_xvb0t"), ExtResource("14_e2e7j"), ExtResource("15_yp7jt")])
+subtraits = Dictionary[ExtResource("2_p6p85"), bool]({
+ExtResource("6_rpbx4"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ukw7t"]
+script = ExtResource("1_yhg1g")
+traits = Array[ExtResource("2_p6p85")]([ExtResource("16_3leof"), ExtResource("16_pnddy")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_g7lee")
+name = "Kangaroo, Red"
+description = "A large marsupial, emblematic of the Australian continent."
+base_goop = 25
+size_rating = 10
+enhancable_attributes = Array[String](["Perception", "Strength", "Speed"])
+source = "Mutants in the Now, pg. 27"
+major_traits = Dictionary[String, ExtResource("1_yhg1g")]({
+"Mutants in the Next": SubResource("Resource_bv04y"),
+"Mutants in the Now": SubResource("Resource_tgyuc")
+})
+minor_traits = Dictionary[String, ExtResource("1_yhg1g")]({
+"Mutants in the Next": SubResource("Resource_ukw7t"),
+"Mutants in the Now": SubResource("Resource_yvwcw")
+})
+unique_trait = ExtResource("19_hyb6h")
+basic_traits = ["Type: Macropodiformes", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

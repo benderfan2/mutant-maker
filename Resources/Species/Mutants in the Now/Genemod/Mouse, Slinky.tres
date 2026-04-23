@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bpp4ibyxws4tt"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_ikqmp"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_gdc8h"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_hx0d7"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="3_ueukf"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_fafl1"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_gr2st"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="6_qlitn"]
+[ext_resource type="Resource" uid="uid://80tq5esgl4cb" path="res://Resources/Traits/Major/Splay.tres" id="7_u1gvb"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="8_86wi4"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="9_pdohk"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="10_ftno1"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="11_x1ya0"]
+[ext_resource type="Resource" uid="uid://cc3rxmqd81me0" path="res://Resources/Traits/Minor/Compress.tres" id="12_xtnqt"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="13_mf76d"]
+[ext_resource type="Resource" uid="uid://bhp4puhbdestn" path="res://Resources/Traits/Minor/Flamboyant.tres" id="14_3wcgy"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="15_0uluo"]
+[ext_resource type="Resource" uid="uid://q54nymoqsy5d" path="res://Resources/Traits/Minor/Spring Leap.tres" id="16_ebqdo"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="17_rc6ft"]
+[ext_resource type="Resource" uid="uid://bwavxurgycv0" path="res://Resources/Traits/Minor/Whiskers.tres" id="18_vf82p"]
+[ext_resource type="Resource" uid="uid://6jxq878g24xp" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Brief.tres" id="19_3er63"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="20_pbgwg"]
+[ext_resource type="Resource" uid="uid://baqcr3vkcaseo" path="res://Resources/Traits/Unique/Stretch 'n Squish.tres" id="22_pdohk"]
+
+[sub_resource type="Resource" id="Resource_yjq5i"]
+script = ExtResource("1_ikqmp")
+traits = Array[ExtResource("2_gdc8h")]([ExtResource("3_ueukf"), ExtResource("4_fafl1"), ExtResource("5_gr2st"), ExtResource("6_qlitn")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ltm30"]
+script = ExtResource("1_ikqmp")
+traits = Array[ExtResource("2_gdc8h")]([ExtResource("7_u1gvb")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_qhed2"]
+script = ExtResource("1_ikqmp")
+traits = Array[ExtResource("2_gdc8h")]([ExtResource("11_x1ya0"), ExtResource("12_xtnqt"), ExtResource("13_mf76d"), ExtResource("14_3wcgy"), ExtResource("15_0uluo"), ExtResource("16_ebqdo"), ExtResource("17_rc6ft"), ExtResource("18_vf82p")])
+subtraits = Dictionary[ExtResource("2_gdc8h"), bool]({
+ExtResource("8_86wi4"): false,
+ExtResource("9_pdohk"): false,
+ExtResource("10_ftno1"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_yfc8q"]
+script = ExtResource("1_ikqmp")
+traits = Array[ExtResource("2_gdc8h")]([ExtResource("20_pbgwg")])
+subtraits = Dictionary[ExtResource("2_gdc8h"), bool]({
+ExtResource("19_3er63"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_hx0d7")
+name = "Mouse, Slinky"
+description = "The “Squeaky-Slinky” is highly stretchy with a colorful plume."
+base_goop = 38
+enhancable_attributes = Array[String](["Affinity", "Perception", "Prowess"])
+source = "Mutants in the Now, pg. 34"
+major_traits = Dictionary[String, ExtResource("1_ikqmp")]({
+"Mutants in the Next": SubResource("Resource_ltm30"),
+"Mutants in the Now": SubResource("Resource_yjq5i")
+})
+minor_traits = Dictionary[String, ExtResource("1_ikqmp")]({
+"Mutants in the Next": SubResource("Resource_yfc8q"),
+"Mutants in the Now": SubResource("Resource_qhed2")
+})
+unique_trait = ExtResource("22_pdohk")
+basic_traits = ["Type: Rodentia (Genemod)", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dcmvcakx7881o"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_hlnyo"]
+
+[resource]
+script = ExtResource("2_hlnyo")
+name = "Beagling"
+source = "Mutants in the Now, pg. 22"
+type = 3
+cost = 2
+description = "When tracking, you may do so at your full MOVE, and if you find your target, gain 1 temporary WILL."
+requirements = Array[String](["Enhanced Scent"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

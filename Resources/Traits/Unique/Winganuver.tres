@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b3de4xwv4h0o0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_f1jj5"]
+
+[resource]
+script = ExtResource("1_f1jj5")
+name = "Winganuver"
+source = "Mutants in the Now, pg. 29"
+type = 3
+cost = 2
+description = "When your wings are free to use (not holding objects, or if you have independent wings), +A on any move action."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

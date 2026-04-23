@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bhxx31332qecu"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_jsguu"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_mo7m4"]
+[ext_resource type="Resource" uid="uid://djd56kp46iaby" path="res://Resources/Traits/Major/Subtraits/Flight/Diving.tres" id="2_1tgwi"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_mo7m4"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="3_6drgx"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="4_gnvoy"]
+[ext_resource type="Resource" uid="uid://c05hb8ebs4ryh" path="res://Resources/Traits/Minor/Subtraits/Beak/Hooked.tres" id="5_ko3et"]
+[ext_resource type="Resource" uid="uid://rgoahy2ntvqe" path="res://Resources/Traits/Minor/Subtraits/Claws/Talons.tres" id="6_abol5"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="6_uel48"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="7_mubic"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="8_vg160"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_ankfh"]
+[ext_resource type="Resource" uid="uid://rucuwqsui72h" path="res://Resources/Traits/Minor/Grasping Feet.tres" id="10_alwib"]
+[ext_resource type="Resource" uid="uid://d1hmoppo5ufuu" path="res://Resources/Traits/Minor/Red Sight.tres" id="11_gjr1b"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="12_gpvdp"]
+[ext_resource type="Resource" uid="uid://bmioro8xl16j5" path="res://Resources/Traits/Unique/Opportunist.tres" id="14_abol5"]
+
+[sub_resource type="Resource" id="Resource_we1ve"]
+script = ExtResource("1_mo7m4")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_cop3b"]
+script = ExtResource("1_mo7m4")
+traits = Array[ExtResource("1_jsguu")]([ExtResource("3_6drgx"), ExtResource("4_gnvoy")])
+subtraits = Dictionary[ExtResource("1_jsguu"), bool]({
+ExtResource("2_1tgwi"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_qav6h"]
+script = ExtResource("1_mo7m4")
+traits = Array[ExtResource("1_jsguu")]([ExtResource("6_uel48")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_stdt7"]
+script = ExtResource("1_mo7m4")
+traits = Array[ExtResource("1_jsguu")]([ExtResource("7_mubic"), ExtResource("9_ankfh"), ExtResource("10_alwib"), ExtResource("8_vg160"), ExtResource("11_gjr1b"), ExtResource("12_gpvdp")])
+subtraits = Dictionary[ExtResource("1_jsguu"), bool]({
+ExtResource("6_abol5"): false,
+ExtResource("5_ko3et"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_mo7m4")
+name = "Eagle, Bald"
+description = "The national bird of the United States, with a distinct plumage."
+base_goop = 23
+size_rating = 6
+enhancable_attributes = Array[String](["Perception", "Strength", "Speed"])
+source = "Mutants in the Now, pg. 23"
+major_traits = Dictionary[String, ExtResource("1_mo7m4")]({
+"Mutants in the Next": SubResource("Resource_we1ve"),
+"Mutants in the Now": SubResource("Resource_cop3b")
+})
+minor_traits = Dictionary[String, ExtResource("1_mo7m4")]({
+"Mutants in the Next": SubResource("Resource_qav6h"),
+"Mutants in the Now": SubResource("Resource_stdt7")
+})
+unique_trait = ExtResource("14_abol5")
+basic_traits = ["Type: Accipitriformes", "Diet: Carnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dr6i2iqn2n505"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_3qsqb"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_fohs6"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="2_w2ju4"]
+[ext_resource type="Resource" uid="uid://bydgdm6pmcn4i" path="res://Resources/Traits/Major/Adhesive.tres" id="3_6cy4i"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="4_w1kro"]
+[ext_resource type="Resource" uid="uid://cmhaxypfn8lgs" path="res://Resources/Traits/Major/Compound Sight.tres" id="5_0so6v"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="6_bruuu"]
+[ext_resource type="Resource" uid="uid://dqgmiawdshgwa" path="res://Resources/Traits/Major/Exoskeletal Defense.tres" id="7_bkx6c"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="8_fo4ws"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="9_2e3l1"]
+[ext_resource type="Resource" uid="uid://yfr1wo5x788o" path="res://Resources/Traits/Major/Regenerative.tres" id="10_aw3dd"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="11_ttr2k"]
+[ext_resource type="Resource" uid="uid://bsrheoag7qrio" path="res://Resources/Traits/Major/Toxin Resistance.tres" id="12_2sfua"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="13_u0l31"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="14_7w5pf"]
+[ext_resource type="Resource" uid="uid://csk1jwmxwymkp" path="res://Resources/Traits/Minor/Subtraits/Mandibles/Chewing.tres" id="14_drn03"]
+[ext_resource type="Resource" uid="uid://b8g3u8nkwvwlj" path="res://Resources/Traits/Major/Subtraits/Flight/Strenuous.tres" id="14_s8gwc"]
+[ext_resource type="Resource" uid="uid://lcqf3pswtyv6" path="res://Resources/Traits/Minor/Subtraits/Spurs/Leg.tres" id="15_bcim4"]
+[ext_resource type="Resource" uid="uid://cu7qeg1a6b5ll" path="res://Resources/Traits/Minor/Antennae.tres" id="16_gd5aq"]
+[ext_resource type="Resource" uid="uid://80tq5esgl4cb" path="res://Resources/Traits/Major/Splay.tres" id="16_s8gwc"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="17_rgva4"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="18_rqnpu"]
+[ext_resource type="Resource" uid="uid://cpyd8qym2kgr1" path="res://Resources/Traits/Minor/Heat Tolerance.tres" id="19_56u1q"]
+[ext_resource type="Resource" uid="uid://dogjwef6axh60" path="res://Resources/Traits/Minor/Mandibles.tres" id="20_tdqis"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="21_iechs"]
+[ext_resource type="Resource" uid="uid://iu04sudfa1ld" path="res://Resources/Traits/Minor/Spurs.tres" id="22_b1k0m"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="23_0xy7i"]
+[ext_resource type="Resource" uid="uid://bso8mn2qs7gh6" path="res://Resources/Traits/Minor/Vibration Sense.tres" id="24_l25v3"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="25_cahkt"]
+[ext_resource type="Resource" uid="uid://bhcka35asw0dh" path="res://Resources/Traits/Unique/Ancient Survivor.tres" id="26_j2std"]
+[ext_resource type="Resource" uid="uid://06737g5ofekg" path="res://Resources/Traits/Minor/Subtraits/Lidless Sleep/Eyeguard.tres" id="29_etjqb"]
+[ext_resource type="Resource" uid="uid://dqbeg2iaftswd" path="res://Resources/Traits/Minor/Lidless Sleep.tres" id="30_2v1dv"]
+
+[sub_resource type="Resource" id="Resource_tpakg"]
+script = ExtResource("1_3qsqb")
+traits = Array[ExtResource("1_fohs6")]([ExtResource("14_7w5pf"), ExtResource("16_s8gwc")])
+subtraits = Dictionary[ExtResource("1_fohs6"), bool]({
+ExtResource("14_s8gwc"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_s8gwc"]
+script = ExtResource("1_3qsqb")
+traits = Array[ExtResource("1_fohs6")]([ExtResource("2_w2ju4"), ExtResource("3_6cy4i"), ExtResource("4_w1kro"), ExtResource("5_0so6v"), ExtResource("6_bruuu"), ExtResource("7_bkx6c"), ExtResource("9_2e3l1"), ExtResource("8_fo4ws"), ExtResource("10_aw3dd"), ExtResource("11_ttr2k"), ExtResource("12_2sfua")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_tslmf"]
+script = ExtResource("1_3qsqb")
+traits = Array[ExtResource("1_fohs6")]([ExtResource("30_2v1dv")])
+subtraits = Dictionary[ExtResource("1_fohs6"), bool]({
+ExtResource("29_etjqb"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_48lg6"]
+script = ExtResource("1_3qsqb")
+traits = Array[ExtResource("1_fohs6")]([ExtResource("16_gd5aq"), ExtResource("17_rgva4"), ExtResource("18_rqnpu"), ExtResource("19_56u1q"), ExtResource("20_tdqis"), ExtResource("21_iechs"), ExtResource("22_b1k0m"), ExtResource("23_0xy7i"), ExtResource("24_l25v3")])
+subtraits = Dictionary[ExtResource("1_fohs6"), bool]({
+ExtResource("13_u0l31"): false,
+ExtResource("14_drn03"): false,
+ExtResource("15_bcim4"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("25_cahkt")
+name = "Cockroach, American"
+description = "Though from Africa, this bug was spread across the world on ships."
+base_goop = 41
+enhancable_attributes = Array[String](["Determination", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 22"
+major_traits = Dictionary[String, ExtResource("1_3qsqb")]({
+"Mutants in the Next": SubResource("Resource_tpakg"),
+"Mutants in the Now": SubResource("Resource_s8gwc")
+})
+minor_traits = Dictionary[String, ExtResource("1_3qsqb")]({
+"Mutants in the Next": SubResource("Resource_tslmf"),
+"Mutants in the Now": SubResource("Resource_48lg6")
+})
+unique_trait = ExtResource("26_j2std")
+basic_traits = ["Type: Blattodea", "Diet: Omnivore", "Movement: Hexapodal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Vibration", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

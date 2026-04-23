@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_k8is7")
 name = "Color Shift"
-type = 1
+type = 5
 cost = 1
 description = "You can adjust your color slightly between several shades if you take a full scene to do so. Add two related natural environments (like forest, mountains, rivers, etc.) you can use Camouflage in."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

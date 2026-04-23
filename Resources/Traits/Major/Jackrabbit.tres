@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_sqya3")
 name = "Jackrabbit"
+source = "Mutants in the Now, pg. 43"
 cost = 5
 description = "Gain +A on initiative. If you already have +A on initiative, harden it. All foes targeting you with maneuvers for your first turn in a fight scene gain +D. This +D does not apply if you voluntarily enter a melee or use a maneuver against a foe."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

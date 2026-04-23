@@ -5,9 +5,10 @@
 [resource]
 script = ExtResource("1_v3o87")
 name = "Tough Hide"
+source = "Mutants in the Now, pg. 45"
 cost = 5
 description = "Thanks to thick skin, you gain additional SHT equal to your Endurance."
 stat_modifications = Dictionary[String, int]({
-"SHT": -7
+"SHT": "Endurance"
 })
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://vswfkg3i22h5"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_yql81"]
+
+[resource]
+script = ExtResource("1_yql81")
+name = "Gatorbite"
+source = "Mutants in the Now, pg. 20"
+type = 3
+cost = 2
+description = "When using your teeth to do damage to a grabbed target, reroll any 1 on damage dice."
+requirements = Array[String](["Crushing Jaw"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

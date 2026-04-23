@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bb758w8gp888b"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_rieqs"]
+[ext_resource type="Resource" uid="uid://c1fw0644xpm4c" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Airborne.tres" id="2_brkok"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="3_ulyc2"]
+[ext_resource type="Resource" uid="uid://6jxq878g24xp" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Brief.tres" id="4_kia21"]
+
+[resource]
+script = ExtResource("1_rieqs")
+name = "Polyphasic"
+source = "Next"
+type = 1
+cost = 1
+description = "You can break your sleep pattern into naps throughout the day or night, as short as (100 - Endurance) minutes. While you still require eight hours of sleep, you can divide it up as convenient."
+subtraits = Array[ExtResource("1_rieqs")]([ExtResource("2_brkok"), ExtResource("3_ulyc2"), ExtResource("4_kia21")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

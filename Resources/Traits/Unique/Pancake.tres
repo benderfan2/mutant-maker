@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b1t8ls5mhsdbi"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_smg0o"]
+
+[resource]
+script = ExtResource("1_smg0o")
+name = "Pancake"
+source = "Mutants in the Now, pg. 28"
+type = 3
+cost = 2
+description = "You can flatten 6 size ratings shorter (minimum 0). Gain +A to avoid visual notice, but reduce MOVE to 1/10."
+requirements = Array[String](["Compress"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

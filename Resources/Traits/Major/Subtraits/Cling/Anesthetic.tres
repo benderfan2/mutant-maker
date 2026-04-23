@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cvms20vsikjkh"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_hoym2"]
+
+[resource]
+script = ExtResource("1_hoym2")
+name = "Anesthetic"
+source = "Mutants in the Next, pg. 91"
+type = 4
+cost = 2
+description = "You can use a mild numbing agent to mask contact. If you make a successful grab on a foe from surprise, cling successfully, and have a size rating smaller than your target by a margin of at least 4, they must expend an action to notice you in a fight scene, or make a dramatic roll at +D to notice you in a dramatic scene. Others notice you normally on the target unless your size rating is at least 8 smaller than your target."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

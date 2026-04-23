@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dgl1wc70ohxbq"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ft7oj"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_s4rrl"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="2_7anyc"]
+[ext_resource type="Resource" uid="uid://bk8qyylh4rbdw" path="res://Resources/Traits/Major/Subtraits/Burrow/Slow.tres" id="2_nlhqo"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_s4rrl"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_nlhqo"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_uxbff"]
+[ext_resource type="Resource" uid="uid://c452443gjdgdb" path="res://Resources/Traits/Major/Shed Skin.tres" id="5_11qvu"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="7_4qamn"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="8_123ug"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_ij361"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="10_b7blk"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="11_0d8ny"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="12_c73sc"]
+[ext_resource type="Resource" uid="uid://bgerwn04ldad" path="res://Resources/Traits/Minor/Water Storage.tres" id="13_kmq7v"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="14_r4b3d"]
+[ext_resource type="Resource" uid="uid://bnouy6bxopr58" path="res://Resources/Traits/Unique/Gilatoxin.tres" id="16_123ug"]
+[ext_resource type="Resource" uid="uid://cm7e8n21o0j4o" path="res://Resources/Traits/Minor/Subtraits/Camouflage/Disruptive.tres" id="16_kmq7v"]
+[ext_resource type="Resource" uid="uid://6jxq878g24xp" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Brief.tres" id="17_r4b3d"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="18_i222l"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="19_i13ac"]
+
+[sub_resource type="Resource" id="Resource_b7blk"]
+script = ExtResource("1_s4rrl")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ij361"]
+script = ExtResource("1_s4rrl")
+traits = Array[ExtResource("1_ft7oj")]([ExtResource("2_7anyc"), ExtResource("3_nlhqo"), ExtResource("4_uxbff"), ExtResource("5_11qvu")])
+subtraits = Dictionary[ExtResource("1_ft7oj"), bool]({
+ExtResource("2_nlhqo"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_1sivq"]
+script = ExtResource("1_s4rrl")
+traits = Array[ExtResource("1_ft7oj")]([ExtResource("18_i222l"), ExtResource("19_i13ac")])
+subtraits = Dictionary[ExtResource("1_ft7oj"), bool]({
+ExtResource("16_kmq7v"): true,
+ExtResource("17_r4b3d"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0d8ny"]
+script = ExtResource("1_s4rrl")
+traits = Array[ExtResource("1_ft7oj")]([ExtResource("9_ij361"), ExtResource("10_b7blk"), ExtResource("11_0d8ny"), ExtResource("12_c73sc"), ExtResource("13_kmq7v"), ExtResource("14_r4b3d")])
+subtraits = Dictionary[ExtResource("1_ft7oj"), bool]({
+ExtResource("7_4qamn"): false,
+ExtResource("8_123ug"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_s4rrl")
+name = "Gila Monster"
+description = "This poisonous reptile is the largest lizard in North America."
+base_goop = 37
+size_rating = 3
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 25"
+major_traits = Dictionary[String, ExtResource("1_s4rrl")]({
+"Mutants in the Next": SubResource("Resource_b7blk"),
+"Mutants in the Now": SubResource("Resource_ij361")
+})
+minor_traits = Dictionary[String, ExtResource("1_s4rrl")]({
+"Mutants in the Next": SubResource("Resource_1sivq"),
+"Mutants in the Now": SubResource("Resource_0d8ny")
+})
+unique_trait = ExtResource("16_123ug")
+basic_traits = ["Type: Anguimorpha", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

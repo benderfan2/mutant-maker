@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_cgtda")
 name = "Insectivorous"
-type = 1
+type = 5
 cost = 1
 description = "These teeth gain +A when trying to grab or strike a foe with a size rating of at least 2 size rankings smaller than you. If your SR is 4 or less, gain the bonus on foes only 1 size ranking smaller than you."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

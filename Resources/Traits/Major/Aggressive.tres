@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_32rpn")
 name = "Aggressive"
+source = "Mutants in the Now, pg. 42"
 cost = 5
 description = "When you make a saving throw against a foe performing a maneuver against you in melee, you may gain +A on the roll. When you do so, you take damage normally even on a success, but you do not suffer any statuses even on a failure. If the maneuver doesn’t normally do damage and you’re in melee with the foe targeting you, you suffer the character’s highest applicable damage type (size, strength, etc.) instead. Resistance or Armor may not reduce this damage or prevent injuries from it."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

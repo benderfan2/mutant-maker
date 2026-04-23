@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_j6l37")
 name = "Darts"
+source = "Mutants in the Now, pg. 44"
+type = 4
 cost = 3
 description = "By shedding spines, you may perform a melee strike that does your size damage with the AoE weapon type (pg. 86) to all in melee with you. This reduces the Resistance from Spines by 1 each time it’s performed, and cannot be performed when your Resistance is 0. You regain 1 point of Resistance at the end of each scene."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

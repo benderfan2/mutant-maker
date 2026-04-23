@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_qjea0")
 name = "Roar"
+source = "Mutants in the Now, pg. 45"
+type = 4
 cost = 5
 description = "The first time you bully a target during a fight scene, you inflict the stunned status instead of disoriented."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

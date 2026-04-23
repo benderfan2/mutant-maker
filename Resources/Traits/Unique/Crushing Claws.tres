@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://co17jn61rvhw7"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ivdt8"]
+
+[resource]
+script = ExtResource("1_ivdt8")
+name = "Crushing Claws"
+source = "Mutants in the Now, pg. 29"
+type = 3
+cost = 5
+description = "When you perform a move and strike or move and grab with claws in a single turn, inflict disoriented on a raw roll of 16+."
+requirements = Array[String](["Claws"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

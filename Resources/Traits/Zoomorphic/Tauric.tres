@@ -8,5 +8,5 @@ name = "Tauric"
 type = 2
 cost = 12
 description = "This functions as bipedalism, but you are a quadruped with a humanoid body and two additional limbs, like the mythical centaur. Gain +A on any roll to avoid knockdown or involving jumps. However, it presents some challenges for you in regards to human spaces and may inflict +D when space restrictions would get in your way."
-requirements = ["Quadrupedal OR Hexapodal OR Octopodal OR Myriapodal"]
+requirements = Array[String](["Movement: Quadrupedal", "OR", "Movement: Hexapodal", "OR", "Movement: Octopodal", "OR", "Myriapodal"])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

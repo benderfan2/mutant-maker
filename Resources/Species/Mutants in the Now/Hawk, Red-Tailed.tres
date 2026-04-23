@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://datxtvap3nkws"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_gvf4r"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_3pnna"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_bqkao"]
+[ext_resource type="Resource" uid="uid://djd56kp46iaby" path="res://Resources/Traits/Major/Subtraits/Flight/Diving.tres" id="3_3so8x"]
+[ext_resource type="Resource" uid="uid://4sbre7spx5fb" path="res://Resources/Traits/Major/Subtraits/Flight/Migratory.tres" id="4_e4eux"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="5_xgsb4"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="6_e0b4q"]
+[ext_resource type="Resource" uid="uid://c05hb8ebs4ryh" path="res://Resources/Traits/Minor/Subtraits/Beak/Hooked.tres" id="7_26lfw"]
+[ext_resource type="Resource" uid="uid://rgoahy2ntvqe" path="res://Resources/Traits/Minor/Subtraits/Claws/Talons.tres" id="8_1oswa"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="9_pwqso"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="10_l4o7s"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="11_l6124"]
+[ext_resource type="Resource" uid="uid://rucuwqsui72h" path="res://Resources/Traits/Minor/Grasping Feet.tres" id="12_ak0cg"]
+[ext_resource type="Resource" uid="uid://ceho4hcpypfph" path="res://Resources/Traits/Minor/Migration Sense.tres" id="13_jnkh5"]
+[ext_resource type="Resource" uid="uid://d1hmoppo5ufuu" path="res://Resources/Traits/Minor/Red Sight.tres" id="14_k6xqd"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="15_dkhyd"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="16_3so8x"]
+[ext_resource type="Resource" uid="uid://bcjy8d30rys2c" path="res://Resources/Traits/Unique/Low Flyer.tres" id="18_e4eux"]
+
+[sub_resource type="Resource" id="Resource_rwnbf"]
+script = ExtResource("1_gvf4r")
+traits = Array[ExtResource("2_3pnna")]([ExtResource("5_xgsb4"), ExtResource("6_e0b4q")])
+subtraits = Dictionary[ExtResource("2_3pnna"), bool]({
+ExtResource("3_3so8x"): false,
+ExtResource("4_e4eux"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_o0jib"]
+script = ExtResource("1_gvf4r")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_e4eux"]
+script = ExtResource("1_gvf4r")
+traits = Array[ExtResource("2_3pnna")]([ExtResource("9_pwqso"), ExtResource("10_l4o7s"), ExtResource("11_l6124"), ExtResource("12_ak0cg"), ExtResource("13_jnkh5"), ExtResource("14_k6xqd"), ExtResource("15_dkhyd")])
+subtraits = Dictionary[ExtResource("2_3pnna"), bool]({
+ExtResource("7_26lfw"): false,
+ExtResource("8_1oswa"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xgsb4"]
+script = ExtResource("1_gvf4r")
+traits = Array[ExtResource("2_3pnna")]([ExtResource("16_3so8x")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_bqkao")
+name = "Hawk, Red-Tailed"
+description = "An opportunistic and common bird of prey in North America."
+base_goop = 26
+size_rating = 4
+enhancable_attributes = Array[String](["Perception", "Prowess", "Speed"])
+source = "Mutants in the Now, pg. 26"
+major_traits = Dictionary[String, ExtResource("1_gvf4r")]({
+"Mutants in the Next": SubResource("Resource_o0jib"),
+"Mutants in the Now": SubResource("Resource_rwnbf")
+})
+minor_traits = Dictionary[String, ExtResource("1_gvf4r")]({
+"Mutants in the Next": SubResource("Resource_xgsb4"),
+"Mutants in the Now": SubResource("Resource_e4eux")
+})
+unique_trait = ExtResource("18_e4eux")
+basic_traits = ["Type: Accipitriformes", "Diet: Carnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_lftdc")
 name = "Piercing"
-type = 1
+type = 5
 cost = 1
 description = "Attacks with these mandibles do an additional 1 non-injuring damage directly to HP, and they add a weapon die and ignore Resistance if the foe is inactive."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bdb6ofxpc0pxl"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_yawyt"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_mwp80"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_v14fb"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="3_nj84b"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_e4ur3"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="5_l8wnq"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="6_1jy11"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="7_iui6s"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="8_kw60k"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="9_8xwea"]
+[ext_resource type="Resource" uid="uid://bike6etqqbcxc" path="res://Resources/Traits/Minor/Subtraits/Claws/Mauling.tres" id="10_8jjtk"]
+[ext_resource type="Resource" uid="uid://bmunn0y3qbi21" path="res://Resources/Traits/Minor/Subtraits/Teeth/Crushing.tres" id="11_5taaq"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="12_kp0a1"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="13_xmdpm"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="14_cempe"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="15_msrdk"]
+[ext_resource type="Resource" uid="uid://dn0isbtmed402" path="res://Resources/Traits/Minor/Rock Climber.tres" id="16_a8rgm"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="17_fiaeh"]
+[ext_resource type="Resource" uid="uid://1dyg3bo6sq71" path="res://Resources/Traits/Minor/Snow Shoes.tres" id="18_5kigy"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="19_5jgjy"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="20_nj84b"]
+[ext_resource type="Resource" uid="uid://i4wqdppj1a40" path="res://Resources/Traits/Unique/Little Tough.tres" id="22_e4ur3"]
+
+[sub_resource type="Resource" id="Resource_av6vc"]
+script = ExtResource("1_yawyt")
+traits = Array[ExtResource("2_v14fb")]([ExtResource("3_nj84b"), ExtResource("4_e4ur3"), ExtResource("5_l8wnq"), ExtResource("6_1jy11"), ExtResource("7_iui6s"), ExtResource("8_kw60k")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_2jxew"]
+script = ExtResource("1_yawyt")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_7rw71"]
+script = ExtResource("1_yawyt")
+traits = Array[ExtResource("2_v14fb")]([ExtResource("13_xmdpm"), ExtResource("14_cempe"), ExtResource("15_msrdk"), ExtResource("16_a8rgm"), ExtResource("17_fiaeh"), ExtResource("18_5kigy"), ExtResource("19_5jgjy")])
+subtraits = Dictionary[ExtResource("2_v14fb"), bool]({
+ExtResource("9_8xwea"): false,
+ExtResource("10_8jjtk"): false,
+ExtResource("11_5taaq"): false,
+ExtResource("12_kp0a1"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_e4ur3"]
+script = ExtResource("1_yawyt")
+traits = Array[ExtResource("2_v14fb")]([ExtResource("20_nj84b")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_mwp80")
+name = "Wolverine"
+description = "A scavenger known for getting into fights with larger foes."
+base_goop = 30
+size_rating = 7
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 34"
+major_traits = Dictionary[String, ExtResource("1_yawyt")]({
+"Mutants in the Next": SubResource("Resource_2jxew"),
+"Mutants in the Now": SubResource("Resource_av6vc")
+})
+minor_traits = Dictionary[String, ExtResource("1_yawyt")]({
+"Mutants in the Next": SubResource("Resource_e4ur3"),
+"Mutants in the Now": SubResource("Resource_7rw71")
+})
+unique_trait = ExtResource("22_e4ur3")
+basic_traits = ["Type: Musteloidea", "Diet: Facultative Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

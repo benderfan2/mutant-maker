@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_s2h1l")
 name = "Outward"
-type = 1
+type = 5
 cost = 1
 description = "These horns have the edged type instead of blunt. When they inflict HP damage, they inflict two injuries instead of one."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

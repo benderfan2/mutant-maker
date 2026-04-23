@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bdrjxs3328lt7"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_vhvvy"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_5qim5"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_jnjnp"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="3_e64hf"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_m5oiu"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="5_b5wph"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="6_hx4p7"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="7_m5oiu"]
+[ext_resource type="Resource" uid="uid://bpwuk0s4ijcb0" path="res://Resources/Traits/Minor/Subtraits/Horns/Charging.tres" id="7_nbwl4"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="8_b5wph"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="10_hmd8n"]
+[ext_resource type="Resource" uid="uid://pat37m2ckbeb" path="res://Resources/Traits/Minor/Horns.tres" id="11_1tmwu"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="12_kg6c0"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="13_1tmwu"]
+[ext_resource type="Resource" uid="uid://cxa26alvnn8qs" path="res://Resources/Traits/Minor/Reduced Sleep.tres" id="14_kg6c0"]
+[ext_resource type="Resource" uid="uid://dcdykdknjvvmc" path="res://Resources/Traits/Unique/Horned and Hardy.tres" id="16_kg6c0"]
+
+[sub_resource type="Resource" id="Resource_hx4p7"]
+script = ExtResource("1_vhvvy")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_tcuna"]
+script = ExtResource("1_vhvvy")
+traits = Array[ExtResource("2_jnjnp")]([ExtResource("3_e64hf"), ExtResource("4_m5oiu"), ExtResource("5_b5wph"), ExtResource("6_hx4p7")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_v70cq"]
+script = ExtResource("1_vhvvy")
+traits = Array[ExtResource("2_jnjnp")]([ExtResource("13_1tmwu"), ExtResource("14_kg6c0")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_nbwl4"]
+script = ExtResource("1_vhvvy")
+traits = Array[ExtResource("2_jnjnp")]([ExtResource("7_m5oiu"), ExtResource("8_b5wph"), ExtResource("10_hmd8n"), ExtResource("11_1tmwu"), ExtResource("12_kg6c0")])
+subtraits = Dictionary[ExtResource("2_jnjnp"), bool]({
+ExtResource("7_nbwl4"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_5qim5")
+name = "Goat, Saanen"
+description = "A common domestic goat from Switzerland, raised for milk."
+base_goop = 25
+size_rating = 10
+enhancable_attributes = Array[String](["Determination", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 25"
+major_traits = Dictionary[String, ExtResource("1_vhvvy")]({
+"Mutants in the Next": SubResource("Resource_hx4p7"),
+"Mutants in the Now": SubResource("Resource_tcuna")
+})
+minor_traits = Dictionary[String, ExtResource("1_vhvvy")]({
+"Mutants in the Next": SubResource("Resource_v70cq"),
+"Mutants in the Now": SubResource("Resource_nbwl4")
+})
+unique_trait = ExtResource("16_kg6c0")
+basic_traits = ["Type: Bovidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

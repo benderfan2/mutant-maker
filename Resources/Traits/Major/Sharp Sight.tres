@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_7undd")
 name = "Sharp Sight"
+source = "Mutants in the Now, pg. 44"
 cost = 5
 description = "You suffer no +D for dramatic rolls done to notice details or creatures while sprinting, and you do not suffer +D to use a maneuver against a sprinting target. In addition, you gain +A on maneuvers if you have moved this turn."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

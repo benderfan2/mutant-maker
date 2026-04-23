@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_g05fo")
 name = "Musk"
+source = "Mutants in the Now, pg. 43"
 cost = 10
 description = "You have a powerful smell. When somebody enters melee with you, they become unbalanced. Furthermore, when you enter melee with somebody else, the unbalanced status lasts until the end of their next turn."
 subtraits = Array[ExtResource("1_g05fo")]([ExtResource("2_bllg4"), ExtResource("3_rpb47")])

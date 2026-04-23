@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://vpsv8qv76d4v"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_2e4m6"]
+
+[resource]
+script = ExtResource("1_2e4m6")
+name = "Thanks For All the Fish"
+source = "Mutants in the Now, pg. 23"
+type = 3
+cost = 8
+description = "Gain an additional specialty skill. When making a social interaction roll, skip one step."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://rj4kl1m7pkt1"]
+
+[ext_resource type="Script" uid="uid://bf2tb5h3h8o6v" path="res://Scripts/trait_requirement.gd" id="1_5xqfo"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_c1jdg"]
+[ext_resource type="Resource" uid="uid://dogjwef6axh60" path="res://Resources/Traits/Minor/Mandibles.tres" id="3_ywgbt"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="4_1vx5c"]
+[ext_resource type="Resource" uid="uid://bgavnfxiewb47" path="res://Resources/Traits/Minor/Subtraits/Blood-Drinker/Allergenic.tres" id="5_ywgbt"]
+[ext_resource type="Resource" uid="uid://bib3unqsh0mjc" path="res://Resources/Traits/Minor/Subtraits/Blood-Drinker/Anticoagulant.tres" id="6_1vx5c"]
+
+[sub_resource type="Resource" id="Resource_4v2nx"]
+script = ExtResource("1_5xqfo")
+traits_list = Array[ExtResource("1_c1jdg")]([ExtResource("3_ywgbt"), ExtResource("4_1vx5c")])
+metadata/_custom_type_script = "uid://bf2tb5h3h8o6v"
+
+[resource]
+script = ExtResource("1_c1jdg")
+name = "Blood-Drinker"
+source = "Mutants in the Now, pg. 97"
+type = 1
+cost = 1
+description = "You feed on blood as your main diet or to sate a secondary physiological need, and have specialized mouthparts for such. When you roll a maximum value of a die while inflicting damage with a mouthpart natural weapon and have over 0 SHT, gain 1 T-SHT for every die showing that maximum value. This won’t cause you to gain any more T-SHT than the maximum die value of your natural weapon (so if you have a sucker that inflicts 1d6 damage, you can’t gain more T-SHT if you have 6 or more T-SHT already, even from other sources)."
+requirements = [SubResource("Resource_4v2nx")]
+subtraits = Array[ExtResource("1_c1jdg")]([ExtResource("5_ywgbt"), ExtResource("6_1vx5c")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

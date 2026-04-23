@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://curgcumubdjsa"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_2sab6"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_73aev"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_73aev"]
+[ext_resource type="Resource" uid="uid://cspjhw8ode0l2" path="res://Resources/Traits/Major/Subtraits/Swift/Sprint.tres" id="3_2qygc"]
+[ext_resource type="Resource" uid="uid://bkiyviwp87l18" path="res://Resources/Traits/Major/Subtraits/Echolocation/Aquatic.tres" id="3_isk26"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="3_xxs5d"]
+[ext_resource type="Resource" uid="uid://ktaw303a6sr7" path="res://Resources/Traits/Minor/Breach Leap.tres" id="4_d4lfd"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="4_dr31y"]
+[ext_resource type="Resource" uid="uid://bujgoce3ed40e" path="res://Resources/Traits/Major/Subtraits/Swift/Swimmer.tres" id="4_vfh6j"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="5_ufwre"]
+[ext_resource type="Resource" uid="uid://dsqigdsvxw862" path="res://Resources/Traits/Major/Echolocation.tres" id="6_qw0d6"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="7_wqaod"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="8_l6mws"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="9_1fg3j"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="10_2qygc"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="10_ngfqn"]
+[ext_resource type="Resource" uid="uid://dcj50jj8oe2bi" path="res://Resources/Traits/Minor/Clicks.tres" id="11_edc60"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="12_02l2j"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="13_3tc06"]
+[ext_resource type="Resource" uid="uid://bh6elycom5su3" path="res://Resources/Traits/Minor/Sleep Surfacing.tres" id="16_r5mlj"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="17_7mgnp"]
+[ext_resource type="Resource" uid="uid://ccv32cjvyqjk4" path="res://Resources/Traits/Minor/Ultrasonic Hearing.tres" id="18_rcuue"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="19_r8jw2"]
+[ext_resource type="Resource" uid="uid://vpsv8qv76d4v" path="res://Resources/Traits/Unique/Thanks For All the Fish.tres" id="22_vfh6j"]
+
+[sub_resource type="Resource" id="Resource_jaqn4"]
+script = ExtResource("1_73aev")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_d4lfd"]
+script = ExtResource("1_73aev")
+traits = Array[ExtResource("1_2sab6")]([ExtResource("5_ufwre"), ExtResource("6_qw0d6"), ExtResource("7_wqaod"), ExtResource("8_l6mws"), ExtResource("9_1fg3j")])
+subtraits = Dictionary[ExtResource("1_2sab6"), bool]({
+ExtResource("3_isk26"): true,
+ExtResource("3_2qygc"): true,
+ExtResource("4_vfh6j"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_fbakg"]
+script = ExtResource("1_73aev")
+traits = Array[ExtResource("1_2sab6")]([ExtResource("4_d4lfd"), ExtResource("4_dr31y")])
+subtraits = Dictionary[ExtResource("1_2sab6"), bool]({
+ExtResource("3_xxs5d"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_uxgc3"]
+script = ExtResource("1_73aev")
+traits = Array[ExtResource("1_2sab6")]([ExtResource("10_ngfqn"), ExtResource("11_edc60"), ExtResource("12_02l2j"), ExtResource("13_3tc06"), ExtResource("16_r5mlj"), ExtResource("17_7mgnp"), ExtResource("18_rcuue"), ExtResource("19_r8jw2")])
+subtraits = Dictionary[ExtResource("1_2sab6"), bool]({
+ExtResource("10_2qygc"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_73aev")
+name = "Dolphin, Bottlenose"
+description = "The most common and famed of the dolphin species."
+base_goop = 30
+size_rating = 11
+enhancable_attributes = Array[String](["Cognition", "Affinity", "Speed"])
+source = "Mutants in the Now, pg. 23"
+major_traits = Dictionary[String, ExtResource("1_73aev")]({
+"Mutants in the Next": SubResource("Resource_jaqn4"),
+"Mutants in the Now": SubResource("Resource_d4lfd")
+})
+minor_traits = Dictionary[String, ExtResource("1_73aev")]({
+"Mutants in the Next": SubResource("Resource_fbakg"),
+"Mutants in the Now": SubResource("Resource_uxgc3")
+})
+unique_trait = ExtResource("22_vfh6j")
+basic_traits = ["Type: Cetacea", "Diet: Carnivore", "Movement: Aquatic", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Finned"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

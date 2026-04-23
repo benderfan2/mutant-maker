@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b8g3u8nkwvwlj"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_sg33v"]
+
+[resource]
+script = ExtResource("1_sg33v")
+name = "Strenuous"
+source = "Mutants in the Next, pg. 92"
+type = 4
+cost = -5
+is_universal = true
+description = "Your flight only adds +50% to your MOVE, and your flight time is measured in turns (six seconds) instead of minutes."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cgpfr5tf2ivqa"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_cucho"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_q4nw0"]
+[ext_resource type="Resource" uid="uid://cspjhw8ode0l2" path="res://Resources/Traits/Major/Subtraits/Swift/Sprint.tres" id="2_j4p2t"]
+[ext_resource type="Resource" uid="uid://bao27sr0vfgbj" path="res://Resources/Traits/Major/Cat Fancy.tres" id="3_cyb4f"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_7bqtl"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="5_p4oeg"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="6_ev8t2"]
+[ext_resource type="Resource" uid="uid://5e02xe36n64w" path="res://Resources/Traits/Minor/Subtraits/Claws/Ascent.tres" id="7_1qo1r"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="8_5fpqs"]
+[ext_resource type="Resource" uid="uid://daen7y88peun5" path="res://Resources/Traits/Minor/Subtraits/Claws/Hooked.tres" id="8_tcm4b"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_5fpqs"]
+[ext_resource type="Resource" uid="uid://crk84tyq250er" path="res://Resources/Traits/Minor/Subtraits/Claws/Retractable.tres" id="9_cyb4f"]
+[ext_resource type="Resource" uid="uid://dboslq5lcqxhm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Slaying.tres" id="10_7bqtl"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="10_l2yjk"]
+[ext_resource type="Resource" uid="uid://dekr6e8qmrw2c" path="res://Resources/Traits/Minor/Fall Righting.tres" id="11_8rbm3"]
+[ext_resource type="Resource" uid="uid://q54nymoqsy5d" path="res://Resources/Traits/Minor/Spring Leap.tres" id="12_hbio6"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_p2ase"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="14_8lia7"]
+[ext_resource type="Resource" uid="uid://ccv32cjvyqjk4" path="res://Resources/Traits/Minor/Ultrasonic Hearing.tres" id="15_dgpet"]
+[ext_resource type="Resource" uid="uid://bwavxurgycv0" path="res://Resources/Traits/Minor/Whiskers.tres" id="16_8fkad"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="17_a26ly"]
+[ext_resource type="Resource" uid="uid://cwhg1xbn7efni" path="res://Resources/Traits/Unique/Working Cat.tres" id="18_o7pjo"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="20_ev8t2"]
+[ext_resource type="Resource" uid="uid://bc04boxo4sqha" path="res://Resources/Traits/Minor/Meme.tres" id="21_1qo1r"]
+[ext_resource type="Resource" uid="uid://3in80j2by8i0" path="res://Resources/Traits/Minor/Weather Sense.tres" id="23_l2yjk"]
+
+[sub_resource type="Resource" id="Resource_8rbm3"]
+script = ExtResource("1_q4nw0")
+traits = Array[ExtResource("1_cucho")]([ExtResource("8_5fpqs")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xfou3"]
+script = ExtResource("1_q4nw0")
+traits = Array[ExtResource("1_cucho")]([ExtResource("3_cyb4f"), ExtResource("4_7bqtl"), ExtResource("5_p4oeg"), ExtResource("6_ev8t2")])
+subtraits = Dictionary[ExtResource("1_cucho"), bool]({
+ExtResource("2_j4p2t"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_tcm4b"]
+script = ExtResource("1_q4nw0")
+traits = Array[ExtResource("1_cucho")]([ExtResource("20_ev8t2"), ExtResource("21_1qo1r"), ExtResource("23_l2yjk")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_7bqtl"]
+script = ExtResource("1_q4nw0")
+traits = Array[ExtResource("1_cucho")]([ExtResource("9_5fpqs"), ExtResource("10_l2yjk"), ExtResource("11_8rbm3"), ExtResource("12_hbio6"), ExtResource("13_p2ase"), ExtResource("14_8lia7"), ExtResource("15_dgpet"), ExtResource("16_8fkad")])
+subtraits = Dictionary[ExtResource("1_cucho"), bool]({
+ExtResource("7_1qo1r"): false,
+ExtResource("8_tcm4b"): false,
+ExtResource("9_cyb4f"): false,
+ExtResource("10_7bqtl"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("17_a26ly")
+name = "Cat, American Shorthair"
+description = "The classic domestic cat of the US, with a variety of colors and coats."
+base_goop = 33
+size_rating = 6
+enhancable_attributes = Array[String](["Affinity", "Perception", "Prowess"])
+source = "Mutants in the Now, pg. 21"
+major_traits = Dictionary[String, ExtResource("1_q4nw0")]({
+"Mutants in the Next": SubResource("Resource_8rbm3"),
+"Mutants in the Now": SubResource("Resource_xfou3")
+})
+minor_traits = Dictionary[String, ExtResource("1_q4nw0")]({
+"Mutants in the Next": SubResource("Resource_tcm4b"),
+"Mutants in the Now": SubResource("Resource_7bqtl")
+})
+unique_trait = ExtResource("18_o7pjo")
+basic_traits = ["Type: Felidae", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

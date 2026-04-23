@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dh0sh2hnd4mpx"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_hytki"]
+
+[resource]
+script = ExtResource("1_hytki")
+name = "Stubborn"
+source = "Mutants in the Now, pg. 23"
+type = 3
+cost = 5
+description = "The donkey gains the value: self-preservation and +1 WILL."
+stat_modifications = {
+"WILL": 1
+}
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

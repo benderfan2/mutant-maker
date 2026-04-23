@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b1kr42q6irj53"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_5e535"]
+
+[resource]
+script = ExtResource("1_5e535")
+name = "Distasteful"
+source = "Mutants in the Next, pg. 96"
+type = 1
+cost = 1
+description = "You taste bitter and bad. Any foe that inflicts damage to you with mouthparts during a maneuver or attempts to inflict swallowed against you for the first time in a scene becomes stunned afterwards. They can perform a saving throw against being stunned, but a failed save inflicts the tired and unbalanced statuses as well, and reinforces stunned."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

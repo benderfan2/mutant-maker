@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c26knshs1gubi"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_itnlr"]
+
+[resource]
+script = ExtResource("1_itnlr")
+name = "Deadly Bite"
+source = "Mutants in the Now, pg. 32"
+type = 3
+cost = 10
+description = "When you deal damage with your teeth, you can cause an injury even on SHT damage if your damage exceeds your foe’s Endurance."
+requirements = Array[String](["Teeth"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

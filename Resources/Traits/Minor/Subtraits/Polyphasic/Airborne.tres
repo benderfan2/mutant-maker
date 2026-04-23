@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c1fw0644xpm4c"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_d3hw5"]
+
+[resource]
+script = ExtResource("2_d3hw5")
+name = "Airborne"
+source = "Next"
+type = 5
+cost = 1
+description = "Extremely brief and repeated naps keep you on course. You can sleep while flying as long as you maintain a straight route. When doing so, you only regain WILL on a 6 or higher."
+requirements = Array[String](["Flight: Migratory"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

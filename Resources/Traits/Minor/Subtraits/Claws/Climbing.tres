@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_4hdbj")
 name = "Climbing"
-type = 1
+type = 5
 cost = 1
 description = "+A to dramatic rolls or traversal actions when climbing up or down a surface your claws can grip."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

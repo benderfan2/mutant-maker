@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_r6vjr")
 name = "Pecking"
-type = 1
+type = 5
 cost = 1
 description = "When using this for a barrage, increase your damage die incrementally on subsequent attacks if the first attack hits. (So, a second attack does 1d8, the third does 1d10, etc.) Gain barrage as a supported maneuver with your fighting style. when using your beak."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

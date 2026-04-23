@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dltcmo70l4ase"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_2f5ig"]
+
+[resource]
+script = ExtResource("1_2f5ig")
+name = "Big Shell"
+source = "Mutants in the Now, pg. 33"
+type = 3
+cost = 5
+description = "Add 2 to the Armor value your shell provides."
+requirements = Array[String](["Shell"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cctplgjlf2btq"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_qye6w"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_h4v83"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_q5wmn"]
+[ext_resource type="Resource" uid="uid://0po20huyfym7" path="res://Resources/Traits/Major/Subtraits/Burrow/Tunnel.tres" id="3_ck3by"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="4_bumw4"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_tvwmk"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="6_8raky"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="7_avreb"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="8_qix5c"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="9_mn1mu"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_c23wm"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="11_565uf"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="12_yba4m"]
+[ext_resource type="Resource" uid="uid://bcqpvwdtojfkk" path="res://Resources/Traits/Minor/Standing Posture.tres" id="13_788qd"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="14_22g8x"]
+[ext_resource type="Resource" uid="uid://co0vjk4w4cl7u" path="res://Resources/Traits/Unique/Alarm Response.tres" id="16_mn1mu"]
+
+[sub_resource type="Resource" id="Resource_cxir8"]
+script = ExtResource("1_qye6w")
+traits = Array[ExtResource("2_h4v83")]([ExtResource("4_bumw4"), ExtResource("5_tvwmk"), ExtResource("6_8raky"), ExtResource("7_avreb")])
+subtraits = Dictionary[ExtResource("2_h4v83"), bool]({
+ExtResource("3_ck3by"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_qix5c"]
+script = ExtResource("1_qye6w")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_3fm5x"]
+script = ExtResource("1_qye6w")
+traits = Array[ExtResource("2_h4v83")]([ExtResource("10_c23wm"), ExtResource("11_565uf"), ExtResource("12_yba4m"), ExtResource("13_788qd"), ExtResource("14_22g8x")])
+subtraits = Dictionary[ExtResource("2_h4v83"), bool]({
+ExtResource("8_qix5c"): false,
+ExtResource("9_mn1mu"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_o06cy"]
+script = ExtResource("1_qye6w")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_q5wmn")
+name = "Prairie Dog"
+description = "A burrowing ground squirrel of the southwest United States."
+base_goop = 36
+size_rating = 3
+enhancable_attributes = Array[String](["Affinity", "Perception", "Speed"])
+source = "Mutants in the Now, pg. 30"
+major_traits = Dictionary[String, ExtResource("1_qye6w")]({
+"Mutants in the Next": SubResource("Resource_qix5c"),
+"Mutants in the Now": SubResource("Resource_cxir8")
+})
+minor_traits = Dictionary[String, ExtResource("1_qye6w")]({
+"Mutants in the Next": SubResource("Resource_o06cy"),
+"Mutants in the Now": SubResource("Resource_3fm5x")
+})
+unique_trait = ExtResource("16_mn1mu")
+basic_traits = ["Type: Rodentia", "Diet: Facultative Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

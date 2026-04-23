@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ruxvcf5dijdd"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_6250x"]
+
+[resource]
+script = ExtResource("1_6250x")
+name = "Headfirst"
+source = "Mutants in the Now, pg. 24"
+type = 3
+cost = 2
+description = "When charging into melee with only one foe, the foe gains disoriented in addition to unbalanced."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

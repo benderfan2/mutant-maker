@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cuwe2tl6l4pga"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_fuc2b"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_i3fnt"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="2_52jsv"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_fuc2b"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="3_76lnm"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_1a2jo"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="5_fcb6j"]
+[ext_resource type="Resource" uid="uid://bmtyynarowxx4" path="res://Resources/Traits/Minor/Subtraits/Horns/Blunt.tres" id="6_4bir2"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="7_3ra8f"]
+[ext_resource type="Resource" uid="uid://pat37m2ckbeb" path="res://Resources/Traits/Minor/Horns.tres" id="8_6dxdf"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="9_p03nv"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="10_rkuv4"]
+[ext_resource type="Resource" uid="uid://sn6n4udfs8o1" path="res://Resources/Traits/Minor/Long Neck.tres" id="11_xg3k3"]
+[ext_resource type="Resource" uid="uid://dwn28450d5dcm" path="res://Resources/Traits/Minor/Prehensile Tongue.tres" id="12_h68ba"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="13_pbilx"]
+[ext_resource type="Resource" uid="uid://hr0ebtrpnoti" path="res://Resources/Traits/Minor/Sticky Tongue.tres" id="14_hisp4"]
+[ext_resource type="Resource" uid="uid://bgerwn04ldad" path="res://Resources/Traits/Minor/Water Storage.tres" id="15_ngnyo"]
+[ext_resource type="Resource" uid="uid://cm7e8n21o0j4o" path="res://Resources/Traits/Minor/Subtraits/Camouflage/Disruptive.tres" id="17_6dxdf"]
+[ext_resource type="Resource" uid="uid://cix8x3e0wl1tt" path="res://Resources/Traits/Unique/Stink Bull.tres" id="17_52jsv"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="18_p03nv"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="19_rkuv4"]
+[ext_resource type="Resource" uid="uid://cxa26alvnn8qs" path="res://Resources/Traits/Minor/Reduced Sleep.tres" id="20_xg3k3"]
+[ext_resource type="Resource" uid="uid://dkkl4pmrob2ed" path="res://Resources/Traits/Minor/Standing Sleep.tres" id="21_h68ba"]
+
+[sub_resource type="Resource" id="Resource_pbilx"]
+script = ExtResource("1_fuc2b")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0tnq4"]
+script = ExtResource("1_fuc2b")
+traits = Array[ExtResource("1_i3fnt")]([ExtResource("2_52jsv"), ExtResource("3_76lnm"), ExtResource("4_1a2jo"), ExtResource("5_fcb6j")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_hisp4"]
+script = ExtResource("1_fuc2b")
+traits = Array[ExtResource("1_i3fnt")]([ExtResource("18_p03nv"), ExtResource("19_rkuv4"), ExtResource("20_xg3k3"), ExtResource("21_h68ba")])
+subtraits = Dictionary[ExtResource("1_i3fnt"), bool]({
+ExtResource("17_6dxdf"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_76lnm"]
+script = ExtResource("1_fuc2b")
+traits = Array[ExtResource("1_i3fnt")]([ExtResource("7_3ra8f"), ExtResource("8_6dxdf"), ExtResource("9_p03nv"), ExtResource("10_rkuv4"), ExtResource("11_xg3k3"), ExtResource("12_h68ba"), ExtResource("13_pbilx"), ExtResource("14_hisp4"), ExtResource("15_ngnyo")])
+subtraits = Dictionary[ExtResource("1_i3fnt"), bool]({
+ExtResource("6_4bir2"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_fuc2b")
+name = "Giraffe, Reticulated"
+description = "Also known as the Somali giraffe, and commonly held in zoos."
+base_goop = 10
+size_rating = 13
+enhancable_attributes = Array[String](["Perception", "Strength", "Speed"])
+source = "Mutants in the Now, pg. 25"
+major_traits = Dictionary[String, ExtResource("1_fuc2b")]({
+"Mutants in the Next": SubResource("Resource_pbilx"),
+"Mutants in the Now": SubResource("Resource_0tnq4")
+})
+minor_traits = Dictionary[String, ExtResource("1_fuc2b")]({
+"Mutants in the Next": SubResource("Resource_hisp4"),
+"Mutants in the Now": SubResource("Resource_76lnm")
+})
+unique_trait = ExtResource("17_52jsv")
+basic_traits = ["Type: Giraffoidea", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

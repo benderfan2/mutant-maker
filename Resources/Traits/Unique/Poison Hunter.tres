@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://comfd0n62eqg7"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_kta28"]
+
+[resource]
+script = ExtResource("2_kta28")
+name = "Poison Hunter"
+source = "Mutants in the Now, pg. 26"
+type = 3
+cost = 5
+description = "When a source of poison or filth is available, you may “anoint” your spines with it as an moment, inflicting the agony status on any character that takes 5+ points of damage from your spines in one maneuver. This lasts for one scene."
+requirements = Array[String](["Spines", "AND", "Toxin Resistance"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

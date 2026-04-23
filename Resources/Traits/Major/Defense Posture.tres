@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_rjsmo")
 name = "Defense Posture"
+source = "Mutants in the Now, pg. 42"
 cost = 5
 description = "You may roll into a ball, retreat into a shell, etc., as an action. If you have Resistance or Armor from a mutation, it’s increased by 100%, and you gain Resistance or Armor to match the base value of whichever was increased. (So a turtle with an Armor of 5 would increase that Armor to 10, and gain a Resistance of 5). However, you gain the inactive status, may take no physical action and cannot see or smell. Alternately, you may enter this posture as a reaction to a successful maneuver against you if you spend focus to do so. Exiting this posture requires an action."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

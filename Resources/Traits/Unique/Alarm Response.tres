@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://co0vjk4w4cl7u"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_phyy0"]
+
+[resource]
+script = ExtResource("1_phyy0")
+name = "Alarm Response"
+source = "Mutants in the Now, pg. 30"
+type = 3
+cost = 8
+description = "You grant your allies +A on initiative rolls."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://t6irqmhqb0jq"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_vlfpt"]
+
+[resource]
+script = ExtResource("1_vlfpt")
+name = "Poison Spurs"
+source = "Mutants in the Now, pg. 30"
+type = 3
+cost = 15
+description = "Your spurs carry a 1d8 toxin that inflicts agony and unbalanced for as long as they’re envenomed. Your spurs gain the injector trait, and this functions as if you had the venom trait."
+requirements = Array[String](["Spurs"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

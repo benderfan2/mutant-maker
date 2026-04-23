@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c6vlh1b4t76qr"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_bugim"]
+
+[resource]
+script = ExtResource("2_bugim")
+name = "Eager"
+source = "Mutants in the Now, pg. 23"
+type = 3
+cost = 2
+description = "When assisting in teamwork, your bonus from communal is increased to +4."
+requirements = Array[String](["Communal"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_7lty7")
 name = "Spidersilk"
+source = "Mutants in the Now, pg. 44"
 cost = 10
 description = "You can produce spidersilk, which can line the ground or tunnel sides. You can produce roughly your Endurance in square feet per round as an action. Any attempt to cross your silk requires the traversal action; failure to do so renders a foe prone. Once a foe is prone on your silk, they must attempt another traversal action at +D to escape; if they fail, they become prone again. They may attempt to use traverse to escape again, but at that point the +D is hardened."
 subtraits = Array[ExtResource("1_7lty7")]([ExtResource("2_y31gg")])

@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://b5ladityip1sd"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_ehkry"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_gjqvi"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="2_xlgeh"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_t014y"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_j6p22"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="5_ct6pd"]
+[ext_resource type="Resource" uid="uid://dhdbk7vtr2y1o" path="res://Resources/Traits/Minor/Subtraits/Horns/Antlers.tres" id="6_cvxen"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="7_4qss5"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="8_00de3"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="9_d8hu6"]
+[ext_resource type="Resource" uid="uid://pat37m2ckbeb" path="res://Resources/Traits/Minor/Horns.tres" id="10_nnnti"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="11_v1aqm"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="12_tys2a"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="13_e0yj8"]
+[ext_resource type="Resource" uid="uid://q2ia6dm8kjgs" path="res://Resources/Traits/Unique/White-Tail Posture.tres" id="14_2jmqr"]
+[ext_resource type="Resource" uid="uid://6jxq878g24xp" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Brief.tres" id="14_255sq"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="15_elvdb"]
+[ext_resource type="Resource" uid="uid://cxa26alvnn8qs" path="res://Resources/Traits/Minor/Reduced Sleep.tres" id="16_0rx2t"]
+[ext_resource type="Resource" uid="uid://dkkl4pmrob2ed" path="res://Resources/Traits/Minor/Standing Sleep.tres" id="17_elvdb"]
+
+[sub_resource type="Resource" id="Resource_xamjd"]
+script = ExtResource("1_ehkry")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_huqce"]
+script = ExtResource("1_ehkry")
+traits = Array[ExtResource("1_gjqvi")]([ExtResource("2_xlgeh"), ExtResource("3_t014y"), ExtResource("4_j6p22"), ExtResource("5_ct6pd")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xusa7"]
+script = ExtResource("1_ehkry")
+traits = Array[ExtResource("1_gjqvi")]([ExtResource("15_elvdb"), ExtResource("16_0rx2t"), ExtResource("17_elvdb")])
+subtraits = Dictionary[ExtResource("1_gjqvi"), bool]({
+ExtResource("14_255sq"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_d0pk2"]
+script = ExtResource("1_ehkry")
+traits = Array[ExtResource("1_gjqvi")]([ExtResource("7_4qss5"), ExtResource("8_00de3"), ExtResource("10_nnnti"), ExtResource("9_d8hu6"), ExtResource("11_v1aqm"), ExtResource("12_tys2a")])
+subtraits = Dictionary[ExtResource("1_gjqvi"), bool]({
+ExtResource("6_cvxen"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("13_e0yj8")
+name = "Deer, White Tailed"
+description = "The most widespread ungulate in the Americas."
+base_goop = 25
+size_rating = 10
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 22"
+major_traits = Dictionary[String, ExtResource("1_ehkry")]({
+"Mutants in the Next": SubResource("Resource_xamjd"),
+"Mutants in the Now": SubResource("Resource_huqce")
+})
+minor_traits = Dictionary[String, ExtResource("1_ehkry")]({
+"Mutants in the Next": SubResource("Resource_xusa7"),
+"Mutants in the Now": SubResource("Resource_d0pk2")
+})
+unique_trait = ExtResource("14_2jmqr")
+basic_traits = ["Type: Cervidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bt3plxswqthld"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_76x6u"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_whona"]
+[ext_resource type="Resource" uid="uid://cl7qd5j436i11" path="res://Resources/Traits/Major/Subtraits/Burrow/Subterranean.tres" id="3_vied5"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="3_whona"]
+[ext_resource type="Resource" uid="uid://blhphogfbwajr" path="res://Resources/Traits/Major/Subtraits/Regenerative/Bisection.tres" id="4_u8v28"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="5_7d0yq"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="6_mxikx"]
+[ext_resource type="Resource" uid="uid://yfr1wo5x788o" path="res://Resources/Traits/Major/Regenerative.tres" id="7_hbtah"]
+[ext_resource type="Resource" uid="uid://3id5xuxkmatj" path="res://Resources/Traits/Major/Slippery.tres" id="8_q5e6c"]
+[ext_resource type="Resource" uid="uid://biyj6b21rrsei" path="res://Resources/Traits/Major/Sleepless.tres" id="9_u8v28"]
+[ext_resource type="Resource" uid="uid://b7qbveyhfw28f" path="res://Resources/Traits/Unique/From Below.tres" id="10_alktw"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="10_x41ae"]
+[ext_resource type="Resource" uid="uid://8511d51arja7" path="res://Resources/Traits/Minor/Languid.tres" id="11_pc3jb"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="12_g1aw0"]
+[ext_resource type="Resource" uid="uid://bso8mn2qs7gh6" path="res://Resources/Traits/Minor/Vibration Sense.tres" id="13_rdjs6"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="14_gaib2"]
+[ext_resource type="Resource" uid="uid://bgerwn04ldad" path="res://Resources/Traits/Minor/Water Storage.tres" id="15_k25hm"]
+
+[sub_resource type="Resource" id="Resource_x41ae"]
+script = ExtResource("1_76x6u")
+traits = Array[ExtResource("3_whona")]([ExtResource("5_7d0yq"), ExtResource("6_mxikx"), ExtResource("7_hbtah"), ExtResource("8_q5e6c")])
+subtraits = Dictionary[ExtResource("3_whona"), bool]({
+ExtResource("3_vied5"): false,
+ExtResource("4_u8v28"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_pc3jb"]
+script = ExtResource("1_76x6u")
+traits = Array[ExtResource("3_whona")]([ExtResource("9_u8v28")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_bnm4h"]
+script = ExtResource("1_76x6u")
+traits = Array[ExtResource("3_whona")]([ExtResource("10_x41ae"), ExtResource("11_pc3jb"), ExtResource("12_g1aw0"), ExtResource("13_rdjs6")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rsesl"]
+script = ExtResource("1_76x6u")
+traits = Array[ExtResource("3_whona")]([ExtResource("14_gaib2"), ExtResource("15_k25hm")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_whona")
+name = "Nightcrawler (L. Terrestris)"
+description = "This large worm is the most likely to surface from soil."
+base_goop = 58
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 28"
+major_traits = Dictionary[String, ExtResource("1_76x6u")]({
+"Mutants in the Next": SubResource("Resource_pc3jb"),
+"Mutants in the Now": SubResource("Resource_x41ae")
+})
+minor_traits = Dictionary[String, ExtResource("1_76x6u")]({
+"Mutants in the Next": SubResource("Resource_rsesl"),
+"Mutants in the Now": SubResource("Resource_bnm4h")
+})
+unique_trait = ExtResource("10_alktw")
+basic_traits = ["Type: Oligochaeta", "Diet: Detritivore", "Movement: Limbless", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Receptors", "Senses: Vibration", "Senses: Anosmia"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

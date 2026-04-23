@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://btw011fuun714"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_0eprc"]
+
+[resource]
+script = ExtResource("1_0eprc")
+name = "Barbed"
+source = "Mutants in the Now, pg. 30"
+type = 3
+cost = 5
+description = "Whenever a foe takes damage from your spines, they are unbalanced if the damage is 4 or more."
+requirements = Array[String](["Spines"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

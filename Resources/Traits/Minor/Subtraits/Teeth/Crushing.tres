@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_b1yt2")
 name = "Crushing"
-type = 1
+type = 5
 cost = 1
 description = "If you successfully grab using teeth, you may inflict your teeth’s weapon damage at the end of any turn you fail to perform a maneuver against them while they remain grabbed."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

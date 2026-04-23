@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dieblfrq35i6x"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qi72i"]
+
+[resource]
+script = ExtResource("1_qi72i")
+name = "Iconic Stink"
+source = "Mutants in the Now, pg. 32"
+type = 3
+cost = 2
+description = "When a foe moves into melee with you, you may expend focus to bully them immediately as a reaction. If you have Stink Spray and they’re currently affected by it, gain +A on this roll."
+requirements = Array[String](["Musk"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

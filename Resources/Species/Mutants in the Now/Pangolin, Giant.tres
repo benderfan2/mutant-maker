@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bjvgh17t0ppoh"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_x2wt8"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_3a8wb"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_a4q4i"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="3_r6cwy"]
+[ext_resource type="Resource" uid="uid://gihaifspdfti" path="res://Resources/Traits/Major/Defense Posture.tres" id="4_n8lny"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_pwvir"]
+[ext_resource type="Resource" uid="uid://dqgmiawdshgwa" path="res://Resources/Traits/Major/Exoskeletal Defense.tres" id="6_i8oau"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="7_3fjpk"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="8_yfh2v"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="9_rph3c"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="10_vilno"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="11_lffc7"]
+[ext_resource type="Resource" uid="uid://hr0ebtrpnoti" path="res://Resources/Traits/Minor/Sticky Tongue.tres" id="12_hqoxk"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="13_v30om"]
+[ext_resource type="Resource" uid="uid://k2pqq4cpnb3p" path="res://Resources/Traits/Unique/Mound-Buster.tres" id="15_r6cwy"]
+
+[sub_resource type="Resource" id="Resource_151t7"]
+script = ExtResource("1_x2wt8")
+traits = Array[ExtResource("2_3a8wb")]([ExtResource("3_r6cwy"), ExtResource("4_n8lny"), ExtResource("5_pwvir"), ExtResource("6_i8oau"), ExtResource("7_3fjpk"), ExtResource("8_yfh2v")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xsh8y"]
+script = ExtResource("1_x2wt8")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_1xqpd"]
+script = ExtResource("1_x2wt8")
+traits = Array[ExtResource("2_3a8wb")]([ExtResource("11_lffc7"), ExtResource("12_hqoxk"), ExtResource("13_v30om")])
+subtraits = Dictionary[ExtResource("2_3a8wb"), bool]({
+ExtResource("9_rph3c"): false,
+ExtResource("10_vilno"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_1fsfd"]
+script = ExtResource("1_x2wt8")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_a4q4i")
+name = "Pangolin, Giant"
+description = "The largest pangolin, with enough weight to shatter termite mounds."
+base_goop = 29
+size_rating = 8
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 29"
+major_traits = Dictionary[String, ExtResource("1_x2wt8")]({
+"Mutants in the Next": SubResource("Resource_xsh8y"),
+"Mutants in the Now": SubResource("Resource_151t7")
+})
+minor_traits = Dictionary[String, ExtResource("1_x2wt8")]({
+"Mutants in the Next": SubResource("Resource_1fsfd"),
+"Mutants in the Now": SubResource("Resource_1xqpd")
+})
+unique_trait = ExtResource("15_r6cwy")
+basic_traits = ["Type: Pholidotamorpha", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"
