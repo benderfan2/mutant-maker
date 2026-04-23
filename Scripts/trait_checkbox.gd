@@ -59,11 +59,8 @@ func _on_trait_toggled(toggled_on: bool) -> void:
 	
 	for checkbox in subtrait_checkboxes:
 		checkbox.disabled = !toggled_on
-	
-	if !toggled_on:
-		for checkbox in subtrait_checkboxes:
-			for subtrait in optional_subtraits:
-				if checkbox.name == subtrait.name and checkbox.pressed:
-					subtraits_selected.append(subtrait)
+		for subtrait in main_trait.subtraits:
+			if (subtrait in optional_subtraits or subtrait.is_universal) and checkbox.name == subtrait.name and checkbox.button_pressed:
+				subtraits_selected.append(subtrait)
 	
 	trait_pressed.emit(toggled_on,main_trait,subtraits_selected)

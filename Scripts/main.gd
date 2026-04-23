@@ -937,7 +937,7 @@ func update_affinity() -> void:
 	if ATTRIBUTES_TABLE[affinity][4] >= 0:
 		%AffinityGOOPBonusLabel.text = "+"
 	else:
-		%AfinityGOOPBonusLabel.text = ""
+		%AffinityGOOPBonusLabel.text = ""
 	%AffinityGOOPBonusLabel.text += str(ATTRIBUTES_TABLE[affinity][4])
 
 
@@ -2092,11 +2092,15 @@ func _on_table_d_lock_button_pressed() -> void:
 				if selected_trait.type != Trait.TraitType.MAJOR_SUBTRAIT and selected_trait.type != Trait.TraitType.MINOR_SUBTRAIT:
 					if selected_trait in character_traits:
 						character_traits.erase(selected_trait)
+						print(selected_trait.name + " erased")
 						total_cost += selected_trait.cost
+						print("Current Total Cost: " + str(total_cost))
 					for subtrait in subtraits:
 						if subtrait in character_subtraits:
 							character_subtraits.erase(subtrait)
+							print(subtrait.name + " erased")
 							total_cost += subtrait.cost
+							print("Current Total Cost: " + str(total_cost))
 					if selected_trait.type == Trait.TraitType.MINOR:
 						goop_used -= total_cost
 					else:
@@ -2104,18 +2108,6 @@ func _on_table_d_lock_button_pressed() -> void:
 				else:
 					goop_used -= selected_trait.cost
 					character_subtraits.erase(selected_trait)
-					#var parent_trait: Trait = null
-					#for character_trait in character_traits:
-						#if selected_trait in character_trait.subtraits:
-							#parent_trait = character_trait
-							#break
-					#if parent_trait != null:
-						#total_cost += parent_trait.cost
-						#for subtrait in parent_trait.subtraits:
-							#if subtrait in character_subtraits:
-								#total_cost += subtrait.cost
-						#goop_used -= total_cost
-						#character_subtraits.erase(selected_trait)
 		
 		trait_checkbox.trait_pressed.connect(trait_checkbox_lambda)
 		
@@ -2174,17 +2166,7 @@ func _on_table_d_lock_button_pressed() -> void:
 					else:
 						goop_used -= max(total_cost,2)
 				else:
-					var parent_trait: Trait = null
-					for character_trait in character_traits:
-						if selected_trait in character_trait.subtraits:
-							parent_trait = character_trait
-							break
-					if parent_trait != null:
-						total_cost += parent_trait.cost
-						for subtrait in parent_trait.subtraits:
-							if subtrait in character_subtraits:
-								total_cost += subtrait.cost
-						goop_used -= max(total_cost - selected_trait.cost,0)
+						goop_used -= selected_trait.cost
 						character_subtraits.erase(selected_trait)
 		
 		trait_checkbox.trait_pressed.connect(trait_checkbox_lambda)
