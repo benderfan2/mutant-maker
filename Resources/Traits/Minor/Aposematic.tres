@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c2kad1v12idd"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_jg0yl"]
+
+[resource]
+script = ExtResource("1_jg0yl")
+name = "Aposematic"
+source = "Mutants in the Next, pg. 96"
+type = 1
+cost = 1
+description = "You have bright colors that warn predators of your toxicity, or act as a daring bluff. In the wild, no animal will attack you unless they have adapted specifically to eat your species (usually involving the Toxin Digestion trait)."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

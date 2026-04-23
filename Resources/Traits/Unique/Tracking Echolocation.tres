@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://binrlsjm3ja7n"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_e5qwl"]
+
+[resource]
+script = ExtResource("1_e5qwl")
+name = "Tracking Echolocation"
+source = "Mutants in the Now, pg. 20"
+type = 3
+cost = 5
+description = "+A on fight rolls when using any maneuver that adds +PRO against flying foes, traverse rolls while flying, or dramatic rolls to maneuver in flight."
+requirements = Array[String](["Echolocation"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

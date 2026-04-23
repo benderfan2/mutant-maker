@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cn83j1njtnf2w"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_c87yj"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_wigjy"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="2_lt48g"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="3_bp8ro"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="4_lbqhu"]
+[ext_resource type="Resource" uid="uid://dr74emqnwuqgd" path="res://Resources/Traits/Minor/Subtraits/Claws/Perching.tres" id="5_f2pa2"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="6_ui1tf"]
+[ext_resource type="Resource" uid="uid://bn2l4c4g36hn2" path="res://Resources/Traits/Minor/Chemical Scent.tres" id="7_yuv16"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="8_rluw8"]
+[ext_resource type="Resource" uid="uid://bhp4puhbdestn" path="res://Resources/Traits/Minor/Flamboyant.tres" id="9_tdkdk"]
+[ext_resource type="Resource" uid="uid://dxyg4ww76p8b6" path="res://Resources/Traits/Minor/Songbird.tres" id="10_bykjw"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="11_4ebqu"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="12_bp8ro"]
+[ext_resource type="Resource" uid="uid://be1upue6v71eg" path="res://Resources/Traits/Unique/Coal Mine.tres" id="12_fayt7"]
+
+[sub_resource type="Resource" id="Resource_lt48g"]
+script = ExtResource("1_wigjy")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_c87yj"]
+script = ExtResource("1_wigjy")
+traits = Array[ExtResource("1_c87yj")]([ExtResource("2_lt48g"), ExtResource("3_bp8ro")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_lbqhu"]
+script = ExtResource("1_wigjy")
+traits = Array[ExtResource("1_c87yj")]([ExtResource("12_bp8ro")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_bp8ro"]
+script = ExtResource("1_wigjy")
+traits = Array[ExtResource("1_c87yj")]([ExtResource("6_ui1tf"), ExtResource("8_rluw8"), ExtResource("7_yuv16"), ExtResource("9_tdkdk"), ExtResource("10_bykjw")])
+subtraits = Dictionary[ExtResource("1_c87yj"), bool]({
+ExtResource("4_lbqhu"): false,
+ExtResource("5_f2pa2"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("11_4ebqu")
+name = "Canary, Domestic"
+description = "Humans bred this small finch for its song and plumage."
+base_goop = 28
+size_rating = 2
+enhancable_attributes = Array[String](["Perception", "Affinity", "Speed"])
+source = "Mutants in the Now, pg. 21"
+major_traits = Dictionary[String, ExtResource("1_wigjy")]({
+"Mutants in the Next": SubResource("Resource_lt48g"),
+"Mutants in the Now": SubResource("Resource_c87yj")
+})
+minor_traits = Dictionary[String, ExtResource("1_wigjy")]({
+"Mutants in the Next": SubResource("Resource_lbqhu"),
+"Mutants in the Now": SubResource("Resource_bp8ro")
+})
+unique_trait = ExtResource("12_fayt7")
+basic_traits = ["Type: Passerine", "Diet: Herbivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

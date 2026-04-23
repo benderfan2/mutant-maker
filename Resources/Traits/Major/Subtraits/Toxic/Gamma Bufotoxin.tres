@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_xqsia")
 name = "Gamma Bufotoxin"
+source = "Mutants in the Now, pg. 45"
+type = 4
 cost = 5
 description = "This is a toxin rated 1d8 that inhibits the circulatory system and inflicts hallucinogenic effects. While your foe is envenomed, they are disoriented. If you’re grabbed, the toxin is only 1d6."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

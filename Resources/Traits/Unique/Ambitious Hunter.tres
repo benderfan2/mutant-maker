@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dhxp61pw8ujr4"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_xmj1n"]
+
+[resource]
+script = ExtResource("1_xmj1n")
+name = "Ambitious Hunter"
+source = "Mutants in the Now, pg. 21"
+type = 3
+cost = 5
+description = "When you use a natural weapon or try to strike or grab a foe of greater size with a melee weapon, add an additional weapon damage die."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

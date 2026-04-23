@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_qcjqi")
 name = "Mauling"
-type = 1
+type = 5
 cost = 1
 description = "Any damage using your claws becomes massive damage."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

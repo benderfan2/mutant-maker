@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://jfv6w7heyo6t"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_nd51l"]
+
+[resource]
+script = ExtResource("1_nd51l")
+name = "Packmaster"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 8
+description = "When you and an ally are in the same melee, spend a moment to grant +A on their first maneuver in their next turn."
+requirements = Array[String](["Pack Hunter"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_3bhux")
 name = "Rooting"
+source = "Mutants in the Now, pg. 43"
+type = 4
 cost = 2
 description = "You may use Enhanced Scent to attempt to detect buried items or food and suffer no +D for such. You also gain +A and halve the time on any action to dig them up."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

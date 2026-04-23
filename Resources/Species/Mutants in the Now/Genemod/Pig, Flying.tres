@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://c8mmb5bx6xtaj"]
+
+[ext_resource type="Resource" uid="uid://bm138xahv8gdh" path="res://Resources/Traits/Zoomorphic/Independent Wings.tres" id="1_78kov"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_kkvg0"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_oa8ec"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="3_pe036"]
+[ext_resource type="Resource" uid="uid://mcphbikc1pu1" path="res://Resources/Traits/Major/Subtraits/Enhanced Scent/Rooting.tres" id="4_0r4dh"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_dcb0k"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="6_ub0bp"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="7_qrda7"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="8_avdit"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="9_ub0bp"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="10_qrda7"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="11_avdit"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="12_vigej"]
+[ext_resource type="Resource" uid="uid://bni2cjjmjyqll" path="res://Resources/Traits/Unique/Heavy Landing.tres" id="14_qrda7"]
+
+[sub_resource type="Resource" id="Resource_vigej"]
+script = ExtResource("1_kkvg0")
+traits = Array[ExtResource("3_pe036")]([ExtResource("5_dcb0k"), ExtResource("6_ub0bp"), ExtResource("7_qrda7"), ExtResource("8_avdit")])
+subtraits = Dictionary[ExtResource("3_pe036"), bool]({
+ExtResource("4_0r4dh"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_sa0ji"]
+script = ExtResource("1_kkvg0")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ji2p3"]
+script = ExtResource("1_kkvg0")
+traits = Array[ExtResource("3_pe036")]([ExtResource("9_ub0bp"), ExtResource("10_qrda7"), ExtResource("11_avdit"), ExtResource("12_vigej")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_llxpa"]
+script = ExtResource("1_kkvg0")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_oa8ec")
+name = "Pig, Flying"
+description = "This winged pig cannot fly, but the Goop may enable liftoff."
+base_goop = 18
+size_rating = 10
+enhancable_attributes = Array[String](["Affinity", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 34"
+major_traits = Dictionary[String, ExtResource("1_kkvg0")]({
+"Mutants in the Next": SubResource("Resource_sa0ji"),
+"Mutants in the Now": SubResource("Resource_vigej")
+})
+minor_traits = Dictionary[String, ExtResource("1_kkvg0")]({
+"Mutants in the Next": SubResource("Resource_llxpa"),
+"Mutants in the Now": SubResource("Resource_ji2p3")
+})
+unique_trait = ExtResource("14_qrda7")
+basic_traits = ["Type: Suidae (Genemod)", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged", ExtResource("1_78kov")]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

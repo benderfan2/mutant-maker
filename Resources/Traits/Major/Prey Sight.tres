@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_tfv0d")
 name = "Prey Sight"
+source = "Mutants in the Now, pg. 43"
 cost = 5
 description = "+A on all rolls to notice movement or avoid surprise, and you can ignore the unbalanced condition on rolls to retreat."
 subtraits = Array[ExtResource("1_tfv0d")]([ExtResource("2_j0nls")])

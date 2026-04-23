@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://0x0mf87qqrxe"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_llal6"]
+
+[resource]
+script = ExtResource("1_llal6")
+name = "Nine-Alarm Spring"
+source = "Mutants in the Now, pg. 20"
+type = 3
+cost = 2
+description = "You may take an additional move action as the first action on the first turn of a fight, but it cannot be used to enter melee."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

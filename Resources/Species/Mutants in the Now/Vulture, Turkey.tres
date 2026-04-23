@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dshgldum7qb32"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_wdqbf"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ahtly"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_m4odj"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_ma58j"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="4_pki1q"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="5_exdp0"]
+[ext_resource type="Resource" uid="uid://c05hb8ebs4ryh" path="res://Resources/Traits/Minor/Subtraits/Beak/Hooked.tres" id="6_dob8m"]
+[ext_resource type="Resource" uid="uid://dr74emqnwuqgd" path="res://Resources/Traits/Minor/Subtraits/Claws/Perching.tres" id="7_rnw4p"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="8_tnx3x"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_plk3q"]
+[ext_resource type="Resource" uid="uid://rucuwqsui72h" path="res://Resources/Traits/Minor/Grasping Feet.tres" id="10_xx78u"]
+[ext_resource type="Resource" uid="uid://d1hmoppo5ufuu" path="res://Resources/Traits/Minor/Red Sight.tres" id="11_ul6y5"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="12_8cfeg"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="13_pd8kt"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="14_rnw4p"]
+[ext_resource type="Resource" uid="uid://c1pr1hupf2o5" path="res://Resources/Traits/Unique/Vulture, Turkey.tres" id="16_tnx3x"]
+
+[sub_resource type="Resource" id="Resource_ksjud"]
+script = ExtResource("1_wdqbf")
+traits = Array[ExtResource("2_ahtly")]([ExtResource("3_ma58j"), ExtResource("4_pki1q"), ExtResource("5_exdp0")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_pu3rj"]
+script = ExtResource("1_wdqbf")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_p1cde"]
+script = ExtResource("1_wdqbf")
+traits = Array[ExtResource("2_ahtly")]([ExtResource("8_tnx3x"), ExtResource("9_plk3q"), ExtResource("10_xx78u"), ExtResource("11_ul6y5"), ExtResource("12_8cfeg"), ExtResource("13_pd8kt")])
+subtraits = Dictionary[ExtResource("2_ahtly"), bool]({
+ExtResource("6_dob8m"): false,
+ExtResource("7_rnw4p"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_tnx3x"]
+script = ExtResource("1_wdqbf")
+traits = Array[ExtResource("2_ahtly")]([ExtResource("14_rnw4p")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_m4odj")
+name = "Vulture, Turkey"
+description = "The “buzzard” can smell decay for miles."
+base_goop = 25
+size_rating = 4
+enhancable_attributes = Array[String](["Perception", "Strength", "Speed"])
+source = "Mutants in the Now, pg. 34"
+major_traits = Dictionary[String, ExtResource("1_wdqbf")]({
+"Mutants in the Next": SubResource("Resource_pu3rj"),
+"Mutants in the Now": SubResource("Resource_ksjud")
+})
+minor_traits = Dictionary[String, ExtResource("1_wdqbf")]({
+"Mutants in the Next": SubResource("Resource_tnx3x"),
+"Mutants in the Now": SubResource("Resource_p1cde")
+})
+unique_trait = ExtResource("16_tnx3x")
+basic_traits = ["Type: Accipitriformes", "Diet: Facultative Carnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

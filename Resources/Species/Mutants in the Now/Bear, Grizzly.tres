@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bkmslfcnuykgi"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_bgfad"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ph26k"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="3_ah036"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_4y0of"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="5_ih3wi"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="6_3bk8v"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="7_gn24e"]
+[ext_resource type="Resource" uid="uid://wa308j3wsjv6" path="res://Resources/Traits/Major/Unnerving Vocalization.tres" id="8_sv1r4"]
+[ext_resource type="Resource" uid="uid://5e02xe36n64w" path="res://Resources/Traits/Minor/Subtraits/Claws/Ascent.tres" id="9_iklbg"]
+[ext_resource type="Resource" uid="uid://bike6etqqbcxc" path="res://Resources/Traits/Minor/Subtraits/Claws/Mauling.tres" id="10_88hx6"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="11_ejklw"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="12_0mnb6"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="13_txs3i"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="14_a6ci6"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="15_wp55m"]
+[ext_resource type="Resource" uid="uid://bcqpvwdtojfkk" path="res://Resources/Traits/Minor/Standing Posture.tres" id="16_u6ysr"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="17_jvbur"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="18_3she1"]
+[ext_resource type="Resource" uid="uid://cynb6nopdldow" path="res://Resources/Traits/Unique/Bear Hug.tres" id="19_3xeal"]
+
+[sub_resource type="Resource" id="Resource_8b4gn"]
+script = ExtResource("1_bgfad")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_bn3ae"]
+script = ExtResource("1_bgfad")
+traits = Array[ExtResource("1_ph26k")]([ExtResource("3_ah036"), ExtResource("4_4y0of"), ExtResource("5_ih3wi"), ExtResource("6_3bk8v"), ExtResource("7_gn24e"), ExtResource("8_sv1r4")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_i5kfh"]
+script = ExtResource("1_bgfad")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_bgfad"]
+script = ExtResource("1_bgfad")
+traits = Array[ExtResource("1_ph26k")]([ExtResource("12_0mnb6"), ExtResource("13_txs3i"), ExtResource("14_a6ci6"), ExtResource("17_jvbur"), ExtResource("15_wp55m"), ExtResource("16_u6ysr")])
+subtraits = Dictionary[ExtResource("1_ph26k"), bool]({
+ExtResource("9_iklbg"): false,
+ExtResource("10_88hx6"): false,
+ExtResource("11_ejklw"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("18_3she1")
+name = "Bear, Grizzly"
+description = "One of the most fearsome bears, known for its size and aggression."
+base_goop = 18
+size_rating = 11
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 20"
+major_traits = Dictionary[String, ExtResource("1_bgfad")]({
+"Mutants in the Next": SubResource("Resource_8b4gn"),
+"Mutants in the Now": SubResource("Resource_bn3ae")
+})
+minor_traits = Dictionary[String, ExtResource("1_bgfad")]({
+"Mutants in the Next": SubResource("Resource_i5kfh"),
+"Mutants in the Now": SubResource("Resource_bgfad")
+})
+unique_trait = ExtResource("19_3xeal")
+basic_traits = ["Type: Ursidae", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

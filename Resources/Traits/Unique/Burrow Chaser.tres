@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://7mfqal2hy0su"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_os1ek"]
+
+[resource]
+script = ExtResource("1_os1ek")
+name = "Burrow Chaser"
+source = "Mutants in the Now, pg. 20"
+type = 3
+cost = 5
+description = "You dig at 1/6th of your move, and roll with +A to strike or grab any animal while both of you are digging or in a burrow."
+requirements = Array[String](["Burrow"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

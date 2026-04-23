@@ -8,5 +8,5 @@ name = "Independent Fins"
 type = 2
 cost = 5
 description = "Your fins are separate limbs from your arms, allowing you to swim and manipulate objects at the same time."
-requirements = ["Finned"]
+requirements = Array[String](["Finned"])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://clqj1cmncl7rc"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_wirmo"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_3lc10"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_kplg8"]
+[ext_resource type="Resource" uid="uid://cmvkwcc3elarr" path="res://Resources/Traits/Major/Arboreal.tres" id="3_e3rct"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="4_8ooyv"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="5_ru7c7"]
+[ext_resource type="Resource" uid="uid://bmunn0y3qbi21" path="res://Resources/Traits/Minor/Subtraits/Teeth/Crushing.tres" id="6_e7pxw"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="7_tx281"]
+[ext_resource type="Resource" uid="uid://rucuwqsui72h" path="res://Resources/Traits/Minor/Grasping Feet.tres" id="8_ae6i3"]
+[ext_resource type="Resource" uid="uid://ch45pm128e0qh" path="res://Resources/Traits/Minor/Nearly Human.tres" id="9_qba4n"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="10_mcxic"]
+[ext_resource type="Resource" uid="uid://bc04boxo4sqha" path="res://Resources/Traits/Minor/Meme.tres" id="11_e3rct"]
+[ext_resource type="Resource" uid="uid://cotnpyilpfk2a" path="res://Resources/Traits/Unique/Going Ape.tres" id="13_8ooyv"]
+
+[sub_resource type="Resource" id="Resource_jtfdj"]
+script = ExtResource("1_wirmo")
+traits = Array[ExtResource("2_3lc10")]([ExtResource("3_e3rct"), ExtResource("4_8ooyv")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_lrjof"]
+script = ExtResource("1_wirmo")
+traits = Array[ExtResource("2_3lc10")]([ExtResource("5_ru7c7")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6gko3"]
+script = ExtResource("1_wirmo")
+traits = Array[ExtResource("2_3lc10")]([ExtResource("7_tx281"), ExtResource("8_ae6i3"), ExtResource("9_qba4n"), ExtResource("10_mcxic")])
+subtraits = Dictionary[ExtResource("2_3lc10"), bool]({
+ExtResource("6_e7pxw"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_8ooyv"]
+script = ExtResource("1_wirmo")
+traits = Array[ExtResource("2_3lc10")]([ExtResource("11_e3rct")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_kplg8")
+name = "Gorilla, Western Lowland"
+description = "The smallest of the gorillas is often found in captivity."
+base_goop = 10
+size_rating = 11
+enhancable_attributes = Array[String](["Cognition", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 25"
+major_traits = Dictionary[String, ExtResource("1_wirmo")]({
+"Mutants in the Next": SubResource("Resource_lrjof"),
+"Mutants in the Now": SubResource("Resource_jtfdj")
+})
+minor_traits = Dictionary[String, ExtResource("1_wirmo")]({
+"Mutants in the Next": SubResource("Resource_8ooyv"),
+"Mutants in the Now": SubResource("Resource_6gko3")
+})
+unique_trait = ExtResource("13_8ooyv")
+basic_traits = ["Type: Primates", "Diet: Herbivore", "Movement: Semi-Bipedal", "Prehensility: Grasping", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

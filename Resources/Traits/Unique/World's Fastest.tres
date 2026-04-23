@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://nh7x3g0y5eh6"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_viih2"]
+
+[resource]
+script = ExtResource("2_viih2")
+name = "World's Fastest"
+source = "Mutants in the Now, pg. 24"
+type = 3
+cost = 5
+description = "Advantage from Sharp Sight is hardened, and they add 20% to their MOVE when flying."
+requirements = Array[String](["Sharp Sight"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

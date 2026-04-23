@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_q05b4")
 name = "Pain Tolerance"
+source = "Mutants in the Now, pg. 43"
 cost = 8
 description = "When you roll for initiative, gain temporary SHT equal to your Determination."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

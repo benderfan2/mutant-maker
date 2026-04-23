@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dcq16yc1ixep6"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_s6rkr"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ss8bt"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="2_x60dv"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="3_flpb0"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="4_gjjoa"]
+[ext_resource type="Resource" uid="uid://daen7y88peun5" path="res://Resources/Traits/Minor/Subtraits/Claws/Hooked.tres" id="5_ocd8u"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="6_bqcqy"]
+[ext_resource type="Resource" uid="uid://dboslq5lcqxhm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Slaying.tres" id="7_rc468"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="8_htn60"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="9_hjqk8"]
+[ext_resource type="Resource" uid="uid://bwavxurgycv0" path="res://Resources/Traits/Minor/Whiskers.tres" id="10_w012l"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="11_gw7t0"]
+[ext_resource type="Resource" uid="uid://cm7e8n21o0j4o" path="res://Resources/Traits/Minor/Subtraits/Camouflage/Disruptive.tres" id="12_gjjoa"]
+[ext_resource type="Resource" uid="uid://brkct6kn6ybgd" path="res://Resources/Traits/Unique/Burst Acceleration.tres" id="12_qyi40"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="13_ocd8u"]
+
+[sub_resource type="Resource" id="Resource_s6rkr"]
+script = ExtResource("1_s6rkr")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_l8roc"]
+script = ExtResource("1_s6rkr")
+traits = Array[ExtResource("1_ss8bt")]([ExtResource("2_x60dv"), ExtResource("3_flpb0"), ExtResource("4_gjjoa")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rc468"]
+script = ExtResource("1_s6rkr")
+traits = Array[ExtResource("1_ss8bt")]([ExtResource("13_ocd8u")])
+subtraits = Dictionary[ExtResource("1_ss8bt"), bool]({
+ExtResource("12_gjjoa"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_bqcqy"]
+script = ExtResource("1_s6rkr")
+traits = Array[ExtResource("1_ss8bt")]([ExtResource("8_htn60"), ExtResource("9_hjqk8"), ExtResource("10_w012l")])
+subtraits = Dictionary[ExtResource("1_ss8bt"), bool]({
+ExtResource("5_ocd8u"): false,
+ExtResource("6_bqcqy"): false,
+ExtResource("7_rc468"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("11_gw7t0")
+name = "Cheetah"
+description = "The fastest land animal, adapted for pure speed."
+base_goop = 27
+size_rating = 9
+enhancable_attributes = Array[String](["Perception", "Prowess", "Speed"])
+source = "Mutants in the Now, pg. 21"
+major_traits = Dictionary[String, ExtResource("1_s6rkr")]({
+"Mutants in the Next": SubResource("Resource_s6rkr"),
+"Mutants in the Now": SubResource("Resource_l8roc")
+})
+minor_traits = Dictionary[String, ExtResource("1_s6rkr")]({
+"Mutants in the Next": SubResource("Resource_rc468"),
+"Mutants in the Now": SubResource("Resource_bqcqy")
+})
+unique_trait = ExtResource("12_qyi40")
+basic_traits = ["Type: Felidae", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

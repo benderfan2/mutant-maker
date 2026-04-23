@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://fqi47dimvn4m"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_8kgn0"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_q7udp"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_8kgn0"]
+[ext_resource type="Resource" uid="uid://dqgmiawdshgwa" path="res://Resources/Traits/Major/Exoskeletal Defense.tres" id="2_8putm"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="3_ama5m"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_6823f"]
+[ext_resource type="Resource" uid="uid://3id5xuxkmatj" path="res://Resources/Traits/Major/Slippery.tres" id="5_g61sl"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="6_wxoil"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="7_tfy58"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="8_5u5sf"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="9_nq1vu"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="10_6ll40"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="11_j71ig"]
+[ext_resource type="Resource" uid="uid://ktaw303a6sr7" path="res://Resources/Traits/Minor/Breach Leap.tres" id="13_6ll40"]
+[ext_resource type="Resource" uid="uid://dnl302cirme7u" path="res://Resources/Traits/Unique/Ancient Armor.tres" id="13_tfy58"]
+[ext_resource type="Resource" uid="uid://dqbeg2iaftswd" path="res://Resources/Traits/Minor/Lidless Sleep.tres" id="14_j71ig"]
+
+[sub_resource type="Resource" id="Resource_nq1vu"]
+script = ExtResource("1_8kgn0")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_5u5sf"]
+script = ExtResource("1_8kgn0")
+traits = Array[ExtResource("1_q7udp")]([ExtResource("2_8putm"), ExtResource("3_ama5m"), ExtResource("4_6823f"), ExtResource("5_g61sl")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_j71ig"]
+script = ExtResource("1_8kgn0")
+traits = Array[ExtResource("1_q7udp")]([ExtResource("13_6ll40"), ExtResource("14_j71ig")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6ll40"]
+script = ExtResource("1_8kgn0")
+traits = Array[ExtResource("1_q7udp")]([ExtResource("8_5u5sf"), ExtResource("9_nq1vu"), ExtResource("10_6ll40"), ExtResource("11_j71ig")])
+subtraits = Dictionary[ExtResource("1_q7udp"), bool]({
+ExtResource("6_wxoil"): false,
+ExtResource("7_tfy58"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_8kgn0")
+name = "Gar, Alligator"
+description = "One of the toothiest freshwater predators in North America."
+base_goop = 25
+size_rating = 10
+enhancable_attributes = Array[String](["Perception", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 24"
+major_traits = Dictionary[String, ExtResource("1_8kgn0")]({
+"Mutants in the Next": SubResource("Resource_nq1vu"),
+"Mutants in the Now": SubResource("Resource_5u5sf")
+})
+minor_traits = Dictionary[String, ExtResource("1_8kgn0")]({
+"Mutants in the Next": SubResource("Resource_j71ig"),
+"Mutants in the Now": SubResource("Resource_6ll40")
+})
+unique_trait = ExtResource("13_tfy58")
+basic_traits = ["Type: Ginglymodi", "Diet: Carnivore", "Movement: Aquatic", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Amphibious", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Finned"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

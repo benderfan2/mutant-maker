@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://kivdx7nbjr7l"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_qi43a"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_jos4x"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_y1kcg"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="3_y86yo"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="4_5u30i"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="5_1qxgw"]
+[ext_resource type="Resource" uid="uid://dxccbsmwvplbx" path="res://Resources/Traits/Minor/Subtraits/Teeth/Baleen.tres" id="6_6m4g3"]
+[ext_resource type="Resource" uid="uid://bt5cyrhprxs4t" path="res://Resources/Traits/Minor/Aqualocation.tres" id="7_tox1c"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="8_6yb5j"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="9_kvosl"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="10_3e368"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="11_dkdya"]
+[ext_resource type="Resource" uid="uid://bh6elycom5su3" path="res://Resources/Traits/Minor/Sleep Surfacing.tres" id="12_muo1d"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_0quuh"]
+[ext_resource type="Resource" uid="uid://jq5l3gnorkm8" path="res://Resources/Traits/Minor/Whalesong.tres" id="14_dmig6"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="15_vt4u4"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="16_3e368"]
+[ext_resource type="Resource" uid="uid://ktaw303a6sr7" path="res://Resources/Traits/Minor/Breach Leap.tres" id="17_dkdya"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="18_muo1d"]
+[ext_resource type="Resource" uid="uid://dvw4r1t2n1wnv" path="res://Resources/Traits/Minor/Pressure Resistance.tres" id="19_0quuh"]
+[ext_resource type="Resource" uid="uid://blasu6atgfcgl" path="res://Resources/Traits/Unique/Longsong.tres" id="21_dkdya"]
+
+[sub_resource type="Resource" id="Resource_ami7i"]
+script = ExtResource("1_qi43a")
+traits = Array[ExtResource("2_jos4x")]([ExtResource("3_y86yo"), ExtResource("4_5u30i"), ExtResource("5_1qxgw")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0yey5"]
+script = ExtResource("1_qi43a")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ugagb"]
+script = ExtResource("1_qi43a")
+traits = Array[ExtResource("2_jos4x")]([ExtResource("7_tox1c"), ExtResource("8_6yb5j"), ExtResource("9_kvosl"), ExtResource("10_3e368"), ExtResource("11_dkdya"), ExtResource("12_muo1d"), ExtResource("13_0quuh"), ExtResource("14_dmig6"), ExtResource("15_vt4u4")])
+subtraits = Dictionary[ExtResource("2_jos4x"), bool]({
+ExtResource("6_6m4g3"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_dmig6"]
+script = ExtResource("1_qi43a")
+traits = Array[ExtResource("2_jos4x")]([ExtResource("17_dkdya"), ExtResource("18_muo1d"), ExtResource("19_0quuh")])
+subtraits = Dictionary[ExtResource("2_jos4x"), bool]({
+ExtResource("16_3e368"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_y1kcg")
+name = "Whale, Humpback"
+description = "A large baleen whale with lumpy looks and sophisticated songs."
+base_goop = -20
+size_rating = 18
+enhancable_attributes = Array[String](["Affinity", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 34"
+major_traits = Dictionary[String, ExtResource("1_qi43a")]({
+"Mutants in the Next": SubResource("Resource_0yey5"),
+"Mutants in the Now": SubResource("Resource_ami7i")
+})
+minor_traits = Dictionary[String, ExtResource("1_qi43a")]({
+"Mutants in the Next": SubResource("Resource_dmig6"),
+"Mutants in the Now": SubResource("Resource_ugagb")
+})
+unique_trait = ExtResource("21_dkdya")
+basic_traits = ["Type: Cetacea", "Diet: Carnivore", "Movement: Aquatic", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Finned"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

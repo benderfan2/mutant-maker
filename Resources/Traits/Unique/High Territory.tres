@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://col744rc24inv"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_prem7"]
+
+[resource]
+script = ExtResource("1_prem7")
+name = "High Territory"
+source = "Mutants in the Now, pg. 27"
+type = 3
+cost = 2
+description = "When trying to knockdown a foe on rough terrain, +A. In addition, +A on any roll to avoid a fall."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

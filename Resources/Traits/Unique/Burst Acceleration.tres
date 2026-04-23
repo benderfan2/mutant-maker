@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://brkct6kn6ybgd"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_wpcoy"]
+
+[resource]
+script = ExtResource("2_wpcoy")
+name = "Burst Acceleration"
+source = "Mutants in the Now, pg. 21"
+type = 3
+cost = 5
+description = "You can gain an extra 100% speed (for a total of 200%) when using Swift, but may only do so for +END turns. At the end of this period or when you stop moving for a turn, gain the tired status. In addition, when you move into melee with this burst of speed, your foe is distracted (in addition to becoming unbalanced)."
+requirements = Array[String](["Swift"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cf7vt8ojrgbkc"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_7illq"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_exx14"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="2_n8psu"]
+[ext_resource type="Resource" uid="uid://cxahuw1iqnhv1" path="res://Resources/Traits/Major/Pain Tolerance.tres" id="3_adsma"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_wm7p1"]
+[ext_resource type="Resource" uid="uid://bbla7lr5jaw3o" path="res://Resources/Traits/Major/Stampede.tres" id="5_7q2w8"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="6_p32fv"]
+[ext_resource type="Resource" uid="uid://bpwuk0s4ijcb0" path="res://Resources/Traits/Minor/Subtraits/Horns/Charging.tres" id="7_e8trt"]
+[ext_resource type="Resource" uid="uid://c4petdf5ptuws" path="res://Resources/Traits/Minor/Subtraits/Horns/Outward.tres" id="8_vqja6"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="9_x8brr"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="10_ikkim"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="11_h25qr"]
+[ext_resource type="Resource" uid="uid://pat37m2ckbeb" path="res://Resources/Traits/Minor/Horns.tres" id="12_lbdq3"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="13_i3yoq"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="14_1yuru"]
+[ext_resource type="Resource" uid="uid://dadhn5ojhd644" path="res://Resources/Traits/Unique/Burdened Beast.tres" id="15_ihvdw"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="15_oon7a"]
+[ext_resource type="Resource" uid="uid://cxa26alvnn8qs" path="res://Resources/Traits/Minor/Reduced Sleep.tres" id="16_gtesy"]
+
+[sub_resource type="Resource" id="Resource_gtesy"]
+script = ExtResource("1_exx14")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_pwlq0"]
+script = ExtResource("1_exx14")
+traits = Array[ExtResource("1_7illq")]([ExtResource("2_n8psu"), ExtResource("3_adsma"), ExtResource("4_wm7p1"), ExtResource("5_7q2w8"), ExtResource("6_p32fv")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6mb5u"]
+script = ExtResource("1_exx14")
+traits = Array[ExtResource("1_7illq")]([ExtResource("15_oon7a"), ExtResource("16_gtesy")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_pc3rb"]
+script = ExtResource("1_exx14")
+traits = Array[ExtResource("1_7illq")]([ExtResource("9_x8brr"), ExtResource("10_ikkim"), ExtResource("12_lbdq3"), ExtResource("11_h25qr"), ExtResource("13_i3yoq")])
+subtraits = Dictionary[ExtResource("1_7illq"), bool]({
+ExtResource("7_e8trt"): false,
+ExtResource("8_vqja6"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("14_1yuru")
+name = "Cow, Holstein"
+description = "Their black-and-white coat is iconic."
+base_goop = 10
+size_rating = 13
+enhancable_attributes = Array[String](["Affinity", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 22"
+major_traits = Dictionary[String, ExtResource("1_exx14")]({
+"Mutants in the Next": SubResource("Resource_gtesy"),
+"Mutants in the Now": SubResource("Resource_pwlq0")
+})
+minor_traits = Dictionary[String, ExtResource("1_exx14")]({
+"Mutants in the Next": SubResource("Resource_6mb5u"),
+"Mutants in the Now": SubResource("Resource_pc3rb")
+})
+unique_trait = ExtResource("15_ihvdw")
+basic_traits = ["Type: Bovidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_27ssy")
 name = "Head-First"
+source = "Mutants in the Now, pg. 42"
+type = 4
 cost = 2
 description = "You can climb down surfaces head-first rather than lowering yourself down, allowing you to MOVE at your full move when descending."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

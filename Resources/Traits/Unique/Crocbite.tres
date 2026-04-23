@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dmyada3sd8rvd"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_cre5k"]
+
+[resource]
+script = ExtResource("2_cre5k")
+name = "Crocbite"
+source = "Mutants in the Now, pg. 22"
+type = 3
+cost = 5
+description = "When you roll the maximum value of a die on a strike using teeth, add +ESC to your damage."
+requirements = Array[String](["Teeth"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

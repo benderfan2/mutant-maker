@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://5m44x724g53u"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_nxomb"]
+
+[resource]
+script = ExtResource("1_nxomb")
+name = "Croak"
+source = "Mutants in the Now, pg. 24"
+type = 3
+cost = 5
+description = "When pressing foes, you may affect every target in melee as an area of effect (AoE)."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

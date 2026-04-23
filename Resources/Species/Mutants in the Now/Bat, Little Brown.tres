@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://c5vb2u0iaakir"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_fsa18"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qlm5e"]
+[ext_resource type="Resource" uid="uid://dsqigdsvxw862" path="res://Resources/Traits/Major/Echolocation.tres" id="2_8s8id"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="3_nqpxp"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="4_fsa18"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="5_4kwoi"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="6_8s8id"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="6_uunmg"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="7_v8jak"]
+[ext_resource type="Resource" uid="uid://d1hmoppo5ufuu" path="res://Resources/Traits/Minor/Red Sight.tres" id="8_4rgyb"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="9_6oqn7"]
+[ext_resource type="Resource" uid="uid://ccv32cjvyqjk4" path="res://Resources/Traits/Minor/Ultrasonic Hearing.tres" id="10_5el0d"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="11_lyehq"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="12_u6alf"]
+[ext_resource type="Resource" uid="uid://binrlsjm3ja7n" path="res://Resources/Traits/Unique/Tracking Echolocation.tres" id="13_ycr2o"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="14_4kwoi"]
+
+[sub_resource type="Resource" id="Resource_v8jak"]
+script = ExtResource("1_fsa18")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_uunmg"]
+script = ExtResource("1_fsa18")
+traits = Array[ExtResource("1_qlm5e")]([ExtResource("2_8s8id"), ExtResource("3_nqpxp"), ExtResource("4_fsa18"), ExtResource("5_4kwoi")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_6oqn7"]
+script = ExtResource("1_fsa18")
+traits = Array[ExtResource("1_qlm5e")]([ExtResource("14_4kwoi")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_4rgyb"]
+script = ExtResource("1_fsa18")
+traits = Array[ExtResource("1_qlm5e")]([ExtResource("6_uunmg"), ExtResource("7_v8jak"), ExtResource("8_4rgyb"), ExtResource("9_6oqn7"), ExtResource("10_5el0d"), ExtResource("11_lyehq")])
+subtraits = Dictionary[ExtResource("1_qlm5e"), bool]({
+ExtResource("6_8s8id"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("12_u6alf")
+name = "Bat, Little Brown"
+description = "This tiny bat is struggling to survive both disease and humanity."
+base_goop = 39
+size_rating = 1
+enhancable_attributes = Array[String](["Perception", "Prowess", "Speed"])
+source = "Mutants in the Now, pg. 20"
+major_traits = Dictionary[String, ExtResource("1_fsa18")]({
+"Mutants in the Next": SubResource("Resource_v8jak"),
+"Mutants in the Now": SubResource("Resource_uunmg")
+})
+minor_traits = Dictionary[String, ExtResource("1_fsa18")]({
+"Mutants in the Next": SubResource("Resource_6oqn7"),
+"Mutants in the Now": SubResource("Resource_4rgyb")
+})
+unique_trait = ExtResource("13_ycr2o")
+basic_traits = ["Type: Chiroptera", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

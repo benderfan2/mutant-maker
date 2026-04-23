@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cmuetphs2jtxa"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_udveh"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_g5yq7"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_yvocs"]
+[ext_resource type="Resource" uid="uid://cig7j2g3n7o3c" path="res://Resources/Traits/Major/Subtraits/Arboreal/Head-First.tres" id="3_t0wbt"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="4_ftr7e"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="5_eyrbq"]
+[ext_resource type="Resource" uid="uid://cmvkwcc3elarr" path="res://Resources/Traits/Major/Arboreal.tres" id="6_163mu"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="7_w2jgp"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="8_escit"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="9_3a0oj"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="10_rlw57"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="11_1w6lq"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="12_wn0vl"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="13_hlju2"]
+[ext_resource type="Resource" uid="uid://djiq5u2gn622h" path="res://Resources/Traits/Minor/Spatial Memory.tres" id="14_ngpsu"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="15_tsin1"]
+[ext_resource type="Resource" uid="uid://cu6y65xel5ywb" path="res://Resources/Traits/Unique/Swift Climber.tres" id="17_t0wbt"]
+
+[sub_resource type="Resource" id="Resource_aax1j"]
+script = ExtResource("1_udveh")
+traits = Array[ExtResource("2_yvocs")]([ExtResource("4_ftr7e"), ExtResource("5_eyrbq"), ExtResource("6_163mu"), ExtResource("7_w2jgp"), ExtResource("8_escit")])
+subtraits = Dictionary[ExtResource("2_yvocs"), bool]({
+ExtResource("3_t0wbt"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_w4ykl"]
+script = ExtResource("1_udveh")
+traits = Array[ExtResource("2_yvocs")]([ExtResource("9_3a0oj")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_8xh1h"]
+script = ExtResource("1_udveh")
+traits = Array[ExtResource("2_yvocs")]([ExtResource("12_wn0vl"), ExtResource("13_hlju2"), ExtResource("14_ngpsu"), ExtResource("15_tsin1")])
+subtraits = Dictionary[ExtResource("2_yvocs"), bool]({
+ExtResource("10_rlw57"): false,
+ExtResource("11_1w6lq"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xe7bl"]
+script = ExtResource("1_udveh")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_g5yq7")
+name = "Squirrel, Eastern Gray"
+description = "A common squirrel in North America that’s invasively spread."
+base_goop = 37
+size_rating = 2
+enhancable_attributes = Array[String](["Perception", "Prowess", "Speed"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_udveh")]({
+"Mutants in the Next": SubResource("Resource_w4ykl"),
+"Mutants in the Now": SubResource("Resource_aax1j")
+})
+minor_traits = Dictionary[String, ExtResource("1_udveh")]({
+"Mutants in the Next": SubResource("Resource_xe7bl"),
+"Mutants in the Now": SubResource("Resource_8xh1h")
+})
+unique_trait = ExtResource("17_t0wbt")
+basic_traits = ["Type: Rodentia", "Diet: Facultative Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

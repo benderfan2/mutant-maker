@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dil0dew4ljvlu"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_q87iq"]
+
+[resource]
+script = ExtResource("1_q87iq")
+name = "Mudslider"
+source = "Mutants in the Now, pg. 33"
+type = 3
+cost = 2
+description = "When within MOVE distance of a body of water, or similar, you may perform a dash towards it as a moment."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

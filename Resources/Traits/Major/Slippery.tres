@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_4seol")
 name = "Slippery"
+source = "Mutants in the Now, pg. 44"
 cost = 5
 description = "You’re remarkably smooth or slimy. Foes are +D to grab you."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

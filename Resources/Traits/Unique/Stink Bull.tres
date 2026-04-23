@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cix8x3e0wl1tt"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ti6we"]
+
+[resource]
+script = ExtResource("2_ti6we")
+name = "Stink Bull"
+source = "Mutants in the Now, pg. 25"
+cost = 2
+description = "Foes are +D on maneuvers using mouthparts (like beak, mandibles, teeth, etc.) against you. If they’re also unbalanced, this becomes hardened."
+requirements = Array[String](["Musk"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

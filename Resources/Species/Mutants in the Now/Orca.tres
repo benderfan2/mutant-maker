@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bnpreaa7as7ji"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_sijkw"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_3f7un"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_rqpdk"]
+[ext_resource type="Resource" uid="uid://bkiyviwp87l18" path="res://Resources/Traits/Major/Subtraits/Echolocation/Aquatic.tres" id="3_xtwhy"]
+[ext_resource type="Resource" uid="uid://bujgoce3ed40e" path="res://Resources/Traits/Major/Subtraits/Swift/Swimmer.tres" id="4_m4ics"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="5_t34vr"]
+[ext_resource type="Resource" uid="uid://dsqigdsvxw862" path="res://Resources/Traits/Major/Echolocation.tres" id="6_isomq"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="7_isxin"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="8_lerdd"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="9_aeha6"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="10_mlkxj"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="11_c1p46"]
+[ext_resource type="Resource" uid="uid://bmunn0y3qbi21" path="res://Resources/Traits/Minor/Subtraits/Teeth/Crushing.tres" id="12_i55f4"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="13_t3h0q"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="14_w711c"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="15_0vgxw"]
+[ext_resource type="Resource" uid="uid://dcj50jj8oe2bi" path="res://Resources/Traits/Minor/Clicks.tres" id="16_v2vdt"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="17_v2cp0"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="18_id4rm"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="19_sm0ws"]
+[ext_resource type="Resource" uid="uid://ceho4hcpypfph" path="res://Resources/Traits/Minor/Migration Sense.tres" id="20_fkxkh"]
+[ext_resource type="Resource" uid="uid://cfqa1fkduipnj" path="res://Resources/Traits/Minor/Saltwater Tolerance.tres" id="21_cd475"]
+[ext_resource type="Resource" uid="uid://bh6elycom5su3" path="res://Resources/Traits/Minor/Sleep Surfacing.tres" id="22_3a8st"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="23_j230n"]
+[ext_resource type="Resource" uid="uid://ccv32cjvyqjk4" path="res://Resources/Traits/Minor/Ultrasonic Hearing.tres" id="24_8t5ks"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="25_qkdtr"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="26_v2vdt"]
+[ext_resource type="Resource" uid="uid://ktaw303a6sr7" path="res://Resources/Traits/Minor/Breach Leap.tres" id="27_v2cp0"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="28_id4rm"]
+[ext_resource type="Resource" uid="uid://dvw4r1t2n1wnv" path="res://Resources/Traits/Minor/Pressure Resistance.tres" id="29_sm0ws"]
+[ext_resource type="Resource" uid="uid://d2lc238ugdo2d" path="res://Resources/Traits/Unique/Marine Brawler.tres" id="31_v2cp0"]
+
+[sub_resource type="Resource" id="Resource_f1u1y"]
+script = ExtResource("1_sijkw")
+traits = Array[ExtResource("2_rqpdk")]([ExtResource("5_t34vr"), ExtResource("6_isomq"), ExtResource("7_isxin"), ExtResource("8_lerdd"), ExtResource("9_aeha6"), ExtResource("10_mlkxj"), ExtResource("11_c1p46")])
+subtraits = Dictionary[ExtResource("2_rqpdk"), bool]({
+ExtResource("3_xtwhy"): true,
+ExtResource("4_m4ics"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_85fhl"]
+script = ExtResource("1_sijkw")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_omonl"]
+script = ExtResource("1_sijkw")
+traits = Array[ExtResource("2_rqpdk")]([ExtResource("14_w711c"), ExtResource("15_0vgxw"), ExtResource("16_v2vdt"), ExtResource("17_v2cp0"), ExtResource("18_id4rm"), ExtResource("19_sm0ws"), ExtResource("20_fkxkh"), ExtResource("21_cd475"), ExtResource("22_3a8st"), ExtResource("23_j230n"), ExtResource("24_8t5ks"), ExtResource("25_qkdtr")])
+subtraits = Dictionary[ExtResource("2_rqpdk"), bool]({
+ExtResource("12_i55f4"): false,
+ExtResource("13_t3h0q"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_scl06"]
+script = ExtResource("1_sijkw")
+traits = Array[ExtResource("2_rqpdk")]([ExtResource("27_v2cp0"), ExtResource("28_id4rm"), ExtResource("29_sm0ws")])
+subtraits = Dictionary[ExtResource("2_rqpdk"), bool]({
+ExtResource("26_v2vdt"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_3f7un")
+name = "Orca"
+description = "The famous “killer whale” of waterparks."
+base_goop = 15
+size_rating = 14
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 28"
+major_traits = Dictionary[String, ExtResource("1_sijkw")]({
+"Mutants in the Next": SubResource("Resource_85fhl"),
+"Mutants in the Now": SubResource("Resource_f1u1y")
+})
+minor_traits = Dictionary[String, ExtResource("1_sijkw")]({
+"Mutants in the Next": SubResource("Resource_scl06"),
+"Mutants in the Now": SubResource("Resource_omonl")
+})
+unique_trait = ExtResource("31_v2cp0")
+basic_traits = ["Type: Cetacea", "Diet: Carnivore", "Movement: Aquatic", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Finned"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

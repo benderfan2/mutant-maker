@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://b4vn6wsyujr5u"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_uxbl0"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_503g5"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_f54gg"]
+[ext_resource type="Resource" uid="uid://cl7qd5j436i11" path="res://Resources/Traits/Major/Subtraits/Burrow/Subterranean.tres" id="3_jqg1c"]
+[ext_resource type="Resource" uid="uid://0po20huyfym7" path="res://Resources/Traits/Major/Subtraits/Burrow/Tunnel.tres" id="4_e421g"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="5_87thp"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="6_7tnv1"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="7_acac1"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="8_q4ifn"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="9_acac1"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="10_q4ifn"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="11_f8kxg"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="12_n2nem"]
+[ext_resource type="Resource" uid="uid://bso8mn2qs7gh6" path="res://Resources/Traits/Minor/Vibration Sense.tres" id="13_pel70"]
+[ext_resource type="Resource" uid="uid://diwlv3sto68tp" path="res://Resources/Traits/Unique/Master Miner.tres" id="15_q4ifn"]
+
+[sub_resource type="Resource" id="Resource_syui1"]
+script = ExtResource("1_uxbl0")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_f8kxg"]
+script = ExtResource("1_uxbl0")
+traits = Array[ExtResource("2_503g5")]([ExtResource("5_87thp"), ExtResource("6_7tnv1"), ExtResource("7_acac1"), ExtResource("8_q4ifn")])
+subtraits = Dictionary[ExtResource("2_503g5"), bool]({
+ExtResource("3_jqg1c"): false,
+ExtResource("4_e421g"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_j32sf"]
+script = ExtResource("1_uxbl0")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_q3ob4"]
+script = ExtResource("1_uxbl0")
+traits = Array[ExtResource("2_503g5")]([ExtResource("11_f8kxg"), ExtResource("12_n2nem"), ExtResource("13_pel70")])
+subtraits = Dictionary[ExtResource("2_503g5"), bool]({
+ExtResource("9_acac1"): false,
+ExtResource("10_q4ifn"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_f54gg")
+name = "Mole, Eastern"
+description = "This tiny mole is common in the eastern United States."
+base_goop = 43
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 27"
+major_traits = Dictionary[String, ExtResource("1_uxbl0")]({
+"Mutants in the Next": SubResource("Resource_syui1"),
+"Mutants in the Now": SubResource("Resource_f8kxg")
+})
+minor_traits = Dictionary[String, ExtResource("1_uxbl0")]({
+"Mutants in the Next": SubResource("Resource_j32sf"),
+"Mutants in the Now": SubResource("Resource_q3ob4")
+})
+unique_trait = ExtResource("15_q4ifn")
+basic_traits = ["Type: Eulipotyphla", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Receptors", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

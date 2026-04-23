@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://b24bdbwhgc7wi"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_86xkk"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_gyq28"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_s478u"]
+[ext_resource type="Resource" uid="uid://mcphbikc1pu1" path="res://Resources/Traits/Major/Subtraits/Enhanced Scent/Rooting.tres" id="3_lqswt"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_el30v"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_cybja"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="6_6aas1"]
+[ext_resource type="Resource" uid="uid://bsrheoag7qrio" path="res://Resources/Traits/Major/Toxin Resistance.tres" id="7_jf0d1"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="8_lqswt"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="9_jf0d1"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="10_8ihpq"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="11_lj047"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="12_nbtyf"]
+[ext_resource type="Resource" uid="uid://4t5gti8bwxuq" path="res://Resources/Traits/Unique/Social Swine.tres" id="14_8ihpq"]
+
+[sub_resource type="Resource" id="Resource_8ihpq"]
+script = ExtResource("1_86xkk")
+traits = Array[ExtResource("2_s478u")]([ExtResource("4_el30v"), ExtResource("5_cybja"), ExtResource("6_6aas1"), ExtResource("7_jf0d1")])
+subtraits = Dictionary[ExtResource("2_s478u"), bool]({
+ExtResource("3_lqswt"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_el30v"]
+script = ExtResource("1_86xkk")
+traits = Array[ExtResource("2_s478u")]([ExtResource("8_lqswt")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_dj4im"]
+script = ExtResource("1_86xkk")
+traits = Array[ExtResource("2_s478u")]([ExtResource("9_jf0d1"), ExtResource("10_8ihpq"), ExtResource("11_lj047"), ExtResource("12_nbtyf")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_5y3hc"]
+script = ExtResource("1_86xkk")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_gyq28")
+name = "Pig, Miniature"
+description = "A pig specifically bred as a pet and a lab specimen."
+base_goop = 25
+size_rating = 9
+enhancable_attributes = Array[String](["Affinity", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 30"
+major_traits = Dictionary[String, ExtResource("1_86xkk")]({
+"Mutants in the Next": SubResource("Resource_el30v"),
+"Mutants in the Now": SubResource("Resource_8ihpq")
+})
+minor_traits = Dictionary[String, ExtResource("1_86xkk")]({
+"Mutants in the Next": SubResource("Resource_5y3hc"),
+"Mutants in the Now": SubResource("Resource_dj4im")
+})
+unique_trait = ExtResource("14_8ihpq")
+basic_traits = ["Type: Suidae", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

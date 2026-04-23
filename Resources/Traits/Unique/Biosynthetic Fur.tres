@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bcl2y3sjl0wue"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_riei7"]
+
+[resource]
+script = ExtResource("1_riei7")
+name = "Biosynthetic Fur"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 5
+description = "Gain Armor 1, Resistance 1, and Resistance: fire 4."
+stat_modifications = {
+"Armor": 1,
+"Resistance": 1,
+"Resistance: Fire": 4
+}
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

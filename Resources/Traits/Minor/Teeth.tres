@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="7_oenxx"]
 [ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="8_g8w5s"]
 [ext_resource type="Resource" uid="uid://dboslq5lcqxhm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Slaying.tres" id="9_y4wef"]
+[ext_resource type="Resource" uid="uid://5she8k8c5hbg" path="res://Resources/Traits/Minor/Subtraits/Teeth/Razor.tres" id="10_pqh8r"]
 
 [resource]
 script = ExtResource("1_fx83s")
@@ -16,5 +17,5 @@ name = "Teeth"
 type = 1
 cost = 1
 description = "These are natural weapons that inflict 1d8 weapon damage with the following supported maneuvers: grab and knockdown. It has the edged type."
-subtraits = Array[ExtResource("1_fx83s")]([ExtResource("2_06pmf"), ExtResource("3_mxo8m"), ExtResource("4_c1dkv"), ExtResource("5_6502e"), ExtResource("6_pveng"), ExtResource("7_oenxx"), ExtResource("8_g8w5s"), ExtResource("9_y4wef")])
+subtraits = Array[ExtResource("1_fx83s")]([ExtResource("2_06pmf"), ExtResource("3_mxo8m"), ExtResource("4_c1dkv"), ExtResource("5_6502e"), ExtResource("6_pveng"), ExtResource("7_oenxx"), ExtResource("8_g8w5s"), ExtResource("9_y4wef"), ExtResource("10_pqh8r")])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

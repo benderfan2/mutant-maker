@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_bv7b1")
 name = "Shed Skin"
+source = "Mutants in the Now, pg. 44"
 cost = 5
 description = "When you suffer a maneuver that causes damage or the grabbed status, you may suffer 1d8 non-injuring damage directly to HP to gain +A on any saving throw against it by losing your skin. Once this is done, it cannot be performed again until your HP is entirely healed. If you choose to escape the fight on your next turn, gain 1 temporary WILL at the start of your next scene."
 subtraits = Array[ExtResource("1_bv7b1")]([ExtResource("2_whwtd")])

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dtym01kb8nd4j"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_wtjpw"]
+
+[resource]
+script = ExtResource("1_wtjpw")
+name = "Aerial"
+source = "Mutants in the Next, pg. 94"
+type = 4
+description = "You only gain the benefit of Stable while flying."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

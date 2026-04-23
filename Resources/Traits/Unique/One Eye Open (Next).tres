@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bgv2mtyjo0blu"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_vfptu"]
+
+[resource]
+script = ExtResource("1_vfptu")
+name = "One Eye Open"
+source = "Mutants in the Next, pg. 70"
+type = 3
+cost = 2
+description = "You no longer need to spend 1 WILL to be treated as awake while asleep, and the distracted status doesn’t reduce your Morale."
+requirements = Array[String](["Polyphasic", "AND", "Alert"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

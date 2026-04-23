@@ -5,8 +5,9 @@
 [resource]
 script = ExtResource("1_12kid")
 name = "Hindrunner"
+source = "Mutants in the Now, pg. 46"
 type = 1
 cost = 2
 description = "Your species normally moves on four legs, but can run or hop on two, and you can free your forelimbs to hold objects if necessary when moving. However, you must be traveling at 50% or more of your MOVE (dashing once a turn in a fight scene) to use this mutation."
-requirements = ["Quadrupedal"]
+requirements = Array[String](["Movement: Quadrupedal"])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

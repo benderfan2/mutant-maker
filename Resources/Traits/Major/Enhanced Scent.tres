@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_dstrk")
 name = "Enhanced Scent"
+source = "Mutants in the Now, pg. 43"
 cost = 5
 description = "Your greater sense of smell can recognize specific scents (like a species) and their general direction, as well as avoid +D due to lack of sight or hearing when it comes to noticing the presence of others (but provides no precise location for targeting with maneuvers). The character can even identify others or track recent scents with a successful dramatic roll."
 subtraits = Array[ExtResource("1_dstrk")]([ExtResource("2_0dmq2")])

@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_or16a")
 name = "Goring"
-type = 1
+type = 5
 cost = 1
 description = "Add knockdown as a supported maneuver and inflict 1d12 weapon damage when using these tusks as part of a knockdown."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

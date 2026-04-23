@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_rttti")
 name = "Compound Sight"
+source = "Mutants in the Now, pg. 42"
 cost = 5
 description = "You can see in a very wide arc around yourself with almost no blind spots. When others are trying to gain surprise on you or otherwise pass by you without notice, +D on their roll."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

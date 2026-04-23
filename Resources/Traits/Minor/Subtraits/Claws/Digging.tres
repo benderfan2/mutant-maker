@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_ldmll")
 name = "Digging"
-type = 1
+type = 5
 cost = 1
 description = "Your claws gain Piercing 2."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

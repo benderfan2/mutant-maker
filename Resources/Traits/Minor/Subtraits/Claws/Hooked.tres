@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_6coyg")
 name = "Hooked"
-type = 1
+type = 5
 cost = 1
 description = "Your claws can grip prey. Treat grab as a supported maneuver for this weapon."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_td83u")
 name = "Aquatic"
+source = "Mutants in the Now, pg. 42"
+type = 4
 cost = -5
 description = "This version of echolocation only functions in water."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

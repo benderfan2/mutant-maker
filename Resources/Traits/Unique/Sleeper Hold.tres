@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ert6s8pld8w1"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_c4j1j"]
+
+[resource]
+script = ExtResource("1_c4j1j")
+name = "Sleeper Hold"
+source = "Mutants in the Now, pg. 32"
+type = 3
+cost = 5
+description = "Any target you grab gains the tired status, and it cannot end while they’re grabbed."
+requirements = Array[String](["Constriction"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

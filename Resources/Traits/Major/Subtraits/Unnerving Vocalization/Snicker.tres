@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_4vrt0")
 name = "Snicker"
+source = "Mutants in the Now, pg. 45"
+type = 4
 cost = 2
 description = "When you bully a target, you may inflict the distracted status instead of the disoriented status."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

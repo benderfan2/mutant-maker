@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://baqcr3vkcaseo"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_hha0h"]
+
+[resource]
+script = ExtResource("1_hha0h")
+name = "Stretch 'n Squish"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 2
+description = "You can double or halve your height for +END turns (minimum 1), and may take traits that require the limbless trait or forelimbs trait."
+requirements = Array[String](["Flexible"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dqoje5prmigxo"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_cxw8b"]
+
+[resource]
+script = ExtResource("1_cxw8b")
+name = "Tiger Blood"
+source = "Mutants in the Now, pg. 33"
+type = 3
+cost = 8
+description = "When you use aggressive, gain +END temporary HP."
+requirements = Array[String](["Aggressive"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

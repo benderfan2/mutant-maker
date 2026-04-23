@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://d3rupukakhobt"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_rycnv"]
+
+[resource]
+script = ExtResource("1_rycnv")
+name = "Cornered Rat"
+source = "Mutants in the Now, pg. 31"
+type = 3
+cost = 5
+description = "+A on dramatic rolls in urban environments to find your way or locate food. In addition, when you roll initiative for a fight scene while in urban environments, gain 1 temporary WILL."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

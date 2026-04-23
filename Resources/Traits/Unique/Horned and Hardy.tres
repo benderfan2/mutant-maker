@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dcdykdknjvvmc"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qf7n1"]
+
+[resource]
+script = ExtResource("1_qf7n1")
+name = "Horned and Hardy"
+source = "Mutants in the Now, pg. 25"
+type = 3
+cost = 2
+description = "When you spend a WILL to gain +A on the roll for a saving throw, harden it."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

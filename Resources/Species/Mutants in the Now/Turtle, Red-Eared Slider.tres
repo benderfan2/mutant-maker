@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://u27fo3ou782e"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_1k3jd"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ckio0"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_x7f64"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="3_h7h71"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="4_hw7bi"]
+[ext_resource type="Resource" uid="uid://gihaifspdfti" path="res://Resources/Traits/Major/Defense Posture.tres" id="5_1yc3t"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="6_8i6md"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="7_aq0fg"]
+[ext_resource type="Resource" uid="uid://b3427q3rk6n44" path="res://Resources/Traits/Major/Shell.tres" id="8_kbdt4"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="9_nvxdd"]
+[ext_resource type="Resource" uid="uid://daen7y88peun5" path="res://Resources/Traits/Minor/Subtraits/Claws/Hooked.tres" id="10_3qodb"]
+[ext_resource type="Resource" uid="uid://lhovfgshxid0" path="res://Resources/Traits/Minor/Aquatic Scent.tres" id="11_1e2vv"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="12_ard87"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="13_dtm73"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="14_71mb4"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="15_imro3"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="16_hdo5k"]
+[ext_resource type="Resource" uid="uid://ckpt5coeqiea2" path="res://Resources/Traits/Minor/Scales.tres" id="17_g8dle"]
+[ext_resource type="Resource" uid="uid://bh6elycom5su3" path="res://Resources/Traits/Minor/Sleep Surfacing.tres" id="18_h7h71"]
+[ext_resource type="Resource" uid="uid://dil0dew4ljvlu" path="res://Resources/Traits/Unique/Mudslider.tres" id="20_hw7bi"]
+
+[sub_resource type="Resource" id="Resource_mehll"]
+script = ExtResource("1_1k3jd")
+traits = Array[ExtResource("2_ckio0")]([ExtResource("3_h7h71"), ExtResource("4_hw7bi"), ExtResource("5_1yc3t"), ExtResource("6_8i6md"), ExtResource("7_aq0fg"), ExtResource("8_kbdt4")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_3d8yu"]
+script = ExtResource("1_1k3jd")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ouax5"]
+script = ExtResource("1_1k3jd")
+traits = Array[ExtResource("2_ckio0")]([ExtResource("11_1e2vv"), ExtResource("12_ard87"), ExtResource("13_dtm73"), ExtResource("14_71mb4"), ExtResource("15_imro3"), ExtResource("16_hdo5k"), ExtResource("17_g8dle")])
+subtraits = Dictionary[ExtResource("2_ckio0"), bool]({
+ExtResource("9_nvxdd"): false,
+ExtResource("10_3qodb"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_57c5j"]
+script = ExtResource("1_1k3jd")
+traits = Array[ExtResource("2_ckio0")]([ExtResource("18_h7h71")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_x7f64")
+name = "Turtle, Red-Eared Slider"
+description = "The popularity of this pet made it an worldwide invader."
+base_goop = 33
+size_rating = 5
+enhancable_attributes = Array[String](["Determination", "Affinity", "Endurance"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_1k3jd")]({
+"Mutants in the Next": SubResource("Resource_3d8yu"),
+"Mutants in the Now": SubResource("Resource_mehll")
+})
+minor_traits = Dictionary[String, ExtResource("1_1k3jd")]({
+"Mutants in the Next": SubResource("Resource_57c5j"),
+"Mutants in the Now": SubResource("Resource_ouax5")
+})
+unique_trait = ExtResource("20_hw7bi")
+basic_traits = ["Type: Testudines", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

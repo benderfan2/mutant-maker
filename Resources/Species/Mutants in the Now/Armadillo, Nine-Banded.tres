@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cgcwo3tlux4rw"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_hbe48"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_xiuqt"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="2_vniiw"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="3_0ti6y"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_d7mtd"]
+[ext_resource type="Resource" uid="uid://dqgmiawdshgwa" path="res://Resources/Traits/Major/Exoskeletal Defense.tres" id="5_i88ii"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="6_adoy7"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="7_ckx35"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="8_87nfs"]
+[ext_resource type="Resource" uid="uid://cspjhw8ode0l2" path="res://Resources/Traits/Major/Subtraits/Swift/Sprint.tres" id="8_ljyn7"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="9_rlbxd"]
+[ext_resource type="Resource" uid="uid://byhyi24ci3tfy" path="res://Resources/Traits/Minor/Bed Treader.tres" id="9_tkagg"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_prcnk"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="11_rmvwo"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="12_msjbb"]
+[ext_resource type="Resource" uid="uid://8511d51arja7" path="res://Resources/Traits/Minor/Languid.tres" id="13_og21m"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="14_xbd0o"]
+[ext_resource type="Resource" uid="uid://hr0ebtrpnoti" path="res://Resources/Traits/Minor/Sticky Tongue.tres" id="15_k2afh"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="16_nt4n5"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="17_b3yvs"]
+[ext_resource type="Resource" uid="uid://0x0mf87qqrxe" path="res://Resources/Traits/Unique/Nine-Alarm Spring.tres" id="18_405kd"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="20_i88ii"]
+
+[sub_resource type="Resource" id="Resource_v0x86"]
+script = ExtResource("1_hbe48")
+traits = Array[ExtResource("1_xiuqt")]([ExtResource("9_rlbxd")])
+subtraits = Dictionary[ExtResource("1_xiuqt"), bool]({
+ExtResource("8_ljyn7"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_hbe48"]
+script = ExtResource("1_hbe48")
+traits = Array[ExtResource("1_xiuqt")]([ExtResource("2_vniiw"), ExtResource("3_0ti6y"), ExtResource("4_d7mtd"), ExtResource("5_i88ii"), ExtResource("6_adoy7")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ckx35"]
+script = ExtResource("1_hbe48")
+subtraits = Dictionary[ExtResource("1_xiuqt"), bool]({
+ExtResource("20_i88ii"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_adoy7"]
+script = ExtResource("1_hbe48")
+traits = Array[ExtResource("1_xiuqt")]([ExtResource("9_tkagg"), ExtResource("10_prcnk"), ExtResource("11_rmvwo"), ExtResource("12_msjbb"), ExtResource("13_og21m"), ExtResource("14_xbd0o"), ExtResource("15_k2afh"), ExtResource("16_nt4n5")])
+subtraits = Dictionary[ExtResource("1_xiuqt"), bool]({
+ExtResource("7_ckx35"): false,
+ExtResource("8_87nfs"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("17_b3yvs")
+name = "Armadillo, Nine-Banded"
+description = "The “Hoover Hog” faces few threats save for speeding cars."
+base_goop = 33
+size_rating = 6
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 20"
+major_traits = Dictionary[String, ExtResource("1_hbe48")]({
+"Mutants in the Next": SubResource("Resource_v0x86"),
+"Mutants in the Now": SubResource("Resource_hbe48")
+})
+minor_traits = Dictionary[String, ExtResource("1_hbe48")]({
+"Mutants in the Next": SubResource("Resource_ckx35"),
+"Mutants in the Now": SubResource("Resource_adoy7")
+})
+unique_trait = ExtResource("18_405kd")
+basic_traits = ["Type: Xenarthra", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

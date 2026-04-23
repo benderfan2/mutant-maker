@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_52dk0")
 name = "Chameleon"
+source = "Mutants in the Now, pg. 42"
 cost = 15
 description = "By changing your color to match that of the area you’re in, gain +A on any roll to go unnoticed. In fight scenes, you may take an action to adapt your body to the environment, giving foes +D to target you with maneuvers while you have no statuses. If you move to a location with significantly different coloration, you lose this effect and must spend another action to regain it."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

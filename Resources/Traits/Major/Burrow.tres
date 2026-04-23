@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("1_a4yb4")
 name = "Burrow"
+source = "Mutants in the Now, pg. 42"
 cost = 10
 description = "You may move through earth, soil, and sand with MOVE reduced to 1⁄10, as well as craft simple dens appropriate to your size, given the proper earth."
 subtraits = Array[ExtResource("1_a4yb4")]([ExtResource("2_hv7go"), ExtResource("3_ep3bo"), ExtResource("4_8kods")])

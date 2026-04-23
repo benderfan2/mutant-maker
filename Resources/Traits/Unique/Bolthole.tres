@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cgb8hsa8fldf8"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_8orvc"]
+
+[resource]
+script = ExtResource("1_8orvc")
+name = "Bolthole"
+source = "Mutants in the Now, pg. 30"
+type = 3
+cost = 2
+description = "When near your main domicile, gain +A with dramatic rolls to notice or escape foes, or on retreat rolls in fight scenes."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

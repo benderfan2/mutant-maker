@@ -1,22 +1,13 @@
 [gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ck2vbmhm8elti"]
 
-[ext_resource type="Script" uid="uid://bf2tb5h3h8o6v" path="res://Scripts/trait_requirement.gd" id="1_6bjpd"]
 [ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_thqga"]
-[ext_resource type="Resource" uid="uid://cn4hhiuh8ouqx" path="res://Resources/Traits/Major/Subtraits/Flight/Burst.tres" id="3_y7p5h"]
-[ext_resource type="Resource" uid="uid://dijab1kd2a0iu" path="res://Resources/Traits/Major/Subtraits/Flight/Hover.tres" id="4_5vgsj"]
-[ext_resource type="Resource" uid="uid://4sbre7spx5fb" path="res://Resources/Traits/Major/Subtraits/Flight/Migratory.tres" id="5_5hm2m"]
-
-[sub_resource type="Resource" id="Resource_ojf57"]
-script = ExtResource("1_6bjpd")
-traits_list = Array[ExtResource("2_thqga")]([ExtResource("3_y7p5h"), ExtResource("4_5vgsj"), ExtResource("5_5hm2m")])
-require_not_having = true
-metadata/_custom_type_script = "uid://bf2tb5h3h8o6v"
 
 [resource]
 script = ExtResource("2_thqga")
 name = "Gliding"
+source = "Mutants in the Now, pg. 43"
+type = 4
 cost = -5
 is_universal = true
 description = "You cannot gain lift on your own and must rely on natural lift. Flight requires you to jump from a substantial height; you cannot launch from the ground. To see if natural lift is available, roll 1d8; a 3 or less means you may gain altitude, but a 4 or higher means you must gradually descend for the rest of the flight. In good weather, roll 1d6 instead. Cannot be combined with Burst, Hover, or Migratory."
-requirements = [SubResource("Resource_ojf57")]
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cngxpi0jx3ymu"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_0tk7i"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_h6cuw"]
+[ext_resource type="Resource" uid="uid://b6k3u0f5ik7po" path="res://Resources/Traits/Major/Subtraits/Unnerving Vocalization/Bellow.tres" id="3_8juki"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="3_lny3l"]
+[ext_resource type="Resource" uid="uid://cspjhw8ode0l2" path="res://Resources/Traits/Major/Subtraits/Swift/Sprint.tres" id="4_0j8gf"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="4_n4w2y"]
+[ext_resource type="Resource" uid="uid://dqgmiawdshgwa" path="res://Resources/Traits/Major/Exoskeletal Defense.tres" id="5_8juki"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="6_0j8gf"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="7_vtdl8"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="8_2xxws"]
+[ext_resource type="Resource" uid="uid://wa308j3wsjv6" path="res://Resources/Traits/Major/Unnerving Vocalization.tres" id="9_lny3l"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="12_goxty"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="12_si3sh"]
+[ext_resource type="Resource" uid="uid://bb5p0skr75bd0" path="res://Resources/Traits/Major/Swallow.tres" id="12_vyaci"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="13_thp5i"]
+[ext_resource type="Resource" uid="uid://bmunn0y3qbi21" path="res://Resources/Traits/Minor/Subtraits/Teeth/Crushing.tres" id="13_vyaci"]
+[ext_resource type="Resource" uid="uid://bt5cyrhprxs4t" path="res://Resources/Traits/Minor/Aqualocation.tres" id="14_goxty"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="15_vyaci"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="16_nw6qd"]
+[ext_resource type="Resource" uid="uid://brin4v2hf63i8" path="res://Resources/Traits/Minor/Crushing Jaw.tres" id="17_yve8q"]
+[ext_resource type="Resource" uid="uid://d07jai4noyqvu" path="res://Resources/Traits/Minor/Death Roll.tres" id="18_ro246"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="19_jtyu3"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="20_5e84l"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="21_833kf"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="22_33xr3"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="23_0yhtt"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="25_clob3"]
+[ext_resource type="Resource" uid="uid://vswfkg3i22h5" path="res://Resources/Traits/Unique/Gatorbite.tres" id="26_ygqwk"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="27_yve8q"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="28_ro246"]
+
+[sub_resource type="Resource" id="Resource_nw6qd"]
+script = ExtResource("1_0tk7i")
+traits = Array[ExtResource("2_h6cuw")]([ExtResource("12_vyaci")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_lny3l"]
+script = ExtResource("1_0tk7i")
+traits = Array[ExtResource("2_h6cuw")]([ExtResource("3_lny3l"), ExtResource("4_n4w2y"), ExtResource("5_8juki"), ExtResource("6_0j8gf"), ExtResource("7_vtdl8"), ExtResource("8_2xxws"), ExtResource("9_lny3l")])
+subtraits = Dictionary[ExtResource("2_h6cuw"), bool]({
+ExtResource("3_8juki"): false,
+ExtResource("4_0j8gf"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_vyaci"]
+script = ExtResource("1_0tk7i")
+traits = Array[ExtResource("2_h6cuw")]([ExtResource("28_ro246")])
+subtraits = Dictionary[ExtResource("2_h6cuw"), bool]({
+ExtResource("27_yve8q"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_lwm3i"]
+script = ExtResource("1_0tk7i")
+traits = Array[ExtResource("2_h6cuw")]([ExtResource("12_si3sh"), ExtResource("13_thp5i"), ExtResource("14_goxty"), ExtResource("15_vyaci"), ExtResource("16_nw6qd"), ExtResource("17_yve8q"), ExtResource("18_ro246"), ExtResource("19_jtyu3"), ExtResource("20_5e84l"), ExtResource("21_833kf"), ExtResource("22_33xr3"), ExtResource("23_0yhtt")])
+subtraits = Dictionary[ExtResource("2_h6cuw"), bool]({
+ExtResource("12_goxty"): false,
+ExtResource("13_vyaci"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("25_clob3")
+name = "Alligator, American"
+description = "This huge aquatic reptile thrives across the Southeastern US."
+base_goop = 20
+size_rating = 11
+enhancable_attributes = Array[String](["Perception", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 20"
+major_traits = Dictionary[String, ExtResource("1_0tk7i")]({
+"Mutants in the Next": SubResource("Resource_nw6qd"),
+"Mutants in the Now": SubResource("Resource_lny3l")
+})
+minor_traits = Dictionary[String, ExtResource("1_0tk7i")]({
+"Mutants in the Next": SubResource("Resource_vyaci"),
+"Mutants in the Now": SubResource("Resource_lwm3i")
+})
+unique_trait = ExtResource("26_ygqwk")
+basic_traits = ["Type: Crocodilia", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

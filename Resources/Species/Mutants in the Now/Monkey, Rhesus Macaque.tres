@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://xcn88kt5ydrc"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_pfbn1"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_baklh"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_gmvph"]
+[ext_resource type="Resource" uid="uid://cmvkwcc3elarr" path="res://Resources/Traits/Major/Arboreal.tres" id="3_e1jv3"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="4_8eb5s"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="5_b7flt"]
+[ext_resource type="Resource" uid="uid://bh0ux3jeafe3h" path="res://Resources/Traits/Minor/Cheek Pouches.tres" id="6_p8oqc"]
+[ext_resource type="Resource" uid="uid://rucuwqsui72h" path="res://Resources/Traits/Minor/Grasping Feet.tres" id="7_vlbtr"]
+[ext_resource type="Resource" uid="uid://ch45pm128e0qh" path="res://Resources/Traits/Minor/Nearly Human.tres" id="8_4eqja"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="9_8eb5s"]
+[ext_resource type="Resource" uid="uid://dfrksclbfw6r5" path="res://Resources/Traits/Unique/Prankster.tres" id="11_b7flt"]
+
+[sub_resource type="Resource" id="Resource_cbbni"]
+script = ExtResource("1_pfbn1")
+traits = Array[ExtResource("2_gmvph")]([ExtResource("3_e1jv3"), ExtResource("4_8eb5s")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rjll3"]
+script = ExtResource("1_pfbn1")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xxp55"]
+script = ExtResource("1_pfbn1")
+traits = Array[ExtResource("2_gmvph")]([ExtResource("5_b7flt"), ExtResource("6_p8oqc"), ExtResource("7_vlbtr"), ExtResource("8_4eqja")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xua3e"]
+script = ExtResource("1_pfbn1")
+traits = Array[ExtResource("2_gmvph")]([ExtResource("9_8eb5s")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_baklh")
+name = "Monkey, Rhesus Macaque"
+description = "The most common monkey in labs, and the first cloned by science."
+base_goop = 23
+size_rating = 6
+enhancable_attributes = Array[String](["Cognition", "Determination", "Prowess"])
+source = "Mutants in the Now, pg. 27"
+major_traits = Dictionary[String, ExtResource("1_pfbn1")]({
+"Mutants in the Next": SubResource("Resource_rjll3"),
+"Mutants in the Now": SubResource("Resource_cbbni")
+})
+minor_traits = Dictionary[String, ExtResource("1_pfbn1")]({
+"Mutants in the Next": SubResource("Resource_xua3e"),
+"Mutants in the Now": SubResource("Resource_xxp55")
+})
+unique_trait = ExtResource("11_b7flt")
+basic_traits = ["Type: Primates", "Diet: Herbivore", "Movement: Semi-Bipedal", "Prehensility: Grasping", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

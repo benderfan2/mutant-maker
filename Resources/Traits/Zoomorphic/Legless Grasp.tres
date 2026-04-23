@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bo7rfoskyynp0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_grgyt"]
+
+[resource]
+script = ExtResource("1_grgyt")
+name = "Legless Grasp"
+source = "Mutants in the Now, pg. 41"
+type = 2
+cost = 2
+description = "You can use your serpentine body to grasp a single object at a time, though you cannot manipulate it without additional limbs. Your speed is reduced to 0 unless you have quadrupedal, semi-bipedal, or bipedal movement, in which case it is reduced by 1⁄2."
+requirements = Array[String](["Movement: Limbless", "OR", "Movement: Forelimbs"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

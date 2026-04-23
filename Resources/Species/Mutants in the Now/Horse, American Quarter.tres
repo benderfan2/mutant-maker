@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://jgfeidhtsnmh"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_jlngr"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ifk1w"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_uoy8r"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_8f8dh"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="4_g22sj"]
+[ext_resource type="Resource" uid="uid://bbla7lr5jaw3o" path="res://Resources/Traits/Major/Stampede.tres" id="5_5l7k8"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="6_61dor"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="7_2cxly"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="8_g22sj"]
+[ext_resource type="Resource" uid="uid://dhupckl21s0rg" path="res://Resources/Traits/Major/Rideable.tres" id="9_5l7k8"]
+[ext_resource type="Resource" uid="uid://cu5jp1dbcg32" path="res://Resources/Traits/Minor/Subtraits/Hooves/Mule Kick.tres" id="10_i1hix"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="11_cyado"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="12_gd44x"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="13_6wqdp"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="14_odoth"]
+[ext_resource type="Resource" uid="uid://cxa26alvnn8qs" path="res://Resources/Traits/Minor/Reduced Sleep.tres" id="15_vwjmt"]
+[ext_resource type="Resource" uid="uid://c8iaefeoyqogt" path="res://Resources/Traits/Unique/Quarter Mile.tres" id="17_cyado"]
+
+[sub_resource type="Resource" id="Resource_61dor"]
+script = ExtResource("1_jlngr")
+traits = Array[ExtResource("2_ifk1w")]([ExtResource("8_g22sj"), ExtResource("9_5l7k8")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_c5de8"]
+script = ExtResource("1_jlngr")
+traits = Array[ExtResource("2_ifk1w")]([ExtResource("3_8f8dh"), ExtResource("4_g22sj"), ExtResource("5_5l7k8"), ExtResource("6_61dor"), ExtResource("7_2cxly")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_m372q"]
+script = ExtResource("1_jlngr")
+traits = Array[ExtResource("2_ifk1w")]([ExtResource("14_odoth"), ExtResource("15_vwjmt")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_t4gdh"]
+script = ExtResource("1_jlngr")
+traits = Array[ExtResource("2_ifk1w")]([ExtResource("11_cyado"), ExtResource("12_gd44x"), ExtResource("13_6wqdp")])
+subtraits = Dictionary[ExtResource("2_ifk1w"), bool]({
+ExtResource("10_i1hix"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_uoy8r")
+name = "Horse, American Quarter"
+description = "Known for its sprint, this is the mount of the cowboy and rodeo."
+base_goop = 15
+size_rating = 12
+enhancable_attributes = Array[String](["Affinity", "Strength", "Speed"])
+source = "Mutants in the Now, pg. 26"
+major_traits = Dictionary[String, ExtResource("1_jlngr")]({
+"Mutants in the Next": SubResource("Resource_61dor"),
+"Mutants in the Now": SubResource("Resource_c5de8")
+})
+minor_traits = Dictionary[String, ExtResource("1_jlngr")]({
+"Mutants in the Next": SubResource("Resource_m372q"),
+"Mutants in the Now": SubResource("Resource_t4gdh")
+})
+unique_trait = ExtResource("17_cyado")
+basic_traits = ["Type: Equidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

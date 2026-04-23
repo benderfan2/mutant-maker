@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://p5qatghdknpp"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_m0m4j"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_8hmni"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ul3dy"]
+[ext_resource type="Resource" uid="uid://0po20huyfym7" path="res://Resources/Traits/Major/Subtraits/Burrow/Tunnel.tres" id="3_7ggtn"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="4_uwe0l"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_0p4mq"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="6_orcd6"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="7_mfggd"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="8_hkc7y"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_87fat"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="10_gxvvs"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="11_06hby"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="12_6uwor"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_sh371"]
+[ext_resource type="Resource" uid="uid://ban1hmc6yb5jh" path="res://Resources/Traits/Unique/Tunnel Rat.tres" id="15_7ggtn"]
+
+[sub_resource type="Resource" id="Resource_kjwgq"]
+script = ExtResource("1_m0m4j")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0w53o"]
+script = ExtResource("1_m0m4j")
+traits = Array[ExtResource("2_ul3dy")]([ExtResource("4_uwe0l"), ExtResource("5_0p4mq")])
+subtraits = Dictionary[ExtResource("2_ul3dy"), bool]({
+ExtResource("3_7ggtn"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xkgkd"]
+script = ExtResource("1_m0m4j")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_cfd8a"]
+script = ExtResource("1_m0m4j")
+traits = Array[ExtResource("2_ul3dy")]([ExtResource("9_87fat"), ExtResource("10_gxvvs"), ExtResource("11_06hby"), ExtResource("12_6uwor"), ExtResource("13_sh371")])
+subtraits = Dictionary[ExtResource("2_ul3dy"), bool]({
+ExtResource("6_orcd6"): false,
+ExtResource("7_mfggd"): false,
+ExtResource("8_hkc7y"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_8hmni")
+name = "Groundhog"
+description = "The “woodchuck” is one of the largest marmots in North America."
+base_goop = 33
+size_rating = 6
+enhancable_attributes = Array[String](["Determination", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 25"
+major_traits = Dictionary[String, ExtResource("1_m0m4j")]({
+"Mutants in the Next": SubResource("Resource_kjwgq"),
+"Mutants in the Now": SubResource("Resource_0w53o")
+})
+minor_traits = Dictionary[String, ExtResource("1_m0m4j")]({
+"Mutants in the Next": SubResource("Resource_xkgkd"),
+"Mutants in the Now": SubResource("Resource_cfd8a")
+})
+unique_trait = ExtResource("15_7ggtn")
+basic_traits = ["Type: Rodentia", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

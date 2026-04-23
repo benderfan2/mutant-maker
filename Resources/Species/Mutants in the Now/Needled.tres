@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ydpcihfc8avm"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_rads1"]
+
+[resource]
+script = ExtResource("1_rads1")
+name = "Needled"
+source = "Mutants in the Now, pg. 33"
+type = 3
+cost = 3
+description = "When a foe takes damage from your Spines or Darts, increase the damage by 1."
+requirements = Array[String](["Spines"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cnmmoxujnlko1"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_7g7cp"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_sotg1"]
+[ext_resource type="Resource" uid="uid://mcphbikc1pu1" path="res://Resources/Traits/Major/Subtraits/Enhanced Scent/Rooting.tres" id="2_lhuby"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="3_v45gw"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_teh3b"]
+[ext_resource type="Resource" uid="uid://ejca065bwp08" path="res://Resources/Traits/Major/Fearless.tres" id="5_vbgg5"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="6_4vn7t"]
+[ext_resource type="Resource" uid="uid://dhkyb35xolir2" path="res://Resources/Traits/Major/Stable.tres" id="7_jwivm"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="8_tnv4h"]
+[ext_resource type="Resource" uid="uid://bsrheoag7qrio" path="res://Resources/Traits/Major/Toxin Resistance.tres" id="9_128ep"]
+[ext_resource type="Resource" uid="uid://bymplldyi6x4p" path="res://Resources/Traits/Minor/Subtraits/Tusks/Goring.tres" id="10_87l7i"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="11_bqkxo"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="12_5var2"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="13_m77ha"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="14_xcfu1"]
+[ext_resource type="Resource" uid="uid://dr2khibmxxpbd" path="res://Resources/Traits/Minor/Tusks.tres" id="15_p0yci"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="16_1bx6i"]
+[ext_resource type="Resource" uid="uid://h07r2ruwtceh" path="res://Resources/Traits/Unique/Razorback.tres" id="17_jm8rx"]
+
+[sub_resource type="Resource" id="Resource_cuvhn"]
+script = ExtResource("1_sotg1")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_2jdgh"]
+script = ExtResource("1_sotg1")
+traits = Array[ExtResource("1_7g7cp")]([ExtResource("3_v45gw"), ExtResource("4_teh3b"), ExtResource("5_vbgg5"), ExtResource("6_4vn7t"), ExtResource("7_jwivm"), ExtResource("8_tnv4h"), ExtResource("9_128ep")])
+subtraits = Dictionary[ExtResource("1_7g7cp"), bool]({
+ExtResource("2_lhuby"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_04fq8"]
+script = ExtResource("1_sotg1")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_86dhb"]
+script = ExtResource("1_sotg1")
+traits = Array[ExtResource("1_7g7cp")]([ExtResource("11_bqkxo"), ExtResource("12_5var2"), ExtResource("13_m77ha"), ExtResource("14_xcfu1"), ExtResource("15_p0yci")])
+subtraits = Dictionary[ExtResource("1_7g7cp"), bool]({
+ExtResource("10_87l7i"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("16_1bx6i")
+name = "Boar, Wild"
+description = "Settlers brought the boar to the Americas in the 19th Century."
+base_goop = 23
+size_rating = 10
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 20"
+major_traits = Dictionary[String, ExtResource("1_sotg1")]({
+"Mutants in the Next": SubResource("Resource_cuvhn"),
+"Mutants in the Now": SubResource("Resource_2jdgh")
+})
+minor_traits = Dictionary[String, ExtResource("1_sotg1")]({
+"Mutants in the Next": SubResource("Resource_04fq8"),
+"Mutants in the Now": SubResource("Resource_86dhb")
+})
+unique_trait = ExtResource("17_jm8rx")
+basic_traits = ["Type: Suidae", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

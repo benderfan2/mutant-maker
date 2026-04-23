@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_hq26c")
 name = "Shell"
+source = "Mutants in the Now, pg. 44"
 cost = 15
 description = "You have a heavy, exoskeletal carapace around your torso and vital organs. Gain Armor 5."
 stat_modifications = Dictionary[String, int]({

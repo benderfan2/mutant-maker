@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_ruskh")
 name = "Stampede"
+source = "Mutants in the Now, pg. 44"
 cost = 5
 description = "When you charge a foe of smaller size, you do not need to stop in melee. If you charge a foe and perform a strike, knockdown, or reposition maneuver against them, you may exit melee as a moment afterwards. When charging, gain +A on knockdowns, and treat them as a supported maneuver for your fighting style when using unarmed weapons."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

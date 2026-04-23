@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://y4sffhfjljlf"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_xwvqg"]
+
+[resource]
+script = ExtResource("1_xwvqg")
+name = "Travel Packed"
+source = "Mutants in the Now, pg. 26"
+type = 3
+cost = 2
+description = "You can negate the tired status by spending 1 WILL, but only if you have recently (within the space of 24 hours) eaten your own weight in food."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

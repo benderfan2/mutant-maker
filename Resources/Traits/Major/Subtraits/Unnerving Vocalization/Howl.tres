@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bag3iseyv5r5r"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_w2qwq"]
+
+[resource]
+script = ExtResource("1_w2qwq")
+name = "Howl"
+source = "Mutants in the Next, pg. 95"
+type = 4
+cost = 2
+description = "You can bully a foe at range, inflicting the unbalanced status instead of startled when doing so."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

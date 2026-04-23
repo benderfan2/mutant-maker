@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_qygj7")
 name = "Back"
-type = 1
+type = 5
 cost = 1
 description = "When using these spurs on a strike against a target that has grabbed you, you gain hard +A."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

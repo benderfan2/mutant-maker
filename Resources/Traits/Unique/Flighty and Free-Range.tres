@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bicuxjrtgwisa"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_b3kdj"]
+
+[resource]
+script = ExtResource("2_b3kdj")
+name = "Flighty and Free-Range"
+source = "Mutants in the Now, pg. 21"
+type = 3
+cost = 2
+description = "When using Flight: Burst, you may stay aloft for +END rounds instead (minimum 2)."
+requirements = Array[String](["Flight", "AND", "Burst"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

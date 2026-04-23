@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://diwlv3sto68tp"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_sopei"]
+
+[resource]
+script = ExtResource("1_sopei")
+name = "Master Miner"
+source = "Mutants in the Now, pg. 27"
+type = 3
+cost = 2
+description = "When constructing tunnels and chambers, you treat your size rating as if it was 2 higher when calculating how long it takes. This stacks with the bonus from Subterranean."
+requirements = Array[String](["Burrow", "AND", "Tunnel"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

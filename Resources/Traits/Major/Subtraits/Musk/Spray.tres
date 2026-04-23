@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_rc24r")
 name = "Spray"
+source = "Mutants in the Now, pg. 43"
+type = 4
 cost = 5
 description = "You can perform a ranged strike that inflicts the tired status on a single target, and unbalances all targets in melee with that foe on a successful hit with the AoE weapon type (pg. 86), including the target. If they’re already tired, they’re stunned instead. This cannot do damage. You aren’t unbalanced by your own smell when performing this in melee. They can make a saving throw against this effect, but they become inactive if they fail."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

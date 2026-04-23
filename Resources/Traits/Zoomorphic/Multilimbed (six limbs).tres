@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource("1_cdl86")
-name = "Multilimbed (six limbs)"
+name = "Multilimbed (Six Limbs)"
 type = 2
 description = "You can use six of your limbs as arms. This allows you to ready or hold additional weapons or objects at once. You may use moments to grab objects or reload without becoming distracted, and you gain barrage as a supported maneuver for your fighting style. When using multiweapon fighting, you can reroll any result of 2 to X on an applicable fight roll once per action, where X is the number of weapons you have in hand. However, any miss leaves you unbalanced. You may choose to strike normally (without this benefit to multiweapon fighting), losing the benefit and the penalty."
-requirements = ["Octopodal"]
+requirements = Array[String](["Movement: Octopodal"])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

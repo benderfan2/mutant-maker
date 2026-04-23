@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_gpkqy")
 name = "Migratory"
+source = "Mutants in the Now, pg. 43"
+type = 4
 cost = 5
 description = "You can fly for extended periods by using gusts and drafts. Roll 1d8. A 3 or less means you can stay aloft for (+END [minimum 1] x 8) hours, and a 4 or more means you can only remain for +END (minimum 1) hours. In good weather, roll 1d6 instead."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

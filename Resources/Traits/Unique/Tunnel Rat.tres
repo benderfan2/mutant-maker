@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ban1hmc6yb5jh"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_7h4wd"]
+
+[resource]
+script = ExtResource("2_7h4wd")
+name = "Tunnel Rat"
+source = "Mutants in the Now, pg. 25"
+type = 3
+cost = 5
+description = "You have +A when making any dramatic roll to construct a tunnel, and +A when making any fight roll in a tunnel you’ve constructed."
+requirements = Array[String](["Burrow", "AND", "Tunnel"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

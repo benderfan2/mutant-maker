@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bksv407wq702o"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_pqvse"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_6wsgs"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ayppo"]
+[ext_resource type="Resource" uid="uid://dijab1kd2a0iu" path="res://Resources/Traits/Major/Subtraits/Flight/Hover.tres" id="3_3k617"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="4_tb67r"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="5_0537x"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="6_004km"]
+[ext_resource type="Resource" uid="uid://fk0j8qfupy2a" path="res://Resources/Traits/Minor/Subtraits/Beak/Poking.tres" id="7_deuny"]
+[ext_resource type="Resource" uid="uid://dr74emqnwuqgd" path="res://Resources/Traits/Minor/Subtraits/Claws/Perching.tres" id="8_ufrme"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="9_tiyw4"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_4gwyp"]
+[ext_resource type="Resource" uid="uid://d1hmoppo5ufuu" path="res://Resources/Traits/Minor/Red Sight.tres" id="11_rg5nk"]
+[ext_resource type="Resource" uid="uid://djiq5u2gn622h" path="res://Resources/Traits/Minor/Spatial Memory.tres" id="12_5o78a"]
+[ext_resource type="Resource" uid="uid://hr0ebtrpnoti" path="res://Resources/Traits/Minor/Sticky Tongue.tres" id="13_we60l"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="14_0j7fn"]
+[ext_resource type="Resource" uid="uid://dkkl4pmrob2ed" path="res://Resources/Traits/Minor/Standing Sleep.tres" id="15_5jovn"]
+[ext_resource type="Resource" uid="uid://y4sffhfjljlf" path="res://Resources/Traits/Unique/Travel Packed.tres" id="17_ufrme"]
+
+[sub_resource type="Resource" id="Resource_5xe67"]
+script = ExtResource("1_pqvse")
+traits = Array[ExtResource("2_ayppo")]([ExtResource("4_tb67r"), ExtResource("5_0537x"), ExtResource("6_004km")])
+subtraits = Dictionary[ExtResource("2_ayppo"), bool]({
+ExtResource("3_3k617"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_m3l6p"]
+script = ExtResource("1_pqvse")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_cpo02"]
+script = ExtResource("1_pqvse")
+traits = Array[ExtResource("2_ayppo")]([ExtResource("9_tiyw4"), ExtResource("10_4gwyp"), ExtResource("11_rg5nk"), ExtResource("12_5o78a"), ExtResource("13_we60l"), ExtResource("14_0j7fn")])
+subtraits = Dictionary[ExtResource("2_ayppo"), bool]({
+ExtResource("7_deuny"): false,
+ExtResource("8_ufrme"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_c1ycg"]
+script = ExtResource("1_pqvse")
+traits = Array[ExtResource("2_ayppo")]([ExtResource("15_5jovn")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_6wsgs")
+name = "Hummingbird, Ruby-Throated"
+description = "Distinguished by the red throats of the males."
+base_goop = 28
+enhancable_attributes = Array[String](["Perception", "Prowess", "Speed"])
+source = "Mutants in the Now, pg. 26"
+major_traits = Dictionary[String, ExtResource("1_pqvse")]({
+"Mutants in the Next": SubResource("Resource_m3l6p"),
+"Mutants in the Now": SubResource("Resource_5xe67")
+})
+minor_traits = Dictionary[String, ExtResource("1_pqvse")]({
+"Mutants in the Next": SubResource("Resource_c1ycg"),
+"Mutants in the Now": SubResource("Resource_cpo02")
+})
+unique_trait = ExtResource("17_ufrme")
+basic_traits = ["Type:Apodiformae", "Diet: Omnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

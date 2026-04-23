@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bqm7f4emtlcge"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_bbksk"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_rew7y"]
+[ext_resource type="Resource" uid="uid://2qoxma8ybhwy" path="res://Resources/Traits/Major/Subtraits/Swift/Saltation.tres" id="2_o0ch1"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_rew7y"]
+[ext_resource type="Resource" uid="uid://djv1w5ba1ccrh" path="res://Resources/Traits/Major/Catching Tongue.tres" id="3_m0jn8"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="4_tog4e"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="5_2yiii"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="6_02ib2"]
+[ext_resource type="Resource" uid="uid://3id5xuxkmatj" path="res://Resources/Traits/Major/Slippery.tres" id="7_keerw"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="7_msiie"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="8_oaug4"]
+[ext_resource type="Resource" uid="uid://bb5p0skr75bd0" path="res://Resources/Traits/Major/Swallow.tres" id="8_rsf0p"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="9_fs0jj"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="9_trfnk"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="10_jkqi0"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="11_dc1ye"]
+[ext_resource type="Resource" uid="uid://cgd3i2xa8bskk" path="res://Resources/Traits/Minor/Parietal Eye.tres" id="12_dmewv"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_e6mtl"]
+[ext_resource type="Resource" uid="uid://5m44x724g53u" path="res://Resources/Traits/Unique/Croak.tres" id="15_m0jn8"]
+
+[sub_resource type="Resource" id="Resource_n6baj"]
+script = ExtResource("1_rew7y")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_luh4p"]
+script = ExtResource("1_rew7y")
+traits = Array[ExtResource("1_bbksk")]([ExtResource("3_m0jn8"), ExtResource("4_tog4e"), ExtResource("5_2yiii"), ExtResource("6_02ib2"), ExtResource("7_keerw"), ExtResource("8_rsf0p"), ExtResource("9_trfnk")])
+subtraits = Dictionary[ExtResource("1_bbksk"), bool]({
+ExtResource("2_o0ch1"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_msiie"]
+script = ExtResource("1_rew7y")
+traits = Array[ExtResource("1_bbksk")]([ExtResource("8_oaug4"), ExtResource("9_fs0jj")])
+subtraits = Dictionary[ExtResource("1_bbksk"), bool]({
+ExtResource("7_msiie"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_jklwk"]
+script = ExtResource("1_rew7y")
+traits = Array[ExtResource("1_bbksk")]([ExtResource("11_dc1ye"), ExtResource("12_dmewv"), ExtResource("13_e6mtl")])
+subtraits = Dictionary[ExtResource("1_bbksk"), bool]({
+ExtResource("10_jkqi0"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_rew7y")
+name = "Frog, Bull"
+description = "Unusually large and invasive, and it throws its weight around."
+base_goop = 28
+size_rating = 2
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 24"
+major_traits = Dictionary[String, ExtResource("1_rew7y")]({
+"Mutants in the Next": SubResource("Resource_n6baj"),
+"Mutants in the Now": SubResource("Resource_luh4p")
+})
+minor_traits = Dictionary[String, ExtResource("1_rew7y")]({
+"Mutants in the Next": SubResource("Resource_msiie"),
+"Mutants in the Now": SubResource("Resource_jklwk")
+})
+unique_trait = ExtResource("15_m0jn8")
+basic_traits = ["Type: Salienta", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Amphibious", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

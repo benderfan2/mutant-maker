@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://brpxetefac3xc"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_bde6c"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_buywf"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ukbuc"]
+[ext_resource type="Resource" uid="uid://d00xdfslrjtuw" path="res://Resources/Traits/Major/Constriction.tres" id="3_uqymi"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_6o856"]
+[ext_resource type="Resource" uid="uid://c452443gjdgdb" path="res://Resources/Traits/Major/Shed Skin.tres" id="5_blvqq"]
+[ext_resource type="Resource" uid="uid://bb5p0skr75bd0" path="res://Resources/Traits/Major/Swallow.tres" id="6_wsbul"]
+[ext_resource type="Resource" uid="uid://b8wryga8olesq" path="res://Resources/Traits/Minor/Subtraits/Spurs/Belly.tres" id="7_p12mq"]
+[ext_resource type="Resource" uid="uid://cl6dlb3ep6a01" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gripping.tres" id="8_7j11y"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="9_y8vln"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="10_jx7xb"]
+[ext_resource type="Resource" uid="uid://hop7fthxsnpv" path="res://Resources/Traits/Minor/Heat Sense.tres" id="11_1vfhv"]
+[ext_resource type="Resource" uid="uid://dyj3khmmbufe0" path="res://Resources/Traits/Minor/Inspirational.tres" id="12_qrj0j"]
+[ext_resource type="Resource" uid="uid://8511d51arja7" path="res://Resources/Traits/Minor/Languid.tres" id="13_dpw02"]
+[ext_resource type="Resource" uid="uid://ckpt5coeqiea2" path="res://Resources/Traits/Minor/Scales.tres" id="14_w7658"]
+[ext_resource type="Resource" uid="uid://iu04sudfa1ld" path="res://Resources/Traits/Minor/Spurs.tres" id="15_0usp5"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="16_2g3p8"]
+[ext_resource type="Resource" uid="uid://06737g5ofekg" path="res://Resources/Traits/Minor/Subtraits/Lidless Sleep/Eyeguard.tres" id="17_1vfhv"]
+[ext_resource type="Resource" uid="uid://cm7e8n21o0j4o" path="res://Resources/Traits/Minor/Subtraits/Camouflage/Disruptive.tres" id="18_qrj0j"]
+[ext_resource type="Resource" uid="uid://dqbeg2iaftswd" path="res://Resources/Traits/Minor/Lidless Sleep.tres" id="19_dpw02"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="20_w7658"]
+[ext_resource type="Resource" uid="uid://ert6s8pld8w1" path="res://Resources/Traits/Unique/Sleeper Hold.tres" id="22_qrj0j"]
+
+[sub_resource type="Resource" id="Resource_dvbo3"]
+script = ExtResource("1_bde6c")
+traits = Array[ExtResource("2_ukbuc")]([ExtResource("3_uqymi"), ExtResource("4_6o856"), ExtResource("5_blvqq"), ExtResource("6_wsbul")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_f7vxw"]
+script = ExtResource("1_bde6c")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_fisaq"]
+script = ExtResource("1_bde6c")
+traits = Array[ExtResource("2_ukbuc")]([ExtResource("9_y8vln"), ExtResource("10_jx7xb"), ExtResource("11_1vfhv"), ExtResource("12_qrj0j"), ExtResource("13_dpw02"), ExtResource("14_w7658"), ExtResource("15_0usp5"), ExtResource("16_2g3p8")])
+subtraits = Dictionary[ExtResource("2_ukbuc"), bool]({
+ExtResource("7_p12mq"): false,
+ExtResource("8_7j11y"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0usp5"]
+script = ExtResource("1_bde6c")
+traits = Array[ExtResource("2_ukbuc")]([ExtResource("19_dpw02"), ExtResource("20_w7658")])
+subtraits = Dictionary[ExtResource("2_ukbuc"), bool]({
+ExtResource("17_1vfhv"): true,
+ExtResource("18_qrj0j"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_buywf")
+name = "Snake, Boa Constrictor"
+description = "This snake has a crushing grip, but makes for an easygoing pet."
+base_goop = 41
+size_rating = 7
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 32"
+major_traits = Dictionary[String, ExtResource("1_bde6c")]({
+"Mutants in the Next": SubResource("Resource_f7vxw"),
+"Mutants in the Now": SubResource("Resource_dvbo3")
+})
+minor_traits = Dictionary[String, ExtResource("1_bde6c")]({
+"Mutants in the Next": SubResource("Resource_0usp5"),
+"Mutants in the Now": SubResource("Resource_fisaq")
+})
+unique_trait = ExtResource("22_qrj0j")
+basic_traits = ["Type: Serpentes", "Diet: Carnivore", "Movement: Limbless", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -3,6 +3,17 @@
 [ext_resource type="Script" uid="uid://ckehdcx6ki17t" path="res://Scripts/main.gd" id="1_ig7tw"]
 [ext_resource type="Theme" uid="uid://dtsi5cphcij6i" path="res://marked_attribute_theme.tres" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b23j2d553syct" path="res://Scenes/Attribute Picker.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c4fimelvbojja" path="res://Scenes/TraitCheckbox.tscn" id="3_kry3j"]
+[ext_resource type="Resource" uid="uid://c86hd1p5pkrdn" path="res://Resources/Traits/Zoomorphic/Independent Fins.tres" id="4_21xkr"]
+[ext_resource type="Resource" uid="uid://bm138xahv8gdh" path="res://Resources/Traits/Zoomorphic/Independent Wings.tres" id="5_21xkr"]
+[ext_resource type="Resource" uid="uid://bo7rfoskyynp0" path="res://Resources/Traits/Zoomorphic/Legless Grasp.tres" id="6_6bp64"]
+[ext_resource type="Resource" uid="uid://btg6wq83vb48t" path="res://Resources/Traits/Zoomorphic/Multilimbed (four limbs).tres" id="7_jkdf5"]
+[ext_resource type="Resource" uid="uid://d0vqygxd84sjq" path="res://Resources/Traits/Zoomorphic/Multilimbed (six limbs).tres" id="8_wsu2k"]
+[ext_resource type="Resource" uid="uid://cnghf3r50ufq3" path="res://Resources/Traits/Zoomorphic/Myriadlimbed.tres" id="9_k12tt"]
+[ext_resource type="Resource" uid="uid://crcueyvidm87n" path="res://Resources/Traits/Zoomorphic/Secondary Limb.tres" id="10_h1bgf"]
+[ext_resource type="Resource" uid="uid://3scma0j7fno1" path="res://Resources/Traits/Zoomorphic/Tauric.tres" id="11_b3802"]
+[ext_resource type="Resource" uid="uid://db62b5t07jp5g" path="res://Resources/Traits/Zoomorphic/Tentacles.tres" id="12_fevyy"]
+[ext_resource type="Resource" uid="uid://1o6do11nt0mp" path="res://Resources/Traits/Zoomorphic/Upright Slither.tres" id="13_hibaj"]
 
 [node name="Control" type="PanelContainer" unique_id=162022356]
 anchors_preset = 15
@@ -23,18 +34,39 @@ metadata/_tab_index = 0
 [node name="Info" type="HBoxContainer" parent="TabContainer/Create" unique_id=315177642]
 layout_mode = 2
 
-[node name="TakebacksLabel" type="Label" parent="TabContainer/Create/Info" unique_id=743907689]
+[node name="TakebacksContainer" type="HBoxContainer" parent="TabContainer/Create/Info" unique_id=1388701092]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TakebacksLabel" type="Label" parent="TabContainer/Create/Info/TakebacksContainer" unique_id=743907689]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 text = "Takebacks:"
 
-[node name="GroupTakebacksLabel" type="Label" parent="TabContainer/Create/Info" unique_id=861071556]
+[node name="GroupTakebacksLabel" type="Label" parent="TabContainer/Create/Info/TakebacksContainer" unique_id=861071556]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Group Takebacks:"
 horizontal_alignment = 1
+
+[node name="StatsContainer" type="HBoxContainer" parent="TabContainer/Create/Info" unique_id=1377379070]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GOOPLabel" type="Label" parent="TabContainer/Create/Info/StatsContainer" unique_id=516324941]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "GOO-P:"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TabContainer/Create/Info/StatsContainer" unique_id=1642394105]
+layout_mode = 2
 
 [node name="Rolls" type="ScrollContainer" parent="TabContainer/Create" unique_id=17168571]
 layout_mode = 2
@@ -43,6 +75,68 @@ size_flags_vertical = 3
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls" unique_id=1824299559]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Step0" type="FoldableContainer" parent="TabContainer/Create/Rolls/VBoxContainer" unique_id=818560591]
+layout_mode = 2
+title = "Step #0 - What Are We Using?"
+
+[node name="SourceBookGridContainer" type="GridContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step0" unique_id=374550231]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 5
+
+[node name="NowContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer" unique_id=557057751]
+layout_mode = 2
+
+[node name="NowCheckbox" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NowContainer" unique_id=1730776068]
+layout_mode = 2
+disabled = true
+button_pressed = true
+text = "Mutants in the Now"
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NowContainer" unique_id=1668966682]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NowContainer/MarginContainer" unique_id=690830429]
+layout_mode = 2
+
+[node name="NowSpeciesCheckbox" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NowContainer/MarginContainer/VBoxContainer" unique_id=2039068496]
+layout_mode = 2
+disabled = true
+button_pressed = true
+text = "Species"
+
+[node name="NowTraitsCheckbox" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NowContainer/MarginContainer/VBoxContainer" unique_id=922568664]
+layout_mode = 2
+disabled = true
+button_pressed = true
+text = "Traits"
+
+[node name="NextContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer" unique_id=1053845512]
+layout_mode = 2
+
+[node name="NextCheckbox" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NextContainer" unique_id=1805212113]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mutants in the Next"
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NextContainer" unique_id=1100121644]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NextContainer/MarginContainer" unique_id=1345449866]
+layout_mode = 2
+
+[node name="NextSpeciesCheckbox" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NextContainer/MarginContainer/VBoxContainer" unique_id=285178490]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Species"
+
+[node name="NextTraitsCheckbox" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NextContainer/MarginContainer/VBoxContainer" unique_id=2134554331]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Traits"
 
 [node name="Step1" type="FoldableContainer" parent="TabContainer/Create/Rolls/VBoxContainer" unique_id=1864089095]
 layout_mode = 2
@@ -143,568 +237,570 @@ title = "Step #3 - You're Good At..."
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="GridContainer" type="GridContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer" unique_id=870549800]
+[node name="AttributeContainer" type="GridContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer" unique_id=870549800]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/h_separation = 16
 columns = 9
 
-[node name="AttributeNameColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1778208914]
+[node name="AttributeNameColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1778208914]
 layout_mode = 2
 text = "Attribute"
 horizontal_alignment = 1
 
-[node name="RollColumLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1801277632]
+[node name="RollColumLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1801277632]
 layout_mode = 2
 text = "Roll"
 horizontal_alignment = 1
 
-[node name="PrimeModColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1548350954]
+[node name="PrimeModColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1548350954]
 layout_mode = 2
 text = "Prime Mod"
 horizontal_alignment = 1
 
-[node name="SkillBaseColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1065372630]
+[node name="SkillBaseColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1065372630]
 layout_mode = 2
 text = "Skill Base"
 horizontal_alignment = 1
 
-[node name="SkillGainColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=133417846]
+[node name="SkillGainColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=133417846]
 layout_mode = 2
 text = "Skill Gain"
 horizontal_alignment = 1
 
-[node name="DamageDiceColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=243636382]
+[node name="DamageDiceColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=243636382]
 layout_mode = 2
 text = "Damage Dice"
 horizontal_alignment = 1
 
-[node name="GOOPBonusColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1933796931]
+[node name="GOOPBonusColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1933796931]
 layout_mode = 2
 text = "GOO-P Bonus"
 horizontal_alignment = 1
 
-[node name="MarkedColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1256317133]
+[node name="MarkedColumnLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1256317133]
 layout_mode = 2
 text = "Marked?"
 horizontal_alignment = 1
 
-[node name="RerollButtonColumLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=387966946]
+[node name="RerollButtonColumLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=387966946]
 layout_mode = 2
 
-[node name="CognitionLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1192430446]
+[node name="CognitionLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1192430446]
 layout_mode = 2
 text = "Cognition"
 horizontal_alignment = 1
 
-[node name="CognitionRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=754770123]
+[node name="CognitionRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=754770123]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=882564800]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=882564800]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="COGLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer" unique_id=1165101600]
+[node name="COGLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer" unique_id=1165101600]
 layout_mode = 2
 text = "+COG"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="COGValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer" unique_id=689920450]
+[node name="COGValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer" unique_id=689920450]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CognitionSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1997728692]
+[node name="CognitionSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1997728692]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CognitionSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2119608177]
+[node name="CognitionSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=2119608177]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CognitionDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=687926298]
+[node name="CognitionDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=687926298]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CognitionGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=19027145]
+[node name="CognitionGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=19027145]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CognitionMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1664698020]
+[node name="CognitionMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1664698020]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_0xm2m")
 disabled = true
 text = "Marked"
 
-[node name="CognitionRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=160606857]
+[node name="CognitionRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=160606857]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Re-Roll"
 
-[node name="DeterminationLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1329612662]
+[node name="DeterminationLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1329612662]
 layout_mode = 2
 text = "Determination"
 horizontal_alignment = 1
 
-[node name="DeterminationRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=621317108]
+[node name="DeterminationRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=621317108]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1914474006]
+[node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1914474006]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="DETLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer2" unique_id=931478381]
+[node name="DETLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer2" unique_id=931478381]
 layout_mode = 2
 text = "+DET"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DETValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer2" unique_id=1452707730]
+[node name="DETValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer2" unique_id=1452707730]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DeterminationSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=484053143]
+[node name="DeterminationSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=484053143]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DeterminationSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=669991198]
+[node name="DeterminationSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=669991198]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DeterminationDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2018585282]
+[node name="DeterminationDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=2018585282]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DeterminationGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1281397492]
+[node name="DeterminationGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1281397492]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DeterminationMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1354711409]
+[node name="DeterminationMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1354711409]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_0xm2m")
 disabled = true
 text = "Marked"
 
-[node name="DeterminationRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1393464434]
+[node name="DeterminationRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1393464434]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Re-Roll"
 
-[node name="AffinityLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=113594110]
+[node name="AffinityLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=113594110]
 layout_mode = 2
 text = "Affinity"
 horizontal_alignment = 1
 
-[node name="AffinityRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=532353164]
+[node name="AffinityRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=532353164]
 unique_name_in_owner = true
 layout_mode = 2
+horizontal_alignment = 1
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=749829657]
+[node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=749829657]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="AFFLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer3" unique_id=1283844304]
+[node name="AFFLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer3" unique_id=1283844304]
 layout_mode = 2
 text = "+AFF"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AFFValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer3" unique_id=440095996]
+[node name="AFFValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer3" unique_id=440095996]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AffinitySkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=42321379]
+[node name="AffinitySkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=42321379]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AffinitySkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=975763067]
+[node name="AffinitySkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=975763067]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AffinityDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1405104231]
+[node name="AffinityDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1405104231]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AffinityGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1793103824]
+[node name="AffinityGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1793103824]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AffinityMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=900392866]
+[node name="AffinityMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=900392866]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_0xm2m")
 disabled = true
 text = "Marked"
 
-[node name="AffinityRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=418797526]
+[node name="AffinityRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=418797526]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Re-Roll"
 
-[node name="PerceptionLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1699889711]
+[node name="PerceptionLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1699889711]
 layout_mode = 2
 text = "Perception"
 horizontal_alignment = 1
 
-[node name="PerceptionRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1495567914]
+[node name="PerceptionRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1495567914]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1274165609]
+[node name="HBoxContainer4" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1274165609]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="PERLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer4" unique_id=2072115835]
+[node name="PERLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer4" unique_id=2072115835]
 layout_mode = 2
 text = "+PER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PERValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer4" unique_id=1023191026]
+[node name="PERValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer4" unique_id=1023191026]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PerceptionSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=689628677]
+[node name="PerceptionSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=689628677]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PerceptionSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1853521642]
+[node name="PerceptionSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1853521642]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PerceptionDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2050870975]
+[node name="PerceptionDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=2050870975]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PerceptionGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1878050564]
+[node name="PerceptionGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1878050564]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PerceptionMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=557350595]
+[node name="PerceptionMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=557350595]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_0xm2m")
 disabled = true
 text = "Marked"
 
-[node name="PerceptionRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=298825387]
+[node name="PerceptionRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=298825387]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Re-Roll"
 
-[node name="StrengthLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=338298415]
+[node name="StrengthLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=338298415]
 layout_mode = 2
 text = "Strength"
 horizontal_alignment = 1
 
-[node name="StrengthRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=732069675]
+[node name="StrengthRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=732069675]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=212774891]
+[node name="HBoxContainer5" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=212774891]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="STRLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer5" unique_id=2024218147]
+[node name="STRLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer5" unique_id=2024218147]
 layout_mode = 2
 text = "+STR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="STRValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer5" unique_id=732704608]
+[node name="STRValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer5" unique_id=732704608]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StrengthSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=88179535]
+[node name="StrengthSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=88179535]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StrengthSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=14240575]
+[node name="StrengthSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=14240575]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StrengthDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1958596078]
+[node name="StrengthDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1958596078]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StrengthGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1546365906]
+[node name="StrengthGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1546365906]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="StrengthMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1756812473]
+[node name="StrengthMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1756812473]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_0xm2m")
 disabled = true
 text = "Marked"
 
-[node name="StrengthRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1350349150]
+[node name="StrengthRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1350349150]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Re-Roll"
 
-[node name="ProwessLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1911409774]
+[node name="ProwessLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1911409774]
 layout_mode = 2
 text = "Prowess"
 horizontal_alignment = 1
 
-[node name="ProwessRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1983868745]
+[node name="ProwessRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1983868745]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=786243106]
+[node name="HBoxContainer6" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=786243106]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="PROLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer6" unique_id=1683129666]
+[node name="PROLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer6" unique_id=1683129666]
 layout_mode = 2
 text = "+PRO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PROValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer6" unique_id=179506545]
+[node name="PROValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer6" unique_id=179506545]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProwessSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1415260873]
+[node name="ProwessSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1415260873]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProwessSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2018080431]
+[node name="ProwessSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=2018080431]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProwessDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2057563485]
+[node name="ProwessDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=2057563485]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProwessGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1141290965]
+[node name="ProwessGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1141290965]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProwessMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1326679819]
+[node name="ProwessMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1326679819]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_0xm2m")
 disabled = true
 text = "Marked"
 
-[node name="ProwessRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2093494593]
+[node name="ProwessRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=2093494593]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Re-Roll"
 
-[node name="EnduranceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=437482207]
+[node name="EnduranceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=437482207]
 layout_mode = 2
 text = "Endurance"
 horizontal_alignment = 1
 
-[node name="EnduranceRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1720734863]
+[node name="EnduranceRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1720734863]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1543553290]
+[node name="HBoxContainer7" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1543553290]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="ENDLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer7" unique_id=1217813846]
+[node name="ENDLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer7" unique_id=1217813846]
 layout_mode = 2
 text = "+END"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ENDValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer7" unique_id=333105192]
+[node name="ENDValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer7" unique_id=333105192]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnduranceSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1026914969]
+[node name="EnduranceSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1026914969]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnduranceSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1424244681]
+[node name="EnduranceSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1424244681]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnduranceDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=2132397300]
+[node name="EnduranceDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=2132397300]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnduranceGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1780051742]
+[node name="EnduranceGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1780051742]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnduranceMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=23794582]
+[node name="EnduranceMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=23794582]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_0xm2m")
 disabled = true
 text = "Marked"
 
-[node name="EnduranceRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1301927873]
+[node name="EnduranceRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1301927873]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Re-Roll"
 
-[node name="SpeedLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=243016005]
+[node name="SpeedLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=243016005]
 layout_mode = 2
 text = "Speed"
 horizontal_alignment = 1
 
-[node name="SpeedRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=65145743]
+[node name="SpeedRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=65145743]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer8" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1803907232]
+[node name="HBoxContainer8" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1803907232]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="SPDLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer8" unique_id=1147020910]
+[node name="SPDLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer8" unique_id=1147020910]
 layout_mode = 2
 text = "+SPD"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SPDValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/HBoxContainer8" unique_id=2089626840]
+[node name="SPDValueLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/HBoxContainer8" unique_id=2089626840]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpeedSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1328975940]
+[node name="SpeedSkillBaseLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1328975940]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpeedSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1189724829]
+[node name="SpeedSkillGainLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1189724829]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpeedDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1163364073]
+[node name="SpeedDamageDiceLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1163364073]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpeedGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1541177836]
+[node name="SpeedGOOPBonusLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1541177836]
 unique_name_in_owner = true
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpeedMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=68370909]
+[node name="SpeedMarkedButton" type="CheckBox" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=68370909]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_0xm2m")
 disabled = true
 text = "Marked"
 
-[node name="SpeedRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer" unique_id=1681127112]
+[node name="SpeedRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer" unique_id=1681127112]
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
@@ -852,43 +948,266 @@ text = "Lock"
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
-text = "Background Description Goes Here."
 fit_content = true
 
 [node name="SpeciesContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer" unique_id=1470057060]
+unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="RollSpeciesButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer" unique_id=642560515]
+[node name="TableCContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer" unique_id=1587071245]
 layout_mode = 2
 
-[node name="SpeciesTableContainer" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer" unique_id=1890273795]
+[node name="RollSpeciesTableCButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer" unique_id=642560515]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Roll on Table C"
+
+[node name="TableCChoiceContainer" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer" unique_id=1890273795]
 layout_mode = 2
 
-[node name="SpeciesTableLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/SpeciesTableContainer" unique_id=1709544577]
+[node name="TableCLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCChoiceContainer" unique_id=1709544577]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Background Table"
+text = "Table C"
 horizontal_alignment = 1
 
-[node name="SpeciesTable" type="OptionButton" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/SpeciesTableContainer" unique_id=449784244]
+[node name="TableC" type="OptionButton" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCChoiceContainer" unique_id=449784244]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
+item_count = 3
+popup/item_0/text = "Table C-1: City Species"
+popup/item_0/id = 0
+popup/item_1/text = "Table C-2: Rural Species"
+popup/item_1/id = 1
+popup/item_2/text = "Table C-3: Institutional Species"
+popup/item_2/id = 2
 
-[node name="AttributePicker" parent="TabContainer/Create/Rolls/VBoxContainer" unique_id=529555240 instance=ExtResource("3_h2yge")]
+[node name="TableCRollContainer" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer" unique_id=559878245]
+layout_mode = 2
+
+[node name="TableCRollLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCRollContainer" unique_id=377594883]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Table C Roll"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TableCRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCRollContainer" unique_id=290527789]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TableCRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCRollContainer" unique_id=182827403]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reroll"
+
+[node name="TableCSwapButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCRollContainer" unique_id=1789729521]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Swap"
+
+[node name="TableCLockButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCRollContainer" unique_id=1921083521]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Lock"
+
+[node name="TableCResultLabel" type="RichTextLabel" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer" unique_id=1817448948]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="TableDContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer" unique_id=629141763]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="RollSpeciesTableDButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer" unique_id=846896598]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Roll on Table D"
+
+[node name="TableDChoiceContainer" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer" unique_id=207089516]
+layout_mode = 2
+
+[node name="TableDLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDChoiceContainer" unique_id=1962739332]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Table D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TableD" type="OptionButton" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDChoiceContainer" unique_id=385936495]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+item_count = 7
+popup/item_0/text = "Table D-1: Urban Species"
+popup/item_0/id = 0
+popup/item_1/text = "Table D-2: Pet Species"
+popup/item_1/id = 1
+popup/item_2/text = "Table D-3: Farm Species"
+popup/item_2/id = 2
+popup/item_3/text = "Table D-4: Wild Species"
+popup/item_3/id = 3
+popup/item_4/text = "Table D-5: Zoo Species"
+popup/item_4/id = 4
+popup/item_5/text = "Table D-6: Lab Species"
+popup/item_5/id = 5
+popup/item_6/text = "Table D-7: GeneMod Species"
+popup/item_6/id = 6
+
+[node name="TableDRollContainer" type="HBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer" unique_id=139353195]
+layout_mode = 2
+
+[node name="TableDRollLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDRollContainer" unique_id=1479892752]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Table D Roll"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TableDRoll" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDRollContainer" unique_id=968042956]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TableDRerollButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDRollContainer" unique_id=1246514240]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Reroll"
+
+[node name="TableDSwapButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDRollContainer" unique_id=1137413967]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Swap"
+
+[node name="TableDLockButton" type="Button" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDRollContainer" unique_id=664867698]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Lock"
+
+[node name="SpeciesLabel" type="RichTextLabel" parent="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer" unique_id=320858983]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/paragraph_separation = 10
+bbcode_enabled = true
+fit_content = true
+
+[node name="Step5" type="FoldableContainer" parent="TabContainer/Create/Rolls/VBoxContainer" unique_id=455342879]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+title = "Step #5 - Let's Mutate!"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step5" unique_id=560937246]
+layout_mode = 2
+
+[node name="ZoomorphicTraitsLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer" unique_id=916570528]
+layout_mode = 2
+text = "Zoomorphic Traits"
+horizontal_alignment = 1
+
+[node name="ZoomorphicTraitsContainer" type="GridContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer" unique_id=117289277]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+columns = 5
+
+[node name="IndependentFinsCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=229392202 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("4_21xkr")
+
+[node name="IndependentWingsCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=455386186 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("5_21xkr")
+
+[node name="LeglessGraspCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=1611751269 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("6_6bp64")
+
+[node name="MultlimbedFourLimbsCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=281880128 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("7_jkdf5")
+
+[node name="MultilimbedSixLimbsCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=770549447 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("8_wsu2k")
+
+[node name="MyriadlimbedCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=956456580 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("9_k12tt")
+
+[node name="SecondaryLimbCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=136090957 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("10_h1bgf")
+
+[node name="TauricCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=1619299635 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("11_b3802")
+
+[node name="TentaclesCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=654848697 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("12_fevyy")
+
+[node name="UprightSlitherCheckbox" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer/ZoomorphicTraitsContainer" unique_id=1039430634 instance=ExtResource("3_kry3j")]
+layout_mode = 2
+main_trait = ExtResource("13_hibaj")
+
+[node name="MajorTraitsLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer" unique_id=917236939]
+layout_mode = 2
+text = "Major Traits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MajorTraitsContainer" type="GridContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer" unique_id=861220012]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+columns = 5
+
+[node name="MinorTraitsLabel" type="Label" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer" unique_id=1801961895]
+layout_mode = 2
+text = "Minor Traits"
+
+[node name="MinorTraitsContainer" type="GridContainer" parent="TabContainer/Create/Rolls/VBoxContainer/Step5/VBoxContainer" unique_id=1966436719]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+columns = 5
+
+[node name="AttributePicker" parent="." unique_id=529555240 instance=ExtResource("3_h2yge")]
 unique_name_in_owner = true
 visible = false
 
+[connection signal="toggled" from="TabContainer/Create/Rolls/VBoxContainer/Step0/SourceBookGridContainer/NextContainer/NextCheckbox" to="." method="_on_next_checkbox_toggled"]
 [connection signal="item_selected" from="TabContainer/Create/Rolls/VBoxContainer/Step1/HBoxContainer/GroupType" to="." method="_on_group_type_item_selected"]
-[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/CognitionRerollButton" to="." method="_on_cognition_reroll_button_pressed"]
-[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/DeterminationRerollButton" to="." method="_on_determination_reroll_button_pressed"]
-[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/AffinityRerollButton" to="." method="_on_affinity_reroll_button_pressed"]
-[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/PerceptionRerollButton" to="." method="_on_perception_reroll_button_pressed"]
-[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/StrengthRerollButton" to="." method="_on_strength_reroll_button_pressed"]
-[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/ProwessRerollButton" to="." method="_on_prowess_reroll_button_pressed"]
-[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/EnduranceRerollButton" to="." method="_on_endurance_reroll_button_pressed"]
-[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/GridContainer/SpeedRerollButton" to="." method="_on_speed_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/CognitionRerollButton" to="." method="_on_cognition_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/DeterminationRerollButton" to="." method="_on_determination_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/AffinityRerollButton" to="." method="_on_affinity_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/PerceptionRerollButton" to="." method="_on_perception_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/StrengthRerollButton" to="." method="_on_strength_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/ProwessRerollButton" to="." method="_on_prowess_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/EnduranceRerollButton" to="." method="_on_endurance_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/AttributeContainer/SpeedRerollButton" to="." method="_on_speed_reroll_button_pressed"]
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/RollAttributesButton" to="." method="_on_roll_attributes_button_pressed"]
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step3/VBoxContainer/LockAttributesButton" to="." method="_on_lock_attributes_button_pressed"]
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/RollSourceOfMutationButton" to="." method="_on_roll_source_of_mutation_button_pressed"]
@@ -896,3 +1215,14 @@ visible = false
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer/SourceOfMutationSwapButton" to="." method="_on_source_of_mutation_swap_button_pressed"]
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SourceOfMutationContainer/SourceOfMutationRollContainer/SourceOfMutationLockButton" to="." method="_on_source_of_mutation_lock_button_pressed"]
 [connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundContainer/RollBackgroundButton" to="." method="_on_roll_background_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundContainer/BackgroundTableRollContainer/BackgroundTableRerollButton" to="." method="_on_background_table_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundContainer/BackgroundTableRollContainer/BackgroundTableSwapButton" to="." method="_on_background_table_swap_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/BackgroundContainer/BackgroundTableRollContainer/BackgroundTableLockButton" to="." method="_on_background_table_lock_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/RollSpeciesTableCButton" to="." method="_on_roll_species_table_c_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCRollContainer/TableCRerollButton" to="." method="_on_table_c_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCRollContainer/TableCSwapButton" to="." method="_on_table_c_swap_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableCContainer/TableCRollContainer/TableCLockButton" to="." method="_on_table_c_lock_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/RollSpeciesTableDButton" to="." method="_on_roll_species_table_d_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDRollContainer/TableDRerollButton" to="." method="_on_table_d_reroll_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDRollContainer/TableDSwapButton" to="." method="_on_table_d_swap_button_pressed"]
+[connection signal="pressed" from="TabContainer/Create/Rolls/VBoxContainer/Step4/OriginStoryContainer/SpeciesContainer/TableDContainer/TableDRollContainer/TableDLockButton" to="." method="_on_table_d_lock_button_pressed"]

@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_lyb2x")
 name = "Fearless"
+source = "Mutants in the Now, pg. 43"
 cost = 5
 description = "+A on any saving throw against a maneuver or ability that would cause you to gain the startled condition, and you never become unbalanced when a foe moves into melee with you."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

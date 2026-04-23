@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cr0frylgu4ysa"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_nw1iw"]
+
+[resource]
+script = ExtResource("1_nw1iw")
+name = "Flipper-Feet"
+source = "Mutants in the Now, pg. 31"
+type = 1
+cost = 1
+description = "Your flippers are capable of dragging you on land. Your move is only reduced to 1/4 instead of 1/10."
+requirements = Array[String](["Movement: Aquatic"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

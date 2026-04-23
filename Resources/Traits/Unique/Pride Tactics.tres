@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://5pwi3wcru8mq"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_7s7nh"]
+
+[resource]
+script = ExtResource("2_7s7nh")
+name = "Pride Tactics"
+source = "Mutants in the Now, pg. 27"
+type = 3
+cost = 5
+description = "You gain +A on any dramatic roll to hunt using teamwork, and any roll by a foe to retreat while in melee with you is done at +D if an ally is also in that melee."
+requirements = Array[String](["Pack Hunter"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

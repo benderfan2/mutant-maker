@@ -7,11 +7,13 @@
 [ext_resource type="Resource" uid="uid://br0gfpys4g3dw" path="res://Resources/Traits/Major/Subtraits/Flight/Silent.tres" id="5_ka85j"]
 [ext_resource type="Resource" uid="uid://cn4hhiuh8ouqx" path="res://Resources/Traits/Major/Subtraits/Flight/Burst.tres" id="6_6lcqc"]
 [ext_resource type="Resource" uid="uid://ck2vbmhm8elti" path="res://Resources/Traits/Major/Subtraits/Flight/Gliding.tres" id="7_mbhl6"]
+[ext_resource type="Resource" uid="uid://b8g3u8nkwvwlj" path="res://Resources/Traits/Major/Subtraits/Flight/Strenuous.tres" id="8_ojf57"]
 
 [resource]
 script = ExtResource("1_6qxmt")
 name = "Flight"
+source = "Mutants in the Now, pg. 43"
 cost = 15
 description = "This allows you to fly with a 100% MOVE bonus if you have enough space to use your wings. However, unless you have the independent wings special trait, you cannot hold or manipulate objects while doing so, as your arms double as wings. You can remain aloft for Endurance in minutes, or triple that time in good flying weather (spring, summer, high mountaintops, or convergence zones), before gaining the tired status. You cannot fly again until that status is cleared."
-subtraits = Array[ExtResource("1_6qxmt")]([ExtResource("2_1nqfb"), ExtResource("3_epdw5"), ExtResource("4_vqj2e"), ExtResource("5_ka85j"), ExtResource("6_6lcqc"), ExtResource("7_mbhl6")])
+subtraits = Array[ExtResource("1_6qxmt")]([ExtResource("2_1nqfb"), ExtResource("3_epdw5"), ExtResource("4_vqj2e"), ExtResource("5_ka85j"), ExtResource("6_6lcqc"), ExtResource("7_mbhl6"), ExtResource("8_ojf57")])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

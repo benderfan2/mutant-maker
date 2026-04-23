@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://btrc0kd5eek30"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_jdg2i"]
+
+[resource]
+script = ExtResource("1_jdg2i")
+name = "Warning Bark"
+source = "Mutants in the Now, pg. 23"
+type = 3
+cost = 2
+description = "When a foe fails to surprise you, increase escalation by 1 and gain +A on initiative. If you already have +A to initiative, harden it."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

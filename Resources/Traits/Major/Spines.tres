@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_tv4er")
 name = "Spines"
+source = "Mutants in the Now, pg. 44"
 cost = 15
 description = "Your body is covered in sharp spines. This grants Resistance 3, and any damage dice negated by this Resistance in melee are instead inflicted on the attacker. Any attempt by a foe to grab you inflicts your size damage dice on them whether the grab is successful or not."
 subtraits = Array[ExtResource("1_tv4er")]([ExtResource("2_av47g")])

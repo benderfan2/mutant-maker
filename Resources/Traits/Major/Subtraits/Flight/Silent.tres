@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_nkn2h")
 name = "Silent"
+source = "Mutants in the Now, pg. 43"
+type = 4
 cost = 5
 description = "When flying, +A on dramatic rolls to remain unheard or establish surprise."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

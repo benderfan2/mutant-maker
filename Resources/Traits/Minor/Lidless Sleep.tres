@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dqbeg2iaftswd"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_0eypy"]
+[ext_resource type="Resource" uid="uid://06737g5ofekg" path="res://Resources/Traits/Minor/Subtraits/Lidless Sleep/Eyeguard.tres" id="2_bej2u"]
+
+[resource]
+script = ExtResource("1_0eypy")
+name = "Lidless Sleep"
+source = "Mutants in the Next, pg. 99"
+type = 1
+cost = 1
+description = "You can sleep underwater with your eyes open. You can make dramatic rolls to avoid surprise while asleep underwater, and aren’t treated as inactive when surprised while asleep underwater."
+subtraits = Array[ExtResource("1_0eypy")]([ExtResource("2_bej2u")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

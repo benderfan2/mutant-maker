@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dadhn5ojhd644"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ehkpl"]
+
+[resource]
+script = ExtResource("1_ehkpl")
+name = "Burdened Beast"
+source = "Mutants in the Now, pg. 22"
+type = 3
+cost = 2
+description = "Gain +5 SHT."
+stat_modifications = {
+"SHT": 5
+}
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

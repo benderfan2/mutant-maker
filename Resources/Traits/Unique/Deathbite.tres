@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://diyabmi7makq0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ischg"]
+
+[resource]
+script = ExtResource("1_ischg")
+name = "Deathbite"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 10
+description = "Add deathblow as a maneuver with your teeth. When performing a deathblow, add +SPD to your roll."
+requirements = Array[String](["Teeth"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

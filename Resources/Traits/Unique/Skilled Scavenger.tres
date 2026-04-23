@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dk6syhr81dyww"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_u6w7f"]
+
+[resource]
+script = ExtResource("1_u6w7f")
+name = "Skilled Scavenger"
+source = "Mutants in the Now, pg. 28"
+type = 3
+cost = 2
+description = "When searching through any sort of mess, +A on dramatic rolls to find what you seek."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

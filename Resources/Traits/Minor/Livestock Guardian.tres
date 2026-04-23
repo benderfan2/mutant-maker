@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b5kamgx71hlms"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_foh1m"]
+[ext_resource type="Resource" uid="uid://dyyl3jg3kaluw" path="res://Resources/Traits/Minor/Subtraits/Livestock Guardian/Herder.tres" id="2_ncv3n"]
+
+[resource]
+script = ExtResource("1_foh1m")
+name = "Livestock Guardian"
+source = "Mutants in the Next, pg. 99"
+type = 1
+cost = 1
+description = "Your breed or species was domesticated to protect livestock. Choose a classification trait of a non-extraordinary, domesticated animal. You gain 1 T-WILL at the start of a fight scene if members of a that classification trait are present. For herbivores or facultative herbivores, this is your own classification type. For species with other types of diet, choose one classification type for a species you’ve been trained to protect. For example, a herd dog could choose Bovidae or Tylopoda. If you’re in a melee with a member of the either species, you may spend 1 WILL as a reaction to a maneuver targeting that species to redirect it towards yourself."
+subtraits = Array[ExtResource("1_foh1m")]([ExtResource("2_ncv3n")])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

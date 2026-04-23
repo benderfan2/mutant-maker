@@ -1,0 +1,68 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cswfrs2bj5bk4"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_4570s"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qta15"]
+[ext_resource type="Resource" uid="uid://cn4hhiuh8ouqx" path="res://Resources/Traits/Major/Subtraits/Flight/Burst.tres" id="2_mo15d"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="3_l30ca"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_4570s"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="5_85v82"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="6_4jvd8"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="7_77voq"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="8_hqs1d"]
+[ext_resource type="Resource" uid="uid://bn2l4c4g36hn2" path="res://Resources/Traits/Minor/Chemical Scent.tres" id="9_8hqhx"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_sbene"]
+[ext_resource type="Resource" uid="uid://bd74klehwos8h" path="res://Resources/Traits/Minor/Independent Eyes.tres" id="11_hvm3q"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="12_oa1o7"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="13_3ipx6"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="14_85v82"]
+[ext_resource type="Resource" uid="uid://bicuxjrtgwisa" path="res://Resources/Traits/Unique/Flighty and Free-Range.tres" id="14_w0p2l"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="15_4jvd8"]
+
+[sub_resource type="Resource" id="Resource_hqs1d"]
+script = ExtResource("1_4570s")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_77voq"]
+script = ExtResource("1_4570s")
+traits = Array[ExtResource("1_qta15")]([ExtResource("3_l30ca"), ExtResource("4_4570s"), ExtResource("5_85v82")])
+subtraits = Dictionary[ExtResource("1_qta15"), bool]({
+ExtResource("2_mo15d"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_sbene"]
+script = ExtResource("1_4570s")
+traits = Array[ExtResource("1_qta15")]([ExtResource("15_4jvd8")])
+subtraits = Dictionary[ExtResource("1_qta15"), bool]({
+ExtResource("14_85v82"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_8hqhx"]
+script = ExtResource("1_4570s")
+traits = Array[ExtResource("1_qta15")]([ExtResource("8_hqs1d"), ExtResource("9_8hqhx"), ExtResource("10_sbene"), ExtResource("11_hvm3q"), ExtResource("12_oa1o7")])
+subtraits = Dictionary[ExtResource("1_qta15"), bool]({
+ExtResource("6_4jvd8"): false,
+ExtResource("7_77voq"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("13_3ipx6")
+name = "Chicken, White Leghorn"
+description = "The iconic domesticated chicken, chiefly used for egg-laying."
+base_goop = 23
+size_rating = 5
+enhancable_attributes = Array[String](["Perception", "Affinity", "Endurance"])
+source = "Mutants in the Now, pg. 21"
+major_traits = Dictionary[String, ExtResource("1_4570s")]({
+"Mutants in the Next": SubResource("Resource_hqs1d"),
+"Mutants in the Now": SubResource("Resource_77voq")
+})
+minor_traits = Dictionary[String, ExtResource("1_4570s")]({
+"Mutants in the Next": SubResource("Resource_sbene"),
+"Mutants in the Now": SubResource("Resource_8hqhx")
+})
+unique_trait = ExtResource("14_w0p2l")
+basic_traits = ["Type: Galliformes", "Diet: Omnivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

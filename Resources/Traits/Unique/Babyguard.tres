@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://byld6c4xs30st"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_oc8pc"]
+
+[resource]
+script = ExtResource("1_oc8pc")
+name = "Babyguard"
+source = "Mutants in the Now, pg. 28"
+type = 3
+cost = 5
+description = "During a fight, you may declare you’re protecting an ally in melee with you as a moment. While doing so, all foes are +D to perform maneuvers against them unless you have a status. You may spend another moment to switch this protection to another ally in melee."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

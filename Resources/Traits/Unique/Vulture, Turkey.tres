@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://c1pr1hupf2o5"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_pisik"]
+
+[resource]
+script = ExtResource("1_pisik")
+name = "Carrion Catcher"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 2
+description = "You can smell the nearest decaying meat present for (Perception) miles."
+requirements = Array[String](["Enhanced Scent"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://ynnqa16kvi38"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_kiccx"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_e5ibb"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_q0gdt"]
+[ext_resource type="Resource" uid="uid://c6djt1nmp7b47" path="res://Resources/Traits/Major/Subtraits/Shed Skin/Autotomy.tres" id="3_hsdhx"]
+[ext_resource type="Resource" uid="uid://cspjhw8ode0l2" path="res://Resources/Traits/Major/Subtraits/Swift/Sprint.tres" id="4_1kowl"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="5_wmsmy"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="6_uvjiy"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="7_ybso8"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="8_10pit"]
+[ext_resource type="Resource" uid="uid://c452443gjdgdb" path="res://Resources/Traits/Major/Shed Skin.tres" id="9_hj45l"]
+[ext_resource type="Resource" uid="uid://3id5xuxkmatj" path="res://Resources/Traits/Major/Slippery.tres" id="10_xijci"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="11_ck0ry"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="12_ybso8"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="13_10pit"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="14_hj45l"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="15_xijci"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="16_ck0ry"]
+[ext_resource type="Resource" uid="uid://dtahnfnlp4yti" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Alert.tres" id="17_xijci"]
+[ext_resource type="Resource" uid="uid://c2kad1v12idd" path="res://Resources/Traits/Minor/Aposematic.tres" id="18_ck0ry"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="19_svlep"]
+[ext_resource type="Resource" uid="uid://cid2lfb8ebmhu" path="res://Resources/Traits/Unique/Better Where It's Wetter.tres" id="21_ck0ry"]
+
+[sub_resource type="Resource" id="Resource_svlep"]
+script = ExtResource("1_kiccx")
+traits = Array[ExtResource("2_e5ibb")]([ExtResource("5_wmsmy"), ExtResource("6_uvjiy"), ExtResource("7_ybso8"), ExtResource("8_10pit"), ExtResource("9_hj45l"), ExtResource("10_xijci"), ExtResource("11_ck0ry")])
+subtraits = Dictionary[ExtResource("2_e5ibb"), bool]({
+ExtResource("3_hsdhx"): false,
+ExtResource("4_1kowl"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_c1xge"]
+script = ExtResource("1_kiccx")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_pom6d"]
+script = ExtResource("1_kiccx")
+traits = Array[ExtResource("2_e5ibb")]([ExtResource("13_10pit"), ExtResource("14_hj45l"), ExtResource("15_xijci"), ExtResource("16_ck0ry")])
+subtraits = Dictionary[ExtResource("2_e5ibb"), bool]({
+ExtResource("12_ybso8"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rhd25"]
+script = ExtResource("1_kiccx")
+traits = Array[ExtResource("2_e5ibb")]([ExtResource("18_ck0ry"), ExtResource("19_svlep")])
+subtraits = Dictionary[ExtResource("2_e5ibb"), bool]({
+ExtResource("17_xijci"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_q0gdt")
+name = "Salamander, Red-Backed"
+description = "Red-backs avoid water, living in decaying plant matter."
+base_goop = 30
+enhancable_attributes = Array[String](["Determination", "Perception", "Speed"])
+source = "Mutants in the Now, pg. 31"
+major_traits = Dictionary[String, ExtResource("1_kiccx")]({
+"Mutants in the Next": SubResource("Resource_c1xge"),
+"Mutants in the Now": SubResource("Resource_svlep")
+})
+minor_traits = Dictionary[String, ExtResource("1_kiccx")]({
+"Mutants in the Next": SubResource("Resource_rhd25"),
+"Mutants in the Now": SubResource("Resource_pom6d")
+})
+unique_trait = ExtResource("21_ck0ry")
+basic_traits = ["Type: Urodela", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Amphibious", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dhkpjjx8a2tpj"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_63evh"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_n606x"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_nyd6o"]
+[ext_resource type="Resource" uid="uid://4sbre7spx5fb" path="res://Resources/Traits/Major/Subtraits/Flight/Migratory.tres" id="3_8tr10"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="4_m6vuv"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="5_imyy4"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="6_kx1q1"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="7_3vemg"]
+[ext_resource type="Resource" uid="uid://bb4d7frpl77cw" path="res://Resources/Traits/Major/Sharp Sight.tres" id="8_ewfa8"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="9_86r7c"]
+[ext_resource type="Resource" uid="uid://ceho4hcpypfph" path="res://Resources/Traits/Minor/Migration Sense.tres" id="10_bndrn"]
+[ext_resource type="Resource" uid="uid://d1hmoppo5ufuu" path="res://Resources/Traits/Minor/Red Sight.tres" id="11_x7rm5"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="12_d0f6l"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="13_hr0pu"]
+[ext_resource type="Resource" uid="uid://dkkl4pmrob2ed" path="res://Resources/Traits/Minor/Standing Sleep.tres" id="14_xfu46"]
+[ext_resource type="Resource" uid="uid://dakjmi3v8qwut" path="res://Resources/Traits/Unique/Guard Goose.tres" id="16_8tr10"]
+
+[sub_resource type="Resource" id="Resource_iompp"]
+script = ExtResource("1_63evh")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_y1evr"]
+script = ExtResource("1_63evh")
+traits = Array[ExtResource("2_nyd6o")]([ExtResource("4_m6vuv"), ExtResource("5_imyy4"), ExtResource("6_kx1q1"), ExtResource("7_3vemg"), ExtResource("8_ewfa8")])
+subtraits = Dictionary[ExtResource("2_nyd6o"), bool]({
+ExtResource("3_8tr10"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rdtac"]
+script = ExtResource("1_63evh")
+traits = Array[ExtResource("2_nyd6o")]([ExtResource("13_hr0pu"), ExtResource("14_xfu46")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_km5fw"]
+script = ExtResource("1_63evh")
+traits = Array[ExtResource("2_nyd6o")]([ExtResource("9_86r7c"), ExtResource("10_bndrn"), ExtResource("11_x7rm5"), ExtResource("12_d0f6l")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_n606x")
+name = "Goose, Emden"
+description = "A domestic goose well known for its white plumage and large size."
+base_goop = 21
+size_rating = 7
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 25"
+major_traits = Dictionary[String, ExtResource("1_63evh")]({
+"Mutants in the Next": SubResource("Resource_iompp"),
+"Mutants in the Now": SubResource("Resource_y1evr")
+})
+minor_traits = Dictionary[String, ExtResource("1_63evh")]({
+"Mutants in the Next": SubResource("Resource_rdtac"),
+"Mutants in the Now": SubResource("Resource_km5fw")
+})
+unique_trait = ExtResource("16_8tr10")
+basic_traits = ["Type: Anseriformes", "Diet: Herbivore", "Movement: Bipedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Winged"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

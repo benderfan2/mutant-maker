@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_6amyx")
 name = "Arboreal"
+source = "Mutants in the Now, pg. 42"
 cost = 5
 description = "You gain the Climbing skill as a specialty skill and may climb horizontally on any surface or area with widespread handholds or branches at your full MOVE, or vertically with a MOVE restriction of 1⁄2. If you’re also trained in the Climbing skill, make it a specialty skill and advance the skill three times."
 subtraits = Array[ExtResource("1_6amyx")]([ExtResource("2_7v57u")])

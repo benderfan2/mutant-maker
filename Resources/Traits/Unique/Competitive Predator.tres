@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ctperjeru2e3j"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_7xjhe"]
+
+[resource]
+script = ExtResource("1_7xjhe")
+name = "Competitive Predator"
+source = "Mutants in the Now, pg. 22"
+type = 3
+cost = 5
+description = "If you perform a successful maneuver against a carnivore (as defined by species, not mutation) this turn, gain 1 temporary WILL at the end of the turn."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

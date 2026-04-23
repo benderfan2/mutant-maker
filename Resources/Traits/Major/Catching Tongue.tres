@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_urx5w")
 name = "Catching Tongue"
+source = "Mutants in the Now, pg. 42"
 cost = 5
 description = "You may attempt to grab a foe that is not presently in melee with you. If you do so successfully, remove them from any melee they are in and place them in melee with you instead. You can also use it to pick up objects up to Strength feet away."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://i4wqdppj1a40"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_u6b38"]
+
+[resource]
+script = ExtResource("1_u6b38")
+name = "Little Tough"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 5
+description = "When inflicting damage with claws or teeth on a foe with a greater size rating, you may add a weapon damage die."
+requirements = Array[String](["Claws", "OR", "Teeth"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

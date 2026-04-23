@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b5j0on281bgsf"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_jx0mm"]
+
+[resource]
+script = ExtResource("1_jx0mm")
+name = "Raiding Troop"
+source = "Mutants in the Now, pg. 27"
+type = 3
+cost = 5
+description = "When picking up an object, you do not receive the distracted status. Add the disarm maneuver to your fighting style. After taking an object, you gain +A on your next retreat roll."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

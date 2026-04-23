@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_koi4r")
 name = "Alpha Neurotoxin"
+source = "Mutants in the Now, pg. 45"
+type = 4
 cost = 10
 description = "This is a toxin rated 1d10 that inhibits the operation of muscles by attacking their nervous system. While your foe is envenomed, they are unbalanced. If they succeed at a roll while envenomed, they become tired as well."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

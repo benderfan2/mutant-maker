@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_hmmk4")
 name = "Toxin Resistance"
+source = "Mutants in the Now, pg. 45"
 cost = 2
 description = "+A to saving throws against toxins, and the envenomed status stops on the two highest values on the toxin die; 7 or 8 on a 1d8 toxin, for example."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bd5ms8s04pxvy"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_6ox8s"]
+
+[resource]
+script = ExtResource("1_6ox8s")
+name = "Roar of the Sea"
+source = "Mutants in the Now, pg. 31"
+type = 3
+cost = 2
+description = "When you bully a foe, you can grant them +A on attempts to retreat until the end of their next turn."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

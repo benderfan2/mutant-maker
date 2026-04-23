@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://4hd3w3kt3i4f"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_1x2p3"]
+
+[resource]
+script = ExtResource("1_1x2p3")
+name = "Parential Instinct"
+source = "Mutants in the Now, pg. 32"
+type = 3
+cost = 5
+description = "When entering melee with an ally with a lower size rating and a foe for the first time in a fight, add 1 to escalation."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

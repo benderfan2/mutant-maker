@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://s4lbhvg1nlp2"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_5uqbq"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_d125o"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_3gya4"]
+[ext_resource type="Resource" uid="uid://bcd8nhmgge0tk" path="res://Resources/Traits/Major/Subtraits/Unnerving Vocalization/Bark.tres" id="2_bq6el"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_5kg7d"]
+[ext_resource type="Resource" uid="uid://ddrd0wki6dwxd" path="res://Resources/Traits/Major/Good Dog.tres" id="4_fb5rm"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="5_p715y"]
+[ext_resource type="Resource" uid="uid://wa308j3wsjv6" path="res://Resources/Traits/Major/Unnerving Vocalization.tres" id="6_wf00v"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="7_bolu4"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="8_jc2v7"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_3xuog"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="10_idp5o"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="11_gjcxj"]
+[ext_resource type="Resource" uid="uid://dvni6x7ifkw4h" path="res://Resources/Traits/Minor/Pack Hunter.tres" id="12_0j2bj"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="13_7djpn"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="14_0jnyr"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="15_uykwp"]
+[ext_resource type="Resource" uid="uid://ccv32cjvyqjk4" path="res://Resources/Traits/Minor/Ultrasonic Hearing.tres" id="16_573hr"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="18_0j6gl"]
+[ext_resource type="Resource" uid="uid://dcmvcakx7881o" path="res://Resources/Traits/Unique/Beagling.tres" id="18_5kg7d"]
+[ext_resource type="Resource" uid="uid://3in80j2by8i0" path="res://Resources/Traits/Minor/Weather Sense.tres" id="19_hw1v0"]
+
+[sub_resource type="Resource" id="Resource_0j6gl"]
+script = ExtResource("1_5uqbq")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_7q104"]
+script = ExtResource("1_5uqbq")
+traits = Array[ExtResource("1_d125o")]([ExtResource("3_5kg7d"), ExtResource("4_fb5rm"), ExtResource("5_p715y"), ExtResource("6_wf00v")])
+subtraits = Dictionary[ExtResource("1_d125o"), bool]({
+ExtResource("2_bq6el"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_p22vi"]
+script = ExtResource("1_5uqbq")
+traits = Array[ExtResource("1_d125o")]([ExtResource("18_0j6gl"), ExtResource("19_hw1v0")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_hw1v0"]
+script = ExtResource("1_5uqbq")
+traits = Array[ExtResource("1_d125o")]([ExtResource("9_3xuog"), ExtResource("10_idp5o"), ExtResource("11_gjcxj"), ExtResource("12_0j2bj"), ExtResource("13_7djpn"), ExtResource("14_0jnyr"), ExtResource("15_uykwp"), ExtResource("16_573hr")])
+subtraits = Dictionary[ExtResource("1_d125o"), bool]({
+ExtResource("7_bolu4"): false,
+ExtResource("8_jc2v7"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_3gya4")
+name = "Dog, Beagle"
+description = "Bred to track small game, this stocky dog has become ubiquitous."
+base_goop = 31
+size_rating = 7
+enhancable_attributes = Array[String](["Perception", "Affinity", "Endurance"])
+source = "Mutants in the Now, pg. 22"
+major_traits = Dictionary[String, ExtResource("1_5uqbq")]({
+"Mutants in the Next": SubResource("Resource_0j6gl"),
+"Mutants in the Now": SubResource("Resource_7q104")
+})
+minor_traits = Dictionary[String, ExtResource("1_5uqbq")]({
+"Mutants in the Next": SubResource("Resource_p22vi"),
+"Mutants in the Now": SubResource("Resource_hw1v0")
+})
+unique_trait = ExtResource("18_5kg7d")
+basic_traits = ["Type: Canidae", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

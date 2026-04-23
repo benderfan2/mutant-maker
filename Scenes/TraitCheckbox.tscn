@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c4fimelvbojja"]
+
+[ext_resource type="Script" uid="uid://bhcjeopjuk2aj" path="res://Scripts/trait_checkbox.gd" id="1_rlunr"]
+
+[node name="TraitCheckbox" type="VBoxContainer" unique_id=455386186]
+offset_right = 65.0
+offset_bottom = 35.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_rlunr")
+
+[node name="Trait" type="CheckBox" parent="." unique_id=1640325717]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Trait"
+
+[node name="SubtraitMarginContiner" type="MarginContainer" parent="." unique_id=1098651899]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+
+[node name="SubtraitContainer" type="VBoxContainer" parent="SubtraitMarginContiner" unique_id=1584899718]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="toggled" from="Trait" to="." method="_on_trait_toggled"]

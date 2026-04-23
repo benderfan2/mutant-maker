@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://c73x60kb8m0f4"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_7ha00"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_dooub"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_q0icr"]
+[ext_resource type="Resource" uid="uid://bk8qyylh4rbdw" path="res://Resources/Traits/Major/Subtraits/Burrow/Slow.tres" id="3_6nlbp"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="4_85dll"]
+[ext_resource type="Resource" uid="uid://gihaifspdfti" path="res://Resources/Traits/Major/Defense Posture.tres" id="5_exlcv"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="6_3cpfi"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="7_gygk4"]
+[ext_resource type="Resource" uid="uid://b3427q3rk6n44" path="res://Resources/Traits/Major/Shell.tres" id="8_34s30"]
+[ext_resource type="Resource" uid="uid://dx28cyfcbvi3x" path="res://Resources/Traits/Minor/Subtraits/Beak/Pecking.tres" id="9_nsyge"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="10_ggtt6"]
+[ext_resource type="Resource" uid="uid://i5eu444p2lgi" path="res://Resources/Traits/Minor/Beak.tres" id="11_px7a0"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="12_f1v25"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="13_xslw6"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="14_gp4gl"]
+[ext_resource type="Resource" uid="uid://p8plgehuis6n" path="res://Resources/Traits/Minor/Infrasonic Hearing.tres" id="15_1ifea"]
+[ext_resource type="Resource" uid="uid://ckpt5coeqiea2" path="res://Resources/Traits/Minor/Scales.tres" id="16_kl2y0"]
+[ext_resource type="Resource" uid="uid://bgerwn04ldad" path="res://Resources/Traits/Minor/Water Storage.tres" id="17_vc7u5"]
+
+[sub_resource type="Resource" id="Resource_uwoh3"]
+script = ExtResource("1_7ha00")
+traits = Array[ExtResource("2_dooub")]([ExtResource("4_85dll"), ExtResource("5_exlcv"), ExtResource("6_3cpfi"), ExtResource("7_gygk4"), ExtResource("8_34s30")])
+subtraits = Dictionary[ExtResource("2_dooub"), bool]({
+ExtResource("3_6nlbp"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_dyjv3"]
+script = ExtResource("1_7ha00")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_l42d3"]
+script = ExtResource("1_7ha00")
+traits = Array[ExtResource("2_dooub")]([ExtResource("11_px7a0"), ExtResource("12_f1v25"), ExtResource("13_xslw6"), ExtResource("14_gp4gl"), ExtResource("15_1ifea"), ExtResource("16_kl2y0"), ExtResource("5_exlcv"), ExtResource("17_vc7u5")])
+subtraits = Dictionary[ExtResource("2_dooub"), bool]({
+ExtResource("9_nsyge"): false,
+ExtResource("10_ggtt6"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_e2clw"]
+script = ExtResource("1_7ha00")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_gdi8c"]
+script = ExtResource("2_dooub")
+name = "Sealed Box"
+source = "Mutants in the Now, pg. 33"
+type = 3
+cost = 5
+description = "When you retreat into your shell, add 2 to your Armor and Resistance."
+requirements = Array[String](["Defense Posture"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"
+
+[resource]
+script = ExtResource("2_q0icr")
+name = "Turtle, Common Box"
+description = "This turtle’s unique shell “seals” up."
+base_goop = 35
+size_rating = 3
+enhancable_attributes = Array[String](["Determination", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_7ha00")]({
+"Mutants in the Next": SubResource("Resource_dyjv3"),
+"Mutants in the Now": SubResource("Resource_uwoh3")
+})
+minor_traits = Dictionary[String, ExtResource("1_7ha00")]({
+"Mutants in the Next": SubResource("Resource_e2clw"),
+"Mutants in the Now": SubResource("Resource_l42d3")
+})
+unique_trait = SubResource("Resource_gdi8c")
+basic_traits = ["Type: Testudines", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

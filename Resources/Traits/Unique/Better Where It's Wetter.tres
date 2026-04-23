@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cid2lfb8ebmhu"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qw37w"]
+
+[resource]
+script = ExtResource("1_qw37w")
+name = "Better Where It's Wetter"
+source = "Mutants in the Now, pg. 31"
+type = 3
+cost = 2
+description = "When rolling initiative for a fight scene in a moist or wet environment, gain 1 temporary WILL."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

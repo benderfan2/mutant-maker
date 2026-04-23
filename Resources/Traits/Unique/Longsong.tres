@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://blasu6atgfcgl"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_syes3"]
+
+[resource]
+script = ExtResource("1_syes3")
+name = "Longsong"
+source = "Mutants in the Now, pg. 34"
+type = 3
+cost = 2
+description = "When using your song in a social interaction, you may add your +COG to your skill base. When interacting with other humpbacks, you may communicate using two-word phrases for whalesong instead of one-word."
+requirements = Array[String](["Whalesong"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cex64rvbpu6d"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_a53sb"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_bkh8h"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_mot0o"]
+[ext_resource type="Resource" uid="uid://mcphbikc1pu1" path="res://Resources/Traits/Major/Subtraits/Enhanced Scent/Rooting.tres" id="3_gh75n"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="4_wk8t4"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_den7h"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="6_ays4i"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="7_svh6p"]
+[ext_resource type="Resource" uid="uid://bsrheoag7qrio" path="res://Resources/Traits/Major/Toxin Resistance.tres" id="8_qrtll"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="9_ays4i"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="10_svh6p"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="11_qrtll"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="12_in7sr"]
+
+[sub_resource type="Resource" id="Resource_in7sr"]
+script = ExtResource("1_a53sb")
+traits = Array[ExtResource("2_mot0o")]([ExtResource("4_wk8t4"), ExtResource("5_den7h"), ExtResource("6_ays4i"), ExtResource("7_svh6p"), ExtResource("8_qrtll")])
+subtraits = Dictionary[ExtResource("2_mot0o"), bool]({
+ExtResource("3_gh75n"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xhgq0"]
+script = ExtResource("1_a53sb")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_cs0bn"]
+script = ExtResource("1_a53sb")
+traits = Array[ExtResource("2_mot0o")]([ExtResource("9_ays4i"), ExtResource("10_svh6p"), ExtResource("11_qrtll"), ExtResource("12_in7sr")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ays4i"]
+script = ExtResource("2_mot0o")
+name = "Easygoing"
+source = "Mutants in the Now, pg. 30"
+type = 3
+cost = 5
+description = "Gain Resolve 3."
+stat_modifications = Dictionary[String, int]({
+"Resolve": 3
+})
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"
+
+[resource]
+script = ExtResource("2_bkh8h")
+name = "Pig, American Yorkshire"
+description = "The pinkest and most iconic of the domesticated pig breeds."
+base_goop = 18
+size_rating = 11
+enhancable_attributes = Array[String](["Perception", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 30"
+major_traits = Dictionary[String, ExtResource("1_a53sb")]({
+"Mutants in the Next": SubResource("Resource_xhgq0"),
+"Mutants in the Now": SubResource("Resource_in7sr")
+})
+minor_traits = Dictionary[String, ExtResource("1_a53sb")]({
+"Mutants in the Next": null,
+"Mutants in the Now": SubResource("Resource_cs0bn")
+})
+unique_trait = SubResource("Resource_ays4i")
+basic_traits = ["Type: Suidae", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

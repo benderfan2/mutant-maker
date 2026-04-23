@@ -1,10 +1,14 @@
 [gd_resource type="Resource" script_class="Trait" format=3 uid="uid://dhkyb35xolir2"]
 
 [ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_v142y"]
+[ext_resource type="Resource" uid="uid://cnk3bcj363ijj" path="res://Resources/Traits/Major/Subtraits/Stable/Aquatic.tres" id="2_axk2c"]
+[ext_resource type="Resource" uid="uid://dtym01kb8nd4j" path="res://Resources/Traits/Major/Subtraits/Stable/Aerial.tres" id="3_d3j7x"]
 
 [resource]
 script = ExtResource("1_v142y")
 name = "Stable"
+source = "Mutants in the Now, pg. 44"
 cost = 5
 description = "Foes are +D to perform any maneuver that would inflict prone on you (like the knockdown maneuver)."
+subtraits = Array[ExtResource("1_v142y")]([ExtResource("2_axk2c"), ExtResource("3_d3j7x")])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cl47661d4dynl"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_63i52"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_bvr3r"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_y5sqk"]
+[ext_resource type="Resource" uid="uid://0po20huyfym7" path="res://Resources/Traits/Major/Subtraits/Burrow/Tunnel.tres" id="3_xfkvu"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="4_23vmk"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="5_ibrsw"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="6_he6wf"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="7_qjke5"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="8_e5b5m"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="9_lvqi7"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="10_qjke5"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="11_e5b5m"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="12_lvqi7"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_8o3qh"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="14_0wnru"]
+[ext_resource type="Resource" uid="uid://btnie0qauxqp0" path="res://Resources/Traits/Unique/Lodge Builder.tres" id="16_e5b5m"]
+
+[sub_resource type="Resource" id="Resource_8o3qh"]
+script = ExtResource("1_63i52")
+traits = Array[ExtResource("2_bvr3r")]([ExtResource("4_23vmk"), ExtResource("5_ibrsw"), ExtResource("6_he6wf"), ExtResource("7_qjke5"), ExtResource("8_e5b5m"), ExtResource("9_lvqi7")])
+subtraits = Dictionary[ExtResource("2_bvr3r"), bool]({
+ExtResource("3_xfkvu"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_klfev"]
+script = ExtResource("1_63i52")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_lngf8"]
+script = ExtResource("1_63i52")
+traits = Array[ExtResource("2_bvr3r")]([ExtResource("12_lvqi7"), ExtResource("13_8o3qh"), ExtResource("14_0wnru")])
+subtraits = Dictionary[ExtResource("2_bvr3r"), bool]({
+ExtResource("10_qjke5"): true,
+ExtResource("11_e5b5m"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_tqj3h"]
+script = ExtResource("1_63i52")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_y5sqk")
+name = "Muskrat"
+description = "A semiaquatic rodent, muskrats are closer to voles than rats."
+base_goop = 31
+size_rating = 4
+enhancable_attributes = Array[String](["Determination", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 28"
+major_traits = Dictionary[String, ExtResource("1_63i52")]({
+"Mutants in the Next": SubResource("Resource_klfev"),
+"Mutants in the Now": SubResource("Resource_8o3qh")
+})
+minor_traits = Dictionary[String, ExtResource("1_63i52")]({
+"Mutants in the Next": SubResource("Resource_tqj3h"),
+"Mutants in the Now": SubResource("Resource_lngf8")
+})
+unique_trait = ExtResource("16_e5b5m")
+basic_traits = ["Type: Rodentia", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Grasping", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

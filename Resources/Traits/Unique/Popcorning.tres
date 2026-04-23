@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cd7o0w0brmt8t"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_5wasq"]
+
+[resource]
+script = ExtResource("1_5wasq")
+name = "Popcorning"
+source = "Mutants in the Now, pg. 25"
+type = 3
+cost = 5
+description = "The first time you gain temporary WILL in a dramatic scene, gain 1 additional temporary WILL. This effect is cancelled if if you have any damage or statuses."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

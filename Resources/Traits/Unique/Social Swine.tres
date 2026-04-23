@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://4t5gti8bwxuq"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_i171r"]
+
+[resource]
+script = ExtResource("1_i171r")
+name = "Social Swine"
+source = "Mutants in the Now, pg. 30"
+type = 3
+cost = 5
+description = "When this is purchased, gain either the effects of Cat Fancy or Good Dog permanently. (You cannot gain both.)"
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

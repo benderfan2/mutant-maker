@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cjbrqbg8plll5"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_r1p45"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_6bms7"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_t471i"]
+[ext_resource type="Resource" uid="uid://bk8qyylh4rbdw" path="res://Resources/Traits/Major/Subtraits/Burrow/Slow.tres" id="3_f4xnj"]
+[ext_resource type="Resource" uid="uid://0po20huyfym7" path="res://Resources/Traits/Major/Subtraits/Burrow/Tunnel.tres" id="4_hthq4"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="5_h5j8e"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="6_8kfss"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="7_hd300"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="8_1lu4e"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="9_4osue"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="10_b3gvq"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="11_weqt1"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="12_o52b1"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="13_slqo7"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="14_7sqbl"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="15_ltens"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="16_42yl2"]
+[ext_resource type="Resource" uid="uid://ccv32cjvyqjk4" path="res://Resources/Traits/Minor/Ultrasonic Hearing.tres" id="17_7r6jn"]
+[ext_resource type="Resource" uid="uid://bwavxurgycv0" path="res://Resources/Traits/Minor/Whiskers.tres" id="18_jr6yx"]
+[ext_resource type="Resource" uid="uid://6jxq878g24xp" path="res://Resources/Traits/Minor/Subtraits/Polyphasic/Brief.tres" id="19_mxywe"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="20_b6nao"]
+[ext_resource type="Resource" uid="uid://bw5u5sbu5wwdn" path="res://Resources/Traits/Unique/Pest Instincts.tres" id="22_weqt1"]
+
+[sub_resource type="Resource" id="Resource_o0iq4"]
+script = ExtResource("1_r1p45")
+traits = Array[ExtResource("2_t471i")]([ExtResource("5_h5j8e"), ExtResource("6_8kfss"), ExtResource("7_hd300"), ExtResource("8_1lu4e"), ExtResource("9_4osue")])
+subtraits = Dictionary[ExtResource("2_t471i"), bool]({
+ExtResource("3_f4xnj"): true,
+ExtResource("4_hthq4"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_wlkf5"]
+script = ExtResource("1_r1p45")
+traits = Array[ExtResource("2_t471i")]([ExtResource("10_b3gvq")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_77rjr"]
+script = ExtResource("1_r1p45")
+traits = Array[ExtResource("2_t471i")]([ExtResource("13_slqo7"), ExtResource("14_7sqbl"), ExtResource("15_ltens"), ExtResource("16_42yl2"), ExtResource("17_7r6jn"), ExtResource("18_jr6yx")])
+subtraits = Dictionary[ExtResource("2_t471i"), bool]({
+ExtResource("11_weqt1"): false,
+ExtResource("12_o52b1"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_o8d1d"]
+script = ExtResource("1_r1p45")
+traits = Array[ExtResource("2_t471i")]([ExtResource("20_b6nao")])
+subtraits = Dictionary[ExtResource("2_t471i"), bool]({
+ExtResource("19_mxywe"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_6bms7")
+name = "Mouse, House"
+description = "Sometimes domesticated as the “fancy” or lab mouse."
+base_goop = 38
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 28"
+major_traits = Dictionary[String, ExtResource("1_r1p45")]({
+"Mutants in the Next": SubResource("Resource_wlkf5"),
+"Mutants in the Now": SubResource("Resource_o0iq4")
+})
+minor_traits = Dictionary[String, ExtResource("1_r1p45")]({
+"Mutants in the Next": SubResource("Resource_o8d1d"),
+"Mutants in the Now": SubResource("Resource_77rjr")
+})
+unique_trait = ExtResource("22_weqt1")
+basic_traits = ["Type: Rodentia", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

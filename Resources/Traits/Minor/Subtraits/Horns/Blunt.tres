@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_sxrhl")
 name = "Blunt"
-type = 1
+type = 5
 cost = 1
 description = "These only do 1d8 damage, but any foe hit gains the prone status."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

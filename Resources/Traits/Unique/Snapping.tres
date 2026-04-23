@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://o3b4lb0i3y1p"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ysrgx"]
+
+[resource]
+script = ExtResource("1_ysrgx")
+name = "Snapping"
+source = "Mutants in the Now, pg. 33"
+type = 3
+cost = 5
+description = "Damage from your beak becomes severing, and if you gain surprise, you may inflict an injury with a successful melee strike with your beak."
+requirements = Array[String](["Beak"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

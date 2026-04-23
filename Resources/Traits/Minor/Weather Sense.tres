@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://3in80j2by8i0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ge1db"]
+[ext_resource type="Script" uid="uid://bf2tb5h3h8o6v" path="res://Scripts/trait_requirement.gd" id="1_jro68"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_swnh1"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="4_0pavq"]
+
+[sub_resource type="Resource" id="Resource_msud6"]
+script = ExtResource("1_jro68")
+traits_list = Array[ExtResource("1_ge1db")]([ExtResource("3_swnh1"), ExtResource("4_0pavq")])
+metadata/_custom_type_script = "uid://bf2tb5h3h8o6v"
+
+[resource]
+script = ExtResource("1_ge1db")
+name = "Weather Sense"
+source = "Mutants in the Next, pg. 101"
+type = 1
+cost = 1
+description = "You can sense severe inclement weather (storms and greater) up to (Perception) miles away. Though you don’t get details on its type, you get a rough idea of its severity."
+requirements = [SubResource("Resource_msud6")]
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

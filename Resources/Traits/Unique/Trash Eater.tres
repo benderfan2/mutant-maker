@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bta0pa484xfyj"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_t8cwf"]
+
+[resource]
+script = ExtResource("1_t8cwf")
+name = "Trash Eater"
+source = "Mutants in the Now, pg. 24"
+type = 3
+cost = 2
+description = "You can survive on nearly any form of organic matter and can always find something to eat outside of extreme environments."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

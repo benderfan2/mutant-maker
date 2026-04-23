@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://85bf50vay8yg"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_1qxrr"]
+
+[resource]
+script = ExtResource("1_1qxrr")
+name = "Wary"
+source = "Mutants in the Now, pg. 27"
+type = 3
+cost = 2
+description = "You may gain +A on initiative, but you must attempt to charge into melee with a foe if you choose to take the bonus."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

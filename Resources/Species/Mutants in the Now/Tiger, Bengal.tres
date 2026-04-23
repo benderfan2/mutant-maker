@@ -1,0 +1,72 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bvdxdtc0purlt"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_urp24"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_lw3er"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_rno6g"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="3_qvgg4"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_hqc61"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="5_rsmdb"]
+[ext_resource type="Resource" uid="uid://cuptu82s2go57" path="res://Resources/Traits/Major/Rake.tres" id="6_8u2fj"]
+[ext_resource type="Resource" uid="uid://5e02xe36n64w" path="res://Resources/Traits/Minor/Subtraits/Claws/Ascent.tres" id="7_5pa06"]
+[ext_resource type="Resource" uid="uid://daen7y88peun5" path="res://Resources/Traits/Minor/Subtraits/Claws/Hooked.tres" id="8_x04of"]
+[ext_resource type="Resource" uid="uid://crk84tyq250er" path="res://Resources/Traits/Minor/Subtraits/Claws/Retractable.tres" id="9_3b75a"]
+[ext_resource type="Resource" uid="uid://dboslq5lcqxhm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Slaying.tres" id="10_r3tot"]
+[ext_resource type="Resource" uid="uid://d3llx3uuou06e" path="res://Resources/Traits/Minor/Apex Predator.tres" id="11_0qoy2"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="12_wm1ss"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="13_y1qjb"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="14_hu2h8"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="15_t0wkt"]
+[ext_resource type="Resource" uid="uid://dyj3khmmbufe0" path="res://Resources/Traits/Minor/Inspirational.tres" id="16_umpv4"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="17_6rb0p"]
+[ext_resource type="Resource" uid="uid://q54nymoqsy5d" path="res://Resources/Traits/Minor/Spring Leap.tres" id="18_14ctu"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="19_ind6q"]
+[ext_resource type="Resource" uid="uid://bwavxurgycv0" path="res://Resources/Traits/Minor/Whiskers.tres" id="20_4tp5p"]
+[ext_resource type="Resource" uid="uid://cm7e8n21o0j4o" path="res://Resources/Traits/Minor/Subtraits/Camouflage/Disruptive.tres" id="21_qvgg4"]
+[ext_resource type="Resource" uid="uid://dqoje5prmigxo" path="res://Resources/Traits/Unique/Tiger Blood.tres" id="23_hqc61"]
+
+[sub_resource type="Resource" id="Resource_ety4w"]
+script = ExtResource("1_urp24")
+traits = Array[ExtResource("2_rno6g")]([ExtResource("3_qvgg4"), ExtResource("4_hqc61"), ExtResource("5_rsmdb"), ExtResource("6_8u2fj")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_5s42b"]
+script = ExtResource("1_urp24")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_1sqhf"]
+script = ExtResource("1_urp24")
+traits = Array[ExtResource("2_rno6g")]([ExtResource("11_0qoy2"), ExtResource("12_wm1ss"), ExtResource("13_y1qjb"), ExtResource("14_hu2h8"), ExtResource("15_t0wkt"), ExtResource("16_umpv4"), ExtResource("17_6rb0p"), ExtResource("18_14ctu"), ExtResource("19_ind6q"), ExtResource("20_4tp5p")])
+subtraits = Dictionary[ExtResource("2_rno6g"), bool]({
+ExtResource("7_5pa06"): false,
+ExtResource("8_x04of"): false,
+ExtResource("9_3b75a"): false,
+ExtResource("10_r3tot"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_hqc61"]
+script = ExtResource("1_urp24")
+subtraits = Dictionary[ExtResource("2_rno6g"), bool]({
+ExtResource("21_qvgg4"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_lw3er")
+name = "Tiger, Bengal"
+description = "More of these cats are kept in captivity than live in the wild."
+base_goop = 20
+size_rating = 11
+enhancable_attributes = Array[String](["Determination", "Strength", "Speed"])
+source = "Mutants in the Now, pg. 33"
+major_traits = Dictionary[String, ExtResource("1_urp24")]({
+"Mutants in the Next": SubResource("Resource_5s42b"),
+"Mutants in the Now": SubResource("Resource_ety4w")
+})
+minor_traits = Dictionary[String, ExtResource("1_urp24")]({
+"Mutants in the Next": SubResource("Resource_hqc61"),
+"Mutants in the Now": SubResource("Resource_1sqhf")
+})
+unique_trait = ExtResource("23_hqc61")
+basic_traits = ["Type: Felidae", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_4pkg4")
 name = "Tentacles"
+source = "Mutants in the Now, pg. 41"
 type = 2
 description = "his is a free trait for species that feature it. When you spend WILL to gain +A on a grab or disarm roll, that advantage is hardened."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

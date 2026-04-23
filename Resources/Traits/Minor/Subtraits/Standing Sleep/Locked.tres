@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://b6dkecmu6dxr0"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_efyj7"]
+
+[resource]
+script = ExtResource("1_efyj7")
+name = "Locked"
+source = "Mutants in the Next, pg. 100"
+type = 5
+cost = 1
+description = "You can remain unmoving for +END (minimum 1) hours, only shifting due to wind, vibration, or other forces. This adds +END to your base skill for dramatic rolls to go unnoticed as long as you are concealed, and is treated as sleep and rest (though you remain aware of your surroundings) for purposes of other traits or healing."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

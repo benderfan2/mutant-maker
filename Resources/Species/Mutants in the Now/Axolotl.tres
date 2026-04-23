@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://ch3c1lcx7jsba"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_1cqpe"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_ht287"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="2_yqq1j"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="3_a5jv6"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="4_vewyo"]
+[ext_resource type="Resource" uid="uid://yfr1wo5x788o" path="res://Resources/Traits/Major/Regenerative.tres" id="5_sr0m1"]
+[ext_resource type="Resource" uid="uid://yoeqmsqi754h" path="res://Resources/Traits/Major/Suction.tres" id="6_lk3ie"]
+[ext_resource type="Resource" uid="uid://bb5p0skr75bd0" path="res://Resources/Traits/Major/Swallow.tres" id="7_rvc5b"]
+[ext_resource type="Resource" uid="uid://dsalxnv4nxmg8" path="res://Resources/Traits/Minor/Subtraits/Camouflage/Color Shift.tres" id="8_bd64d"]
+[ext_resource type="Resource" uid="uid://bt5cyrhprxs4t" path="res://Resources/Traits/Minor/Aqualocation.tres" id="9_wos3x"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="11_28k3s"]
+[ext_resource type="Resource" uid="uid://byhyi24ci3tfy" path="res://Resources/Traits/Minor/Bed Treader.tres" id="12_733iv"]
+[ext_resource type="Resource" uid="uid://br1kqremlpags" path="res://Resources/Traits/Minor/Camouflage.tres" id="13_qasgb"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="14_xhb7t"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="15_kj0yf"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="16_1bc71"]
+[ext_resource type="Resource" uid="uid://capfxktw5u683" path="res://Resources/Traits/Unique/Limb Regeneration.tres" id="17_kl4bq"]
+
+[sub_resource type="Resource" id="Resource_yqq1j"]
+script = ExtResource("1_ht287")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_1cqpe"]
+script = ExtResource("1_ht287")
+traits = Array[ExtResource("1_1cqpe")]([ExtResource("2_yqq1j"), ExtResource("3_a5jv6"), ExtResource("4_vewyo"), ExtResource("5_sr0m1"), ExtResource("6_lk3ie"), ExtResource("7_rvc5b")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_vewyo"]
+script = ExtResource("1_ht287")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_a5jv6"]
+script = ExtResource("1_ht287")
+traits = Array[ExtResource("1_1cqpe")]([ExtResource("9_wos3x"), ExtResource("11_28k3s"), ExtResource("12_733iv"), ExtResource("13_qasgb"), ExtResource("14_xhb7t"), ExtResource("15_kj0yf")])
+subtraits = Dictionary[ExtResource("1_1cqpe"), bool]({
+ExtResource("8_bd64d"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("16_1bc71")
+name = "Axolotl"
+description = "The “Mexican walking fish” is actually an aquatic salamander."
+base_goop = 40
+enhancable_attributes = Array[String](["Determination", "Perception", "Speed"])
+source = "Mutants in the Now, pg. 20"
+major_traits = Dictionary[String, ExtResource("1_ht287")]({
+"Mutants in the Next": SubResource("Resource_yqq1j"),
+"Mutants in the Now": SubResource("Resource_1cqpe")
+})
+minor_traits = Dictionary[String, ExtResource("1_ht287")]({
+"Mutants in the Next": SubResource("Resource_vewyo"),
+"Mutants in the Now": SubResource("Resource_a5jv6")
+})
+unique_trait = ExtResource("17_kl4bq")
+basic_traits = ["Type: Urodela", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Water-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

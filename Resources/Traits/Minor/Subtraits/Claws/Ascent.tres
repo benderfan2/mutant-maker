@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_nrrwc")
 name = "Ascent"
-type = 1
+type = 5
 cost = 1
 description = "+A to dramatic rolls or traversal actions when climbing up a surface your claws can grip, but no benefit when trying to get down."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

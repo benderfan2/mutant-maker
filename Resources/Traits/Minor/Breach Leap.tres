@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://ktaw303a6sr7"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_sj2dv"]
+
+[resource]
+script = ExtResource("1_sj2dv")
+name = "Breach Leap"
+source = "Mutants in the Next, pg. 97"
+type = 1
+cost = 1
+description = "By swimming forcefully, or due to an aerodynamic body structure, you can leap out of water as if you were standing or moving on land. If you have Saltation or Spring Leap, you can apply half the extra leaping distance that would normally provide."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://dml8fm5kifmon"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_c76yg"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_kwd5o"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_y6je0"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="3_sb0o6"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="4_uu46l"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_t6fjf"]
+[ext_resource type="Resource" uid="uid://3id5xuxkmatj" path="res://Resources/Traits/Major/Slippery.tres" id="6_0imcf"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="7_04vkd"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="7_uu46l"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="8_e8s3s"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="9_l5rqy"]
+[ext_resource type="Resource" uid="uid://bkkleb0lsg4lr" path="res://Resources/Traits/Minor/Communal.tres" id="10_f6b7f"]
+[ext_resource type="Resource" uid="uid://bhp4puhbdestn" path="res://Resources/Traits/Minor/Flamboyant.tres" id="11_jf6cv"]
+[ext_resource type="Resource" uid="uid://ckpt5coeqiea2" path="res://Resources/Traits/Minor/Scales.tres" id="12_w5doi"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_ng5s7"]
+[ext_resource type="Resource" uid="uid://crdn842487oos" path="res://Resources/Traits/Minor/Ultraviolet Sight.tres" id="14_57hcn"]
+[ext_resource type="Resource" uid="uid://dqbeg2iaftswd" path="res://Resources/Traits/Minor/Lidless Sleep.tres" id="16_t6fjf"]
+[ext_resource type="Resource" uid="uid://um6bk71pccs" path="res://Resources/Traits/Unique/Smart Little Fish.tres" id="18_t6fjf"]
+
+[sub_resource type="Resource" id="Resource_doenh"]
+script = ExtResource("1_c76yg")
+traits = Array[ExtResource("2_kwd5o")]([ExtResource("7_uu46l")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_l416k"]
+script = ExtResource("1_c76yg")
+traits = Array[ExtResource("2_kwd5o")]([ExtResource("3_sb0o6"), ExtResource("4_uu46l"), ExtResource("5_t6fjf"), ExtResource("6_0imcf")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_scn1l"]
+script = ExtResource("1_c76yg")
+traits = Array[ExtResource("2_kwd5o")]([ExtResource("16_t6fjf")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_n0m5f"]
+script = ExtResource("1_c76yg")
+traits = Array[ExtResource("2_kwd5o")]([ExtResource("8_e8s3s"), ExtResource("9_l5rqy"), ExtResource("10_f6b7f"), ExtResource("11_jf6cv"), ExtResource("12_w5doi"), ExtResource("13_ng5s7"), ExtResource("14_57hcn")])
+subtraits = Dictionary[ExtResource("2_kwd5o"), bool]({
+ExtResource("7_04vkd"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_y6je0")
+name = "Goldfish"
+description = "One of the most popular pet fish across the world."
+base_goop = 48
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 25"
+major_traits = Dictionary[String, ExtResource("1_c76yg")]({
+"Mutants in the Next": SubResource("Resource_doenh"),
+"Mutants in the Now": SubResource("Resource_l416k")
+})
+minor_traits = Dictionary[String, ExtResource("1_c76yg")]({
+"Mutants in the Next": SubResource("Resource_scn1l"),
+"Mutants in the Now": SubResource("Resource_n0m5f")
+})
+unique_trait = ExtResource("18_t6fjf")
+basic_traits = ["Type: Cypriniformes", "Diet: Omnivore", "Movement: Aquatic", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Water-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent", "Finned"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

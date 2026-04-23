@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://d4hnv0hwcukdr"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_4nlym"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_ggmc1"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_4nlym"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="2_31lyq"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="3_2l2yt"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_g8an5"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="5_qir7u"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="6_fjvd2"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="7_uw3yd"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="8_04c11"]
+[ext_resource type="Resource" uid="uid://bdihns3okd56b" path="res://Resources/Traits/Minor/Flexible.tres" id="9_vy67l"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="10_88oxl"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="11_yjij2"]
+[ext_resource type="Resource" uid="uid://1gufuo1a55e4" path="res://Resources/Traits/Unique/Ferreting.tres" id="13_2l2yt"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="13_qir7u"]
+
+[sub_resource type="Resource" id="Resource_qir7u"]
+script = ExtResource("1_4nlym")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_g8an5"]
+script = ExtResource("1_4nlym")
+traits = Array[ExtResource("1_ggmc1")]([ExtResource("2_31lyq"), ExtResource("3_2l2yt"), ExtResource("4_g8an5"), ExtResource("5_qir7u")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_uw3yd"]
+script = ExtResource("1_4nlym")
+traits = Array[ExtResource("1_ggmc1")]([ExtResource("13_qir7u")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_fjvd2"]
+script = ExtResource("1_4nlym")
+traits = Array[ExtResource("1_ggmc1")]([ExtResource("8_04c11"), ExtResource("9_vy67l"), ExtResource("10_88oxl"), ExtResource("11_yjij2")])
+subtraits = Dictionary[ExtResource("1_ggmc1"), bool]({
+ExtResource("6_fjvd2"): false,
+ExtResource("7_uw3yd"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_4nlym")
+name = "Ferret"
+description = "A polecat domesticated to hunt burrowing game and live as a pet."
+base_goop = 36
+size_rating = 4
+enhancable_attributes = Array[String](["Affinity", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 24"
+major_traits = Dictionary[String, ExtResource("1_4nlym")]({
+"Mutants in the Next": SubResource("Resource_qir7u"),
+"Mutants in the Now": SubResource("Resource_g8an5")
+})
+minor_traits = Dictionary[String, ExtResource("1_4nlym")]({
+"Mutants in the Next": SubResource("Resource_uw3yd"),
+"Mutants in the Now": SubResource("Resource_fjvd2")
+})
+unique_trait = ExtResource("13_2l2yt")
+basic_traits = ["Type: Musteloidea", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bubj2mo21h7j5"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_lbkxs"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_n3yiy"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="2_mrsyv"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="3_0vmy5"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_tfnp7"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="5_0fok3"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="7_mrsyv"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="7_o0f4v"]
+[ext_resource type="Resource" uid="uid://b0k7xvwttpblk" path="res://Resources/Traits/Minor/Rot Digestion.tres" id="8_0yqrg"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="9_g54jc"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="10_5bmbg"]
+[ext_resource type="Resource" uid="uid://7mfqal2hy0su" path="res://Resources/Traits/Unique/Burrow Chaser.tres" id="11_4pouk"]
+
+[sub_resource type="Resource" id="Resource_d8ec6"]
+script = ExtResource("1_lbkxs")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_p5pxa"]
+script = ExtResource("1_lbkxs")
+traits = Array[ExtResource("1_n3yiy")]([ExtResource("2_mrsyv"), ExtResource("3_0vmy5"), ExtResource("4_tfnp7")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_tfnp7"]
+script = ExtResource("1_lbkxs")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0vmy5"]
+script = ExtResource("1_lbkxs")
+traits = Array[ExtResource("1_n3yiy")]([ExtResource("7_o0f4v"), ExtResource("8_0yqrg"), ExtResource("9_g54jc")])
+subtraits = Dictionary[ExtResource("1_n3yiy"), bool]({
+ExtResource("5_0fok3"): false,
+ExtResource("7_mrsyv"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("10_5bmbg")
+name = "Badger, American"
+description = "American badgers hunt rodents and other burrowing mammals."
+base_goop = 31
+size_rating = 7
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 20"
+major_traits = Dictionary[String, ExtResource("1_lbkxs")]({
+"Mutants in the Next": SubResource("Resource_d8ec6"),
+"Mutants in the Now": SubResource("Resource_p5pxa")
+})
+minor_traits = Dictionary[String, ExtResource("1_lbkxs")]({
+"Mutants in the Next": SubResource("Resource_tfnp7"),
+"Mutants in the Now": SubResource("Resource_0vmy5")
+})
+unique_trait = ExtResource("11_4pouk")
+basic_traits = ["Type: Musteloidea", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

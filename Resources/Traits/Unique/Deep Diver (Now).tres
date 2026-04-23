@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cavrygagxdtp2"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_1og02"]
+
+[resource]
+script = ExtResource("1_1og02")
+name = "Deep Diver"
+source = "Mutants in the Now, pg. 29"
+type = 3
+cost = 2
+description = "You can dive as far as (100 x Endurance) feet below sea level without +D or ill effects."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

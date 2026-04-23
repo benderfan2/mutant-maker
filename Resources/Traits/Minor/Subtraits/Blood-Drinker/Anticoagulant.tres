@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://bib3unqsh0mjc"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_qmoce"]
+
+[resource]
+script = ExtResource("1_qmoce")
+name = "Anticoagulant"
+source = "Mutants in the Now, pg. 97"
+type = 5
+cost = 1
+description = "Your mouth has saliva that prevents blood clotting. Any strikes that trigger Blood-Drinker inflicts ongoing 1 from blood loss. If you are clinging or grabbing onto a foe, instead inflict ongoing 2 on the first turn you start with them clinged or grabbed, then ongoing 3 on the second turn and thereafter. While you have them clinged or grabbed, this ongoing status does not end, and is reinforced."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

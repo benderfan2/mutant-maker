@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://5dpxir4lg8lm"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_hip75"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_3k1v8"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_7iuf3"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="3_8dgah"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="4_pc4j5"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="5_5obav"]
+[ext_resource type="Resource" uid="uid://bo6jf3dxrigps" path="res://Resources/Traits/Major/Spines.tres" id="6_uh61o"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="7_2sfnw"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="8_rc1om"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_c33d6"]
+[ext_resource type="Resource" uid="uid://gihaifspdfti" path="res://Resources/Traits/Major/Defense Posture.tres" id="10_y6q4i"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="11_8at3t"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="12_eurcs"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="13_m2qfh"]
+[ext_resource type="Resource" uid="uid://btw011fuun714" path="res://Resources/Traits/Unique/Barbed.tres" id="15_pc4j5"]
+
+[sub_resource type="Resource" id="Resource_j33hw"]
+script = ExtResource("1_hip75")
+traits = Array[ExtResource("2_7iuf3")]([ExtResource("3_8dgah"), ExtResource("4_pc4j5"), ExtResource("5_5obav"), ExtResource("6_uh61o")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_8yj76"]
+script = ExtResource("1_hip75")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_vug3k"]
+script = ExtResource("1_hip75")
+traits = Array[ExtResource("2_7iuf3")]([ExtResource("9_c33d6"), ExtResource("10_y6q4i"), ExtResource("11_8at3t"), ExtResource("12_eurcs"), ExtResource("13_m2qfh")])
+subtraits = Dictionary[ExtResource("2_7iuf3"), bool]({
+ExtResource("7_2sfnw"): false,
+ExtResource("8_rc1om"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_x4h1b"]
+script = ExtResource("1_hip75")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_3k1v8")
+name = "Porcupine, North American"
+description = "This large, spiky rodent is a literal pain for most predators."
+base_goop = 31
+size_rating = 7
+enhancable_attributes = Array[String](["Determination", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 30"
+major_traits = Dictionary[String, ExtResource("1_hip75")]({
+"Mutants in the Next": SubResource("Resource_8yj76"),
+"Mutants in the Now": SubResource("Resource_j33hw")
+})
+minor_traits = Dictionary[String, ExtResource("1_hip75")]({
+"Mutants in the Next": SubResource("Resource_x4h1b"),
+"Mutants in the Now": SubResource("Resource_vug3k")
+})
+unique_trait = ExtResource("15_pc4j5")
+basic_traits = ["Type: Rodentia", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

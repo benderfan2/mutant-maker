@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://cmubxdhp8a1l"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_2ryy8"]
+
+[resource]
+script = ExtResource("2_2ryy8")
+name = "Bone-Breaking"
+source = "Mutants in the Now, pg. 26"
+type = 3
+cost = 5
+description = "The hyena’s bite inflicts severing injuries, and does 2d10 if their foe has Armor or Resistance."
+requirements = Array[String](["Teeth"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

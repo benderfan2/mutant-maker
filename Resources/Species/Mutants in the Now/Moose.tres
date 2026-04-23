@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://buxluhisqmb3q"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_uo2qn"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_dwrcf"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_oxu0t"]
+[ext_resource type="Resource" uid="uid://cspjhw8ode0l2" path="res://Resources/Traits/Major/Subtraits/Swift/Sprint.tres" id="3_snr0w"]
+[ext_resource type="Resource" uid="uid://cv4p7677rqei0" path="res://Resources/Traits/Major/Aggressive.tres" id="4_hk7m1"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_d73rw"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="6_hc7ya"]
+[ext_resource type="Resource" uid="uid://yi4a6fiv1e8q" path="res://Resources/Traits/Major/Prey Sight.tres" id="7_wwj17"]
+[ext_resource type="Resource" uid="uid://c17ob0dacm23" path="res://Resources/Traits/Major/Swift.tres" id="8_6p84i"]
+[ext_resource type="Resource" uid="uid://bbla7lr5jaw3o" path="res://Resources/Traits/Major/Stampede.tres" id="9_v7yfb"]
+[ext_resource type="Resource" uid="uid://dhdbk7vtr2y1o" path="res://Resources/Traits/Minor/Subtraits/Horns/Antlers.tres" id="10_mow4c"]
+[ext_resource type="Resource" uid="uid://bpwuk0s4ijcb0" path="res://Resources/Traits/Minor/Subtraits/Horns/Charging.tres" id="11_1jh1m"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="12_m1cng"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="13_4uix1"]
+[ext_resource type="Resource" uid="uid://u7pfe8mefud" path="res://Resources/Traits/Minor/Float.tres" id="14_e2ne7"]
+[ext_resource type="Resource" uid="uid://cwvsugmh5yvj4" path="res://Resources/Traits/Minor/Hooves.tres" id="15_dovnn"]
+[ext_resource type="Resource" uid="uid://pat37m2ckbeb" path="res://Resources/Traits/Minor/Horns.tres" id="16_chnph"]
+[ext_resource type="Resource" uid="uid://ia0wc1wpalu5" path="res://Resources/Traits/Minor/Ruminant Digestion.tres" id="17_waqgy"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="18_l3qsq"]
+[ext_resource type="Resource" uid="uid://df8uc8b3lvf3o" path="res://Resources/Traits/Minor/Water Scent.tres" id="19_6x0at"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="20_wi82e"]
+[ext_resource type="Resource" uid="uid://dkkl4pmrob2ed" path="res://Resources/Traits/Minor/Standing Sleep.tres" id="21_oqhxs"]
+[ext_resource type="Resource" uid="uid://85bf50vay8yg" path="res://Resources/Traits/Unique/Wary.tres" id="23_1jh1m"]
+
+[sub_resource type="Resource" id="Resource_uwrsx"]
+script = ExtResource("1_uo2qn")
+traits = Array[ExtResource("2_oxu0t")]([ExtResource("4_hk7m1"), ExtResource("5_d73rw"), ExtResource("6_hc7ya"), ExtResource("7_wwj17"), ExtResource("8_6p84i"), ExtResource("9_v7yfb")])
+subtraits = Dictionary[ExtResource("2_oxu0t"), bool]({
+ExtResource("3_snr0w"): true
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_a5dhn"]
+script = ExtResource("1_uo2qn")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_oxu0t"]
+script = ExtResource("1_uo2qn")
+traits = Array[ExtResource("2_oxu0t")]([ExtResource("12_m1cng"), ExtResource("13_4uix1"), ExtResource("14_e2ne7"), ExtResource("15_dovnn"), ExtResource("16_chnph"), ExtResource("17_waqgy"), ExtResource("18_l3qsq"), ExtResource("19_6x0at")])
+subtraits = Dictionary[ExtResource("2_oxu0t"), bool]({
+ExtResource("10_mow4c"): false,
+ExtResource("11_1jh1m"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_snr0w"]
+script = ExtResource("1_uo2qn")
+traits = Array[ExtResource("2_oxu0t")]([ExtResource("20_wi82e"), ExtResource("21_oqhxs")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_dwrcf")
+name = "Moose"
+description = "This iconic animal of Canada is the largest of the deer family."
+base_goop = 15
+size_rating = 12
+enhancable_attributes = Array[String](["Determination", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 27"
+major_traits = Dictionary[String, ExtResource("1_uo2qn")]({
+"Mutants in the Next": SubResource("Resource_a5dhn"),
+"Mutants in the Now": SubResource("Resource_uwrsx")
+})
+minor_traits = Dictionary[String, ExtResource("1_uo2qn")]({
+"Mutants in the Next": SubResource("Resource_snr0w"),
+"Mutants in the Now": SubResource("Resource_oxu0t")
+})
+unique_trait = ExtResource("23_1jh1m")
+basic_traits = ["Type: Cervidae", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://bhslbmetto3c3"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_dai1d"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_kcomw"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_ywwrv"]
+[ext_resource type="Resource" uid="uid://bk8qyylh4rbdw" path="res://Resources/Traits/Major/Subtraits/Burrow/Slow.tres" id="3_agcwa"]
+[ext_resource type="Resource" uid="uid://b1cwxa7vp4j30" path="res://Resources/Traits/Major/Subtraits/Musk/Spray.tres" id="4_5ko7v"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="5_17ygt"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="6_0w4ef"]
+[ext_resource type="Resource" uid="uid://dbjv5755uodw0" path="res://Resources/Traits/Major/Musk.tres" id="7_1r125"]
+[ext_resource type="Resource" uid="uid://bsrheoag7qrio" path="res://Resources/Traits/Major/Toxin Resistance.tres" id="8_7y2ce"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="9_yhrn3"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="10_y7mt3"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="11_7xwpn"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="12_ml3jv"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="13_k8bgl"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="14_4m52n"]
+[ext_resource type="Resource" uid="uid://c2kad1v12idd" path="res://Resources/Traits/Minor/Aposematic.tres" id="15_5ko7v"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="16_17ygt"]
+[ext_resource type="Resource" uid="uid://dieblfrq35i6x" path="res://Resources/Traits/Unique/Iconic Stink.tres" id="18_17ygt"]
+
+[sub_resource type="Resource" id="Resource_py8ry"]
+script = ExtResource("1_dai1d")
+traits = Array[ExtResource("2_ywwrv")]([ExtResource("5_17ygt"), ExtResource("6_0w4ef"), ExtResource("7_1r125"), ExtResource("8_7y2ce")])
+subtraits = Dictionary[ExtResource("2_ywwrv"), bool]({
+ExtResource("3_agcwa"): true,
+ExtResource("4_5ko7v"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_xshnn"]
+script = ExtResource("1_dai1d")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ntf5y"]
+script = ExtResource("1_dai1d")
+traits = Array[ExtResource("2_ywwrv")]([ExtResource("11_7xwpn"), ExtResource("12_ml3jv"), ExtResource("13_k8bgl"), ExtResource("14_4m52n")])
+subtraits = Dictionary[ExtResource("2_ywwrv"), bool]({
+ExtResource("9_yhrn3"): false,
+ExtResource("10_y7mt3"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_0w4ef"]
+script = ExtResource("1_dai1d")
+traits = Array[ExtResource("2_ywwrv")]([ExtResource("15_5ko7v"), ExtResource("16_17ygt")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_kcomw")
+name = "Skunk, Striped"
+description = "The iconic skunk, known for its stripes and stink glands."
+base_goop = 33
+size_rating = 5
+enhancable_attributes = Array[String](["Determination", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 32"
+major_traits = Dictionary[String, ExtResource("1_dai1d")]({
+"Mutants in the Next": SubResource("Resource_xshnn"),
+"Mutants in the Now": SubResource("Resource_py8ry")
+})
+minor_traits = Dictionary[String, ExtResource("1_dai1d")]({
+"Mutants in the Next": SubResource("Resource_0w4ef"),
+"Mutants in the Now": SubResource("Resource_ntf5y")
+})
+unique_trait = ExtResource("18_17ygt")
+basic_traits = ["Type: Musteloidea", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

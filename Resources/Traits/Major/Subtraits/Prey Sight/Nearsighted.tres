@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_vvlpb")
 name = "Nearsighted"
+source = "Mutants in the Now, pg. 43"
+type = 4
 cost = -3
 is_universal = true
 description = "You gain +D on any ranged maneuver keyed to Prowess or Speed."

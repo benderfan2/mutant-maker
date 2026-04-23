@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://b2k175xxbwvnx"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_d421u"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_3kn5c"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_4k76s"]
+[ext_resource type="Resource" uid="uid://0po20huyfym7" path="res://Resources/Traits/Major/Subtraits/Burrow/Tunnel.tres" id="3_smt57"]
+[ext_resource type="Resource" uid="uid://duiu5dsnbwcim" path="res://Resources/Traits/Major/Burrow.tres" id="4_erh15"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_7bwj1"]
+[ext_resource type="Resource" uid="uid://cws1pmwk135mq" path="res://Resources/Traits/Major/Dark.tres" id="6_hqeg2"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="7_oht8k"]
+[ext_resource type="Resource" uid="uid://c4rp46fpmq1cm" path="res://Resources/Traits/Minor/Subtraits/Teeth/Gnawing.tres" id="8_l4g7q"]
+[ext_resource type="Resource" uid="uid://bh0ux3jeafe3h" path="res://Resources/Traits/Minor/Cheek Pouches.tres" id="9_rqwd1"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_pqwel"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="11_b8jh5"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="12_bwcdg"]
+[ext_resource type="Resource" uid="uid://bcqpvwdtojfkk" path="res://Resources/Traits/Minor/Standing Posture.tres" id="13_1pwqg"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="14_7lex1"]
+[ext_resource type="Resource" uid="uid://batbjfyb6ocjn" path="res://Resources/Traits/Minor/Backburrow.tres" id="15_7bwj1"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="16_hqeg2"]
+
+[sub_resource type="Resource" id="Resource_1h3r5"]
+script = ExtResource("1_d421u")
+traits = Array[ExtResource("2_3kn5c")]([ExtResource("6_hqeg2")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_kthto"]
+script = ExtResource("1_d421u")
+traits = Array[ExtResource("2_3kn5c")]([ExtResource("4_erh15"), ExtResource("5_7bwj1")])
+subtraits = Dictionary[ExtResource("2_3kn5c"), bool]({
+ExtResource("3_smt57"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_wbxrh"]
+script = ExtResource("1_d421u")
+traits = Array[ExtResource("2_3kn5c")]([ExtResource("15_7bwj1"), ExtResource("16_hqeg2")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_413mm"]
+script = ExtResource("1_d421u")
+traits = Array[ExtResource("2_3kn5c")]([ExtResource("9_rqwd1"), ExtResource("10_pqwel"), ExtResource("11_b8jh5"), ExtResource("12_bwcdg"), ExtResource("13_1pwqg"), ExtResource("14_7lex1")])
+subtraits = Dictionary[ExtResource("2_3kn5c"), bool]({
+ExtResource("7_oht8k"): false,
+ExtResource("8_l4g7q"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rqwd1"]
+script = ExtResource("2_3kn5c")
+name = "Mister Saddlebags"
+source = "Mutants in the Now, pg. 26"
+type = 3
+cost = 2
+description = "When using Cheek Pouches, it does not count towards your LIFT, and you can store one large item instead of two (but cannot bite or talk)."
+requirements = Array[String](["Cheek Pouches"])
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"
+
+[resource]
+script = ExtResource("2_4k76s")
+name = "Hamster, Syriam"
+description = "The “golden” hamster was deeply domesticated."
+base_goop = 37
+size_rating = 3
+enhancable_attributes = Array[String](["Affinity", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 26"
+major_traits = Dictionary[String, ExtResource("1_d421u")]({
+"Mutants in the Next": SubResource("Resource_1h3r5"),
+"Mutants in the Now": SubResource("Resource_kthto")
+})
+minor_traits = Dictionary[String, ExtResource("1_d421u")]({
+"Mutants in the Next": SubResource("Resource_wbxrh"),
+"Mutants in the Now": SubResource("Resource_413mm")
+})
+unique_trait = SubResource("Resource_rqwd1")
+basic_traits = ["Type: Rodentia", "Diet: Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

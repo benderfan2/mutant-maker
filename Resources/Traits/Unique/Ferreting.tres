@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Trait" format=3 uid="uid://1gufuo1a55e4"]
+
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_8uf5w"]
+
+[resource]
+script = ExtResource("1_8uf5w")
+name = "Ferreting"
+source = "Mutants in the Now, pg. 24"
+type = 3
+cost = 2
+description = "When in a small crevice or tunnel (defined as one where you block entry or exit fully), gain +A on strikes with melee weapons."
+metadata/_custom_type_script = "uid://bvg3dreo5cyh"

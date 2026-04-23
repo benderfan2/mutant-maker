@@ -1,0 +1,69 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cvdt46gr7qjvq"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_1t5kv"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_4kdkr"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_oo0rb"]
+[ext_resource type="Resource" uid="uid://cig7j2g3n7o3c" path="res://Resources/Traits/Major/Subtraits/Arboreal/Head-First.tres" id="3_hsdnd"]
+[ext_resource type="Resource" uid="uid://cmvkwcc3elarr" path="res://Resources/Traits/Major/Arboreal.tres" id="4_ehhqj"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_mjbsl"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="6_t0ta7"]
+[ext_resource type="Resource" uid="uid://crk84tyq250er" path="res://Resources/Traits/Minor/Subtraits/Claws/Retractable.tres" id="7_074gn"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="8_r7fqe"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="9_6yxav"]
+[ext_resource type="Resource" uid="uid://cqbde0nuym56s" path="res://Resources/Traits/Minor/Cold Tolerance.tres" id="10_trxuo"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="11_ypb5b"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="12_mjd1n"]
+[ext_resource type="Resource" uid="uid://bcqpvwdtojfkk" path="res://Resources/Traits/Minor/Standing Posture.tres" id="13_qn60b"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="14_i3y0b"]
+[ext_resource type="Resource" uid="uid://bg0bcqgl85yfk" path="res://Resources/Traits/Minor/Territorial.tres" id="15_2wstw"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="16_axqj7"]
+[ext_resource type="Resource" uid="uid://bwavxurgycv0" path="res://Resources/Traits/Minor/Whiskers.tres" id="17_a3ydh"]
+[ext_resource type="Resource" uid="uid://bb758w8gp888b" path="res://Resources/Traits/Minor/Polyphasic.tres" id="18_hsdnd"]
+[ext_resource type="Resource" uid="uid://dqq2a6joogffs" path="res://Resources/Traits/Unique/Escalade.tres" id="20_ehhqj"]
+
+[sub_resource type="Resource" id="Resource_ien4v"]
+script = ExtResource("1_1t5kv")
+traits = Array[ExtResource("2_4kdkr")]([ExtResource("4_ehhqj"), ExtResource("5_mjbsl")])
+subtraits = Dictionary[ExtResource("2_4kdkr"), bool]({
+ExtResource("3_hsdnd"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_dkkyf"]
+script = ExtResource("1_1t5kv")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_5nmy6"]
+script = ExtResource("1_1t5kv")
+traits = Array[ExtResource("2_4kdkr")]([ExtResource("9_6yxav"), ExtResource("10_trxuo"), ExtResource("11_ypb5b"), ExtResource("12_mjd1n"), ExtResource("13_qn60b"), ExtResource("14_i3y0b"), ExtResource("15_2wstw"), ExtResource("16_axqj7"), ExtResource("17_a3ydh")])
+subtraits = Dictionary[ExtResource("2_4kdkr"), bool]({
+ExtResource("6_t0ta7"): false,
+ExtResource("7_074gn"): false,
+ExtResource("8_r7fqe"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_ehhqj"]
+script = ExtResource("1_1t5kv")
+traits = Array[ExtResource("2_4kdkr")]([ExtResource("18_hsdnd")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_oo0rb")
+name = "Panda, Red"
+description = "The “firefox” is a smaller mustelid with a bamboo diet."
+base_goop = 32
+size_rating = 6
+enhancable_attributes = Array[String](["Affinity", "Strength", "Endurance"])
+source = "Mutants in the Now, pg. 29"
+major_traits = Dictionary[String, ExtResource("1_1t5kv")]({
+"Mutants in the Next": SubResource("Resource_dkkyf"),
+"Mutants in the Now": SubResource("Resource_ien4v")
+})
+minor_traits = Dictionary[String, ExtResource("1_1t5kv")]({
+"Mutants in the Next": SubResource("Resource_ehhqj"),
+"Mutants in the Now": SubResource("Resource_5nmy6")
+})
+unique_trait = ExtResource("20_ehhqj")
+basic_traits = ["Type: Musteloidea", "Diet: Facultative Herbivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

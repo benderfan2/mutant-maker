@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://b6jw1owij88il"]
+
+[ext_resource type="Resource" uid="uid://bm138xahv8gdh" path="res://Resources/Traits/Zoomorphic/Independent Wings.tres" id="1_1ad24"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="1_wjciu"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_1ad24"]
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="2_wxwvj"]
+[ext_resource type="Resource" uid="uid://dijab1kd2a0iu" path="res://Resources/Traits/Major/Subtraits/Flight/Hover.tres" id="3_si5rn"]
+[ext_resource type="Resource" uid="uid://c3ebt3akdw270" path="res://Resources/Traits/Major/Adaptable.tres" id="4_0uswj"]
+[ext_resource type="Resource" uid="uid://b7m2aidv6dxdw" path="res://Resources/Traits/Major/Cling.tres" id="4_x27pk"]
+[ext_resource type="Resource" uid="uid://bydgdm6pmcn4i" path="res://Resources/Traits/Major/Adhesive.tres" id="5_q0acp"]
+[ext_resource type="Resource" uid="uid://cmhaxypfn8lgs" path="res://Resources/Traits/Major/Compound Sight.tres" id="6_teliu"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="7_neimj"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="8_lmoye"]
+[ext_resource type="Resource" uid="uid://my2jcgkkihnl" path="res://Resources/Traits/Major/Flight.tres" id="9_080fu"]
+[ext_resource type="Resource" uid="uid://c7ns8octuu8" path="res://Resources/Traits/Major/Tough Hide.tres" id="10_85uiv"]
+[ext_resource type="Resource" uid="uid://khjfdk5r8y0y" path="res://Resources/Traits/Minor/Subtraits/Claws/Climbing.tres" id="11_080fu"]
+[ext_resource type="Resource" uid="uid://cu7qeg1a6b5ll" path="res://Resources/Traits/Minor/Antennae.tres" id="11_neimj"]
+[ext_resource type="Resource" uid="uid://c6lrwttp5s1ps" path="res://Resources/Traits/Minor/Subtraits/Mandibles/Piercing.tres" id="12_85uiv"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="12_lmoye"]
+[ext_resource type="Resource" uid="uid://dogjwef6axh60" path="res://Resources/Traits/Minor/Mandibles.tres" id="13_080fu"]
+[ext_resource type="Resource" uid="uid://bso8mn2qs7gh6" path="res://Resources/Traits/Minor/Vibration Sense.tres" id="14_85uiv"]
+[ext_resource type="Resource" uid="uid://bxi0y6msm8xqn" path="res://Resources/Traits/Unique/Maddening.tres" id="18_85uiv"]
+[ext_resource type="Resource" uid="uid://bgavnfxiewb47" path="res://Resources/Traits/Minor/Subtraits/Blood-Drinker/Allergenic.tres" id="19_qbf7x"]
+[ext_resource type="Resource" uid="uid://rj4kl1m7pkt1" path="res://Resources/Traits/Minor/Blood-Drinker.tres" id="20_kgf7q"]
+
+[sub_resource type="Resource" id="Resource_38p3p"]
+script = ExtResource("2_wxwvj")
+traits = Array[ExtResource("1_wjciu")]([ExtResource("4_x27pk")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_85mmy"]
+script = ExtResource("2_wxwvj")
+traits = Array[ExtResource("1_wjciu")]([ExtResource("4_0uswj"), ExtResource("5_q0acp"), ExtResource("6_teliu"), ExtResource("7_neimj"), ExtResource("8_lmoye"), ExtResource("9_080fu"), ExtResource("10_85uiv")])
+subtraits = Dictionary[ExtResource("1_wjciu"), bool]({
+ExtResource("3_si5rn"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_rwacj"]
+script = ExtResource("2_wxwvj")
+traits = Array[ExtResource("1_wjciu")]([ExtResource("20_kgf7q")])
+subtraits = Dictionary[ExtResource("1_wjciu"), bool]({
+ExtResource("19_qbf7x"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_1fchp"]
+script = ExtResource("2_wxwvj")
+traits = Array[ExtResource("1_wjciu")]([ExtResource("11_neimj"), ExtResource("12_lmoye"), ExtResource("13_080fu"), ExtResource("14_85uiv")])
+subtraits = Dictionary[ExtResource("1_wjciu"), bool]({
+ExtResource("11_080fu"): false,
+ExtResource("12_85uiv"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_1ad24")
+name = "Fly, Horse"
+description = "Though it feeds on saps and nectars, it bites for blood."
+base_goop = 38
+enhancable_attributes = Array[String](["Perception", "Endurance", "Speed"])
+source = "Mutants in the Now, pg. 24"
+major_traits = Dictionary[String, ExtResource("2_wxwvj")]({
+"Mutants in the Next": SubResource("Resource_38p3p"),
+"Mutants in the Now": SubResource("Resource_85mmy")
+})
+minor_traits = Dictionary[String, ExtResource("2_wxwvj")]({
+"Mutants in the Next": SubResource("Resource_rwacj"),
+"Mutants in the Now": SubResource("Resource_1fchp")
+})
+unique_trait = ExtResource("18_85uiv")
+basic_traits = ["Type: Diptera", "Diet: Herbivore", "Movement: Hexapodal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Vibration", "Senses: Scent", "Winged", ExtResource("1_1ad24")]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

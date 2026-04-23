@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://ddlk78i14bqp"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_qyx4d"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_jq8kg"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_pv0cv"]
+[ext_resource type="Resource" uid="uid://bxwey51jvycqg" path="res://Resources/Traits/Major/Breath Storage.tres" id="3_mmi8p"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="4_fy5wu"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="5_2l5oj"]
+[ext_resource type="Resource" uid="uid://d0l88sevixcu7" path="res://Resources/Traits/Major/Natatorial.tres" id="6_qqbhn"]
+[ext_resource type="Resource" uid="uid://dn86h0q2h4wyo" path="res://Resources/Traits/Major/Nightsight.tres" id="7_7lih3"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="8_cwj61"]
+[ext_resource type="Resource" uid="uid://d30fwme770a7k" path="res://Resources/Traits/Minor/Subtraits/Teeth/Pursuit.tres" id="9_hrpcv"]
+[ext_resource type="Resource" uid="uid://bt5cyrhprxs4t" path="res://Resources/Traits/Minor/Aqualocation.tres" id="10_jkkep"]
+[ext_resource type="Resource" uid="uid://brwja03cgxgb0" path="res://Resources/Traits/Minor/Aquatic Sight.tres" id="11_syxrw"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="12_co7sp"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="13_lvrah"]
+[ext_resource type="Resource" uid="uid://h005u0mkhuvh" path="res://Resources/Traits/Minor/Specialized Predator.tres" id="14_bvgkh"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="15_dvslx"]
+[ext_resource type="Resource" uid="uid://d036s43eb005l" path="res://Resources/Traits/Minor/Whiptail.tres" id="16_wwrjq"]
+[ext_resource type="Resource" uid="uid://bwavxurgycv0" path="res://Resources/Traits/Minor/Whiskers.tres" id="17_7fmxn"]
+[ext_resource type="Resource" uid="uid://btab1r6cnhfg3" path="res://Resources/Traits/Unique/River Torpedo.tres" id="19_hrpcv"]
+
+[sub_resource type="Resource" id="Resource_15l7v"]
+script = ExtResource("1_qyx4d")
+traits = Array[ExtResource("2_pv0cv")]([ExtResource("3_mmi8p"), ExtResource("4_fy5wu"), ExtResource("5_2l5oj"), ExtResource("6_qqbhn"), ExtResource("7_7lih3")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_odi72"]
+script = ExtResource("1_qyx4d")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_kwq6u"]
+script = ExtResource("1_qyx4d")
+traits = Array[ExtResource("2_pv0cv")]([ExtResource("10_jkkep"), ExtResource("11_syxrw"), ExtResource("12_co7sp"), ExtResource("13_lvrah"), ExtResource("14_bvgkh"), ExtResource("15_dvslx"), ExtResource("16_wwrjq"), ExtResource("17_7fmxn")])
+subtraits = Dictionary[ExtResource("2_pv0cv"), bool]({
+ExtResource("8_cwj61"): false,
+ExtResource("9_hrpcv"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_vrlf8"]
+script = ExtResource("1_qyx4d")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_jq8kg")
+name = "Otter, North American River"
+description = "The common freshwater otter of America."
+base_goop = 31
+size_rating = 7
+enhancable_attributes = Array[String](["Perception", "Prowess", "Endurance"])
+source = "Mutants in the Now, pg. 29"
+major_traits = Dictionary[String, ExtResource("1_qyx4d")]({
+"Mutants in the Next": SubResource("Resource_odi72"),
+"Mutants in the Now": SubResource("Resource_15l7v")
+})
+minor_traits = Dictionary[String, ExtResource("1_qyx4d")]({
+"Mutants in the Next": SubResource("Resource_vrlf8"),
+"Mutants in the Now": SubResource("Resource_kwq6u")
+})
+unique_trait = ExtResource("19_hrpcv")
+basic_traits = ["Type: Musteloidea", "Diet: Carnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

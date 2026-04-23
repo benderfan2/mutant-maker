@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_fhjnx")
 name = "Ink"
+source = "Mutants in the Now, pg. 43"
 cost = 5
 description = "You can squirt a foul-smelling, dark liquid at foes as a ranged strike that grants the blind and distracted statuses but cannot inflict damage. The blind status clears at the end of their next turn, while distracted is cleared normally. You become stunned by performing this action, but if you escape the fight in your following turn, gain 1 temporary WILL at the start of the next scene. They can make a saving throw against this effect, but become inactive if they fail."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

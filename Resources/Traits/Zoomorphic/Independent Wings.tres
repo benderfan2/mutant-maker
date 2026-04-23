@@ -8,5 +8,5 @@ name = "Independent Wings"
 type = 2
 cost = 5
 description = "Your wings are separate limbs from your arms, allowing you to fly and manipulate objects at the same time."
-requirements = ["Winged"]
+requirements = Array[String](["Winged"])
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

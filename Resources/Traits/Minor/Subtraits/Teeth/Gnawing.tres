@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_hp8n7")
 name = "Gnawing"
-type = 1
+type = 5
 cost = 1
 description = "These teeth gain Piercing 1, and additionally reduce Armor by 1 on a successful attack that would do HP damage. This reduction remains until the end of the scene, and is cumulative."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

@@ -1,0 +1,63 @@
+[gd_resource type="Resource" script_class="Species" format=3 uid="uid://cuxjj8nuqlh0c"]
+
+[ext_resource type="Script" uid="uid://dbpbidobb1jk6" path="res://Scripts/trait_list.gd" id="1_dkprf"]
+[ext_resource type="Script" uid="uid://bvg3dreo5cyh" path="res://Scripts/trait.gd" id="2_8a05q"]
+[ext_resource type="Script" uid="uid://clvqunujepvtg" path="res://Scripts/species.gd" id="2_36hka"]
+[ext_resource type="Resource" uid="uid://d0a0n266f6avr" path="res://Resources/Traits/Major/Energetic.tres" id="3_p2kij"]
+[ext_resource type="Resource" uid="uid://dunyxpsbk816f" path="res://Resources/Traits/Major/Enhanced Scent.tres" id="4_5ux1u"]
+[ext_resource type="Resource" uid="uid://bo6jf3dxrigps" path="res://Resources/Traits/Major/Spines.tres" id="5_81451"]
+[ext_resource type="Resource" uid="uid://bsrheoag7qrio" path="res://Resources/Traits/Major/Toxin Resistance.tres" id="6_env88"]
+[ext_resource type="Resource" uid="uid://bwnnug5o4cy4m" path="res://Resources/Traits/Minor/Subtraits/Claws/Digging.tres" id="7_iusa5"]
+[ext_resource type="Resource" uid="uid://dhy3p2rquuph3" path="res://Resources/Traits/Minor/Subtraits/Teeth/Insectivorous.tres" id="8_2f73l"]
+[ext_resource type="Resource" uid="uid://b3nq0idwgg7r1" path="res://Resources/Traits/Minor/Subtraits/Claws/Pursuit.tres" id="9_ril4b"]
+[ext_resource type="Resource" uid="uid://c23su1ayvriv8" path="res://Resources/Traits/Minor/Claws.tres" id="10_fkwym"]
+[ext_resource type="Resource" uid="uid://gihaifspdfti" path="res://Resources/Traits/Major/Defense Posture.tres" id="11_f0swe"]
+[ext_resource type="Resource" uid="uid://cjktq63mybeam" path="res://Resources/Traits/Minor/Enhanced Hearing.tres" id="12_qssby"]
+[ext_resource type="Resource" uid="uid://b6tdvgd0218pb" path="res://Resources/Traits/Minor/Hibernation.tres" id="13_vndix"]
+[ext_resource type="Resource" uid="uid://b035fmvxm5vix" path="res://Resources/Traits/Minor/Teeth.tres" id="14_i0lt7"]
+[ext_resource type="Resource" uid="uid://i6tfx8m7d87y" path="res://Resources/Traits/Minor/Toxin Digestion.tres" id="15_iuf0w"]
+[ext_resource type="Resource" uid="uid://ccv32cjvyqjk4" path="res://Resources/Traits/Minor/Ultrasonic Hearing.tres" id="16_k3xg8"]
+[ext_resource type="Resource" uid="uid://comfd0n62eqg7" path="res://Resources/Traits/Unique/Poison Hunter.tres" id="18_2f73l"]
+
+[sub_resource type="Resource" id="Resource_838wl"]
+script = ExtResource("1_dkprf")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_1focu"]
+script = ExtResource("1_dkprf")
+traits = Array[ExtResource("2_8a05q")]([ExtResource("3_p2kij"), ExtResource("4_5ux1u"), ExtResource("5_81451"), ExtResource("6_env88")])
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_nwg3h"]
+script = ExtResource("1_dkprf")
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[sub_resource type="Resource" id="Resource_l2shu"]
+script = ExtResource("1_dkprf")
+traits = Array[ExtResource("2_8a05q")]([ExtResource("10_fkwym"), ExtResource("11_f0swe"), ExtResource("12_qssby"), ExtResource("13_vndix"), ExtResource("14_i0lt7"), ExtResource("15_iuf0w"), ExtResource("16_k3xg8")])
+subtraits = Dictionary[ExtResource("2_8a05q"), bool]({
+ExtResource("7_iusa5"): false,
+ExtResource("8_2f73l"): false,
+ExtResource("9_ril4b"): false
+})
+metadata/_custom_type_script = "uid://dbpbidobb1jk6"
+
+[resource]
+script = ExtResource("2_36hka")
+name = "Hedgehog, African Pygmy"
+description = "The domesticated “four-toed” hedgehog."
+base_goop = 35
+size_rating = 3
+enhancable_attributes = Array[String](["Affinity", "Perception", "Endurance"])
+source = "Mutants in the Now, pg. 26"
+major_traits = Dictionary[String, ExtResource("1_dkprf")]({
+"Mutants in the Next": SubResource("Resource_838wl"),
+"Mutants in the Now": SubResource("Resource_1focu")
+})
+minor_traits = Dictionary[String, ExtResource("1_dkprf")]({
+"Mutants in the Next": SubResource("Resource_nwg3h"),
+"Mutants in the Now": SubResource("Resource_l2shu")
+})
+unique_trait = ExtResource("18_2f73l")
+basic_traits = ["Type: Eulipotyphla", "Diet: Omnivore", "Movement: Quadrupedal", "Prehensility: Locomotors", "Speech: Nonvocal", "Mask: Bestial", "Respiration: Air-Breathing", "Senses: Sight", "Senses: Hearing", "Senses: Scent"]
+metadata/_custom_type_script = "uid://clvqunujepvtg"

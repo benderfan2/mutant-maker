@@ -5,5 +5,7 @@
 [resource]
 script = ExtResource("1_gi7jg")
 name = "Gamma Neurotoxin"
+source = "Mutants in the Now, pg. 45"
+type = 4
 description = "This is a small dose of a 1d6 toxin that attacks the central nervous system. While your foe is envenomed, they become tired."
 metadata/_custom_type_script = "uid://bvg3dreo5cyh"

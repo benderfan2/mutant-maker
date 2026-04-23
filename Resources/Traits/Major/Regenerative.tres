@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_m2tyl")
 name = "Regenerative"
+source = "Mutants in the Now, pg. 44"
 cost = 5
 description = "You heal 100% faster. By spending 1 WILL, you may heal Endurance dice in damage worth of SHT as a moment in a fight scene. If your SHT is 0, you may not perform this effect. You may also spend 1 WILL to make a severing injury non-severing."
 subtraits = Array[ExtResource("1_m2tyl")]([ExtResource("2_wusgv")])
